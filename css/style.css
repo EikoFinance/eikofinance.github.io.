@@ -1,5 +1,5 @@
 /* =========================================================
-   EIKO FINANCE - DESIGN GLOBAL, ANIMATIONS & RESPONSIVE MOBILE
+   EIKO FINANCE - DESIGN RESPONSIVE & MENU BURGER MOBILE
    ========================================================= */
 
 :root {
@@ -21,17 +21,21 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--bg-white);
     color: var(--text-dark);
     line-height: 1.5;
-    overflow-x: hidden;
     position: relative;
 }
 
 /* =========================================================
-   SPLASH SCREEN INTRO (LOGO CENTRÉ AU PREMIER PLAN)
+   SPLASH SCREEN INTRO
    ========================================================= */
 .splash-screen {
     position: fixed;
@@ -43,13 +47,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 500;
+    z-index: 2000;
     overflow: hidden;
 }
 
 .splash-logo {
-    max-width: min(380px, 80vw);
-    max-height: 80vh;
+    max-width: min(320px, 75vw);
+    max-height: 70vh;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -57,9 +61,8 @@ body {
 }
 
 /* =========================================================
-   ANIMATIONS STABILISÉES (ANTI-SCINTILLEMENT)
+   ANIMATIONS DE SCÈNE
    ========================================================= */
-
 @keyframes slideRightToLeft {
     0% {
         opacity: 0;
@@ -74,7 +77,7 @@ body {
 @keyframes slideMainOverLogo {
     0% {
         opacity: 0;
-        transform: translate3d(-100px, 0, 0);
+        transform: translate3d(-50px, 0, 0);
     }
     100% {
         opacity: 1;
@@ -98,7 +101,6 @@ body.play-intro header,
 body.play-intro footer {
     opacity: 0;
     backface-visibility: hidden;
-    perspective: 1000px;
     animation: slideRightToLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 2s;
 }
 
@@ -111,7 +113,6 @@ body.play-intro main {
     animation: slideMainOverLogo 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 4s;
 }
 
-/* Mode Navigation Normale */
 body.no-intro .splash-screen {
     display: none !important;
 }
@@ -126,7 +127,7 @@ body.no-intro footer {
 }
 
 /* =========================================================
-   EN-TÊTE AVEC FONDU DU BLANC AU BLEU
+   EN-TÊTE DESKTOP
    ========================================================= */
 header {
     background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 220px, var(--primary-blue) 360px, var(--primary-blue) 100%);
@@ -138,8 +139,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    backface-visibility: hidden;
-    transform: translateZ(0);
+    width: 100%;
 }
 
 .logo-container {
@@ -148,7 +148,6 @@ header {
     gap: 12px;
     padding: 0.6rem 1.5rem;
     background: transparent;
-    border-right: none;
 }
 
 .logo-img {
@@ -203,13 +202,24 @@ nav a:hover {
     color: var(--gold-bright);
 }
 
+/* Bouton Burger Mobile (Masqué sur Desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
 /* =========================================================
-   SECTIONS DE CONTENU
+   CONTENU & CARTE
    ========================================================= */
 .hero {
     background-color: var(--bg-white);
     color: var(--text-dark);
-    padding: 3rem 5% 2rem 5%;
+    padding: 3.5rem 5% 2.5rem 5%;
     text-align: center;
 }
 
@@ -290,8 +300,6 @@ footer {
     font-size: 0.9rem;
     position: relative;
     z-index: 1000;
-    backface-visibility: hidden;
-    transform: translateZ(0);
 }
 
 footer a {
@@ -299,64 +307,102 @@ footer a {
     text-decoration: none;
 }
 
-
 /* =========================================================
-   ADAPTATION MOBILE (RESPONSIVE POUR SMARTPHONES)
+   OPTIMISATION STRICTE MOBILE PORTRAIT (ÉCRANS < 768px)
    ========================================================= */
 @media screen and (max-width: 768px) {
+    /* Header compact sur mobile */
     header {
-        flex-direction: column;
-        background: var(--primary-blue); /* Fond uni sur mobile pour une lisibilité parfaite */
-        padding: 0.5rem 0;
+        background: var(--primary-blue);
+        flex-wrap: wrap;
+        padding: 0.4rem 0.8rem;
     }
 
     .logo-container {
-        padding: 0.5rem 1rem;
-        justify-content: center;
-        width: 100%;
-        border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        padding: 0;
+        gap: 8px;
+    }
+
+    .logo-img {
+        height: 35px;
     }
 
     .logo-text {
-        font-size: 1.15rem;
-        color: #FFFFFF; /* Texte en blanc sur fond bleu mobile */
+        font-size: 1.1rem;
+        color: #FFFFFF;
+        letter-spacing: 1px;
     }
 
+    /* Activation du bouton Burger */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Navigation déroulante sur mobile */
     nav {
-        padding: 0.5rem 1rem;
         width: 100%;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    nav.mobile-open {
+        max-height: 300px;
+        padding: 0.8rem 0;
+        border-top: 1px solid rgba(197, 160, 89, 0.3);
+        margin-top: 0.4rem;
     }
 
     nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.8rem 1.2rem;
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
     }
 
     nav a {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
+        display: block;
+        padding: 0.3rem 0;
     }
 
+    /* Adaptations Contenu Hero & Cartes */
     .hero {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 1.5rem 1rem;
     }
 
     .hero h1 {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
+        line-height: 1.35;
     }
 
     .hero p {
-        font-size: 0.95rem;
+        font-size: 0.92rem;
+        margin-bottom: 1.2rem;
     }
 
     .card-grid {
-        grid-template-columns: 1fr; /* Les cartes s'empilent verticalement sur mobile */
+        grid-template-columns: 1fr;
         padding: 1.5rem 1rem;
         gap: 1.2rem;
     }
 
     .card {
         padding: 1.2rem;
+    }
+
+    /* Simplification des animations sur mobile pour éviter tout bug visuel */
+    body.play-intro header,
+    body.play-intro footer {
+        animation: fadeInMobile 0.8s ease forwards 1.5s !important;
+    }
+
+    body.play-intro main {
+        animation: fadeInMobile 0.8s ease forwards 2.5s !important;
+    }
+
+    @keyframes fadeInMobile {
+        from { opacity: 0; transform: none; }
+        to { opacity: 1; transform: none; }
     }
 }
