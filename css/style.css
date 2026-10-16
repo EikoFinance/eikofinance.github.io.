@@ -1,0 +1,179 @@
+/* =========================================================
+   EIKO FINANCE - CHARTE GRAPHIQUE & ANIMATIONS
+   ========================================================= */
+
+:root {
+    --primary-blue: #0B2C67;
+    --dark-blue: #051329;
+    --gold-accent: #C5A059;
+    --gold-bright: #E6C687;
+    --bg-light: #F8F9FA;
+    --text-dark: #1F2937;
+    --text-light: #FFFFFF;
+    --font-title: 'Cinzel', 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* En-tête / Navigation */
+header {
+    background-color: var(--dark-blue);
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--gold-accent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container img {
+    height: 45px;
+}
+
+.logo-text {
+    font-family: var(--font-title);
+    color: var(--gold-accent);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--gold-accent);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--gold-bright);
+}
+
+/* Section Hero */
+.hero {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+    color: var(--text-light);
+    padding: 6rem 5%;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+    color: var(--gold-accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    color: #E0E6ED;
+}
+
+/* Boutons */
+.btn-gold {
+    background: linear-gradient(45deg, var(--gold-accent), var(--gold-bright));
+    color: var(--dark-blue);
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+}
+
+/* Cartes de contenu avec effet au survol */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--gold-accent);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(11, 44, 103, 0.15);
+}
+
+.card h3 {
+    font-family: var(--font-title);
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--gold-accent);
+}
+
+footer a {
+    color: var(--gold-accent);
+    text-decoration: none;
+}
