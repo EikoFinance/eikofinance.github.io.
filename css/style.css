@@ -1,5 +1,5 @@
 /* =========================================================
-   EIKO FINANCE - CHARTE & ANIMATION SUR-MESURE
+   EIKO FINANCE - DESIGN GLOBAL, ANIMATIONS & RESPONSIVE MOBILE
    ========================================================= */
 
 :root {
@@ -57,34 +57,31 @@ body {
 }
 
 /* =========================================================
-   ANIMATIONS DE LA SCÈNE
+   ANIMATIONS STABILISÉES (ANTI-SCINTILLEMENT)
    ========================================================= */
 
-/* Bannières Haut et Bas : Glissement uniquement de la DROITE vers la GAUCHE */
 @keyframes slideRightToLeft {
     0% {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translate3d(100%, 0, 0);
     }
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
-/* Cœur de page : Glissement de la GAUCHE vers la DROITE pour recouvrir le logo central */
 @keyframes slideMainOverLogo {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translate3d(-100px, 0, 0);
     }
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
-/* Disparition finale du fond de l'intro */
 @keyframes fadeOutSplashBg {
     to {
         opacity: 0;
@@ -93,7 +90,6 @@ body {
     }
 }
 
-/* Application des animations lors de la première visite */
 body.play-intro .splash-screen {
     animation: fadeOutSplashBg 0.6s ease forwards 5s;
 }
@@ -101,6 +97,8 @@ body.play-intro .splash-screen {
 body.play-intro header,
 body.play-intro footer {
     opacity: 0;
+    backface-visibility: hidden;
+    perspective: 1000px;
     animation: slideRightToLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 2s;
 }
 
@@ -109,10 +107,11 @@ body.play-intro main {
     z-index: 600;
     background-color: var(--bg-white);
     opacity: 0;
+    backface-visibility: hidden;
     animation: slideMainOverLogo 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 4s;
 }
 
-/* Mode Navigation Normale (sans rejouer l'intro) */
+/* Mode Navigation Normale */
 body.no-intro .splash-screen {
     display: none !important;
 }
@@ -127,7 +126,7 @@ body.no-intro footer {
 }
 
 /* =========================================================
-   EN-TÊTE AVEC FONDU DU BLANC AU BLEU ET LOGO À CÔTÉ DU NOM
+   EN-TÊTE AVEC FONDU DU BLANC AU BLEU
    ========================================================= */
 header {
     background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 220px, var(--primary-blue) 360px, var(--primary-blue) 100%);
@@ -139,7 +138,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .logo-container {
@@ -290,10 +290,73 @@ footer {
     font-size: 0.9rem;
     position: relative;
     z-index: 1000;
-    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 footer a {
     color: var(--gold-accent);
     text-decoration: none;
+}
+
+
+/* =========================================================
+   ADAPTATION MOBILE (RESPONSIVE POUR SMARTPHONES)
+   ========================================================= */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        background: var(--primary-blue); /* Fond uni sur mobile pour une lisibilité parfaite */
+        padding: 0.5rem 0;
+    }
+
+    .logo-container {
+        padding: 0.5rem 1rem;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+    }
+
+    .logo-text {
+        font-size: 1.15rem;
+        color: #FFFFFF; /* Texte en blanc sur fond bleu mobile */
+    }
+
+    nav {
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem 1.2rem;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* Les cartes s'empilent verticalement sur mobile */
+        padding: 1.5rem 1rem;
+        gap: 1.2rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+    }
 }
