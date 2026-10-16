@@ -15,7 +15,6 @@
 .crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
 .crumbs a{color:var(--text-muted)}
 .card-grid a.card{display:block;text-decoration:none;color:inherit}
-.card-grid a.card.soon{opacity:.55;pointer-events:none;border-top-color:#cbd2dc}
 .chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:1.5rem 0 1rem}
 .chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.2rem;margin:1.8rem 0 .6rem}
 .chapitre p{margin-bottom:1rem;line-height:1.7}
@@ -44,7 +43,6 @@ details p{margin:.7rem 0 0}
 :focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
 </style>
 </head>
-<!-- no-intro : pas d'écran d'intro sur les pages intérieures -->
 <body class="no-intro">
 
 <header>
@@ -71,14 +69,14 @@ details p{margin:.7rem 0 0}
   <section class="hero">
     <h1>Économie & Cycles : comprendre sans jargon</h1>
     <p>Un parcours en 4 chapitres de 5 minutes. On part de ton quotidien, et on remonte pas à pas vers les grands mécanismes de l'économie.</p>
-    <a href="#chap1" class="btn-gold">Commencer le chapitre 1</a>
+    <a href="#chap1" class="btn-gold">Commencer le parcours</a>
   </section>
 
   <section class="card-grid" aria-label="Sommaire du parcours">
     <a class="card" href="#chap1"><h3>1. Mon quotidien</h3><p>Prix, salaire, épargne : pourquoi ma baguette coûte plus cher qu'avant ?</p></a>
-    <a class="card soon" href="#"><h3>2. Un circuit où tout se tient</h3><p>Bientôt disponible</p></a>
-    <a class="card soon" href="#"><h3>3. Les cycles</h3><p>Bientôt disponible</p></a>
-    <a class="card soon" href="#"><h3>4. Qui peut agir ?</h3><p>Bientôt disponible</p></a>
+    <a class="card" href="#chap2"><h3>2. Un circuit fermé</h3><p>Ce que je dépense, quelqu'un d'autre le gagne : le circuit de l'argent.</p></a>
+    <a class="card" href="#chap3"><h3>3. Les cycles économiques</h3><p>Pourquoi les crises reviennent-elles ? Expansion, sommet et récession.</p></a>
+    <a class="card" href="#chap4"><h3>4. Qui peut agir ?</h3><p>Taux d'intérêt, banques centrales et décisions personnelles.</p></a>
   </section>
 
   <!-- ================= CHAPITRE 1 ================= -->
@@ -86,11 +84,11 @@ details p{margin:.7rem 0 0}
     <h2>Chapitre 1 : mon quotidien, en prix, en salaire et en épargne</h2>
     <p class="accroche">« Pourquoi ma baguette coûte plus cher qu'avant ? »</p>
 
-    <h3>L'histoire de Camille, boulangère</h3>
-    <p>Camille tient une boulangerie. Chaque matin, elle achète de la farine, de l'énergie pour le four, et elle paie son employé. Tout cela forme ses <strong>coûts</strong>.</p>
-    <p>Cette année, la farine et l'électricité ont augmenté. Si Camille garde sa baguette au même prix, elle gagne moins, voire perd de l'argent. Alors elle l'augmente de quelques centimes.</p>
-    <p>Mais Camille est aussi cliente : elle fait ses courses, paie son loyer, remplit son réservoir. Quand les prix montent partout, ses 100 € d'hier achètent moins de choses aujourd'hui. Elle ne gagne pas moins d'euros, mais ses euros <strong>valent moins</strong>.</p>
-    <p>C'est exactement ce que vit chacun d'entre nous. Et c'est ce qu'on appelle l'<strong>inflation</strong>.</p>
+    <p>Pour comprendre l'économie, nul besoin de formules complexes : il suffit de regarder son propre panier de courses. Chaque mois, nous observons que certains articles coûtent plus cher qu'hier. Ce phénomène du quotidien touche tout le monde, du boulanger au consommateur.</p>
+    <p>Prenons l'exemple de Camille, boulangère. Elle achète de la farine, de l'énergie pour faire tourner son four, et rémunère son équipe. Si ses coûts augmentent, elle doit répercuter cette hausse sur le prix de sa baguette pour ne pas perdre d'argent.</p>
+    <p>Mais Camille est elle aussi consommatrice au quotidien. Lorsque l'ensemble des prix de la vie courante augmente, ses 100 euros d'hier n'achètent plus la même quantité de biens aujourd'hui. Ses euros en eux-mêmes n'ont pas disparu, mais leur valeur réelle a fondu.</p>
+    <p>C'est exactement ce mécanisme que l'on nomme l'inflation. Face à cela, l'épargne ne se résume pas simplement à « mettre de l'argent de côté sous un matelas » : elle interroge directement la capacité à préserver la valeur de son capital dans le temps.</p>
+    <p>Le déclic à retenir ici est le suivant : l'économie globale n'est rien d'autre que la mise à grande échelle de notre propre budget familial et de nos arbitrages de tous les jours.</p>
 
     <figure>
       <svg viewBox="0 0 600 170" role="img" aria-label="Schéma : quand les prix montent, 100 euros achètent moins de baguettes">
@@ -104,63 +102,297 @@ details p{margin:.7rem 0 0}
         <text x="465" y="85" text-anchor="middle" font-size="15" fill="#1F2937">1 baguette = 1,10 €</text>
         <text x="465" y="120" text-anchor="middle" font-size="15" fill="#1F2937">100 € = 91 baguettes</text>
       </svg>
-      <figcaption>Mêmes 100 €, moins de baguettes : c'est la perte de pouvoir d'achat.</figcaption>
+      <figcaption>Mêmes 100 €, moins de baguettes : la perte de pouvoir d'achat en un clin d'œil.</figcaption>
     </figure>
-
-    <h3>Et l'épargne dans tout ça ?</h3>
-    <p>Si Camille laisse 1 000 € sur un compte qui ne rapporte rien, ces 1 000 € permettront d'acheter un peu moins l'an prochain. Épargner, ce n'est donc pas seulement « mettre de côté » : c'est aussi se demander <em>comment protéger la valeur de cet argent</em>. Une question qu'on retrouvera dans les chapitres suivants.</p>
 
     <div class="retenir">
       <strong>3 idées à retenir</strong>
       <ul>
-        <li>Un prix reflète des coûts, mais aussi ce que les gens acceptent de payer.</li>
-        <li>L'inflation, c'est la hausse générale des prix : elle réduit ce que l'on peut acheter avec la même somme.</li>
-        <li>Ce qui compte, ce n'est pas seulement combien j'ai d'euros, mais ce que ces euros permettent d'acheter.</li>
+        <li>Un prix de vente est le reflet direct des coûts de fabrication et des tensions sur les matières premières.</li>
+        <li>L'inflation rogne progressivement la quantité de biens que l'on peut acquérir avec une somme fixe.</li>
+        <li>La valeur réelle de l'argent dépend de ce qu'il permet d'acheter, pas seulement du chiffre inscrit dessus.</li>
       </ul>
     </div>
 
     <details>
       <summary>Pour aller plus loin</summary>
-      <p>L'inflation se mesure avec un « panier » de produits et services représentatif de ce que consomment les ménages. L'indice officiel en France est publié par l'INSEE. Ton inflation personnelle peut différer de la moyenne, selon ce que tu achètes.</p>
+      <p>L'inflation officielle est calculée par des organismes statistiques (comme l'INSEE en France) en observant l'évolution d'un « panier de la ménagère » type. Néanmoins, votre inflation personnelle varie toujours selon vos propres habitudes de consommation (logement, énergie, alimentation).</p>
     </details>
 
     <h3>Le jargon traduit</h3>
     <dl class="glossaire">
-      <dt>Inflation</dt><dd>La hausse générale et durable des prix.</dd>
-      <dt>Pouvoir d'achat</dt><dd>La quantité de choses que l'on peut acheter avec son revenu.</dd>
-      <dt>Épargne</dt><dd>La part du revenu que l'on ne dépense pas.</dd>
+      <dt>Prix</dt><dd>La somme d'argent nécessaire pour acquérir un bien ou un service à un instant T.</dd>
+      <dt>Inflation</dt><dd>La hausse générale, simultanée et durable des prix sur l'ensemble de l'économie.</dd>
+      <dt>Pouvoir d'achat</dt><dd>Le volume de biens et de services qu'un revenu permet réellement d'acheter.</dd>
+      <dt>Épargne</dt><dd>La portion des revenus qui n'est pas allouée à la consommation immédiate.</dd>
     </dl>
 
     <h3>Teste-toi</h3>
     <div class="q" data-good="1">
-      <p>1. Les prix montent de 10 % et ton salaire ne bouge pas. Que se passe-t-il ?</p>
-      <button>Ton salaire a augmenté</button>
-      <button>Ton pouvoir d'achat a baissé</button>
-      <button>Rien ne change</button>
+      <p>1. Si les prix augmentent de 10 % mais que vos revenus restent strictement identiques, que se passe-t-il ?</p>
+      <button>Votre pouvoir d'achat augmente</button>
+      <button>Votre pouvoir d'achat diminue</button>
+      <button>Rien ne change pour votre budget</button>
       <div class="fb" aria-live="polite"></div>
     </div>
     <div class="q" data-good="0">
-      <p>2. L'inflation, c'est…</p>
-      <button>La hausse générale des prix</button>
-      <button>La hausse du prix d'un seul produit</button>
-      <button>La baisse des salaires</button>
+      <p>2. Qu'est-ce que l'inflation ?</p>
+      <button>La hausse générale et durable des prix</button>
+      <button>La baisse obligatoire des salaires</button>
+      <button>L'augmentation de la quantité d'or dans les banques</button>
       <div class="fb" aria-live="polite"></div>
     </div>
     <div class="q" data-good="2">
-      <p>3. Pourquoi Camille augmente-t-elle le prix de sa baguette ?</p>
-      <button>Par caprice</button>
-      <button>Parce que ses clients gagnent plus</button>
-      <button>Parce que ses coûts ont augmenté</button>
+      <p>3. Pourquoi un commerçant doit-il parfois augmenter ses tarifs ?</p>
+      <button>Par simple choix esthétique</button>
+      <button>Parce que ses clients le réclament</button>
+      <button>Parce que ses propres coûts de fabrication et d'énergie ont grimpé</button>
       <div class="fb" aria-live="polite"></div>
     </div>
 
-    <p style="margin-top:1.5rem"><strong>Et si l'argent que je dépense chez Camille était le salaire de quelqu'un d'autre ?</strong> C'est l'objet du chapitre 2.</p>
-
     <div class="pager">
       <a href="index.html">← Accueil</a>
-      <a class="next" href="#">Chapitre 2 (bientôt) →</a>
+      <a class="next" href="#chap2">Chapitre 2 →</a>
     </div>
   </article>
+
+
+  <!-- ================= CHAPITRE 2 ================= -->
+  <article class="chapitre" id="chap2">
+    <h2>Chapitre 2 : l'économie, un circuit où tout se tient</h2>
+    <p class="accroche">« Ce que je dépense, quelqu’un d’autre le gagne. »</p>
+
+    <p>On imagine souvent l'argent comme un magot statique dormant dans un coffre. En réalité, l'économie fonctionne comme un flux continu, une ronde ininterrompue où les acteurs (les ménages, les entreprises, les banques et l'État) échangent sans cesse.</p>
+    <p>Reprenons notre boulangère Camille. Lorsque vous lui achetez votre pain, l'argent que vous lui versez lui permet de payer son électricien. Cet électricien utilise ensuite cet argent pour s'acheter des vêtements, et le commerçant s'en sert à son tour pour aller au restaurant.</p>
+    <p>Ce mécanisme met en lumière le rôle structurant du crédit accordé par les banques : il permet d'avancer de l'argent pour financer des projets immédiats (comme l'achat d'une machine ou d'un logement) qui alimentent ce cercle vertueux.</p>
+    <p>Mais c'est aussi ce qui rend le système fragile. Si un vent de panique souffle et que l'ensemble des acteurs décide simultanément de réduire ses dépenses par précaution, les revenus de chacun s'effondrent en cascade.</p>
+    <p>Le grand déclic de ce chapitre est de comprendre que la baisse généralisée des dépenses des uns entraîne mécaniquement la chute des revenus de tous les autres.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 180" role="img" aria-label="Schéma du circuit économique circulaire entre ménages et entreprises">
+        <rect x="30" y="40" width="160" height="100" rx="10" fill="#FFFFFF" stroke="#102A56" stroke-width="2"/>
+        <text x="110" y="80" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Ménages</text>
+        <text x="110" y="105" text-anchor="middle" font-size="13" fill="#1F2937">(Salariés / Consommateurs)</text>
+
+        <rect x="410" y="40" width="160" height="100" rx="10" fill="#FFFFFF" stroke="#C5A059" stroke-width="2"/>
+        <text x="490" y="80" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Entreprises</text>
+        <text x="490" y="105" text-anchor="middle" font-size="13" fill="#1F2937">(Production & Emplois)</text>
+
+        <path d="M410 70C330 30 270 30 190 70" fill="none" stroke="#102A56" stroke-width="3" stroke-dasharray="6,6"/>
+        <text x="300" y="35" text-anchor="middle" font-size="12" fill="#102A56" font-weight="700">Salaires / Emplois</text>
+
+        <path d="M190 110C270 150 330 150 410 110" fill="none" stroke="#C5A059" stroke-width="3"/>
+        <polygon points="395,102 415,110 395,118" fill="#C5A059"/>
+        <text x="300" y="162" text-anchor="middle" font-size="12" fill="#C5A059" font-weight="700">Consommation / Achats</text>
+      </svg>
+      <figcaption>Le circuit fermé : le revenu de l'un provient directement de la dépense de l'autre.</figcaption>
+    </figure>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>L'argent n'est jamais immobile : il circule en permanence à travers un réseau d'échanges croisés.</li>
+        <li>Le crédit bancaire joue un rôle d'accélérateur en permettant de financer l'économie en amont.</li>
+        <li>Une contraction simultanée des dépenses paralyse l'ensemble des revenus de la chaîne.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Pour mesurer la taille globale de ce circuit, les économistes utilisent le PIB (Produit Intérieur Brut). Il correspond à la somme totale de tout ce que les entreprises et les administrations produisent et vendent sur le territoire national en une année.</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Ménages</dt><dd>L'ensemble des occupants d'un même logement, considérés sous l'angle de la consommation.</dd>
+      <dt>Entreprises</dt><dd>Les structures qui produisent des biens ou des services marchands pour dégager des profits.</dd>
+      <dt>Crédit</dt><dd>Une mise à disposition d'argent par une banque, remboursable dans le temps avec des intérêts.</dd>
+      <dt>PIB (Produit Intérieur Brut)</dt><dd>La somme de la valeur de tous les biens et services produits dans un pays en un an.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Que devient l'argent que vous dépensez chez un commerçant local ?</p>
+      <button>Il disparaît instantanément du circuit</button>
+      <button>Il sert à rémunérer les salariés et les fournisseurs, devenant un revenu</button>
+      <button>Il est stocké dans un coffre de la banque centrale</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Quel est le risque majeur si tout le monde stoppe ses dépenses en même temps ?</p>
+      <button>Une chute générale des revenus et une mise à l'arrêt des entreprises</button>
+      <button>Une baisse immédiate et définitive de tous les impôts</button>
+      <button>Un enrichissement instantané de l'ensemble de la population</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. Qu'est-ce que le PIB mesure à l'échelle d'un pays ?</p>
+      <button>Le niveau de bonheur des citoyens</button>
+      <button>La quantité d'or détenue par le gouvernement</button>
+      <button>La somme totale de ce que le pays produit en un an</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager">
+      <a href="#chap1">← Chapitre 1</a>
+      <a class="next" href="#chap3">Chapitre 3 →</a>
+    </div>
+  </article>
+
+
+  <!-- ================= CHAPITRE 3 ================= -->
+  <article class="chapitre" id="chap3">
+    <h2>Chapitre 3 : les cycles : pourquoi ça monte, puis ça redescend</h2>
+    <p class="accroche">« Pourquoi les crises reviennent-elles ? »</p>
+
+    <p>L'économie ne trace jamais une ligne droite ascendante : elle avance par vagues successives. On appelle cette alternance les cycles économiques. Ces mouvements ne relèvent pas du hasard ou d'une anomalie passagère, mais d'une logique comportementale bien ancrée.</p>
+    <p>Le cycle s'articule traditionnellement en quatre grands temps : l'expansion (la reprise et la croissance), le sommet (la surchauffe où la demande dépasse l'offre), la récession (le ralentissement et le nettoyage des excès) et enfin le creux.</p>
+    <p>Au cœur de cette mécanique se trouvent deux carburants puissants : l'optimisme et le crédit. Lorsque la confiance règne, les ménages et les entreprises empruntent facilement pour investir. Cet optimisme alimente le crédit, qui à son tour renforce l'optimisme général.</p>
+    <p>Cependant, l'excès d'optimisme conduit souvent à des valorisations excessives et à trop d'endettement. Lorsque les créances deviennent trop lourdes ou que les prix s'envolent trop haut, un grain de sable enraye la machine et provoque le retournement.</p>
+    <p>Le déclic fondamental à retenir est que la crise n'est pas un bug du système capitaliste, mais le mécanisme naturel par lequel l'économie élimine ses excès pour repartir sur des bases assainies.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 180" role="img" aria-label="Graphique simple du cycle économique : expansion, sommet, récession, creux">
+        <path d="M50 140 Q 150 20, 250 90 T 450 130 T 550 140" fill="none" stroke="#102A56" stroke-width="4"/>
+        <!-- Points clés -->
+        <circle cx="250" cy="90" r="6" fill="#C5A059"/>
+        <text x="250" cy="70" text-anchor="middle" font-size="12" font-weight="700" fill="#C5A059" y="72">Sommet (Surchauffe)</text>
+        <circle cx="450" cy="130" r="6" fill="#102A56"/>
+        <text x="450" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#102A56">Creux (Récession)</text>
+        <text x="140" y="60" text-anchor="middle" font-size="13" fill="#4B5563">Expansion</text>
+        <text x="360" y="125" text-anchor="middle" font-size="13" fill="#4B5563">Ralentissement</text>
+      </svg>
+      <figcaption>L'oscillation naturelle de l'activité : de l'expansion à la récession, puis la reprise.</figcaption>
+    </figure>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>L'économie oscille naturellement entre périodes d'euphorie et phases de nettoyage (récession).</li>
+        <li>L'optimisme nourrit le crédit, qui stimule l'activité jusqu'à créer des déséquilibres.</li>
+        <li>La crise joue un rôle correctif indispensable pour résorber les excès d'endettement.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Plusieurs théoriciens ont tenté de classer ces vagues selon leur durée, comme Kondratiev avec ses cycles longs de 50 ans liés aux innovations majeures, ou Juglar avec les cycles d'investissement des entreprises de 10 ans.</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Expansion</dt><dd>La phase de croissance où l'activité économique et l'emploi progressent.</dd>
+      <dt>Sommet</dt><dd>Le point haut du cycle, souvent caractérisé par des tensions inflationnistes.</dd>
+      <dt>Récession</dt><dd>La phase de contraction où l'activité économique recule pendant plusieurs mois consécutifs.</dd>
+      <dt>Creux</dt><dd>Le point bas du cycle d'où l'économie s'apprête à rebondir.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Qu'est-ce qui caractérise principalement la phase d'expansion d'un cycle économique ?</p>
+      <button>Un arrêt total des investissements des entreprises</button>
+      <button>Une hausse de la confiance, de l'emprunt et de l'activité</button>
+      <button>Une baisse systématique et durable de la population</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Quel rôle joue la récession au sein du système économique ?</p>
+      <button>Elle agit comme un mécanisme correcteur qui purge les excès et les dettes</button>
+      <button>Elle détruit définitivement et pour toujours toute production</button>
+      <button>Elle sert uniquement à enrichir instantanément les banques</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. Comment l'optimisme influence-t-il le crédit en période de croissance ?</p>
+      <button>Il bloque l'accès aux prêts bancaires</button>
+      <button>Il n'a aucun impact sur les comportements financiers</button>
+      <button>Il incite les acteurs à emprunter plus facilement pour financer leurs projets</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager">
+      <a href="#chap2">← Chapitre 2</a>
+      <a class="next" href="#chap4">Chapitre 4 →</a>
+    </div>
+  </article>
+
+
+  <!-- ================= CHAPITRE 4 ================= -->
+  <article class="chapitre" id="chap4">
+    <h2>Chapitre 4 : qui peut agir ? Banques centrales, État, et moi</h2>
+    <p class="accroche">« Pourquoi tout le monde parle des taux d’intérêt ? »</p>
+
+    <p>Face aux soubresauts des cycles, des régulateurs disposent de leviers pour tenter d'amortir les chocs. Le premier acteur clé est la banque centrale, dont la mission principale est de veiller à la stabilité des prix.</p>
+    <p>Son outil de prédilection est le taux d'intérêt directeur. En augmentant ce taux, la banque centrale renchérit le coût du crédit pour calmer une économie en surchauffe et juguler l'inflation. À l'inverse, en le baissant, elle facilite l'emprunt pour stimuler l'activité en temps de crise.</p>
+    <p>Le second levier est budgétaire et relève de l'État : à travers les impôts et les dépenses publiques, les gouvernements peuvent soutenir les secteurs en difficulté ou investir dans de grandes infrastructures.</p>
+    <p>Pour l'épargnant ou l'investisseur individuel, ces décisions modifient directement le rendement des livrets, le coût d'un crédit immobilier ou l'attractivité des placements boursiers.</p>
+    <p>Le déclic libérateur de ce parcours est que vous n'avez pas besoin de jouer les devins ou de prédire l'avenir économique pour réussir. En comprenant ces rouages, vous pouvez adapter vos propres décisions d'épargne et de diversification à votre rythme, en toute sérénité.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 160" role="img" aria-label="Schéma simple de l'action des taux d'intérêt directeurs">
+        <rect x="30" y="30" width="240" height="100" rx="10" fill="#FFFFFF" stroke="#C5A059" stroke-width="2"/>
+        <text x="150" y="65" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Taux Bas 📉</text>
+        <text x="150" y="95" text-anchor="middle" font-size="13" fill="#1F2937">Stimule le crédit & l'économie</text>
+
+        <rect x="330" y="30" width="240" height="100" rx="10" fill="#FFFFFF" stroke="#102A56" stroke-width="2"/>
+        <text x="450" y="65" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Taux Hauts 📈</text>
+        <text x="450" y="95" text-anchor="middle" font-size="13" fill="#1F2937">Freine l'emprunt & l'inflation</text>
+      </svg>
+      <figcaption>Le thermostat des banques centrales : ajuster le coût de l'argent pour réguler la température.</figcaption>
+    </figure>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Les banques centrales pilotent les taux d'intérêt pour accélérer ou freiner la machine économique.</li>
+        <li>L'État intervient via son budget et ses dépenses publiques pour amortir les crises sectorielles.</li>
+        <li>Connaître ces mécanismes permet de placer son épargne en cohérence, sans chercher à deviner l'avenir.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>L'exercice d'ajustement des taux est extrêmement délicat : un relèvement trop brutal risque de casser la croissance (provoquer une récession violente), tandis qu'un maintien de taux trop bas nourrit l'inflation sur le long terme.</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Taux directeur</dt><dd>Le taux d'intérêt fixé par la banque centrale auquel les banques commerciales empruntent de l'argent.</dd>
+      <dt>Politique monétaire</dt><dd>L'ensemble des décisions prises par la banque centrale pour contrôler la masse monétaire et l'inflation.</dd>
+      <dt>Politique budgétaire</dt><dd>La stratégie de l'État en matière de prélèvements obligatoires (impôts) et de dépenses publiques.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Quel est l'effet immédiat d'une forte hausse des taux d'intérêt directeurs par une banque centrale ?</p>
+      <button>Il devient beaucoup plus facile et gratuit de s'endetter</button>
+      <button>Le coût du crédit augmente, ce qui tend à ralentir l'emprunt et la demande</button>
+      <button>L'inflation s'envole instantanément sans aucune limite</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Quel rôle joue l'État à travers sa politique budgétaire en période de crise ?</p>
+      <button>Il peut utiliser ses dépenses publiques pour soutenir l'activité et l'emploi</button>
+      <button>Il supprime définitivement toute forme de monnaie en circulation</button>
+      <button>Il fixe directement le prix de chaque action en bourse</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. Pourquoi n'est-il pas nécessaire de faire du market timing (prédire l'avenir) quand on a compris ces cycles ?</p>
+      <button>Parce que les marchés boursiers ne bougent plus jamais</button>
+      <button>Parce que l'État garantit tous vos gains futurs à 100 %</button>
+      <button>Parce que l'on peut structurer son épargne de façon résiliente pour traverser toutes les phases</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Félicitations !</strong> Vous avez complété avec succès ce parcours d'initiation. Vous possédez désormais les clés pour aborder sereinement la suite de votre formation financière.</p>
+
+    <div class="pager">
+      <a href="#chap3">← Chapitre 3</a>
+      <a class="next" href="marches.html">Découvrir les Marchés →</a>
+    </div>
+  </article>
+
 </main>
 
 <footer>
