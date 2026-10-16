@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outils & Simulateurs - EikoFinance</title>
+<meta name="description" content="Télécharge l'application Android de simulation Monte Carlo d'EikoFinance et comprends comment fonctionnent ces simulations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:2.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.2rem;margin:1.6rem 0 .6rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.chapitre ol,.chapitre ul{margin:0 0 1rem 1.3rem;line-height:1.8}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+.download{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.5rem;text-align:center;margin:1rem 0 2rem}
+.download h3{margin-top:0}
+.download p{color:var(--text-muted);margin-bottom:1.2rem}
+.download small{display:block;margin-top:.9rem;color:var(--text-muted)}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:.8rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
+details p{margin:.7rem 0 0}
+.soon{border:2px dashed #cbd2dc;border-radius:8px;padding:1.2rem;color:var(--text-muted);text-align:center;margin:1.5rem 0}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+</style>
+</head>
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html">Économie & Cycles</a></li>
+      <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="outils.html" class="active">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › Outils & Simulateurs</p>
+
+  <section class="hero">
+    <h1>Outils & Simulateurs</h1>
+    <p>Des outils pour passer de la théorie à la pratique. Commence par notre application de simulation Monte Carlo, disponible sur Android.</p>
+    <a href="#telecharger" class="btn-gold">Télécharger l'application</a>
+  </section>
+
+  <article class="chapitre">
+
+    <h2 id="telecharger">Simulateur Monte Carlo (Android)</h2>
+    <p class="accroche">« Et si, au lieu de prédire un seul avenir, on en simulait des milliers ? »</p>
+
+    <div class="download">
+      <h3>Application EikoFinance, Monte Carlo</h3>
+      <p>Lance des simulations de Monte Carlo sur ton smartphone Android.</p>
+      <!-- Remplace le nom du fichier par celui de ton APK, placé dans le dossier downloads/ -->
+      <a class="btn-gold" href="downloads/eiko-montecarlo.apk" download>Télécharger l'APK</a>
+      <small>Compatible Android uniquement (non disponible sur iPhone).</small>
+    </div>
+
+    <h3>Comment l'installer</h3>
+    <ol>
+      <li>Ouvre cette page depuis ton téléphone Android et appuie sur « Télécharger l'APK ».</li>
+      <li>Une fois le fichier téléchargé, ouvre-le depuis la notification ou le dossier « Téléchargements ».</li>
+      <li>Si Android te le demande, autorise ton navigateur à installer des applications inconnues (Paramètres &gt; Applications &gt; Accès spécial).</li>
+      <li>Valide l'installation, puis ouvre l'application.</li>
+    </ol>
+    <div class="alerte"><strong>Sécurité :</strong> cette application est distribuée directement, en dehors du Play Store. Android peut donc afficher un avertissement à l'installation. Ne télécharge un fichier APK qu'à partir de sources que tu connais, et uniquement depuis ce site pour cette application.</div>
+
+    <h2>C'est quoi, une simulation de Monte Carlo ?</h2>
+    <p>Impossible de connaître à l'avance le rendement exact d'un investissement : il change chaque année, au gré des marchés. Plutôt que de parier sur un seul scénario, la méthode de Monte Carlo en <strong>génère des milliers</strong>, chacun avec des rendements tirés au hasard, mais cohérents avec des hypothèses de départ (un rendement moyen attendu et une volatilité).</p>
+    <p>On obtient ainsi non pas une prévision, mais une <strong>fourchette de résultats possibles</strong> : un scénario pessimiste, un scénario médian, un scénario optimiste.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 230" role="img" aria-label="Plusieurs trajectoires simulées d'un capital dans le temps, formant un éventail autour d'un scénario médian">
+        <text x="300" y="20" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Évolution simulée d'un capital</text>
+        <line x1="50" y1="30" x2="50" y2="190" stroke="#4B5563"/><line x1="50" y1="190" x2="570" y2="190" stroke="#4B5563"/>
+        <g fill="none" stroke="#9fb0c9" stroke-width="1.6">
+          <polyline points="50,120 150,98 250,110 350,80 450,92 550,70"/>
+          <polyline points="50,120 150,130 250,115 350,122 450,105 550,95"/>
+          <polyline points="50,120 150,105 250,85 350,65 450,45 550,28" stroke="#C5A059" stroke-width="2.4"/>
+          <polyline points="50,120 150,125 250,128 350,126 450,122 550,118" stroke="#C5A059" stroke-width="2.4"/>
+        </g>
+        <polyline points="50,120 150,112 250,100 350,88 450,76 550,62" fill="none" stroke="#102A56" stroke-width="3.2"/>
+        <circle cx="50" cy="120" r="5" fill="#102A56"/>
+        <g font-size="12" fill="#1F2937">
+          <text x="552" y="52" text-anchor="end" fill="#8a6d2b" font-weight="700">Optimiste</text>
+          <text x="552" y="82" fill="#102A56" font-weight="700" text-anchor="end">Médian</text>
+          <text x="552" y="136" fill="#8a6d2b" font-weight="700" text-anchor="end">Pessimiste</text>
+          <text x="300" y="212" text-anchor="middle" fill="#4B5563">Temps</text>
+        </g>
+      </svg>
+      <figcaption>Illustration : chaque ligne est un scénario possible. Le départ est identique, les trajectoires divergent.</figcaption>
+    </figure>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Monte Carlo ne prédit pas l'avenir : il explore l'éventail des futurs possibles.</li>
+        <li>Plus la volatilité supposée est élevée, plus l'éventail s'élargit.</li>
+        <li>Les résultats valent ce que valent les hypothèses de départ.</li>
+      </ul>
+    </div>
+
+    <div class="alerte"><strong>À savoir :</strong> les simulations sont des outils pédagogiques. Elles ne constituent ni une promesse de rendement ni un conseil en investissement. Les performances passées ne préjugent pas des performances futures.</div>
+
+    <h2>Questions fréquentes</h2>
+    <details><summary>Et sur iPhone ou sur ordinateur ?</summary><p>Un fichier APK ne fonctionne que sur Android. Un simulateur utilisable directement en ligne est prévu : reviens bientôt.</p></details>
+
+    <div class="soon"><strong>Prochainement :</strong> simulateur en ligne, directement dans ton navigateur.</div>
+
+    <div class="pager">
+      <a href="fiscalite.html">← Fiscalité & Enveloppes</a>
+      <a class="next" href="contact.html">Contact & À propos →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
+if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+</script>
+</body>
+</html>
