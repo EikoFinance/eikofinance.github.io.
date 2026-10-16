@@ -1,5 +1,5 @@
 /* =========================================================
-   EIKO FINANCE - CHARTE LUMINEUSE & ANIMATION DE BIENVENUE
+   EIKO FINANCE - CHARTE LUMINEUSE & ANIMATION DE SCÈNE
    ========================================================= */
 
 :root {
@@ -31,7 +31,7 @@ body {
 }
 
 /* =========================================================
-   SPLASH SCREEN INTRO (CENTRÉ PARFAITEMENT)
+   SPLASH SCREEN INTRO (LOGO CENTRÉ AU PREMIER PLAN TEMPORAIRE)
    ========================================================= */
 .splash-screen {
     position: fixed;
@@ -43,7 +43,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 500;
     overflow: hidden;
 }
 
@@ -54,19 +54,13 @@ body {
     height: auto;
     object-fit: contain;
     display: block;
-    animation: pulseLogo 2s ease-in-out infinite;
-}
-
-@keyframes pulseLogo {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
 }
 
 /* =========================================================
-   KEYFRAMES DE LA TIMELINE DE BIENVENUE
+   ANIMATIONS DE LA SCÈNE
    ========================================================= */
 
-/* Bannières Haut/Bas (t=2s à t=3s) */
+/* Bannières Haut/Bas (Arrivent à t=2s) */
 @keyframes slideInHeaderFooter {
     0% {
         opacity: 0;
@@ -89,11 +83,11 @@ body {
     }
 }
 
-/* Bloc Central (t=4s à t=5s) */
-@keyframes slideInMainContent {
+/* Le cœur de page glisse de la gauche vers la droite pour recouvrir le logo central (Arrive à t=4s) */
+@keyframes slideMainOverLogo {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(-100px);
     }
     100% {
         opacity: 1;
@@ -101,7 +95,7 @@ body {
     }
 }
 
-/* Logo Haut-Gauche (t=4.8s) */
+/* Apparition du logo dans le header (à t=4.8s) */
 @keyframes fadeInHeaderLogo {
     0% {
         opacity: 0;
@@ -113,7 +107,8 @@ body {
     }
 }
 
-@keyframes fadeOutSplash {
+/* Disparition finale du fond du splash (à t=5s) */
+@keyframes fadeOutSplashBg {
     to {
         opacity: 0;
         visibility: hidden;
@@ -121,9 +116,9 @@ body {
     }
 }
 
-/* Application des animations lors de la toute première visite */
+/* Application des règles d'animation lors de la première visite */
 body.play-intro .splash-screen {
-    animation: fadeOutSplash 0.8s ease forwards 4.8s;
+    animation: fadeOutSplashBg 0.6s ease forwards 5s;
 }
 
 body.play-intro header {
@@ -137,8 +132,11 @@ body.play-intro .logo-container {
 }
 
 body.play-intro main {
+    position: relative;
+    z-index: 600;
+    background-color: var(--bg-white);
     opacity: 0;
-    animation: slideInMainContent 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 4s;
+    animation: slideMainOverLogo 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 4s;
 }
 
 body.play-intro footer {
@@ -146,7 +144,7 @@ body.play-intro footer {
     animation: slideInFooter 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 2s;
 }
 
-/* Mode Normal (quand la personne a déjà vu l'intro) */
+/* Mode Navigation Normale (quand l'intro est terminée) */
 body.no-intro .splash-screen {
     display: none !important;
 }
@@ -161,11 +159,10 @@ body.no-intro footer {
 }
 
 /* =========================================================
-   STYLES PERMANENTS DU SITE
+   EN-TÊTE AVEC FONDU DU BLANC AU BLEU
    ========================================================= */
-
 header {
-    background-color: var(--primary-blue);
+    background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 180px, var(--primary-blue) 320px, var(--primary-blue) 100%);
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -180,9 +177,9 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
-    background-color: var(--bg-white);
     padding: 0.6rem 1.5rem;
-    border-right: 3px solid var(--gold-accent);
+    background: transparent;
+    border-right: none;
 }
 
 .logo-img {
@@ -237,6 +234,9 @@ nav a:hover {
     color: var(--gold-bright);
 }
 
+/* =========================================================
+   SECTIONS DE CONTENU
+   ========================================================= */
 .hero {
     background-color: var(--bg-white);
     color: var(--text-dark);
@@ -319,6 +319,8 @@ footer {
     padding: 1.5rem;
     border-top: 2px solid var(--gold-accent);
     font-size: 0.9rem;
+    position: relative;
+    z-index: 1000;
 }
 
 footer a {
