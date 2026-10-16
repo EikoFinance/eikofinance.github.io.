@@ -1,21 +1,20 @@
 /* =========================================================
-   EIKO FINANCE - CHARTE LUMINEUSE & ANIMATIONS DE GLISSEMENT
+   EIKO FINANCE - CHARTE LUMINEUSE & ANIMATION TIMELINE
    ========================================================= */
 
 :root {
-    --primary-blue: #102A56;       /* Bleu affiné, légèrement plus clair */
-    --dark-blue: #0A1C3B;          /* Bleu nuit profond */
-    --gold-accent: #C5A059;        /* Or élégant */
-    --gold-bright: #D4AF37;        /* Or lumineux */
-    --bg-white: #FFFFFF;           /* Blanc pur */
-    --bg-subtle: #F4F6F9;          /* Fond très légèrement grisé */
-    --text-dark: #1F2937;          /* Texte sombre lisible */
+    --primary-blue: #102A56;
+    --dark-blue: #0A1C3B;
+    --gold-accent: #C5A059;
+    --gold-bright: #D4AF37;
+    --bg-white: #FFFFFF;
+    --bg-subtle: #F4F6F9;
+    --text-dark: #1F2937;
     --text-muted: #4B5563;
     --font-title: 'Cinzel', 'Playfair Display', serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Base */
 * {
     margin: 0;
     padding: 0;
@@ -28,39 +27,104 @@ body {
     color: var(--text-dark);
     line-height: 1.5;
     overflow-x: hidden;
+    position: relative;
 }
 
 /* =========================================================
-   ANIMATIONS DE GLISSEMENT (KEYFRAMES)
+   ÉCRAN D'ACCUEIL / SPLASH SCREEN (LOGO CENTRAL)
+   0s à 2s d'affichage, puis disparition progressive à 5s
    ========================================================= */
-
-/* Glissement de Gauche à Droite (pour Header et Footer) */
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fadeOutSplash 0.8s ease forwards 4.8s;
 }
 
-/* Glissement de Droite à Gauche (pour le contenu central) */
-@keyframes slideInRight {
-    0% {
-        transform: translateX(100%);
+.splash-logo {
+    max-width: 320px;
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    animation: pulseLogo 2s ease-in-out infinite;
+}
+
+@keyframes pulseLogo {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+@keyframes fadeOutSplash {
+    to {
         opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
+        visibility: hidden;
     }
 }
 
 /* =========================================================
-   EN-TÊTE / NAVIGATION (GLISSEMENT GAUCHE -> DROITE)
+   ANIMATIONS DE GLISSEMENT SELON LA TIMELINE
    ========================================================= */
+
+/* Bannières Haut/Bas : Arrivent entre t=2s et t=3s */
+@keyframes slideInHeaderFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bloc Central : Arrive entre t=4s et t=5s */
+@keyframes slideInMainContent {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Logo Haut-Gauche : Apparaît à t=5s */
+@keyframes fadeInHeaderLogo {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================================================
+   STRUCTURE HTML & DÉLAIS
+   ========================================================= */
+
+/* Header (Bannière Haute) */
 header {
     background-color: var(--primary-blue);
     padding: 0;
@@ -71,10 +135,11 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    animation: slideInLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    opacity: 0;
+    animation: slideInHeaderFooter 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 2s;
 }
 
-/* Encadré blanc haut-gauche pour le logo et le nom */
+/* Logo de l'en-tête (apparait en dernier à t=5s) */
 .logo-container {
     display: flex;
     align-items: center;
@@ -82,6 +147,8 @@ header {
     background-color: var(--bg-white);
     padding: 0.6rem 1.5rem;
     border-right: 3px solid var(--gold-accent);
+    opacity: 0;
+    animation: fadeInHeaderLogo 0.8s ease forwards 4.8s;
 }
 
 .logo-img {
@@ -92,13 +159,13 @@ header {
 
 .logo-text {
     font-family: var(--font-title);
-    color: var(--primary-blue); /* Même bleu que la bannière */
+    color: var(--primary-blue);
     font-size: 1.35rem;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
-/* Menu de navigation */
+/* Navigation */
 nav {
     padding-right: 2rem;
 }
@@ -137,14 +204,12 @@ nav a:hover {
     color: var(--gold-bright);
 }
 
-/* =========================================================
-   CONTENU CENTRAL (GLISSEMENT DROITE -> GAUCHE)
-   ========================================================= */
-.animated-content {
-    animation: slideInRight 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+/* Contenu Central */
+main {
+    opacity: 0;
+    animation: slideInMainContent 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 4s;
 }
 
-/* Section Hero en Fond Blanc */
 .hero {
     background-color: var(--bg-white);
     color: var(--text-dark);
@@ -154,7 +219,7 @@ nav a:hover {
 
 .hero h1 {
     font-family: var(--font-title);
-    font-size: 1.8rem; /* Taille compacte pour tout faire tenir à l'écran */
+    font-size: 1.8rem;
     color: var(--primary-blue);
     margin-bottom: 0.8rem;
     letter-spacing: 1px;
@@ -168,7 +233,7 @@ nav a:hover {
     color: var(--text-muted);
 }
 
-/* Boutons */
+/* Boutons & Cartes */
 .btn-gold {
     background: linear-gradient(45deg, var(--gold-accent), var(--gold-bright));
     color: var(--dark-blue);
@@ -187,7 +252,6 @@ nav a:hover {
     box-shadow: 0 6px 15px rgba(197, 160, 89, 0.35);
 }
 
-/* Cartes de contenu */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -222,17 +286,16 @@ nav a:hover {
     font-size: 0.95rem;
 }
 
-/* =========================================================
-   PIED DE PAGE (GLISSEMENT GAUCHE -> DROITE)
-   ========================================================= */
+/* Footer (Bannière Basse) */
 footer {
-    background-color: var(--primary-blue); /* Mêmes couleurs que la bannière du haut */
+    background-color: var(--primary-blue);
     color: #FFFFFF;
     text-align: center;
     padding: 1.5rem;
     border-top: 2px solid var(--gold-accent);
     font-size: 0.9rem;
-    animation: slideInLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    opacity: 0;
+    animation: slideInFooter 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 2s;
 }
 
 footer a {
