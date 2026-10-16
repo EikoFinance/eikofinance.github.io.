@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EikoFinance - Pédagogie Financière & Économie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Cartes d'accueil cliquables -->
+    <style>
+        a.card { display: block; text-decoration: none; color: inherit; }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Gestion Séquence Intro
+            if (!sessionStorage.getItem("eiko_intro_played")) {
+                document.body.classList.add("play-intro");
+                sessionStorage.setItem("eiko_intro_played", "true");
+                
+                setTimeout(function() {
+                    const splash = document.querySelector('.splash-screen');
+                    if (splash) {
+                        splash.style.transition = "opacity 0.6s ease";
+                        splash.style.opacity = "0";
+                        setTimeout(() => splash.remove(), 600);
+                    }
+                }, 5200);
+            } else {
+                document.body.classList.add("no-intro");
+            }
+
+            // Gestion Menu Burger Mobile
+            const toggleBtn = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav');
+            if (toggleBtn && navMenu) {
+                toggleBtn.addEventListener('click', function() {
+                    navMenu.classList.toggle('mobile-open');
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Ecran d'accueil Splash Screen -->
+    <div class="splash-screen">
+        <img src="images/logoeiko.jpeg" alt="Eiko Finance Logo" class="splash-logo" onerror="this.src='images/logoeiko.jpg';">
+    </div>
+
+    <!-- En-tête / Bannière Haute -->
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+            <span class="logo-text">EIKO FINANCE</span>
+        </div>
+
+        <!-- Bouton Burger Mobile -->
+        <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="economie.html">Économie & Cycles</a></li>
+                <li><a href="marches.html">Marchés & Actifs</a></li>
+                <li><a href="fiscalite.html">Fiscalité</a></li>
+                <li><a href="outils.html">Outils & Simulateurs</a></li>
+                <li><a href="contact.html">Contact & À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu Principal -->
+    <main>
+        <section class="hero">
+            <h1>Comprendre l'Économie & Maîtriser vos Investissements</h1>
+            <p>Une approche pédagogique, claire et structurée pour appréhender les cycles économiques, la gestion d'actifs et l'optimisation financière.</p>
+            <a href="economie.html" class="btn-gold">Explorer les fondamentaux</a>
+        </section>
+
+        <section class="card-grid">
+            <a class="card" href="economie.html">
+                <h3>Économie & Cycles</h3>
+                <p>Analyse des grands cycles (Kitchin, Juglar, Kondratiev), mécanismes de la dette et création monétaire.</p>
+            </a>
+            <a class="card" href="marches.html">
+                <h3>Marchés & Actifs</h3>
+                <p>Comprendre les actions, obligations, ETF, métaux précieux (Or/Argent) et valeurs cycliques.</p>
+            </a>
+            <a class="card" href="fiscalite.html">
+                <h3>Fiscalité & Enveloppes</h3>
+                <p>Optimisation et principes clés du PEA, compte-titres et assurance-vie.</p>
+            </a>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+        <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
