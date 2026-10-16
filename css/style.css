@@ -1,17 +1,16 @@
 /* =========================================================
-   EIKO FINANCE - STYLE CLAIR & ÉLÉGANT
+   EIKO FINANCE - CHARTE LUMINEUSE & ANIMATIONS DE GLISSEMENT
    ========================================================= */
 
 :root {
-    --primary-blue: #0B2C67;
-    --dark-blue: #051329;
-    --gold-accent: #C5A059;
-    --gold-bright: #D4AF37;
-    --bg-light: #FFFFFF;
-    --bg-subtle: #F8F9FA;
-    --text-dark: #1F2937;
+    --primary-blue: #102A56;       /* Bleu affiné, légèrement plus clair */
+    --dark-blue: #0A1C3B;          /* Bleu nuit profond */
+    --gold-accent: #C5A059;        /* Or élégant */
+    --gold-bright: #D4AF37;        /* Or lumineux */
+    --bg-white: #FFFFFF;           /* Blanc pur */
+    --bg-subtle: #F4F6F9;          /* Fond très légèrement grisé */
+    --text-dark: #1F2937;          /* Texte sombre lisible */
     --text-muted: #4B5563;
-    --text-light: #FFFFFF;
     --font-title: 'Cinzel', 'Playfair Display', serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
 }
@@ -25,44 +24,83 @@
 
 body {
     font-family: var(--font-body);
-    background-color: var(--bg-light);
+    background-color: var(--bg-white);
     color: var(--text-dark);
     line-height: 1.5;
     overflow-x: hidden;
 }
 
-/* En-tête / Navigation */
+/* =========================================================
+   ANIMATIONS DE GLISSEMENT (KEYFRAMES)
+   ========================================================= */
+
+/* Glissement de Gauche à Droite (pour Header et Footer) */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Glissement de Droite à Gauche (pour le contenu central) */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* =========================================================
+   EN-TÊTE / NAVIGATION (GLISSEMENT GAUCHE -> DROITE)
+   ========================================================= */
 header {
-    background-color: var(--dark-blue);
-    padding: 0.8rem 5%;
+    background-color: var(--primary-blue);
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid var(--gold-accent);
+    border-bottom: 3px solid var(--gold-accent);
     position: sticky;
     top: 0;
     z-index: 1000;
+    animation: slideInLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
+/* Encadré blanc haut-gauche pour le logo et le nom */
 .logo-container {
     display: flex;
     align-items: center;
     gap: 12px;
+    background-color: var(--bg-white);
+    padding: 0.6rem 1.5rem;
+    border-right: 3px solid var(--gold-accent);
 }
 
 .logo-img {
-    height: 42px;
+    height: 45px;
     width: auto;
     object-fit: contain;
-    display: block;
 }
 
 .logo-text {
     font-family: var(--font-title);
-    color: var(--gold-accent);
-    font-size: 1.3rem;
+    color: var(--primary-blue); /* Même bleu que la bannière */
+    font-size: 1.35rem;
     font-weight: 700;
     letter-spacing: 2px;
+}
+
+/* Menu de navigation */
+nav {
+    padding-right: 2rem;
 }
 
 nav ul {
@@ -72,9 +110,9 @@ nav ul {
 }
 
 nav a {
-    color: var(--text-light);
+    color: #FFFFFF;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -99,22 +137,28 @@ nav a:hover {
     color: var(--gold-bright);
 }
 
-/* Section Hero - FOND BLANC LUMINEUX */
+/* =========================================================
+   CONTENU CENTRAL (GLISSEMENT DROITE -> GAUCHE)
+   ========================================================= */
+.animated-content {
+    animation: slideInRight 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Section Hero en Fond Blanc */
 .hero {
-    background-color: var(--bg-light);
+    background-color: var(--bg-white);
     color: var(--text-dark);
-    padding: 2.5rem 5% 2rem 5%;
+    padding: 3rem 5% 2rem 5%;
     text-align: center;
-    border-bottom: 1px solid #E5E7EB;
 }
 
 .hero h1 {
     font-family: var(--font-title);
-    font-size: 1.8rem; /* Taille réduite pour tout compacter */
+    font-size: 1.8rem; /* Taille compacte pour tout faire tenir à l'écran */
     color: var(--primary-blue);
     margin-bottom: 0.8rem;
     letter-spacing: 1px;
-    line-height: 1.25;
+    line-height: 1.3;
 }
 
 .hero p {
@@ -163,7 +207,7 @@ nav a:hover {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(11, 44, 103, 0.1);
+    box-shadow: 0 10px 20px rgba(16, 42, 86, 0.12);
 }
 
 .card h3 {
@@ -178,14 +222,17 @@ nav a:hover {
     font-size: 0.95rem;
 }
 
-/* Footer */
+/* =========================================================
+   PIED DE PAGE (GLISSEMENT GAUCHE -> DROITE)
+   ========================================================= */
 footer {
-    background-color: var(--dark-blue);
-    color: var(--text-light);
+    background-color: var(--primary-blue); /* Mêmes couleurs que la bannière du haut */
+    color: #FFFFFF;
     text-align: center;
     padding: 1.5rem;
-    border-top: 1px solid var(--gold-accent);
+    border-top: 2px solid var(--gold-accent);
     font-size: 0.9rem;
+    animation: slideInLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 footer a {
