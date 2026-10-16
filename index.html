@@ -15,7 +15,7 @@
                 document.body.classList.add("play-intro");
                 sessionStorage.setItem("eiko_intro_played", "true");
                 
-                // Sécurité : retrait propre du splash screen après la séquence
+                // Retrait propre du splash screen après 5.2 secondes
                 setTimeout(function() {
                     const splash = document.querySelector('.splash-screen');
                     if (splash) {
@@ -32,12 +32,12 @@
 </head>
 <body>
 
-    <!-- Ecran d'accueil Splash Screen (Logo central de démarrage) -->
+    <!-- Écran d'accueil Splash Screen (Logo central au démarrage) -->
     <div class="splash-screen">
         <img src="images/logoeiko.jpeg" alt="Eiko Finance Logo" class="splash-logo" onerror="this.src='images/logoeiko.jpg';">
     </div>
 
-    <!-- En-tête / Bannière Haute (avec fondu dégradé) -->
+    <!-- En-tête / Bannière Haute -->
     <header>
         <div class="logo-container">
             <img src="images/logo.png" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpeg';">
