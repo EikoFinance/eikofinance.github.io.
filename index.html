@@ -15,7 +15,7 @@
                 document.body.classList.add("play-intro");
                 sessionStorage.setItem("eiko_intro_played", "true");
                 
-                // Retrait propre du splash screen après 5.2 secondes
+                // Retrait propre du splash screen après la séquence
                 setTimeout(function() {
                     const splash = document.querySelector('.splash-screen');
                     if (splash) {
@@ -32,15 +32,15 @@
 </head>
 <body>
 
-    <!-- Écran d'accueil Splash Screen (Logo central au démarrage) -->
+    <!-- Écran d'accueil Splash Screen (Logo central de démarrage) -->
     <div class="splash-screen">
         <img src="images/logoeiko.jpeg" alt="Eiko Finance Logo" class="splash-logo" onerror="this.src='images/logoeiko.jpg';">
     </div>
 
-    <!-- En-tête / Bannière Haute -->
+    <!-- En-tête / Bannière Haute (avec logo.jpeg et le texte côte à côte) -->
     <header>
         <div class="logo-container">
-            <img src="images/logo.png" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpeg';">
+            <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
             <span class="logo-text">EIKO FINANCE</span>
         </div>
         <nav>
@@ -55,7 +55,7 @@
         </nav>
     </header>
 
-    <!-- Contenu Central (qui glisse de gauche à droite pour recouvrir le logo) -->
+    <!-- Contenu Central -->
     <main>
         <section class="hero">
             <h1>Comprendre l'Économie & Maîtriser vos Investissements</h1>
