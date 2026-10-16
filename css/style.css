@@ -1,14 +1,16 @@
 /* =========================================================
-   EIKO FINANCE - CHARTE GRAPHIQUE & ANIMATIONS
+   EIKO FINANCE - STYLE CLAIR & ÉLÉGANT
    ========================================================= */
 
 :root {
     --primary-blue: #0B2C67;
     --dark-blue: #051329;
     --gold-accent: #C5A059;
-    --gold-bright: #E6C687;
-    --bg-light: #F8F9FA;
+    --gold-bright: #D4AF37;
+    --bg-light: #FFFFFF;
+    --bg-subtle: #F8F9FA;
     --text-dark: #1F2937;
+    --text-muted: #4B5563;
     --text-light: #FFFFFF;
     --font-title: 'Cinzel', 'Playfair Display', serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -25,14 +27,14 @@ body {
     font-family: var(--font-body);
     background-color: var(--bg-light);
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: 1.5;
     overflow-x: hidden;
 }
 
 /* En-tête / Navigation */
 header {
     background-color: var(--dark-blue);
-    padding: 1.2rem 5%;
+    padding: 0.8rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,14 +50,17 @@ header {
     gap: 12px;
 }
 
-.logo-container img {
-    height: 45px;
+.logo-img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .logo-text {
     font-family: var(--font-title);
     color: var(--gold-accent);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -63,13 +68,13 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.8rem;
 }
 
 nav a {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -80,7 +85,7 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -5px;
+    bottom: -4px;
     left: 0;
     background-color: var(--gold-accent);
     transition: width 0.3s ease;
@@ -94,74 +99,83 @@ nav a:hover {
     color: var(--gold-bright);
 }
 
-/* Section Hero */
+/* Section Hero - FOND BLANC LUMINEUX */
 .hero {
-    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
-    color: var(--text-light);
-    padding: 6rem 5%;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 2.5rem 5% 2rem 5%;
     text-align: center;
-    position: relative;
+    border-bottom: 1px solid #E5E7EB;
 }
 
 .hero h1 {
     font-family: var(--font-title);
-    font-size: 2.8rem;
-    color: var(--gold-accent);
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem; /* Taille réduite pour tout compacter */
+    color: var(--primary-blue);
+    margin-bottom: 0.8rem;
     letter-spacing: 1px;
+    line-height: 1.25;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 2.5rem auto;
-    color: #E0E6ED;
+    font-size: 1.05rem;
+    max-width: 850px;
+    margin: 0 auto 1.5rem auto;
+    color: var(--text-muted);
 }
 
 /* Boutons */
 .btn-gold {
     background: linear-gradient(45deg, var(--gold-accent), var(--gold-bright));
     color: var(--dark-blue);
-    padding: 0.9rem 2rem;
+    padding: 0.75rem 1.8rem;
     border: none;
     border-radius: 4px;
     font-weight: 700;
+    font-size: 0.95rem;
     text-decoration: none;
     display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-gold:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(197, 160, 89, 0.35);
 }
 
-/* Cartes de contenu avec effet au survol */
+/* Cartes de contenu */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 4rem 5%;
+    gap: 1.8rem;
+    padding: 2.5rem 5%;
+    background-color: var(--bg-subtle);
 }
 
 .card {
     background-color: #FFFFFF;
-    padding: 2rem;
+    padding: 1.8rem;
     border-radius: 8px;
     border-top: 4px solid var(--gold-accent);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(11, 44, 103, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(11, 44, 103, 0.1);
 }
 
 .card h3 {
     font-family: var(--font-title);
     color: var(--primary-blue);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 /* Footer */
@@ -169,8 +183,9 @@ footer {
     background-color: var(--dark-blue);
     color: var(--text-light);
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
     border-top: 1px solid var(--gold-accent);
+    font-size: 0.9rem;
 }
 
 footer a {
