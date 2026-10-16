@@ -1,5 +1,5 @@
 /* =========================================================
-   EIKO FINANCE - CHARTE LUMINEUSE & ANIMATION DE DROITE À GAUCHE
+   EIKO FINANCE - CHARTE & ANIMATION SUR-MESURE
    ========================================================= */
 
 :root {
@@ -31,7 +31,7 @@ body {
 }
 
 /* =========================================================
-   SPLASH SCREEN INTRO (LOGO CENTRÉ AU PREMIER PLAN TEMPORAIRE)
+   SPLASH SCREEN INTRO (LOGO CENTRÉ AU PREMIER PLAN)
    ========================================================= */
 .splash-screen {
     position: fixed;
@@ -60,8 +60,8 @@ body {
    ANIMATIONS DE LA SCÈNE
    ========================================================= */
 
-/* Bannières Haut et Bas : Glissement de la droite vers la gauche (t=2s) */
-@keyframes slideInRightToLeft {
+/* Bannières Haut et Bas : Glissement uniquement de la DROITE vers la GAUCHE */
+@keyframes slideRightToLeft {
     0% {
         opacity: 0;
         transform: translateX(100%);
@@ -72,11 +72,11 @@ body {
     }
 }
 
-/* Le cœur de page glisse de la gauche vers la droite pour recouvrir le logo (t=4s) */
+/* Cœur de page : Glissement de la GAUCHE vers la DROITE pour recouvrir le logo central */
 @keyframes slideMainOverLogo {
     0% {
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(-100px);
     }
     100% {
         opacity: 1;
@@ -84,7 +84,7 @@ body {
     }
 }
 
-/* Disparition finale du fond du splash (t=5s) */
+/* Disparition finale du fond de l'intro */
 @keyframes fadeOutSplashBg {
     to {
         opacity: 0;
@@ -93,7 +93,7 @@ body {
     }
 }
 
-/* Application des règles d'animation lors de la première visite */
+/* Application des animations lors de la première visite */
 body.play-intro .splash-screen {
     animation: fadeOutSplashBg 0.6s ease forwards 5s;
 }
@@ -101,7 +101,7 @@ body.play-intro .splash-screen {
 body.play-intro header,
 body.play-intro footer {
     opacity: 0;
-    animation: slideInRightToLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 2s;
+    animation: slideRightToLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 2s;
 }
 
 body.play-intro main {
@@ -112,7 +112,7 @@ body.play-intro main {
     animation: slideMainOverLogo 1s cubic-bezier(0.25, 1, 0.5, 1) forwards 4s;
 }
 
-/* Mode Navigation Normale (quand l'intro est terminée) */
+/* Mode Navigation Normale (sans rejouer l'intro) */
 body.no-intro .splash-screen {
     display: none !important;
 }
@@ -127,10 +127,10 @@ body.no-intro footer {
 }
 
 /* =========================================================
-   EN-TÊTE AVEC FONDU DU BLANC AU BLEU (STABILISÉ)
+   EN-TÊTE AVEC FONDU DU BLANC AU BLEU ET LOGO À CÔTÉ DU NOM
    ========================================================= */
 header {
-    background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 180px, var(--primary-blue) 320px, var(--primary-blue) 100%);
+    background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 220px, var(--primary-blue) 360px, var(--primary-blue) 100%);
     padding: 0;
     display: flex;
     justify-content: space-between;
