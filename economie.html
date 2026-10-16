@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Économie & Cycles - EikoFinance</title>
+<meta name="description" content="Comprendre l'économie et les cycles pas à pas, sans jargon : prix, circuit de l'argent, crises et taux d'intérêt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Ta feuille de style existante (header, menu, footer, cartes) -->
+<link rel="stylesheet" href="style.css">
+<style>
+/* Styles propres à cette page, basés sur les variables de style.css */
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.card-grid a.card{display:block;text-decoration:none;color:inherit}
+.card-grid a.card.soon{opacity:.55;pointer-events:none;border-top-color:#cbd2dc}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:1.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.2rem;margin:1.8rem 0 .6rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.glossaire dt{font-weight:700;color:var(--primary-blue);margin-top:.7rem}
+.glossaire dd{margin:0;color:var(--text-muted)}
+details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
+details p{margin:.7rem 0 0}
+.q{border:1px solid #d9dee5;border-radius:8px;padding:1rem;margin:.9rem 0}
+.q p{font-weight:700;margin-bottom:.6rem}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1px solid #d9dee5;border-radius:6px;background:#fff;font:inherit;color:var(--text-dark);cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--gold-accent)}
+.q button.good{background:#e3f3e9;border-color:#2e7d4f}
+.q button.bad{background:#f8e5e1;border-color:#b3402e}
+.q .fb{font-size:.92rem;margin-top:.5rem;color:var(--text-muted)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+</style>
+</head>
+<!-- no-intro : pas d'écran d'intro sur les pages intérieures -->
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  <nav id="mainNav" aria-label="Navigation principale">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html" class="active">Économie & Cycles</a></li>
+      <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › Économie & Cycles</p>
+
+  <section class="hero">
+    <h1>Économie & Cycles : comprendre sans jargon</h1>
+    <p>Un parcours en 4 chapitres de 5 minutes. On part de ton quotidien, et on remonte pas à pas vers les grands mécanismes de l'économie.</p>
+    <a href="#chap1" class="btn-gold">Commencer le chapitre 1</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire du parcours">
+    <a class="card" href="#chap1"><h3>1. Mon quotidien</h3><p>Prix, salaire, épargne : pourquoi ma baguette coûte plus cher qu'avant ?</p></a>
+    <a class="card soon" href="#"><h3>2. Un circuit où tout se tient</h3><p>Bientôt disponible</p></a>
+    <a class="card soon" href="#"><h3>3. Les cycles</h3><p>Bientôt disponible</p></a>
+    <a class="card soon" href="#"><h3>4. Qui peut agir ?</h3><p>Bientôt disponible</p></a>
+  </section>
+
+  <!-- ================= CHAPITRE 1 ================= -->
+  <article class="chapitre" id="chap1">
+    <h2>Chapitre 1 : mon quotidien, en prix, en salaire et en épargne</h2>
+    <p class="accroche">« Pourquoi ma baguette coûte plus cher qu'avant ? »</p>
+
+    <h3>L'histoire de Camille, boulangère</h3>
+    <p>Camille tient une boulangerie. Chaque matin, elle achète de la farine, de l'énergie pour le four, et elle paie son employé. Tout cela forme ses <strong>coûts</strong>.</p>
+    <p>Cette année, la farine et l'électricité ont augmenté. Si Camille garde sa baguette au même prix, elle gagne moins, voire perd de l'argent. Alors elle l'augmente de quelques centimes.</p>
+    <p>Mais Camille est aussi cliente : elle fait ses courses, paie son loyer, remplit son réservoir. Quand les prix montent partout, ses 100 € d'hier achètent moins de choses aujourd'hui. Elle ne gagne pas moins d'euros, mais ses euros <strong>valent moins</strong>.</p>
+    <p>C'est exactement ce que vit chacun d'entre nous. Et c'est ce qu'on appelle l'<strong>inflation</strong>.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 170" role="img" aria-label="Schéma : quand les prix montent, 100 euros achètent moins de baguettes">
+        <rect x="20" y="20" width="240" height="130" rx="10" fill="#FFFFFF" stroke="#102A56"/>
+        <text x="140" y="48" text-anchor="middle" font-size="16" font-weight="700" fill="#102A56">Avant</text>
+        <text x="140" y="85" text-anchor="middle" font-size="15" fill="#1F2937">1 baguette = 1,00 €</text>
+        <text x="140" y="120" text-anchor="middle" font-size="15" fill="#1F2937">100 € = 100 baguettes</text>
+        <path d="M275 85h50" stroke="#C5A059" stroke-width="4"/><path d="M325 70l20 15-20 15z" fill="#C5A059"/>
+        <rect x="350" y="20" width="230" height="130" rx="10" fill="#FFFFFF" stroke="#C5A059" stroke-width="2"/>
+        <text x="465" y="48" text-anchor="middle" font-size="16" font-weight="700" fill="#102A56">Après</text>
+        <text x="465" y="85" text-anchor="middle" font-size="15" fill="#1F2937">1 baguette = 1,10 €</text>
+        <text x="465" y="120" text-anchor="middle" font-size="15" fill="#1F2937">100 € = 91 baguettes</text>
+      </svg>
+      <figcaption>Mêmes 100 €, moins de baguettes : c'est la perte de pouvoir d'achat.</figcaption>
+    </figure>
+
+    <h3>Et l'épargne dans tout ça ?</h3>
+    <p>Si Camille laisse 1 000 € sur un compte qui ne rapporte rien, ces 1 000 € permettront d'acheter un peu moins l'an prochain. Épargner, ce n'est donc pas seulement « mettre de côté » : c'est aussi se demander <em>comment protéger la valeur de cet argent</em>. Une question qu'on retrouvera dans les chapitres suivants.</p>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Un prix reflète des coûts, mais aussi ce que les gens acceptent de payer.</li>
+        <li>L'inflation, c'est la hausse générale des prix : elle réduit ce que l'on peut acheter avec la même somme.</li>
+        <li>Ce qui compte, ce n'est pas seulement combien j'ai d'euros, mais ce que ces euros permettent d'acheter.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>L'inflation se mesure avec un « panier » de produits et services représentatif de ce que consomment les ménages. L'indice officiel en France est publié par l'INSEE. Ton inflation personnelle peut différer de la moyenne, selon ce que tu achètes.</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Inflation</dt><dd>La hausse générale et durable des prix.</dd>
+      <dt>Pouvoir d'achat</dt><dd>La quantité de choses que l'on peut acheter avec son revenu.</dd>
+      <dt>Épargne</dt><dd>La part du revenu que l'on ne dépense pas.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Les prix montent de 10 % et ton salaire ne bouge pas. Que se passe-t-il ?</p>
+      <button>Ton salaire a augmenté</button>
+      <button>Ton pouvoir d'achat a baissé</button>
+      <button>Rien ne change</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. L'inflation, c'est…</p>
+      <button>La hausse générale des prix</button>
+      <button>La hausse du prix d'un seul produit</button>
+      <button>La baisse des salaires</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. Pourquoi Camille augmente-t-elle le prix de sa baguette ?</p>
+      <button>Par caprice</button>
+      <button>Parce que ses clients gagnent plus</button>
+      <button>Parce que ses coûts ont augmenté</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Et si l'argent que je dépense chez Camille était le salaire de quelqu'un d'autre ?</strong> C'est l'objet du chapitre 2.</p>
+
+    <div class="pager">
+      <a href="index.html">← Accueil</a>
+      <a class="next" href="#">Chapitre 2 (bientôt) →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.getElementById('menuToggle'),n=document.getElementById('mainNav');
+t.addEventListener('click',function(){
+  var o=n.classList.toggle('mobile-open');
+  t.setAttribute('aria-expanded',o);
+});
+document.querySelectorAll('.q').forEach(function(q){
+  var good=+q.dataset.good,btns=q.querySelectorAll('button'),fb=q.querySelector('.fb');
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.disabled=true});
+      btns[good].classList.add('good');
+      if(i===good){fb.textContent="Bravo, c'est la bonne réponse.";}
+      else{b.classList.add('bad');fb.textContent="Pas tout à fait : la bonne réponse est « "+btns[good].textContent+" ».";}
+    });
+  });
+});
+</script>
+</body>
+</html>
