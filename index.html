@@ -8,17 +8,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Script de gestion intelligente de la première visite -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Vérifie si l'utilisateur a déjà vu l'animation lors de sa session
+            if (!sessionStorage.getItem("eiko_intro_played")) {
+                document.body.classList.add("play-intro");
+                sessionStorage.setItem("eiko_intro_played", "true");
+            } else {
+                document.body.classList.add("no-intro");
+            }
+        });
+    </script>
 </head>
 <body>
 
-    <!-- Splash Screen Intro (Logo Central au démarrage) -->
+    <!-- Ecran d'accueil Splash Screen (Logo central) -->
     <div class="splash-screen">
         <img src="images/logoeiko.jpg" alt="Eiko Finance Logo" class="splash-logo" onerror="this.src='images/logoeiko.png';">
     </div>
 
-    <!-- En-tête / Bannière Haute (Glisse à t=2s) -->
+    <!-- En-tête / Bannière Haute -->
     <header>
-        <!-- Logo haut gauche (Apparaît à t=5s) -->
         <div class="logo-container">
             <img src="images/logo.png" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpeg';">
             <span class="logo-text">EIKO FINANCE</span>
@@ -35,7 +47,7 @@
         </nav>
     </header>
 
-    <!-- Contenu Central (Glisse à t=4s) -->
+    <!-- Contenu Central -->
     <main>
         <section class="hero">
             <h1>Comprendre l'Économie & Maîtriser vos Investissements</h1>
@@ -59,7 +71,7 @@
         </section>
     </main>
 
-    <!-- Pied de page / Bannière Basse (Glisse à t=2s) -->
+    <!-- Pied de page -->
     <footer>
         <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
         <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
