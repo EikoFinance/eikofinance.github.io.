@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiscalité & Enveloppes - EikoFinance</title>
+<meta name="description" content="Compte-titres, PEA, assurance-vie, PER, succession et dons : comprendre les enveloppes et la transmission, simplement et sans jargon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.card-grid a.card{display:block;text-decoration:none;color:inherit}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:2.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.2rem;margin:1.6rem 0 .6rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.chapitre ul.liste{margin:0 0 1rem 1.2rem;line-height:1.7}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.tablewrap{overflow-x:auto;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;min-width:680px;font-size:.93rem}
+th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--primary-blue);color:#fff;font-weight:600}
+tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
+.glossaire dt{font-weight:700;color:var(--primary-blue);margin-top:.7rem}
+.glossaire dd{margin:0;color:var(--text-muted)}
+details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
+details p{margin:.7rem 0 0}
+.q{border:1px solid #d9dee5;border-radius:8px;padding:1rem;margin:.9rem 0}
+.q p{font-weight:700;margin-bottom:.6rem}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1px solid #d9dee5;border-radius:6px;background:#fff;font:inherit;color:var(--text-dark);cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--gold-accent)}
+.q button.good{background:#e3f3e9;border-color:#2e7d4f}
+.q button.bad{background:#f8e5e1;border-color:#b3402e}
+.q .fb{font-size:.92rem;margin-top:.5rem;color:var(--text-muted)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+</style>
+</head>
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html">Économie & Cycles</a></li>
+      <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html" class="active">Fiscalité</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › Fiscalité & Enveloppes</p>
+
+  <section class="hero">
+    <h1>Fiscalité & Enveloppes : comprendre où placer son argent</h1>
+    <p>Compte-titres, PEA, assurance-vie, PER : quatre « contenants » pour investir, quatre façons d'être imposé. Puis on aborde la transmission : donations et succession. Pas à pas, avec des exemples concrets.</p>
+    <a href="#intro" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire">
+    <a class="card" href="#cto"><h3>Compte-titres</h3><p>Le plus libre, mais le plus taxé.</p></a>
+    <a class="card" href="#pea"><h3>PEA</h3><p>Le grand allié fiscal des actions.</p></a>
+    <a class="card" href="#av"><h3>Assurance-vie</h3><p>Souple, avec un avantage après 8 ans.</p></a>
+    <a class="card" href="#per"><h3>PER</h3><p>Préparer sa retraite et réduire son impôt.</p></a>
+    <a class="card" href="#transmission"><h3>Transmission</h3><p>Dons aux enfants et succession.</p></a>
+  </section>
+
+  <article class="chapitre">
+
+    <!-- INTRO -->
+    <h2 id="intro">L'enveloppe compte autant que le placement</h2>
+    <p class="accroche">« Deux personnes achètent le même fonds. Pourquoi l'une garde plus d'argent que l'autre ? »</p>
+    <p>Imagine Camille, la boulangère, qui réalise <strong>1 000 € de gain</strong> en investissant. Ce que l'État prélève ensuite ne dépend pas seulement de <em>ce qu'elle a acheté</em>, mais de <strong>l'enveloppe</strong> dans laquelle elle l'a logé.</p>
+    <p>Une enveloppe fiscale, c'est un contenant avec ses propres règles : ce qu'on peut y mettre, quand on peut en sortir, et comment les gains sont imposés. L'impôt n'est généralement dû qu'à la sortie, quand on retire des gains.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 230" role="img" aria-label="Sur 1000 euros de gain, il reste 686 euros sur un compte-titres, 814 sur un PEA de plus de 5 ans, 700 sur une assurance-vie de plus de 8 ans">
+        <text x="300" y="22" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Sur 1 000 € de gain, combien reste-t-il ?</text>
+        <text x="10" y="70" font-size="14" fill="#1F2937">Compte-titres</text>
+        <rect x="150" y="52" width="343" height="28" rx="4" fill="#102A56"/><text x="500" y="72" font-size="14" font-weight="700" fill="#102A56">686 €</text>
+        <text x="10" y="125" font-size="14" fill="#1F2937">PEA (&gt; 5 ans)</text>
+        <rect x="150" y="107" width="407" height="28" rx="4" fill="#C5A059"/><text x="500" y="127" font-size="14" font-weight="700" fill="#0A1C3B" text-anchor="end" dx="-10">814 €</text>
+        <text x="10" y="180" font-size="14" fill="#1F2937">Assurance-vie (&gt; 8 ans)</text>
+        <rect x="150" y="162" width="350" height="28" rx="4" fill="#102A56"/><text x="507" y="182" font-size="14" font-weight="700" fill="#102A56">700 €</text>
+        <text x="300" y="218" text-anchor="middle" font-size="12" fill="#4B5563">Hypothèses simplifiées, barème 2026, sans abattement.</text>
+      </svg>
+      <figcaption>Même gain de départ, trois enveloppes, trois résultats.</figcaption>
+    </figure>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil fiscal ni en investissement. Les taux indiqués sont ceux de 2026 et peuvent évoluer : vérifie toujours sur <a href="https://www.impots.gouv.fr" target="_blank" rel="noopener">impots.gouv.fr</a> ou auprès d'un professionnel.</div>
+
+    <h3>Deux mots à connaître</h3>
+    <ul class="liste">
+      <li><strong>Prélèvements sociaux (PS)</strong> : une contribution qui finance la protection sociale. En 2026, elle est de 18,6 % sur la plupart des placements, et de 17,2 % sur l'assurance-vie.</li>
+      <li><strong>PFU, ou « flat tax »</strong> : un taux unique appliqué aux gains, qui additionne l'impôt sur le revenu (12,8 %) et les prélèvements sociaux. Soit <strong>31,4 %</strong> en 2026 (30 % sur l'assurance-vie).</li>
+    </ul>
+
+    <!-- COMPTE-TITRES -->
+    <h2 id="cto">1. Le compte-titres : la liberté, au prix fort</h2>
+    <p class="accroche">« Je veux investir sans aucune contrainte. »</p>
+    <p>Le compte-titres ordinaire (CTO) est le plus ouvert : actions du monde entier, ETF, obligations… tout est possible, sans plafond de versement, et tu peux retirer quand tu veux.</p>
+    <p>La contrepartie, c'est la fiscalité : chaque gain (plus-value à la vente, dividendes) est taxé au PFU, soit <strong>31,4 %</strong> en 2026. Sur les 1 000 € de Camille, 314 € partent en impôts et prélèvements.</p>
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Aucun plafond, aucun délai : c'est l'enveloppe la plus flexible.</li>
+        <li>Les gains sont imposés à 31,4 % (12,8 % d'impôt + 18,6 % de prélèvements sociaux).</li>
+        <li>On ne paie que sur les gains réalisés, pas tant que l'on n'a pas vendu.</li>
+      </ul>
+    </div>
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Les moins-values (pertes) réalisées se déduisent des plus-values et se reportent pendant 10 ans. Il est aussi possible d'opter pour le barème progressif de l'impôt sur le revenu plutôt que le PFU, ce qui peut être intéressant selon ta tranche d'imposition.</p>
+    </details>
+
+    <!-- PEA -->
+    <h2 id="pea">2. Le PEA : l'allié fiscal des actions</h2>
+    <p class="accroche">« Comment payer moins d'impôt sur mes actions ? »</p>
+    <p>Le Plan d'Épargne en Actions (PEA) est conçu pour encourager l'investissement en actions, principalement européennes. En échange, l'État offre un avantage de taille : <strong>après 5 ans, plus d'impôt sur le revenu</strong> sur les gains.</p>
+    <p>Il ne reste que les prélèvements sociaux, à 18,6 % en 2026. Camille ne verse plus que 186 € sur ses 1 000 € de gain, contre 314 € sur un compte-titres.</p>
+    <p>Pendant que l'argent reste dans le PEA, les dividendes et les gains ne sont pas taxés : l'impôt n'est calculé qu'au moment d'un retrait.</p>
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Les versements sont plafonnés à 150 000 € sur un PEA classique.</li>
+        <li>Après 5 ans : 0 % d'impôt sur le revenu, seulement les prélèvements sociaux (18,6 %).</li>
+        <li>Un retrait avant 5 ans entraîne en principe la clôture du plan, et les gains sont alors imposés comme sur un compte-titres.</li>
+      </ul>
+    </div>
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Seuls certains titres sont éligibles au PEA : surtout des actions d'entreprises de l'Union européenne ou de l'Espace économique européen, et certains ETF. Des règles particulières existent pour les plans ouverts avant 2018 : renseigne-toi si c'est ton cas.</p>
+    </details>
+
+    <!-- ASSURANCE-VIE -->
+    <h2 id="av">3. L'assurance-vie : le contrat souple</h2>
+    <p class="accroche">« Je veux de la souplesse, et un coup de pouce avec le temps. »</p>
+    <p>L'assurance-vie n'est pas qu'un produit d'assurance : c'est un contrat dans lequel tu places ton argent, que tu peux répartir entre deux grandes familles de supports.</p>
+    <ul class="liste">
+      <li><strong>Le fonds en euros</strong> : le capital est garanti par l'assureur, avec un rendement modeste.</li>
+      <li><strong>Les unités de compte</strong> : des supports investis en actions, ETF, immobilier… sans garantie du capital, mais avec un potentiel de gain plus élevé.</li>
+    </ul>
+    <p>Tu peux retirer ton argent à tout moment, mais c'est avec le temps que la fiscalité s'allège : <strong>après 8 ans</strong>, un abattement annuel s'applique sur les gains retirés (4 600 € pour une personne seule, 9 200 € pour un couple), et les prélèvements sociaux restent à 17,2 % en 2026.</p>
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Pas de plafond de versement, et deux types de supports (sécurisé ou dynamique).</li>
+        <li>La fiscalité s'allège après 8 ans de contrat, avec un abattement sur les gains.</li>
+        <li>L'assurance-vie a aussi un rôle en matière de transmission aux proches.</li>
+      </ul>
+    </div>
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>En cas de décès, les sommes versées aux bénéficiaires désignés bénéficient d'un régime fiscal avantageux, avec notamment un abattement de 152 500 € par bénéficiaire pour les primes versées avant 70 ans. Les règles varient selon l'âge au moment des versements : à vérifier selon ta situation.</p>
+    </details>
+
+    <!-- PER -->
+    <h2 id="per">4. Le PER : préparer sa retraite, et réduire son impôt aujourd'hui</h2>
+    <p class="accroche">« Comment alléger mes impôts cette année tout en préparant mes vieux jours ? »</p>
+    <p>Le Plan d'Épargne Retraite (PER) est une enveloppe pensée pour la retraite. Sa particularité : les sommes que tu y verses volontairement peuvent être <strong>déduites de ton revenu imposable</strong>, dans la limite d'un plafond annuel qui dépend de tes revenus.</p>
+    <p>Prenons Camille. Elle verse 3 000 € sur son PER. Si sa tranche marginale d'imposition est de 30 %, elle réduit son impôt d'environ <strong>900 €</strong> cette année-là.</p>
+    <p>En contrepartie, l'argent est en principe <strong>bloqué jusqu'à la retraite</strong>, et il sera imposé au moment de la sortie. L'avantage est donc un report d'impôt : on paie moins aujourd'hui, et l'on espère être moins taxé plus tard.</p>
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Les versements volontaires sont déductibles du revenu imposable, dans la limite d'un plafond.</li>
+        <li>L'épargne est bloquée jusqu'à la retraite, sauf cas de déblocage prévus par la loi (achat de la résidence principale, accidents de la vie…).</li>
+        <li>L'avantage est le plus fort pour les foyers fortement imposés, car la déduction rapporte plus quand la tranche d'imposition est élevée.</li>
+      </ul>
+    </div>
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>À la retraite, on peut sortir en rente (un revenu régulier) ou en capital. Pour les versements déduits, la part correspondante est imposée au barème de l'impôt sur le revenu, tandis que les gains relèvent du PFU. Si tu n'as pas déduit tes versements, seuls les gains sont imposés à la sortie. Le plafond de déduction se retrouve sur ton avis d'impôt.</p>
+    </details>
+
+    <!-- TRANSMISSION -->
+    <h2 id="transmission">5. Transmettre : donations et succession</h2>
+    <p class="accroche">« Que restera-t-il à mes enfants, et combien l'État prélèvera-t-il ? »</p>
+    <p>Un jour, Camille voudra transmettre ce qu'elle a bâti. Elle a deux grandes voies : <strong>donner de son vivant</strong> (donation) ou <strong>transmettre à son décès</strong> (succession). Dans les deux cas, l'impôt dépend du lien de parenté et de la somme transmise.</p>
+
+    <h3>La succession : l'impôt à la transmission</h3>
+    <p>En ligne directe (d'un parent à son enfant), chaque enfant bénéficie d'un <strong>abattement de 100 000 €</strong> sur ce qu'il reçoit de chaque parent : cette part n'est pas imposée. Au-delà, un barème progressif s'applique, de 5 % à 45 %. Le conjoint survivant, lui, est exonéré de droits de succession.</p>
+    <p>Exemple : un enfant qui reçoit 200 000 € de son parent paie environ <strong>18 194 € de droits</strong>, soit un taux réel d'environ 9 %, bien loin des taux les plus élevés du barème.</p>
+
+    <h3>Les dons : transmettre plus tôt, et mieux</h3>
+    <p>Donner de son vivant permet d'utiliser plusieurs avantages, <strong>renouvelables tous les 15 ans</strong> :</p>
+    <ul class="liste">
+      <li><strong>L'abattement de 100 000 €</strong> par parent et par enfant, aussi utilisable pour une donation.</li>
+      <li><strong>Le don familial d'argent</strong> : jusqu'à 31 865 € de plus, si le donateur a moins de 80 ans et que l'enfant est majeur.</li>
+    </ul>
+    <p>En les cumulant, un parent peut donner <strong>131 865 € à chaque enfant sans droits</strong>, soit 263 730 € pour un couple. Et tous les 15 ans, ces plafonds se reconstituent.</p>
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Chaque parent peut transmettre 100 000 € à chaque enfant sans droits, et ce plafond se renouvelle tous les 15 ans.</li>
+        <li>Le don familial d'argent (31 865 €) s'ajoute à cet abattement, sous conditions d'âge.</li>
+        <li>Donner tôt permet de profiter plusieurs fois de ces avantages. Mais une donation est en principe définitive : réfléchis bien avant de donner.</li>
+      </ul>
+    </div>
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Le don familial doit être déclaré à l'administration fiscale, et un notaire est obligatoire pour une donation immobilière. L'assurance-vie, vue plus haut, offre aussi un abattement spécifique par bénéficiaire. Une exonération temporaire pour certains dons liés au logement doit prendre fin le 31 décembre 2026 : renseigne-toi sans tarder si tu es concerné. Pour un conseil adapté à ta famille, rapproche-toi d'un notaire.</p>
+    </details>
+
+    <!-- COMPARATIF -->
+    <h2>Les quatre enveloppes côte à côte</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Compte-titres</th><th>PEA</th><th>Assurance-vie</th><th>PER</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Plafond</th><td>Aucun</td><td>150 000 € de versements</td><td>Aucun</td><td>Plafond de déduction annuel, selon les revenus</td></tr>
+          <tr><th scope="row">Retrait</th><td>Libre</td><td>Libre, mais avantages après 5 ans</td><td>Libre, mais avantages après 8 ans</td><td>Bloqué jusqu'à la retraite, sauf cas prévus</td></tr>
+          <tr><th scope="row">Fiscalité</th><td>Gains à 31,4 %</td><td>Après 5 ans : 18,6 % (prélèvements sociaux seuls)</td><td>Après 8 ans : abattement, puis prélèvements sociaux à 17,2 % et impôt réduit</td><td>Versements déductibles, imposition à la sortie</td></tr>
+          <tr><th scope="row">Idéal pour</th><td>Une grande liberté de choix</td><td>Des actions et ETF éligibles</td><td>Un placement souple et la transmission</td><td>Préparer la retraite et réduire son impôt</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Ces enveloppes ne s'excluent pas : beaucoup d'investisseurs en combinent plusieurs, selon leurs objectifs et la durée de leurs placements.</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Enveloppe fiscale</dt><dd>Le contenant dans lequel on place ses investissements, avec ses règles fiscales propres.</dd>
+      <dt>Plus-value</dt><dd>Le gain réalisé quand on vend un actif plus cher qu'on ne l'a acheté.</dd>
+      <dt>Abattement</dt><dd>Une part des gains qui n'est pas imposée.</dd>
+      <dt>Unité de compte</dt><dd>Un support d'investissement non garanti, dans une assurance-vie.</dd>
+      <dt>PER</dt><dd>Plan d'Épargne Retraite : une enveloppe bloquée jusqu'à la retraite, avec des versements déductibles.</dd>
+      <dt>Donation</dt><dd>Le fait de donner un bien ou de l'argent de son vivant.</dd>
+      <dt>Succession</dt><dd>La transmission du patrimoine d'une personne à ses héritiers, à son décès.</dd>
+      <dt>Ligne directe</dt><dd>Le lien entre parents et enfants (ou grands-parents et petits-enfants).</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Quel est le taux du PFU (flat tax) sur un compte-titres en 2026 ?</p>
+      <button>12,8 %</button>
+      <button>31,4 %</button>
+      <button>17,2 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>2. Après 5 ans, que reste-t-il à payer sur les gains d'un PEA ?</p>
+      <button>L'impôt sur le revenu et les prélèvements sociaux</button>
+      <button>Seulement les prélèvements sociaux</button>
+      <button>Rien du tout</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. À partir de quand l'assurance-vie offre-t-elle son avantage fiscal principal ?</p>
+      <button>2 ans</button>
+      <button>5 ans</button>
+      <button>8 ans</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="q" data-good="1">
+      <p>4. Que permet principalement le PER ?</p>
+      <button>Retirer son argent librement à tout moment</button>
+      <button>Déduire ses versements de son revenu imposable, avec un blocage jusqu'à la retraite</button>
+      <button>Ne jamais payer d'impôt sur ses gains</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>5. Quel abattement permet à un parent de donner à un enfant sans droits (hors don familial d'argent) ?</p>
+      <button>31 865 €</button>
+      <button>100 000 €</button>
+      <button>152 500 €</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager">
+      <a href="marches.html">← Marchés & Actifs</a>
+      <a class="next" href="outils.html">Outils & Simulateurs →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
+if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+document.querySelectorAll('.q').forEach(function(q){
+  var good=+q.dataset.good,btns=q.querySelectorAll('button'),fb=q.querySelector('.fb');
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.disabled=true});
+      btns[good].classList.add('good');
+      if(i===good){fb.textContent="Bravo, c'est la bonne réponse.";}
+      else{b.classList.add('bad');fb.textContent="Pas tout à fait : la bonne réponse est « "+btns[good].textContent+" ».";}
+    });
+  });
+});
+</script>
+</body>
+</html>
