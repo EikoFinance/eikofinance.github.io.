@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Études de cas - EikoFinance</title>
+<meta name="description" content="Quatre profils d'épargnants : épargne seule, ETF, stock picking, SCPI. Comparer les approches pour comprendre risques, rendements et limites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+@media (min-width:769px) and (max-width:1280px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.card-grid a.card{display:block;text-decoration:none;color:inherit}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:2.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.15rem;margin:1.5rem 0 .5rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.chapitre ul.liste{margin:0 0 1rem 1.2rem;line-height:1.7}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+.profil{background:var(--bg-subtle);border-left:4px solid var(--primary-blue);border-radius:8px;padding:1rem 1.2rem;margin:0 0 1.2rem}
+.profil p{margin:0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.duo>div{border:1px solid #d9dee5;border-radius:8px;padding:.9rem 1.1rem}
+.duo h3{margin:0 0 .4rem;font-size:1rem}
+.duo ul{margin:0 0 0 1.1rem;line-height:1.6}
+.duo .pour{border-top:4px solid #2e7d4f}
+.duo .contre{border-top:4px solid #b3402e}
+@media(max-width:640px){.duo{grid-template-columns:1fr}}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.tablewrap{overflow-x:auto;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.93rem}
+th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--primary-blue);color:#fff;font-weight:600}
+tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
+.q{border:1px solid #d9dee5;border-radius:8px;padding:1rem;margin:.9rem 0}
+.q p{font-weight:700;margin-bottom:.6rem}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1px solid #d9dee5;border-radius:6px;background:#fff;font:inherit;color:var(--text-dark);cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--gold-accent)}
+.q button.good{background:#e3f3e9;border-color:#2e7d4f}
+.q button.bad{background:#f8e5e1;border-color:#b3402e}
+.q .fb{font-size:.92rem;margin-top:.5rem;color:var(--text-muted)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+</style>
+</head>
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html">Économie & Cycles</a></li>
+      <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="etudes.html" class="active">Études de cas</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › Études de cas</p>
+
+  <section class="hero">
+    <h1>Études de cas : quatre façons de faire travailler son argent</h1>
+    <p>Même point de départ, quatre stratégies très différentes. On compare ce qu'elles demandent, ce qu'elles peuvent rapporter, et ce qu'elles peuvent coûter.</p>
+    <a href="#intro" class="btn-gold">Découvrir les profils</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire">
+    <a class="card" href="#cas1"><h3>Marc, l'épargnant prudent</h3><p>Compte courant, Livret A et LDDS.</p></a>
+    <a class="card" href="#cas2"><h3>Sarah, l'indicielle</h3><p>S&P 500 et ETF monde.</p></a>
+    <a class="card" href="#cas3"><h3>Julien, le stock picker</h3><p>Des actions choisies une à une.</p></a>
+    <a class="card" href="#cas4"><h3>Claire, la SCPI</h3><p>L'immobilier en pierre-papier.</p></a>
+  </section>
+
+  <article class="chapitre">
+
+    <h2 id="intro">Le même départ, quatre chemins</h2>
+    <p class="accroche">« Si on me donne 10 000 € et 200 € par mois, que se passe-t-il selon ce que j'en fais ? »</p>
+    <p>Pour comparer à armes égales, imaginons quatre personnes qui commencent avec <strong>10 000 €</strong> et ajoutent <strong>200 € par mois pendant 20 ans</strong>, soit 58 000 € versés au total. Ce qui les distingue, ce n'est pas la somme, mais <strong>ce qu'elles en font</strong>.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 250" role="img" aria-label="Fourchettes de capital final après 20 ans selon quatre stratégies, avec 58 000 euros versés au total">
+        <text x="300" y="16" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">Capital final possible après 20 ans (hypothèses)</text>
+        <g stroke="#d9dee5"><line x1="290" y1="40" x2="290" y2="218"/><line x1="430" y1="40" x2="430" y2="218"/><line x1="570" y1="40" x2="570" y2="218"/></g>
+        <line x1="231" y1="40" x2="231" y2="218" stroke="#b3402e" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="236" y="38" font-size="11" fill="#b3402e">Total versé : 58 000 €</text>
+        <g font-size="12" fill="#1F2937">
+          <text x="8" y="66" font-weight="700">Épargne</text><text x="8" y="80" font-size="11" fill="#4B5563">65 k€ à 78 k€</text>
+          <text x="8" y="109" font-weight="700">ETF</text><text x="8" y="123" font-size="11" fill="#4B5563">74 k€ à 184 k€</text>
+          <text x="8" y="152" font-weight="700">Stock picking</text><text x="8" y="166" font-size="11" fill="#4B5563">41 k€ à 279 k€</text>
+          <text x="8" y="195" font-weight="700">SCPI</text><text x="8" y="209" font-size="11" fill="#4B5563">74 k€ à 123 k€</text>
+        </g>
+        <rect x="241" y="52" width="19" height="26" rx="3" fill="#9fb0c9"/>
+        <rect x="253" y="95" width="154" height="26" rx="3" fill="#102A56"/>
+        <rect x="208" y="138" width="332" height="26" rx="3" fill="#C5A059"/>
+        <rect x="253" y="181" width="69" height="26" rx="3" fill="#6d8bb8"/>
+        <g font-size="11" fill="#4B5563" text-anchor="middle"><line x1="150" y1="218" x2="570" y2="218" stroke="#4B5563"/>
+          <text x="150" y="234">0</text><text x="290" y="234">100 k€</text><text x="430" y="234">200 k€</text><text x="570" y="234">300 k€</text></g>
+      </svg>
+      <figcaption>Hypothèses de rendement annuel : épargne 1 à 2,5 %, ETF 2 à 9 %, stock picking de -3 à 12 %, SCPI 2 à 6 %. Avant impôts, simplifié.</figcaption>
+    </figure>
+
+    <div class="alerte"><strong>À savoir :</strong> ces fourchettes sont des illustrations pédagogiques, pas des prévisions ni des promesses. Les personnages sont fictifs. Ce contenu ne constitue pas un conseil en investissement, et tout placement hors livrets comporte un risque de perte en capital.</div>
+    <p>Ce qu'on retient du graphique : <strong>plus la barre est large, plus le résultat est incertain</strong>. L'épargne est étroite et proche du total versé. Le stock picking est large : il peut faire gagner gros, comme faire perdre.</p>
+
+    <!-- CAS 1 -->
+    <h2 id="cas1">Cas 1 : Marc, l'épargnant prudent</h2>
+    <div class="profil"><p><strong>Son choix :</strong> il garde son argent sur son compte courant, un Livret A et un LDDS. Il ne prend aucun risque de marché.</p></div>
+    <p>Marc dort tranquille : son capital ne baisse jamais et reste disponible à tout moment. Le Livret A et le LDDS rapportent 1,7 % depuis le 1er août 2026, et ces intérêts sont exonérés d'impôt et de prélèvements sociaux. Le Livret A est plafonné à 22 950 €, le LDDS à 12 000 €.</p>
+    <p>Mais l'inflation est autour de 2 % en 2026 : avec un livret à 1,7 %, son argent ne progresse pas vraiment en pouvoir d'achat. Et sur le compte courant, qui ne rapporte rien, il en perd chaque année.</p>
+    <div class="duo">
+      <div class="pour"><h3>Points forts</h3><ul><li>Capital garanti</li><li>Disponible à tout moment</li><li>Intérêts non imposés</li><li>Aucun effort de gestion</li></ul></div>
+      <div class="contre"><h3>Points faibles</h3><ul><li>Rendement proche de l'inflation</li><li>Plafonds de dépôt</li><li>Compte courant : zéro rendement</li><li>Aucune croissance du capital</li></ul></div>
+    </div>
+    <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Les livrets sont idéaux pour l'<strong>épargne de précaution</strong> (souvent 3 à 6 mois de dépenses) et les projets à court terme. Pour le long terme, ils protègent le capital mais ne le font pas vraiment grandir.</li></ul></div>
+
+    <!-- CAS 2 -->
+    <h2 id="cas2">Cas 2 : Sarah, l'investisseuse indicielle</h2>
+    <div class="profil"><p><strong>Son choix :</strong> elle place son argent dans un ETF sur le S&P 500 et un ETF « monde » (grandes entreprises de pays développés). Elle investit chaque mois, sans chercher à anticiper les marchés.</p></div>
+    <p>Sarah profite de l'économie de centaines d'entreprises sans les choisir une à une. Ses frais sont faibles, et elle ne passe presque pas de temps à gérer. En contrepartie, elle accepte que son capital <strong>fluctue</strong> : des baisses de 30 à 50 % ont déjà eu lieu sur les grands indices actions, avant de se redresser plus tard.</p>
+    <p>Petite subtilité : un ETF monde contient déjà une part importante d'entreprises américaines. Ajouter un ETF S&P 500 renforce donc cette exposition plutôt que de la diversifier. Et les actifs américains sont cotés en dollars, d'où un <strong>risque de change</strong> pour un épargnant en euros.</p>
+    <div class="duo">
+      <div class="pour"><h3>Points forts</h3><ul><li>Large diversification</li><li>Frais faibles</li><li>Simple, peu de temps requis</li><li>Potentiel de croissance à long terme</li></ul></div>
+      <div class="contre"><h3>Points faibles</h3><ul><li>Fortes baisses possibles</li><li>Recouvrement S&P 500 / monde</li><li>Risque de change</li><li>Exige de tenir le cap quand ça baisse</li></ul></div>
+    </div>
+    <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Le principal risque de cette stratégie n'est pas le marché, c'est le comportement : vendre dans la panique transforme une baisse temporaire en perte réelle. L'enveloppe (PEA, compte-titres, assurance-vie) joue aussi : voir la page <a href="fiscalite.html">Fiscalité</a>.</li></ul></div>
+
+    <!-- CAS 3 -->
+    <h2 id="cas3">Cas 3 : Julien, le stock picker</h2>
+    <div class="profil"><p><strong>Son choix :</strong> il n'investit que dans des actions qu'il sélectionne lui-même, une dizaine d'entreprises, après avoir lu leurs comptes et suivi l'actualité.</p></div>
+    <p>Julien apprend beaucoup et peut, s'il choisit bien, faire mieux que le marché. Mais il se heurte à des obstacles : ses choix sont <strong>concentrés</strong> (dix entreprises, c'est peu), chaque erreur pèse lourd, et il y consacre beaucoup de temps. Les études comparant les gérants actifs à leur indice montrent que, sur le long terme, la majorité fait moins bien que l'indice.</p>
+    <p>Il y a aussi le facteur humain : garder trop longtemps une action qui baisse, vendre trop tôt celle qui monte, se laisser influencer par l'actualité. D'où la large fourchette du graphique.</p>
+    <div class="duo">
+      <div class="pour"><h3>Points forts</h3><ul><li>Potentiel de surperformance</li><li>Comprendre ce que l'on possède</li><li>Liberté totale de choix</li></ul></div>
+      <div class="contre"><h3>Points faibles</h3><ul><li>Forte concentration du risque</li><li>Résultats très dispersés</li><li>Beaucoup de temps nécessaire</li><li>Biais émotionnels</li></ul></div>
+    </div>
+    <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Le stock picking peut avoir sa place en complément, avec une petite part du patrimoine, à côté d'un socle diversifié. Seul, il concentre le risque.</li></ul></div>
+
+    <!-- CAS 4 -->
+    <h2 id="cas4">Cas 4 : Claire, l'investisseuse en SCPI</h2>
+    <div class="profil"><p><strong>Son choix :</strong> elle investit uniquement dans l'immobilier via des SCPI, des sociétés qui achètent et louent des bureaux, commerces, entrepôts, cliniques… et lui reversent les loyers.</p></div>
+    <p>Claire reçoit des revenus réguliers sans gérer de locataires. Le taux de distribution moyen des SCPI s'est établi à 4,91 % en 2025 selon l'ASPIM (un chiffre brut, avant impôts), nettement au-dessus des livrets.</p>
+    <p>En contrepartie, les frais d'entrée sont souvent de 8 à 12 %, la liquidité est limitée (la revente n'est pas garantie), le capital n'est pas garanti, et les loyers sont imposés comme des revenus fonciers, au barème de l'impôt sur le revenu, plus les prélèvements sociaux. Surtout, toute son épargne dépend d'<strong>une seule classe d'actifs</strong> : l'immobilier.</p>
+    <div class="duo">
+      <div class="pour"><h3>Points forts</h3><ul><li>Revenus réguliers</li><li>Aucune gestion locative</li><li>Diversification entre plusieurs biens</li></ul></div>
+      <div class="contre"><h3>Points faibles</h3><ul><li>Frais d'entrée élevés</li><li>Liquidité limitée</li><li>Fiscalité parfois lourde</li><li>Un seul type d'actif</li></ul></div>
+    </div>
+    <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Les SCPI sont un placement de long terme (en général 8 à 10 ans minimum), qui convient comme complément de revenus. Un taux affiché élevé ne dit rien des frais, de la fiscalité ni du prix de revente.</li></ul></div>
+
+    <h2>Les quatre profils côte à côte</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Marc : épargne</th><th>Sarah : ETF</th><th>Julien : stock picking</th><th>Claire : SCPI</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Risque de perte</th><td>Très faible</td><td>Moyen à élevé</td><td>Élevé</td><td>Moyen</td></tr>
+          <tr><th scope="row">Disponibilité</th><td>Immédiate</td><td>Rapide (vente en bourse)</td><td>Rapide (vente en bourse)</td><td>Limitée</td></tr>
+          <tr><th scope="row">Diversification</th><td>Sans objet</td><td>Large</td><td>Faible</td><td>Moyenne (un seul secteur)</td></tr>
+          <tr><th scope="row">Temps demandé</th><td>Aucun</td><td>Très peu</td><td>Beaucoup</td><td>Peu</td></tr>
+          <tr><th scope="row">Fiscalité</th><td>Livrets exonérés</td><td>Selon l'enveloppe</td><td>Selon l'enveloppe</td><td>Revenus fonciers</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Ce que ces quatre histoires nous apprennent</h2>
+    <ul class="liste">
+      <li><strong>Il n'y a pas de bonne réponse unique.</strong> Chaque stratégie répond à un besoin, un horizon et une tolérance au risque différents.</li>
+      <li><strong>Mettre tous ses œufs dans le même panier est risqué</strong>, que ce soit une seule action, un seul secteur ou… un seul livret.</li>
+      <li><strong>Beaucoup d'épargnants combinent</strong> : livrets pour la sécurité, ETF pour la croissance, et éventuellement un peu de stock picking ou de SCPI en complément.</li>
+      <li><strong>Les frais, la fiscalité et le comportement</strong> comptent autant que le choix du produit.</li>
+    </ul>
+    <p>Pour aller plus loin : les <a href="marches.html">actifs</a> en détail, les <a href="fiscalite.html">enveloppes</a>, et l'<a href="outils.html">application Monte Carlo</a> pour visualiser l'éventail des futurs possibles.</p>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="2">
+      <p>1. Pourquoi Marc voit-il peu progresser son pouvoir d'achat ?</p>
+      <button>Parce que ses livrets sont imposés</button>
+      <button>Parce que son capital n'est pas garanti</button>
+      <button>Parce que le rendement de ses livrets est proche de l'inflation</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>2. Pourquoi un ETF S&P 500 ajouté à un ETF monde diversifie-t-il peu ?</p>
+      <button>Parce que les ETF n'ont pas de frais</button>
+      <button>Parce que l'ETF monde contient déjà beaucoup d'entreprises américaines</button>
+      <button>Parce que le S&P 500 est interdit dans un PEA</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>3. Quel est le principal risque pour Julien, le stock picker ?</p>
+      <button>La concentration : peu d'entreprises, donc des résultats très dispersés</button>
+      <button>L'absence de dividendes</button>
+      <button>Une fiscalité obligatoire à 100 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>4. Quelle limite caractérise surtout les SCPI ?</p>
+      <button>Un capital toujours garanti</button>
+      <button>Une liquidité limitée et des frais d'entrée élevés</button>
+      <button>Une interdiction de toucher des loyers</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager">
+      <a href="fiscalite.html">← Fiscalité & Enveloppes</a>
+      <a class="next" href="outils.html">Outils & Simulateurs →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
+if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+document.querySelectorAll('.q').forEach(function(q){
+  var good=+q.dataset.good,btns=q.querySelectorAll('button'),fb=q.querySelector('.fb');
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.disabled=true});
+      btns[good].classList.add('good');
+      if(i===good){fb.textContent="Bravo, c'est la bonne réponse.";}
+      else{b.classList.add('bad');fb.textContent="Pas tout à fait : la bonne réponse est « "+btns[good].textContent+" ».";}
+    });
+  });
+});
+</script>
+</body>
+</html>
