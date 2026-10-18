@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Outils & Simulateurs - EikoFinance</title>
-<meta name="description" content="Utilise en ligne le simulateur Monte Carlo EikoFinance, télécharge l'application Android et comprends comment fonctionnent ces simulations.">
+<meta name="description" content="Télécharge l'application Android de simulation Monte Carlo d'EikoFinance et comprends comment fonctionnent ces simulations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
+@media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
 .chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
 .crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
 .crumbs a{color:var(--text-muted)}
@@ -29,12 +30,10 @@ figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:
 .retenir ul{margin:.5rem 0 0 1.2rem}
 .retenir li{margin-bottom:.4rem}
 .alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
-.simulator-embed{margin:1rem 0 2rem;border:1px solid #d9dee5;border-radius:8px;overflow:hidden;background:#fff}
-.simulator-embed iframe{display:block;width:100%;height:1000px;border:0;background:#fff}
-.simulator-open{display:inline-block;margin:0 0 1rem;color:var(--primary-blue);font-weight:700}
 details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:.8rem 0}
 summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
 details p{margin:.7rem 0 0}
+.soon{border:2px dashed #cbd2dc;border-radius:8px;padding:1.2rem;color:var(--text-muted);text-align:center;margin:1.5rem 0}
 .pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
 .pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
 .pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
@@ -54,6 +53,8 @@ details p{margin:.7rem 0 0}
       <li><a href="index.html">Accueil</a></li>
       <li><a href="economie.html">Économie & Cycles</a></li>
       <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="scpi.html">SCPI</a></li>
+      <li><a href="alternatifs.html">Alternatifs</a></li>
       <li><a href="fiscalite.html">Fiscalité</a></li>
       <li><a href="etudes.html">Études de cas</a></li>
       <li><a href="outils.html" class="active">Outils & Simulateurs</a></li>
@@ -67,18 +68,11 @@ details p{margin:.7rem 0 0}
 
   <section class="hero">
     <h1>Outils & Simulateurs</h1>
-    <p>Des outils pour passer de la théorie à la pratique : utilise le simulateur Monte Carlo directement en ligne ou télécharge l'application Android.</p>
-    <a href="#simulateur" class="btn-gold">Ouvrir le simulateur</a>
+    <p>Des outils pour passer de la théorie à la pratique. Commence par notre application de simulation Monte Carlo, disponible sur Android.</p>
+    <a href="#telecharger" class="btn-gold">Télécharger l'application</a>
   </section>
 
   <article class="chapitre">
-
-    <h2 id="simulateur">Simulateur Monte Carlo en ligne</h2>
-    <p>Lance une simulation directement dans ton navigateur. Les données saisies restent privées et sont enregistrées uniquement dans ton navigateur.</p>
-    <div class="simulator-embed">
-      <iframe src="simulateur-monte-carlo.html" title="Simulateur Monte Carlo EikoFinance" loading="lazy" allow="clipboard-read; clipboard-write"></iframe>
-    </div>
-    <a class="simulator-open" href="simulateur-monte-carlo.html" target="_blank" rel="noopener">Ouvrir le simulateur dans un nouvel onglet</a>
 
     <h2 id="telecharger">Simulateur Monte Carlo (Android)</h2>
     <p class="accroche">« Et si, au lieu de prédire un seul avenir, on en simulait des milliers ? »</p>
@@ -138,10 +132,12 @@ details p{margin:.7rem 0 0}
     <div class="alerte"><strong>À savoir :</strong> les simulations sont des outils pédagogiques. Elles ne constituent ni une promesse de rendement ni un conseil en investissement. Les performances passées ne préjugent pas des performances futures.</div>
 
     <h2>Questions fréquentes</h2>
-    <details><summary>Et sur iPhone ou sur ordinateur ?</summary><p>Le simulateur en ligne ci-dessus fonctionne dans un navigateur récent, sur ordinateur, Android et iPhone. Le fichier APK, lui, ne fonctionne que sur Android.</p></details>
+    <details><summary>Et sur iPhone ou sur ordinateur ?</summary><p>Un fichier APK ne fonctionne que sur Android. Un simulateur utilisable directement en ligne est prévu : reviens bientôt.</p></details>
+
+    <div class="soon"><strong>Prochainement :</strong> simulateur en ligne, directement dans ton navigateur.</div>
 
     <div class="pager">
-      <a href="fiscalite.html">← Fiscalité & Enveloppes</a>
+      <a href="etudes.html">← Études de cas</a>
       <a class="next" href="contact.html">Contact & À propos →</a>
     </div>
   </article>

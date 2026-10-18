@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investissements alternatifs - EikoFinance</title>
+<meta name="description" content="Private equity, vin, montres, voitures de collection, art : comprendre les actifs alternatifs, leurs frais, leurs risques et leur fiscalité.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+@media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.card-grid a.card{display:block;text-decoration:none;color:inherit}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:2.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.15rem;margin:1.5rem 0 .5rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.chapitre ul.liste{margin:0 0 1rem 1.2rem;line-height:1.7}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.duo>div{border:1px solid #d9dee5;border-radius:8px;padding:.9rem 1.1rem}
+.duo h3{margin:0 0 .4rem;font-size:1rem}
+.duo ul{margin:0 0 0 1.1rem;line-height:1.6}
+.duo .pour{border-top:4px solid #2e7d4f}
+.duo .contre{border-top:4px solid #b3402e}
+@media(max-width:640px){.duo{grid-template-columns:1fr}}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.tablewrap{overflow-x:auto;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:.93rem}
+th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--primary-blue);color:#fff;font-weight:600}
+tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
+details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
+details p{margin:.7rem 0 0}
+.q{border:1px solid #d9dee5;border-radius:8px;padding:1rem;margin:.9rem 0}
+.q p{font-weight:700;margin-bottom:.6rem}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1px solid #d9dee5;border-radius:6px;background:#fff;font:inherit;color:var(--text-dark);cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--gold-accent)}
+.q button.good{background:#e3f3e9;border-color:#2e7d4f}
+.q button.bad{background:#f8e5e1;border-color:#b3402e}
+.q .fb{font-size:.92rem;margin-top:.5rem;color:var(--text-muted)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+</style>
+</head>
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html">Économie & Cycles</a></li>
+      <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="scpi.html">SCPI</a></li>
+      <li><a href="alternatifs.html" class="active">Alternatifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="etudes.html">Études de cas</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › Investissements alternatifs</p>
+
+  <section class="hero">
+    <h1>Investissements alternatifs : au-delà des marchés classiques</h1>
+    <p>Private equity, vin, montres, automobiles de collection, art : passion ou placement ? On regarde ce qu'ils offrent, ce qu'ils coûtent et ce qu'ils risquent.</p>
+    <a href="#intro" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire">
+    <a class="card" href="#pe"><h3>Private equity</h3><p>Financer des entreprises non cotées.</p></a>
+    <a class="card" href="#vin"><h3>Vin</h3><p>Du primeur à la cave.</p></a>
+    <a class="card" href="#montres"><h3>Montres</h3><p>Marché secondaire et authenticité.</p></a>
+    <a class="card" href="#autos"><h3>Autos de collection</h3><p>Passion et coûts.</p></a>
+    <a class="card" href="#art"><h3>Art</h3><p>Un marché opaque.</p></a>
+  </section>
+
+  <article class="chapitre">
+    <h2 id="intro">Qu'est-ce qu'un investissement alternatif ?</h2>
+    <p class="accroche">« Et si mon argent ne se limitait pas à la Bourse et aux livrets ? »</p>
+    <p>On appelle « alternatifs » les actifs qui n'entrent pas dans les catégories classiques (actions, obligations, livrets). Camille, la boulangère, s'y intéresse : certains la passionnent (un beau vin, une montre, une voiture ancienne), d'autres lui promettent de la diversification (le capital-investissement).</p>
+    <p>Ces actifs ont des points communs qu'il vaut mieux connaître avant d'acheter :</p>
+    <ul class="liste">
+      <li><strong>Peu de liquidité</strong> : revendre peut prendre des semaines, des mois, voire des années.</li>
+      <li><strong>Des frais élevés</strong> à l'achat comme à la vente.</li>
+      <li><strong>Une valeur moins transparente</strong> : pas de cours affiché chaque seconde, et une cote qui dépend de modes et d'experts.</li>
+      <li><strong>Des coûts annexes</strong> : stockage, assurance, entretien, expertise.</li>
+      <li><strong>Pas de revenus réguliers</strong> : le gain vient presque uniquement de la revente.</li>
+    </ul>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Ces actifs sont risqués et difficiles à revendre : le capital peut être perdu, et ils ne conviennent qu'à une petite part d'un patrimoine déjà diversifié. Les règles fiscales évoluent : vérifie-les avant d'acheter ou de vendre.</div>
+
+    <h3>L'effet « aller-retour »</h3>
+    <p>Prenons un objet de collection qui vaut 100 € sur le marché. Si les frais d'achat sont de 25 % et les frais de vente de 10 %, Camille paie 125 € puis ne reçoit que 90 € si la valeur n'a pas bougé. Pour simplement récupérer sa mise, l'objet doit gagner près de <strong>39 %</strong> de valeur.</p>
+    <figure>
+      <svg viewBox="0 0 600 215" role="img" aria-label="Exemple : on paie 125 euros, la valeur de marché est de 100 euros, on reçoit 90 euros à la revente">
+        <text x="300" y="18" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">Même objet, même valeur de marché : combien ça coûte ?</text>
+        <line x1="30" y1="180" x2="570" y2="180" stroke="#4B5563"/>
+        <rect x="70" y="55" width="110" height="125" rx="3" fill="#b3402e"/>
+        <rect x="245" y="80" width="110" height="100" rx="3" fill="#102A56"/>
+        <rect x="420" y="90" width="110" height="90" rx="3" fill="#C5A059"/>
+        <g font-size="14" font-weight="700" text-anchor="middle"><text x="125" y="48" fill="#b3402e">125 €</text><text x="300" y="73" fill="#102A56">100 €</text><text x="475" y="83" fill="#8a6d2b">90 €</text></g>
+        <g font-size="12" text-anchor="middle" fill="#1F2937"><text x="125" y="198">Tu paies (25 % de frais)</text><text x="300" y="198">Valeur de marché</text><text x="475" y="198">Tu reçois (10 % de frais)</text></g>
+      </svg>
+      <figcaption>Illustration simplifiée : les frais réels varient selon le marché et le canal de vente.</figcaption>
+    </figure>
+
+    <h2 id="pe">1. Le private equity (capital-investissement)</h2>
+    <p class="accroche">« Et si j'investissais dans des entreprises qui ne sont pas en Bourse ? »</p>
+    <p>Le private equity consiste à financer des entreprises <strong>non cotées</strong> : jeunes pousses, PME en croissance, entreprises à transmettre ou à restructurer. Pour un particulier, on y accède en général par des <strong>fonds</strong> (FCPR, FCPI, FIP, ELTIF…) ou des plateformes spécialisées, qui rassemblent l'argent de nombreux investisseurs.</p>
+    <p>En échange d'un potentiel de rendement supérieur aux marchés cotés, l'investisseur accepte un <strong>blocage de longue durée</strong> (souvent 6 à 10 ans), des frais plus élevés, et un risque réel de <strong>perte partielle ou totale</strong>. Les résultats sont très dispersés d'un fonds à l'autre. Certains fonds (FCPI, FIP) ouvrent droit à une réduction d'impôt, en contrepartie de ce blocage et d'un risque élevé.</p>
+        <div class="duo">
+      <div class="pour"><h3>Avantages</h3><ul><li>Accès à des entreprises non cotées</li><li>Potentiel de rendement supérieur aux marchés cotés</li><li>Diversification par rapport à la Bourse</li></ul></div>
+      <div class="contre"><h3>Inconvénients</h3><ul><li>Blocage de 6 à 10 ans</li><li>Frais élevés</li><li>Risque de perte partielle ou totale</li></ul></div>
+    </div>
+
+    <h2 id="vin">2. Le vin</h2>
+    <p class="accroche">« Une cave peut-elle être un placement ? »</p>
+    <p>Certains grands crus (Bordeaux, Bourgogne, Champagne…) prennent de la valeur avec le temps et la rareté. On peut acheter en <strong>primeur</strong> (avant la mise en bouteille), constituer une cave, ou passer par un fonds ou un courtier spécialisé.</p>
+    <p>Mais le vin est un produit vivant : mal conservé, il perd sa valeur. Il faut une cave adaptée, une assurance, une traçabilité irréprochable (provenance, caisse d'origine), et la bonne personne pour le revendre. Les prix peuvent aussi varier fortement selon les modes et la conjoncture.</p>
+        <div class="duo">
+      <div class="pour"><h3>Avantages</h3><ul><li>Actif tangible, avec une dimension plaisir</li><li>Rareté de certains grands crus</li><li>Marché de seconde main existant (courtiers, enchères)</li></ul></div>
+      <div class="contre"><h3>Inconvénients</h3><ul><li>Stockage et assurance à prévoir</li><li>Authenticité et conservation déterminantes</li><li>Prix très sensibles aux modes</li></ul></div>
+    </div>
+
+    <h2 id="montres">3. Les montres</h2>
+    <p class="accroche">« Une montre peut-elle valoir plus cher qu'à l'achat ? »</p>
+    <p>Quelques marques et modèles rares se revendent plus cher que leur prix neuf, d'où l'engouement des dernières années. Après une envolée vers 2021-2022, le marché a connu une correction : rien n'est garanti.</p>
+    <p>Ce qui compte : le modèle, l'état, les <strong>papiers et la boîte d'origine</strong>, l'historique d'entretien, et surtout l'<strong>authenticité</strong> : les contrefaçons sont nombreuses. Une montre ne rapporte aucun revenu, et ses coûts d'assurance et d'entretien sont réels.</p>
+        <div class="duo">
+      <div class="pour"><h3>Avantages</h3><ul><li>Marché secondaire actif sur les grandes marques</li><li>Ticket d'entrée plus accessible que l'art</li><li>Objet que l'on peut porter</li></ul></div>
+      <div class="contre"><h3>Inconvénients</h3><ul><li>Contrefaçons nombreuses</li><li>Valeurs soumises aux modes et aux corrections</li><li>Aucun revenu, entretien et assurance coûteux</li></ul></div>
+    </div>
+
+    <h2 id="autos">4. Les automobiles de collection</h2>
+    <p class="accroche">« Un plaisir qui peut aussi se valoriser ? »</p>
+    <p>On parle généralement de voiture de collection au-delà de 30 ans d'âge. Certains modèles rares, bien documentés et en excellent état, se sont fortement valorisés, mais le marché est étroit et très dépendant des modes (voitures des années 80-90, par exemple, très recherchées ces dernières années).</p>
+    <p>Une voiture se détériore si on ne l'entretient pas : stockage, assurance spécifique, entretien par des spécialistes, pièces parfois rares. Les coûts peuvent absorber une grande partie de la plus-value. La valeur dépend aussi de l'authenticité, de l'historique et des certificats.</p>
+        <div class="duo">
+      <div class="pour"><h3>Avantages</h3><ul><li>Certains modèles se sont fortement valorisés</li><li>Dimension passion et usage possible</li></ul></div>
+      <div class="contre"><h3>Inconvénients</h3><ul><li>Entretien, stockage et assurance coûteux</li><li>Marché étroit et très cyclique</li><li>Authenticité et historique à prouver</li></ul></div>
+    </div>
+
+    <h2 id="art">5. L'art</h2>
+    <p class="accroche">« Acheter une œuvre, c'est un coup de cœur ou un placement ? »</p>
+    <p>Tableaux, sculptures, gravures, photographies d'artistes : l'art est un marché opaque, où la valeur se forme au gré des cotes d'artistes, des galeries et des maisons de vente. En vente aux enchères en France, les frais atteignent souvent <strong>22 à 28 % pour l'acheteur</strong>, et de 0 à 15 % pour le vendeur (d'après les barèmes 2026 communément constatés).</p>
+    <p>Un artiste très coté peut s'envoler, mais la grande majorité des œuvres reste difficile à revendre au prix payé. Le principal conseil des spécialistes : acheter d'abord ce qui te plaît, et considérer l'éventuelle plus-value comme un bonus. Des plateformes proposent aussi des parts d'œuvres, ce qui demande la même prudence sur les frais et la liquidité.</p>
+        <div class="duo">
+      <div class="pour"><h3>Avantages</h3><ul><li>Potentiel de forte valorisation sur quelques artistes</li><li>Plaisir de posséder et d'exposer</li><li>Marché peu corrélé à la Bourse</li></ul></div>
+      <div class="contre"><h3>Inconvénients</h3><ul><li>Frais d'achat et de vente très élevés</li><li>Marché opaque, valeur subjective</li><li>Revente difficile au prix payé</li></ul></div>
+    </div>
+
+    <h2 id="fiscalite">La fiscalité des objets de collection</h2>
+    <p>Pour les <strong>objets d'art, de collection et d'antiquité</strong> (et certaines voitures de collection de plus de 30 ans), la revente par un particulier est en général soumise, dès que le prix dépasse <strong>5 000 €</strong>, à une <strong>taxe forfaitaire de 6,5 %</strong> du prix de vente (6 % plus 0,5 % de CRDS), même sans plus-value. Il est parfois possible d'opter pour le régime des plus-values, avec un abattement de 5 % par an à partir de la troisième année de détention et une exonération après 22 ans.</p>
+    <p>La nature exacte du bien (montre, bijou, véhicule, antiquité) et les justificatifs de propriété (facture d'achat, date) changent le régime applicable. Pour le <strong>vin</strong> et le <strong>private equity</strong>, la fiscalité dépend surtout de la façon dont tu investis (cave en direct, fonds, plateforme). Dans tous les cas, garde tes factures et renseigne-toi auprès d'un professionnel avant de vendre.</p>
+
+    <h2>Les actifs alternatifs côte à côte</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Private equity</th><th>Vin</th><th>Montres</th><th>Autos de collection</th><th>Art</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ticket d'entrée</th><td>Variable (parfois quelques milliers d'euros)</td><td>Quelques centaines à plusieurs milliers d'euros</td><td>Plusieurs milliers d'euros</td><td>Élevé</td><td>Variable, souvent élevé</td></tr>
+          <tr><th scope="row">Liquidité</th><td>Très faible (blocage)</td><td>Moyenne à faible</td><td>Moyenne</td><td>Faible</td><td>Faible</td></tr>
+          <tr><th scope="row">Frais</th><td>Élevés</td><td>Moyens (stockage, courtage)</td><td>Moyens</td><td>Élevés (entretien, assurance)</td><td>Très élevés (enchères, galeries)</td></tr>
+          <tr><th scope="row">Risque principal</th><td>Perte du capital</td><td>Conservation, authenticité</td><td>Contrefaçon, mode</td><td>Coûts, rareté du marché</td><td>Valeur subjective</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <div class="retenir"><strong>3 idées à retenir</strong><ul><li>Ces actifs ne conviennent qu'à une petite part d'un patrimoine déjà diversifié.</li><li>Les frais d'aller-retour sont élevés : une plus-value n'est jamais garantie.</li><li>L'authenticité, la conservation et les justificatifs comptent autant que le prix.</li></ul></div>
+
+    <h3>Le jargon traduit</h3>
+    <dl>
+      <dt><strong>Actif alternatif</strong></dt><dd>Un placement hors actions, obligations et livrets.</dd>
+      <dt><strong>Illiquidité</strong></dt><dd>La difficulté à revendre rapidement sans perdre de valeur.</dd>
+      <dt><strong>Non coté</strong></dt><dd>Une entreprise dont les titres ne s'échangent pas en Bourse.</dd>
+      <dt><strong>Primeur</strong></dt><dd>L'achat d'un vin avant sa mise en bouteille, livré plus tard.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Un objet vaut 100 € sur le marché. Avec 25 % de frais d'achat et 10 % de frais de vente, que se passe-t-il s'il ne bouge pas de valeur ?</p>
+      <button>Tu gagnes 15 €</button>
+      <button>Tu perds environ 35 €</button>
+      <button>Tu récupères exactement ta mise</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>2. Quelle est la caractéristique commune des actifs alternatifs ?</p>
+      <button>Une forte liquidité</button>
+      <button>Une liquidité souvent faible et des frais élevés</button>
+      <button>Des revenus réguliers garantis</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>3. Quel est l'inconvénient principal du private equity pour un particulier ?</p>
+      <button>Un blocage long et un risque de perte du capital</button>
+      <button>Une cotation quotidienne</button>
+      <button>Des frais nuls</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p>Pour comparer avec les placements classiques : <a href="marches.html">Marchés & Actifs</a> et <a href="etudes.html">Études de cas</a>.</p>
+    <div class="pager">
+      <a href="scpi.html">← SCPI</a>
+      <a class="next" href="fiscalite.html">Fiscalité & Enveloppes →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
+if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+document.querySelectorAll('.q').forEach(function(q){
+  var good=+q.dataset.good,btns=q.querySelectorAll('button'),fb=q.querySelector('.fb');
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.disabled=true});
+      btns[good].classList.add('good');
+      if(i===good){fb.textContent="Bravo, c'est la bonne réponse.";}
+      else{b.classList.add('bad');fb.textContent="Pas tout à fait : la bonne réponse est « "+btns[good].textContent+" ».";}
+    });
+  });
+});
+</script>
+</body>
+</html>
