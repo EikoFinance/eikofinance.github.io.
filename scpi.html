@@ -53,6 +53,12 @@ details p{margin:.7rem 0 0}
 .pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
 .pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
 :focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+.subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
+.subnav .st{font-family:var(--font-title);font-size:.78rem;color:var(--text-muted);margin-right:.6rem}
+.subnav a{padding:.35rem .8rem;border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:600;color:var(--primary-blue)}
+.subnav a:hover{background:#e6ebf3}
+.subnav a.on{background:var(--primary-blue);color:#fff}
+@media(max-width:768px){nav.mobile-open{max-height:520px}}
 </style>
 </head>
 <body class="no-intro">
@@ -66,10 +72,8 @@ details p{margin:.7rem 0 0}
   <nav>
     <ul>
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="economie.html">Économie & Cycles</a></li>
-      <li><a href="marches.html">Marchés & Actifs</a></li>
-      <li><a href="scpi.html" class="active">SCPI</a></li>
-      <li><a href="alternatifs.html">Alternatifs</a></li>
+      <li><a href="economie.html">Économie & Géopolitique</a></li>
+      <li><a href="marches.html" class="active">Marchés & Actifs</a></li>
       <li><a href="fiscalite.html">Fiscalité</a></li>
       <li><a href="etudes.html">Études de cas</a></li>
       <li><a href="outils.html">Outils & Simulateurs</a></li>
@@ -79,6 +83,7 @@ details p{margin:.7rem 0 0}
 </header>
 
 <main>
+  <div class="subnav" aria-label="Dans cette rubrique"><span class="st">Marchés & Actifs</span><a href="marches.html">Les classiques</a><a href="crypto.html">Cryptomonnaies</a><a href="scpi.html" class="on" aria-current="page">SCPI</a><a href="alternatifs.html">Alternatifs</a><a href="trading.html">Trading</a></div>
   <p class="crumbs"><a href="index.html">Accueil</a> › SCPI</p>
 
   <section class="hero">
@@ -221,7 +226,7 @@ details p{margin:.7rem 0 0}
 
     <p>Pour voir une SCPI dans un cas concret : <a href="etudes.html">Études de cas</a>.</p>
     <div class="pager">
-      <a href="marches.html">← Marchés & Actifs</a>
+      <a href="crypto.html">← Cryptomonnaies</a>
       <a class="next" href="alternatifs.html">Investissements alternatifs →</a>
     </div>
   </article>

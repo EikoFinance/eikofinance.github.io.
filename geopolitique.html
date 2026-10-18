@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Géopolitique & rapports de force - EikoFinance</title>
+<meta name="description" content="Comment les rapports de force entre pays (commerce, énergie, monnaies, technologie) influencent l'économie et les marchés.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+@media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.card-grid a.card{display:block;text-decoration:none;color:inherit}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:2.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.15rem;margin:1.5rem 0 .5rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.chapitre ul.liste{margin:0 0 1rem 1.2rem;line-height:1.7}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.duo>div{border:1px solid #d9dee5;border-radius:8px;padding:.9rem 1.1rem}
+.duo h3{margin:0 0 .4rem;font-size:1rem}
+.duo ul{margin:0 0 0 1.1rem;line-height:1.6}
+.duo .pour{border-top:4px solid #2e7d4f}
+.duo .contre{border-top:4px solid #b3402e}
+@media(max-width:640px){.duo{grid-template-columns:1fr}}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.tablewrap{overflow-x:auto;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:.93rem}
+th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--primary-blue);color:#fff;font-weight:600}
+tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
+details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
+details p{margin:.7rem 0 0}
+.q{border:1px solid #d9dee5;border-radius:8px;padding:1rem;margin:.9rem 0}
+.q p{font-weight:700;margin-bottom:.6rem}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1px solid #d9dee5;border-radius:6px;background:#fff;font:inherit;color:var(--text-dark);cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--gold-accent)}
+.q button.good{background:#e3f3e9;border-color:#2e7d4f}
+.q button.bad{background:#f8e5e1;border-color:#b3402e}
+.q .fb{font-size:.92rem;margin-top:.5rem;color:var(--text-muted)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+.subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
+.subnav .st{font-family:var(--font-title);font-size:.78rem;color:var(--text-muted);margin-right:.6rem}
+.subnav a{padding:.35rem .8rem;border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:600;color:var(--primary-blue)}
+.subnav a:hover{background:#e6ebf3}
+.subnav a.on{background:var(--primary-blue);color:#fff}
+@media(max-width:768px){nav.mobile-open{max-height:520px}}
+</style>
+</head>
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html" class="active">Économie & Géopolitique</a></li>
+      <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="etudes.html">Études de cas</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="subnav" aria-label="Dans cette rubrique"><span class="st">Économie & Géopolitique</span><a href="economie.html">Parcours débutant</a><a href="macro.html">Macroéconomie</a><a href="geopolitique.html" class="on" aria-current="page">Géopolitique & rapports de force</a></div>
+  <p class="crumbs"><a href="index.html">Accueil</a> › Géopolitique</p>
+
+  <section class="hero">
+    <h1>Géopolitique & rapports de force : comprendre ce qui bouge l'économie</h1>
+    <p>Commerce, énergie, monnaies, dette, technologie : comment les rapports de force entre les pays se transmettent aux prix, aux taux et aux marchés.</p>
+    <a href="#intro" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire">
+    <a class="card" href="#commerce"><h3>Le commerce</h3><p>Libre-échange ou protectionnisme.</p></a>
+    <a class="card" href="#energie"><h3>L'énergie</h3><p>Pétrole, gaz, métaux critiques.</p></a>
+    <a class="card" href="#monnaies"><h3>Les monnaies</h3><p>Dollar, sanctions, or.</p></a>
+    <a class="card" href="#tech"><h3>La technologie</h3><p>Chaînes d'approvisionnement.</p></a>
+  </section>
+
+  <article class="chapitre">
+    <h2 id="intro">L'économie n'est jamais neutre</h2>
+    <p class="accroche">« Pourquoi une décision prise à des milliers de kilomètres change-t-elle le prix de ma baguette ? »</p>
+    <p>Les États ne se contentent pas de laisser faire les marchés : ils utilisent le commerce, l'énergie, les monnaies, la finance et la technologie comme <strong>leviers de puissance</strong>. On appelle cela la <strong>géoéconomie</strong>. Les rapports de force entre pays façonnent les prix, les taux, les chaînes d'approvisionnement, et donc notre quotidien et nos placements.</p>
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, basé sur des mécanismes et des exemples historiques, sans prise de position politique. Le contexte évolue vite : consulte des sources à jour. Ce n'est pas un conseil en investissement.</div>
+    <figure>
+      <svg viewBox="0 0 600 220" role="img" aria-label="Une tension géopolitique agit par l'énergie, le commerce, les monnaies et la finance, et la confiance, puis sur l'inflation, la croissance et les marchés">
+        <defs><marker id="ar3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C5A059"/></marker></defs>
+        <g font-size="12" text-anchor="middle" fill="#1F2937">
+          <rect x="200" y="12" width="200" height="38" rx="8" fill="#102A56"/><text x="300" y="36" fill="#fff" font-weight="700">Tension géopolitique</text>
+          <rect x="15" y="95" width="135" height="40" rx="8" fill="#fff" stroke="#102A56"/><text x="82" y="119" font-weight="700">Énergie</text>
+          <rect x="160" y="95" width="135" height="40" rx="8" fill="#fff" stroke="#102A56"/><text x="227" y="119" font-weight="700">Commerce</text>
+          <rect x="305" y="95" width="135" height="40" rx="8" fill="#fff" stroke="#102A56"/><text x="372" y="112" font-weight="700">Monnaies</text><text x="372" y="127" font-weight="700">et finance</text>
+          <rect x="450" y="95" width="135" height="40" rx="8" fill="#fff" stroke="#102A56"/><text x="517" y="119" font-weight="700">Confiance</text>
+          <rect x="150" y="175" width="300" height="38" rx="8" fill="#fff" stroke="#C5A059" stroke-width="2"/><text x="300" y="199" font-weight="700">Inflation · Croissance · Marchés</text>
+        </g>
+        <g stroke="#C5A059" stroke-width="2" marker-end="url(#ar3)" fill="none">
+          <line x1="260" y1="50" x2="100" y2="92"/><line x1="285" y1="50" x2="227" y2="92"/><line x1="315" y1="50" x2="372" y2="92"/><line x1="340" y1="50" x2="500" y2="92"/>
+          <line x1="82" y1="137" x2="230" y2="172"/><line x1="227" y1="137" x2="270" y2="172"/><line x1="372" y1="137" x2="330" y2="172"/><line x1="517" y1="137" x2="370" y2="172"/>
+        </g>
+      </svg>
+      <figcaption>Les grands canaux par lesquels une tension entre pays atteint l'économie et les marchés.</figcaption>
+    </figure>
+
+    <h2 id="commerce">1. Le commerce : libre-échange ou protectionnisme ?</h2>
+    <p>Un <strong>droit de douane</strong> est une taxe sur les produits importés. Les partisans du <strong>protectionnisme</strong> y voient un moyen de protéger l'emploi et des industries jugées stratégiques. Les partisans du <strong>libre-échange</strong> soulignent que ces taxes renchérissent les produits pour les consommateurs, peuvent provoquer des représailles et désorganisent les chaînes d'approvisionnement. Les économistes nuancent : les effets dépendent des produits, des pays et de la durée.</p>
+
+    <h2 id="energie">2. L'énergie et les matières premières</h2>
+    <p>Le pétrole, le gaz, mais aussi les métaux critiques (lithium, cobalt, terres rares) sont inégalement répartis dans le monde. Quand leur approvisionnement est menacé, les prix s'envolent. Les <strong>chocs pétroliers</strong> des années 1970 en sont un exemple historique. Plus récemment, la hausse des prix du gaz en Europe en 2022 a contribué à la forte inflation, et a poussé plusieurs pays à diversifier leurs sources d'énergie.</p>
+
+    <h2 id="monnaies">3. Les monnaies et le système financier</h2>
+    <p>Le dollar américain joue un rôle central : il sert dans une grande partie des échanges de matières premières, des dettes internationales et des réserves de change. Cette place donne aux États-Unis une influence importante, notamment par les <strong>sanctions financières</strong> (gel d'avoirs, restrictions d'accès au système bancaire).</p>
+    <p>Certains pays cherchent à réduire cette dépendance : développement des échanges dans d'autres monnaies, achats d'or par des banques centrales, projets de systèmes de paiement alternatifs. Ces évolutions sont lentes, et leur portée fait l'objet de débats entre économistes.</p>
+
+    <h2 id="dette">4. La dette, arme et fragilité</h2>
+    <p>Les pays endettés en devises étrangères (surtout en dollars) sont vulnérables quand les taux montent ou que leur monnaie baisse : leur dette devient plus lourde à rembourser. Les relations entre pays créanciers et débiteurs, et le rôle d'institutions comme le FMI, pèsent sur les politiques économiques. L'Europe l'a vu lors de la crise de la dette de 2010-2012.</p>
+
+    <h2 id="tech">5. La technologie et les chaînes d'approvisionnement</h2>
+    <p>Les semi-conducteurs, l'intelligence artificielle ou les batteries sont devenus des enjeux de puissance. Les États restreignent parfois l'exportation de certaines technologies et subventionnent leurs industries. Les perturbations de 2020-2021 (pandémie, transports) ont montré la fragilité de chaînes d'approvisionnement très concentrées, et alimenté les politiques de <strong>relocalisation</strong> ou de diversification des fournisseurs.</p>
+
+    <h2 id="blocs">Un monde de plusieurs pôles</h2>
+    <p>Aujourd'hui, plusieurs grands ensembles pèsent sur l'économie mondiale : les États-Unis, la Chine, l'Union européenne, et des puissances émergentes (Inde, pays du Golfe, Brésil et d'autres). Leurs intérêts, leurs monnaies et leurs modèles économiques diffèrent, et se concurrencent sur certains terrains tout en restant très interdépendants. Cette page décrit des mécanismes, sans prendre parti dans les différends entre États.</p>
+
+    <h2 id="argent">Et pour mon argent ?</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Effet possible</th><th>Pourquoi</th></tr></thead>
+        <tbody><tr><th scope="row">Inflation</th><td>Les prix de l'énergie et des matières premières montent, ce qui renchérit les produits du quotidien</td></tr><tr><th scope="row">Taux d'intérêt</th><td>Les banques centrales ajustent leurs taux pour contenir l'inflation ou soutenir l'activité</td></tr><tr><th scope="row">Marchés financiers</th><td>Les incertitudes font monter la volatilité, certains secteurs en profitent, d'autres souffrent</td></tr><tr><th scope="row">Valeurs refuges</th><td>Les investisseurs se tournent parfois vers l'or ou les obligations d'États jugés sûrs, sans garantie de résultat</td></tr><tr><th scope="row">Taux de change</th><td>Les monnaies réagissent aux écarts de croissance, de taux et à la confiance</td></tr></tbody>
+      </table>
+    </div>
+    <p>Face à cette incertitude, le meilleur réflexe reste la <strong>diversification</strong> et l'horizon long : personne ne sait prédire un événement géopolitique. On peut en revanche comprendre comment il se transmet, et éviter de concentrer tout son patrimoine sur un seul pays, un seul secteur ou une seule monnaie.</p>
+    <p>Pour suivre l'actualité, privilégie des sources institutionnelles : BCE, Banque de France, INSEE, FMI, OCDE.</p>
+    <div class="retenir"><strong>3 idées à retenir</strong><ul><li>L'économie est aussi un outil de puissance : commerce, énergie, monnaie et technologie.</li><li>Les tensions entre pays se transmettent aux prix, aux taux et aux marchés.</li><li>On ne prévoit pas les événements, mais on peut limiter son exposition par la diversification.</li></ul></div>
+
+    <h3>Le jargon traduit</h3>
+    <dl>
+      <dt><strong>Géoéconomie</strong></dt><dd>L'usage de leviers économiques (commerce, énergie, finance) au service de la puissance d'un État.</dd>
+      <dt><strong>Droit de douane</strong></dt><dd>Une taxe sur les produits importés.</dd>
+      <dt><strong>Sanctions financières</strong></dt><dd>Des mesures qui bloquent des avoirs ou l'accès au système bancaire.</dd>
+      <dt><strong>Relocalisation</strong></dt><dd>Le retour de certaines productions vers le pays ou des pays proches.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="0">
+      <p>1. Qu'est-ce qu'un droit de douane ?</p>
+      <button>Une taxe sur les produits importés</button>
+      <button>Une aide aux exportateurs</button>
+      <button>Un taux d'intérêt</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Pourquoi une tension sur l'énergie peut-elle faire monter l'inflation ?</p>
+      <button>Parce que les coûts de production et de transport augmentent</button>
+      <button>Parce que les salaires baissent</button>
+      <button>Parce que les impôts diminuent</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Quel est le meilleur réflexe face à l'incertitude géopolitique ?</p>
+      <button>Tout miser sur un seul pays</button>
+      <button>La diversification et un horizon de long terme</button>
+      <button>Attendre la prochaine crise pour investir</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager">
+      <a href="macro.html">← Macroéconomie</a>
+      <a class="next" href="marches.html">Marchés & Actifs →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
+if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+document.querySelectorAll('.q').forEach(function(q){
+  var good=+q.dataset.good,btns=q.querySelectorAll('button'),fb=q.querySelector('.fb');
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.disabled=true});
+      btns[good].classList.add('good');
+      if(i===good){fb.textContent="Bravo, c'est la bonne réponse.";}
+      else{b.classList.add('bad');fb.textContent="Pas tout à fait : la bonne réponse est « "+btns[good].textContent+" ».";}
+    });
+  });
+});
+</script>
+</body>
+</html>

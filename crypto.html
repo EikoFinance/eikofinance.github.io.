@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cryptomonnaies - EikoFinance</title>
+<meta name="description" content="Bitcoin, Ethereum, stablecoins : fonctionnement, risques, réglementation et fiscalité en France, expliqués simplement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+@media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.card-grid a.card{display:block;text-decoration:none;color:inherit}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:2.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.15rem;margin:1.5rem 0 .5rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.chapitre ul.liste{margin:0 0 1rem 1.2rem;line-height:1.7}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.duo>div{border:1px solid #d9dee5;border-radius:8px;padding:.9rem 1.1rem}
+.duo h3{margin:0 0 .4rem;font-size:1rem}
+.duo ul{margin:0 0 0 1.1rem;line-height:1.6}
+.duo .pour{border-top:4px solid #2e7d4f}
+.duo .contre{border-top:4px solid #b3402e}
+@media(max-width:640px){.duo{grid-template-columns:1fr}}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.tablewrap{overflow-x:auto;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:.93rem}
+th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--primary-blue);color:#fff;font-weight:600}
+tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
+details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
+details p{margin:.7rem 0 0}
+.q{border:1px solid #d9dee5;border-radius:8px;padding:1rem;margin:.9rem 0}
+.q p{font-weight:700;margin-bottom:.6rem}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1px solid #d9dee5;border-radius:6px;background:#fff;font:inherit;color:var(--text-dark);cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--gold-accent)}
+.q button.good{background:#e3f3e9;border-color:#2e7d4f}
+.q button.bad{background:#f8e5e1;border-color:#b3402e}
+.q .fb{font-size:.92rem;margin-top:.5rem;color:var(--text-muted)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+.subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
+.subnav .st{font-family:var(--font-title);font-size:.78rem;color:var(--text-muted);margin-right:.6rem}
+.subnav a{padding:.35rem .8rem;border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:600;color:var(--primary-blue)}
+.subnav a:hover{background:#e6ebf3}
+.subnav a.on{background:var(--primary-blue);color:#fff}
+@media(max-width:768px){nav.mobile-open{max-height:520px}}
+</style>
+</head>
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html">Économie & Géopolitique</a></li>
+      <li><a href="marches.html" class="active">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="etudes.html">Études de cas</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="subnav" aria-label="Dans cette rubrique"><span class="st">Marchés & Actifs</span><a href="marches.html">Les classiques</a><a href="crypto.html" class="on" aria-current="page">Cryptomonnaies</a><a href="scpi.html">SCPI</a><a href="alternatifs.html">Alternatifs</a><a href="trading.html">Trading</a></div>
+  <p class="crumbs"><a href="index.html">Accueil</a> › Cryptomonnaies</p>
+
+  <section class="hero">
+    <h1>Cryptomonnaies : comprendre avant d'investir</h1>
+    <p>Bitcoin, Ethereum, stablecoins : à quoi servent-elles, que valent-elles, et quels sont leurs risques ? Une introduction sans jargon.</p>
+    <a href="#intro" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire">
+    <a class="card" href="#familles"><h3>Les familles</h3><p>Bitcoin, Ethereum, stablecoins.</p></a>
+    <a class="card" href="#valeur"><h3>Que valent-elles ?</h3><p>Pas de revenu, beaucoup de volatilité.</p></a>
+    <a class="card" href="#risques"><h3>Les risques</h3><p>Escroqueries, conservation, faillites.</p></a>
+    <a class="card" href="#cadre"><h3>Cadre et fiscalité</h3><p>MiCA, flat tax à 31,4 %.</p></a>
+  </section>
+
+  <article class="chapitre">
+    <h2 id="intro">Une monnaie sans banque centrale ?</h2>
+    <p class="accroche">« Peut-on créer de la monnaie sans banque ni État ? »</p>
+    <p>Le Bitcoin, lancé en 2009, a proposé une réponse : une monnaie numérique qui repose sur une <strong>blockchain</strong>, un registre partagé et copié sur un très grand nombre d'ordinateurs. Chaque transaction y est enregistrée dans l'ordre, et il est extrêmement difficile de la modifier après coup. Aucune autorité centrale ne le contrôle, et l'offre de Bitcoin est limitée à <strong>21 millions d'unités</strong>.</p>
+    <p>C'est l'inverse des monnaies classiques, dont la création est pilotée par les banques centrales et les banques commerciales (voir la page <a href="economie.html">Économie</a>). Les <strong>cryptomonnaies</strong> (ou crypto-actifs) forment aujourd'hui un marché de milliers de jetons très différents.</p>
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les cryptomonnaies sont un actif très risqué, et leur valeur peut s'effondrer : n'y place que de l'argent que tu peux te permettre de perdre. Méfie-toi de toute promesse de gain garanti.</div>
+
+    <h2 id="familles">Les grandes familles</h2>
+    <ul class="liste">
+      <li><strong>Bitcoin</strong> : le plus ancien et le plus gros. Certains y voient une « réserve de valeur numérique », d'autres un actif purement spéculatif.</li>
+      <li><strong>Ethereum</strong> : une plateforme de « contrats intelligents » (programmes qui s'exécutent automatiquement), sur laquelle on construit des applications et de la finance décentralisée.</li>
+      <li><strong>Stablecoins</strong> : des crypto conçues pour garder une valeur stable, souvent un dollar. Elles servent à transférer de l'argent, mais dépendent de la qualité des réserves de l'émetteur et peuvent décrocher.</li>
+      <li><strong>Autres crypto (altcoins, memecoins)</strong> : des milliers de projets. Beaucoup disparaissent, et les risques de perte totale sont élevés.</li>
+    </ul>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Rôle principal</th><th>Risque principal</th></tr></thead>
+        <tbody><tr><th scope="row">Bitcoin</th><td>Réserve de valeur, actif spéculatif</td><td>Volatilité</td></tr><tr><th scope="row">Ethereum</th><td>Plateforme d'applications</td><td>Volatilité, risques technologiques</td></tr><tr><th scope="row">Stablecoins</th><td>Transférer de l'argent, rester stable</td><td>Réserves de l'émetteur, décrochage</td></tr><tr><th scope="row">Autres crypto</th><td>Spéculation</td><td>Perte totale, escroqueries</td></tr></tbody>
+      </table>
+    </div>
+
+    <h2 id="valeur">Que vaut une crypto ?</h2>
+    <p class="accroche">« Si elle ne verse rien, pourquoi prend-elle de la valeur ? »</p>
+    <p>Une action donne droit à des bénéfices, une obligation verse des intérêts, un immeuble rapporte des loyers. Une cryptomonnaie classique <strong>ne verse aucun revenu</strong> : sa valeur dépend de ce que d'autres acceptent de payer, donc de l'offre, de la demande, de la confiance et de l'adoption. D'où une <strong>volatilité extrême</strong> : des baisses de plus de 70 % ont déjà eu lieu sur le Bitcoin, par exemple en 2018 et en 2022.</p>
+    <figure>
+      <svg viewBox="0 0 600 215" role="img" aria-label="Après une baisse de 50 pour cent il faut gagner 100 pour cent pour revenir à l'équilibre, après 80 pour cent de baisse il faut gagner 400 pour cent">
+        <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">Plus on perd, plus il est difficile de remonter</text>
+        <line x1="30" y1="170" x2="570" y2="170" stroke="#4B5563"/>
+        <rect x="60" y="50" width="100" height="120" rx="3" fill="#102A56"/>
+        <rect x="250" y="110" width="100" height="60" rx="3" fill="#C5A059"/>
+        <rect x="440" y="146" width="100" height="24" rx="3" fill="#b3402e"/>
+        <g font-size="14" font-weight="700" text-anchor="middle"><text x="110" y="44" fill="#102A56">100</text><text x="300" y="104" fill="#8a6d2b">50</text><text x="490" y="140" fill="#b3402e">20</text></g>
+        <g font-size="12" text-anchor="middle" fill="#1F2937"><text x="110" y="188">Capital de départ</text><text x="300" y="188">Après -50 % : il faut</text><text x="300" y="203">+100 % pour revenir</text><text x="490" y="188">Après -80 % : il faut</text><text x="490" y="203">+400 % pour revenir</text></g>
+      </svg>
+      <figcaption>Une perte de 50 % doit être compensée par un gain de 100 %. C'est pourquoi la gestion du risque compte plus que le rendement espéré.</figcaption>
+    </figure>
+
+    <h2 id="risques">Les risques à connaître</h2>
+    <ul class="liste">
+      <li><strong>La volatilité</strong> : des variations de plusieurs dizaines de pourcents en quelques semaines sont fréquentes.</li>
+      <li><strong>Les escroqueries</strong> : faux sites, faux « conseillers », promesses de gains garantis, influenceurs rémunérés. Un gain « garanti » n'existe pas.</li>
+      <li><strong>La conservation</strong> : si tu laisses tes cryptos sur une plateforme, tu dépends d'elle (certaines ont fait faillite, comme FTX en 2022). Si tu les gardes toi-même, perdre ta clé d'accès revient à perdre tes cryptos.</li>
+      <li><strong>Pas de garantie</strong> : contrairement aux livrets, aucun mécanisme public ne garantit tes dépôts en cryptomonnaies.</li>
+      <li><strong>La réglementation</strong> : elle évolue, et peut changer les règles du jeu.</li>
+    </ul>
+
+    <h2 id="cadre">Cadre réglementaire et fiscalité en France</h2>
+    <p>En Europe, le règlement <strong>MiCA</strong> encadre les prestataires de services sur crypto-actifs : avant d'ouvrir un compte, vérifie que la plateforme est bien agréée ou enregistrée (les listes sont publiées par l'AMF).</p>
+    <p>Côté impôts, en 2026 (particulier, activité non professionnelle) :</p>
+    <ul class="liste">
+      <li>Les plus-values sont imposées à la <strong>flat tax de 31,4 %</strong> (12,8 % d'impôt sur le revenu et 18,6 % de prélèvements sociaux), avec option possible pour le barème progressif.</li>
+      <li>L'impôt n'est dû que lorsque tu <strong>vends contre des euros</strong> ou que tu <strong>achètes un bien ou un service</strong> avec tes cryptos. Un échange de crypto contre une autre crypto n'est pas imposé à ce moment.</li>
+      <li>Un seuil de 305 € de cessions sur l'année permet une exonération en dessous.</li>
+      <li>Les moins-values ne se reportent pas d'une année sur l'autre.</li>
+      <li>Les cessions se déclarent (formulaire 2086), de même que les comptes détenus à l'étranger (formulaire 3916-bis). Depuis 2026, les plateformes transmettent des informations à l'administration (directive DAC8).</li>
+    </ul>
+    <p>Voir aussi la page <a href="fiscalite.html">Fiscalité & Enveloppes</a>. Ces règles évoluent : vérifie-les avant de déclarer.</p>
+
+    <h2 id="macro">Crypto et économie : un lien fragile</h2>
+    <p>Les cryptomonnaies sont souvent présentées comme une alternative aux monnaies classiques. Mais en période d'inquiétude sur les marchés, elles se comportent fréquemment comme des actifs risqués, sensibles aux taux d'intérêt, à la liquidité et à l'appétit pour le risque. Cela nuance l'idée d'une « valeur refuge », à la différence de l'or (voir <a href="marches.html">Marchés & Actifs</a>).</p>
+    <div class="duo">
+      <div class="pour"><h3>Avantages</h3><ul><li>Accès 24 h/24 à un marché mondial</li><li>Transferts rapides, y compris à l'international</li><li>Technologie qui nourrit de nouveaux services</li></ul></div>
+      <div class="contre"><h3>Inconvénients</h3><ul><li>Volatilité extrême, aucun revenu</li><li>Escroqueries et piratages fréquents</li><li>Cadre réglementaire encore en construction</li></ul></div>
+    </div>
+    <div class="retenir"><strong>3 idées à retenir</strong><ul><li>Une crypto ne verse aucun revenu : sa valeur dépend de la demande.</li><li>La volatilité est extrême : les pertes de 50 à 80 % sont possibles.</li><li>Sécurité et fiscalité demandent de la rigueur : plateforme agréée, déclaration, conservation des clés.</li></ul></div>
+
+    <h3>Le jargon traduit</h3>
+    <dl>
+      <dt><strong>Blockchain</strong></dt><dd>Registre numérique partagé où les transactions sont enregistrées dans l'ordre.</dd>
+      <dt><strong>Stablecoin</strong></dt><dd>Crypto conçue pour garder une valeur stable, souvent indexée sur le dollar.</dd>
+      <dt><strong>Clé privée</strong></dt><dd>Le code secret qui donne accès à tes cryptos : à ne jamais partager ni perdre.</dd>
+      <dt><strong>MiCA</strong></dt><dd>Le règlement européen qui encadre les crypto-actifs et leurs prestataires.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="2">
+      <p>1. Que verse une cryptomonnaie classique comme le Bitcoin ?</p>
+      <button>Des dividendes</button>
+      <button>Des loyers</button>
+      <button>Aucun revenu : seule sa valeur de marché compte</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>2. Après une baisse de 50 %, quel gain faut-il pour revenir au point de départ ?</p>
+      <button>+50 %</button>
+      <button>+100 %</button>
+      <button>+25 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Quand les cryptos sont-elles imposées en France (particulier) ?</p>
+      <button>Dès qu'on les achète</button>
+      <button>Quand on les vend contre des euros ou qu'on achète un bien avec</button>
+      <button>Jamais</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager">
+      <a href="marches.html">← Marchés & Actifs</a>
+      <a class="next" href="scpi.html">SCPI →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
+if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+document.querySelectorAll('.q').forEach(function(q){
+  var good=+q.dataset.good,btns=q.querySelectorAll('button'),fb=q.querySelector('.fb');
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.disabled=true});
+      btns[good].classList.add('good');
+      if(i===good){fb.textContent="Bravo, c'est la bonne réponse.";}
+      else{b.classList.add('bad');fb.textContent="Pas tout à fait : la bonne réponse est « "+btns[good].textContent+" ».";}
+    });
+  });
+});
+</script>
+</body>
+</html>

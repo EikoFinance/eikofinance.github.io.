@@ -10,7 +10,25 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Cartes d'accueil cliquables -->
     <style>
+@media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+.subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
+.subnav .st{font-family:var(--font-title);font-size:.78rem;color:var(--text-muted);margin-right:.6rem}
+.subnav a{padding:.35rem .8rem;border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:600;color:var(--primary-blue)}
+.subnav a:hover{background:#e6ebf3}
+.subnav a.on{background:var(--primary-blue);color:#fff}
+@media(max-width:768px){nav.mobile-open{max-height:520px}}
         a.card { display: block; text-decoration: none; color: inherit; }
+
+        /* Intro raccourcie (environ 3 s au lieu de 5,6 s) : modifie ces délais pour ajuster */
+        body.play-intro .splash-screen { animation-delay: 2.4s; }
+        body.play-intro header,
+        body.play-intro footer { animation-delay: 1s; }
+        body.play-intro main { animation-delay: 1.8s; }
+        @media screen and (max-width: 768px) {
+            body.play-intro header,
+            body.play-intro footer { animation-delay: 0.6s !important; }
+            body.play-intro main { animation-delay: 1.2s !important; }
+        }
     </style>
     
     <script>
@@ -27,7 +45,7 @@
                         splash.style.opacity = "0";
                         setTimeout(() => splash.remove(), 600);
                     }
-                }, 5200);
+                }, 2600);
             } else {
                 document.body.classList.add("no-intro");
             }
@@ -63,13 +81,14 @@
         <!-- Navigation -->
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="economie.html">Économie & Cycles</a></li>
-                <li><a href="marches.html">Marchés & Actifs</a></li>
-                <li><a href="fiscalite.html">Fiscalité</a></li>
-                <li><a href="outils.html">Outils & Simulateurs</a></li>
-                <li><a href="contact.html">Contact & À propos</a></li>
-            </ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="economie.html">Économie & Géopolitique</a></li>
+      <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="etudes.html">Études de cas</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
         </nav>
     </header>
 
@@ -81,18 +100,26 @@
             <a href="economie.html" class="btn-gold">Explorer les fondamentaux</a>
         </section>
 
-        <section class="card-grid">
+                <section class="card-grid">
             <a class="card" href="economie.html">
-                <h3>Économie & Cycles</h3>
-                <p>Analyse des grands cycles (Kitchin, Juglar, Kondratiev), mécanismes de la dette et création monétaire.</p>
+                <h3>Économie & Géopolitique</h3>
+                <p>Cycles (Kitchin, Juglar, Kondratiev), macroéconomie, création monétaire, rapports de force entre pays.</p>
             </a>
             <a class="card" href="marches.html">
                 <h3>Marchés & Actifs</h3>
-                <p>Comprendre les actions, obligations, ETF, métaux précieux (Or/Argent) et valeurs cycliques.</p>
+                <p>Actions, obligations, ETF, or et argent, cryptomonnaies, SCPI, investissements alternatifs et trading.</p>
             </a>
             <a class="card" href="fiscalite.html">
-                <h3>Fiscalité & Enveloppes</h3>
-                <p>Optimisation et principes clés du PEA, compte-titres et assurance-vie.</p>
+                <h3>Fiscalité & Transmission</h3>
+                <p>PEA, compte-titres, assurance-vie, PER, donations et succession.</p>
+            </a>
+            <a class="card" href="etudes.html">
+                <h3>Études de cas</h3>
+                <p>Quatre profils d'épargnants comparés : livrets, ETF, stock picking et SCPI.</p>
+            </a>
+            <a class="card" href="outils.html">
+                <h3>Outils & Simulateurs</h3>
+                <p>L'application Android de simulation Monte Carlo et nos futurs simulateurs.</p>
             </a>
         </section>
     </main>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading - EikoFinance</title>
+<meta name="description" content="Trading : fonctionnement, chiffres de l'AMF, effet de levier, gestion du risque et pièges à éviter, expliqués simplement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+@media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.card-grid a.card{display:block;text-decoration:none;color:inherit}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:2.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.15rem;margin:1.5rem 0 .5rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.chapitre ul.liste{margin:0 0 1rem 1.2rem;line-height:1.7}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.duo>div{border:1px solid #d9dee5;border-radius:8px;padding:.9rem 1.1rem}
+.duo h3{margin:0 0 .4rem;font-size:1rem}
+.duo ul{margin:0 0 0 1.1rem;line-height:1.6}
+.duo .pour{border-top:4px solid #2e7d4f}
+.duo .contre{border-top:4px solid #b3402e}
+@media(max-width:640px){.duo{grid-template-columns:1fr}}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.tablewrap{overflow-x:auto;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:.93rem}
+th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--primary-blue);color:#fff;font-weight:600}
+tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
+details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
+details p{margin:.7rem 0 0}
+.q{border:1px solid #d9dee5;border-radius:8px;padding:1rem;margin:.9rem 0}
+.q p{font-weight:700;margin-bottom:.6rem}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1px solid #d9dee5;border-radius:6px;background:#fff;font:inherit;color:var(--text-dark);cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--gold-accent)}
+.q button.good{background:#e3f3e9;border-color:#2e7d4f}
+.q button.bad{background:#f8e5e1;border-color:#b3402e}
+.q .fb{font-size:.92rem;margin-top:.5rem;color:var(--text-muted)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+.subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
+.subnav .st{font-family:var(--font-title);font-size:.78rem;color:var(--text-muted);margin-right:.6rem}
+.subnav a{padding:.35rem .8rem;border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:600;color:var(--primary-blue)}
+.subnav a:hover{background:#e6ebf3}
+.subnav a.on{background:var(--primary-blue);color:#fff}
+@media(max-width:768px){nav.mobile-open{max-height:520px}}
+</style>
+</head>
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html">Économie & Géopolitique</a></li>
+      <li><a href="marches.html" class="active">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="etudes.html">Études de cas</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="subnav" aria-label="Dans cette rubrique"><span class="st">Marchés & Actifs</span><a href="marches.html">Les classiques</a><a href="crypto.html">Cryptomonnaies</a><a href="scpi.html">SCPI</a><a href="alternatifs.html">Alternatifs</a><a href="trading.html" class="on" aria-current="page">Trading</a></div>
+  <p class="crumbs"><a href="index.html">Accueil</a> › Trading</p>
+
+  <section class="hero">
+    <h1>Trading : comprendre avant de se lancer</h1>
+    <p>Day trading, swing trading, CFD, levier : ce que c'est, ce que disent les chiffres, et comment limiter les risques.</p>
+    <a href="#intro" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire">
+    <a class="card" href="#chiffres"><h3>Les chiffres</h3><p>Ce que dit l'AMF.</p></a>
+    <a class="card" href="#difficile"><h3>Pourquoi c'est difficile</h3><p>Coûts, psychologie, levier.</p></a>
+    <a class="card" href="#risque"><h3>Gérer le risque</h3><p>Des principes de base.</p></a>
+    <a class="card" href="#arnaques"><h3>Les pièges</h3><p>Arnaques et plateformes.</p></a>
+  </section>
+
+  <article class="chapitre">
+    <h2 id="intro">Trader, ce n'est pas investir</h2>
+    <p class="accroche">« Et si je profitais des variations de prix pour gagner de l'argent rapidement ? »</p>
+    <p><strong>Investir</strong>, c'est acheter un actif pour le détenir longtemps, en s'appuyant sur la croissance des entreprises ou sur des revenus. <strong>Trader</strong>, c'est acheter et vendre sur des durées courtes pour profiter des mouvements de prix. Il existe plusieurs styles :</p>
+    <ul class="liste">
+      <li><strong>Scalping</strong> : des opérations de quelques secondes ou minutes.</li>
+      <li><strong>Day trading</strong> : on ouvre et on ferme les positions dans la même journée.</li>
+      <li><strong>Swing trading</strong> : on garde les positions quelques jours ou semaines.</li>
+    </ul>
+    <p>On peut trader des actions, des ETF, des devises (forex), des matières premières, des cryptomonnaies, souvent via des produits dérivés comme les <strong>CFD</strong>, qui permettent de miser sur la hausse ou la baisse sans posséder l'actif.</p>
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Le trading à court terme, surtout avec effet de levier, peut faire perdre rapidement tout le capital engagé. N'y consacre jamais l'argent dont tu as besoin.</div>
+
+    <h2 id="chiffres">Ce que disent les chiffres</h2>
+    <p>Une étude de l'AMF, menée sur près de 15 000 clients actifs de plateformes agréées de CFD et de forex entre 2009 et 2012, a constaté que près de <strong>9 clients sur 10 perdaient de l'argent</strong> sur quatre ans (89 % environ), avec une perte moyenne d'environ 10 900 € par client. Elle montre aussi que plus un client multiplie les transactions, plus sa perte tend à être élevée. Les chiffres sont anciens, mais les plateformes publient aujourd'hui encore, comme l'impose la réglementation, que 7 à 8 clients sur 10 perdent de l'argent sur ces produits.</p>
+    <figure>
+      <svg viewBox="0 0 600 130" role="img" aria-label="Environ 9 clients sur 10 perdent de l'argent sur les CFD et le forex">
+        <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">Sur 10 clients actifs, environ 9 ont perdu de l'argent (CFD et forex, étude AMF)</text>
+        <g><circle cx="75" cy="62" r="17" fill="#b3402e"/><circle cx="125" cy="62" r="17" fill="#b3402e"/><circle cx="175" cy="62" r="17" fill="#b3402e"/><circle cx="225" cy="62" r="17" fill="#b3402e"/><circle cx="275" cy="62" r="17" fill="#b3402e"/><circle cx="325" cy="62" r="17" fill="#b3402e"/><circle cx="375" cy="62" r="17" fill="#b3402e"/><circle cx="425" cy="62" r="17" fill="#b3402e"/><circle cx="475" cy="62" r="17" fill="#b3402e"/><circle cx="525" cy="62" r="17" fill="#2e7d4f"/></g>
+        <text x="300" y="118" text-anchor="middle" font-size="12" fill="#4B5563">Clients perdants en rouge, clients gagnants en vert.</text>
+      </svg>
+      <figcaption>Ces produits sont très risqués et peu adaptés à la majorité des particuliers, selon l'AMF.</figcaption>
+    </figure>
+
+    <h2 id="difficile">Pourquoi c'est si difficile ?</h2>
+    <ul class="liste">
+      <li><strong>Les coûts</strong> : à chaque opération, il y a des frais et un écart entre prix d'achat et de vente (le <em>spread</em>). Plus on trade, plus ils s'accumulent.</li>
+      <li><strong>Les concurrents</strong> : en face, il y a des professionnels, des institutions et des algorithmes qui disposent de plus d'informations, de rapidité et de moyens.</li>
+      <li><strong>La psychologie</strong> : peur de perdre, excès de confiance, peur de rater une opportunité, besoin de « se refaire » après une perte.</li>
+      <li><strong>Le levier</strong> : il amplifie les gains, mais aussi les pertes (voir ci-dessous).</li>
+    </ul>
+    <figure>
+      <svg viewBox="0 0 600 215" role="img" aria-label="Avec un levier de 10, une baisse de 10 pour cent du prix fait perdre l'intégralité du capital">
+        <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">L'effet de levier : un exemple avec un levier de 10</text>
+        <line x1="30" y1="170" x2="570" y2="170" stroke="#4B5563"/>
+        <rect x="70" y="158" width="100" height="12" rx="2" fill="#102A56"/>
+        <rect x="250" y="50" width="100" height="120" rx="2" fill="#C5A059"/>
+        <rect x="430" y="158" width="100" height="12" rx="2" fill="#b3402e"/>
+        <g font-size="14" font-weight="700" text-anchor="middle"><text x="120" y="150" fill="#102A56">1 000 €</text><text x="300" y="44" fill="#8a6d2b">10 000 €</text><text x="480" y="150" fill="#b3402e">-1 000 €</text></g>
+        <g font-size="12" text-anchor="middle" fill="#1F2937"><text x="120" y="188">Ton capital</text><text x="300" y="188">Position prise avec levier ×10</text><text x="480" y="188">Si le prix baisse de 10 %</text><text x="480" y="203">= 100 % du capital perdu</text></g>
+      </svg>
+      <figcaption>Avec un levier de 10, une variation de 10 % du prix suffit à effacer toute la mise. La réglementation européenne limite le levier pour les particuliers, mais le risque reste important.</figcaption>
+    </figure>
+
+    <h2 id="risque">Les bases de la gestion du risque</h2>
+    <p>Si l'on décide malgré tout de s'essayer au trading, voici des principes que citent fréquemment les professionnels :</p>
+    <ul class="liste">
+      <li><strong>Ne mettre que de l'argent qu'on peut perdre</strong>, bien séparé de son épargne de précaution et de ses investissements de long terme.</li>
+      <li><strong>Limiter chaque opération</strong> à une petite fraction du capital (de l'ordre de 1 à 2 %, repère courant).</li>
+      <li><strong>Définir à l'avance</strong> le prix d'entrée, le prix de sortie et un <strong>stop-loss</strong> (ordre qui coupe la perte automatiquement).</li>
+      <li><strong>Viser un ratio gain/risque favorable</strong>, et tenir un <strong>journal</strong> de ses opérations pour apprendre de ses erreurs.</li>
+      <li><strong>S'entraîner sur un compte démo</strong> avant de risquer de l'argent réel, et éviter le levier au départ.</li>
+    </ul>
+
+    <h2 id="analyse">Analyse technique, fondamentale, et rôle de l'économie</h2>
+    <p>L'<strong>analyse technique</strong> étudie les graphiques et l'historique des prix pour repérer des tendances. L'<strong>analyse fondamentale</strong> étudie la santé d'une entreprise ou d'une économie. Aucune des deux ne garantit un résultat.</p>
+    <p>Les prix réagissent fortement aux annonces macroéconomiques (inflation, emploi, décisions des banques centrales) et aux événements géopolitiques : c'est pourquoi comprendre la <a href="macro.html">macroéconomie</a> et la <a href="geopolitique.html">géopolitique</a> aide à ne pas être surpris par des mouvements brusques.</p>
+
+    <h2 id="fiscalite">Fiscalité</h2>
+    <p>Sur un compte-titres, les gains en bourse relèvent en général de la flat tax de 31,4 % en 2026 (voir <a href="fiscalite.html">Fiscalité & Enveloppes</a>). Pour les CFD, le forex ou les cryptomonnaies, les règles varient selon les produits. Et si l'activité de trading devient habituelle et organisée, l'administration peut l'assimiler à une activité professionnelle, avec un régime différent. Garde un historique précis de tes opérations et vérifie ta situation avant de déclarer.</p>
+
+    <h2 id="arnaques">Les pièges à éviter</h2>
+    <ul class="liste">
+      <li>Les promesses de gains rapides ou « garantis », les « signaux » payants et les formations hors de prix.</li>
+      <li>Les plateformes non agréées : vérifie le registre de l'AMF et ses listes noires avant de déposer de l'argent.</li>
+      <li>Les démarches d'inconnus sur les réseaux sociaux ou la messagerie qui proposent de « te guider ».</li>
+    </ul>
+    <div class="duo">
+      <div class="pour"><h3>Avantages</h3><ul><li>Apprentissage des marchés et de ses propres réactions</li><li>Possibilité de limiter ses positions et ses pertes (stop-loss)</li><li>Marchés accessibles à tout moment, avec de petits montants</li></ul></div>
+      <div class="contre"><h3>Inconvénients</h3><ul><li>La grande majorité des particuliers perd de l'argent</li><li>Frais et écarts de prix qui grignotent les gains</li><li>Fort impact psychologique, temps important</li></ul></div>
+    </div>
+    <div class="retenir"><strong>3 idées à retenir</strong><ul><li>Trader n'est pas investir : c'est une activité à court terme, difficile et risquée.</li><li>Le levier amplifie autant les pertes que les gains.</li><li>La gestion du risque et la discipline comptent plus que l'intuition.</li></ul></div>
+
+    <h3>Le jargon traduit</h3>
+    <dl>
+      <dt><strong>CFD</strong></dt><dd>Contrat qui permet de miser sur la hausse ou la baisse d'un actif sans le posséder.</dd>
+      <dt><strong>Levier</strong></dt><dd>Mécanisme qui permet de prendre une position plus grande que son capital.</dd>
+      <dt><strong>Spread</strong></dt><dd>L'écart entre le prix d'achat et le prix de vente d'un actif.</dd>
+      <dt><strong>Stop-loss</strong></dt><dd>Un ordre qui ferme automatiquement une position quand une perte maximale est atteinte.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Que montre l'étude de l'AMF sur les CFD et le forex ?</p>
+      <button>Que la plupart des clients gagnent de l'argent</button>
+      <button>Que près de 9 clients sur 10 perdent de l'argent sur quatre ans</button>
+      <button>Qu'il n'y a pas de frais</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>2. Avec un levier de 10, qu'arrive-t-il si le prix baisse de 10 % ?</p>
+      <button>Tu perds 1 % de ton capital</button>
+      <button>Tu perds l'intégralité de ton capital</button>
+      <button>Tu ne perds rien</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. À quoi sert un stop-loss ?</p>
+      <button>À garantir un gain</button>
+      <button>À fermer automatiquement une position quand une perte maximale est atteinte</button>
+      <button>À réduire les frais</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager">
+      <a href="alternatifs.html">← Alternatifs</a>
+      <a class="next" href="fiscalite.html">Fiscalité & Enveloppes →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
+if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+document.querySelectorAll('.q').forEach(function(q){
+  var good=+q.dataset.good,btns=q.querySelectorAll('button'),fb=q.querySelector('.fb');
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.disabled=true});
+      btns[good].classList.add('good');
+      if(i===good){fb.textContent="Bravo, c'est la bonne réponse.";}
+      else{b.classList.add('bad');fb.textContent="Pas tout à fait : la bonne réponse est « "+btns[good].textContent+" ».";}
+    });
+  });
+});
+</script>
+</body>
+</html>

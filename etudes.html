@@ -11,6 +11,12 @@
 <link rel="stylesheet" href="css/style.css">
 <style>
 @media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+.subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
+.subnav .st{font-family:var(--font-title);font-size:.78rem;color:var(--text-muted);margin-right:.6rem}
+.subnav a{padding:.35rem .8rem;border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:600;color:var(--primary-blue)}
+.subnav a:hover{background:#e6ebf3}
+.subnav a.on{background:var(--primary-blue);color:#fff}
+@media(max-width:768px){nav.mobile-open{max-height:520px}}
 .chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
 .crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
 .crumbs a{color:var(--text-muted)}
@@ -65,10 +71,8 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
   <nav>
     <ul>
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="economie.html">Économie & Cycles</a></li>
+      <li><a href="economie.html">Économie & Géopolitique</a></li>
       <li><a href="marches.html">Marchés & Actifs</a></li>
-      <li><a href="scpi.html">SCPI</a></li>
-      <li><a href="alternatifs.html">Alternatifs</a></li>
       <li><a href="fiscalite.html">Fiscalité</a></li>
       <li><a href="etudes.html" class="active">Études de cas</a></li>
       <li><a href="outils.html">Outils & Simulateurs</a></li>

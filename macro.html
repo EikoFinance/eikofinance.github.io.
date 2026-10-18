@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Macroéconomie - EikoFinance</title>
+<meta name="description" content="Les grands indicateurs, les leviers des banques centrales et des États, et la façon dont la macroéconomie influence les marchés.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+@media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.card-grid a.card{display:block;text-decoration:none;color:inherit}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:2.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.15rem;margin:1.5rem 0 .5rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.chapitre ul.liste{margin:0 0 1rem 1.2rem;line-height:1.7}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.duo>div{border:1px solid #d9dee5;border-radius:8px;padding:.9rem 1.1rem}
+.duo h3{margin:0 0 .4rem;font-size:1rem}
+.duo ul{margin:0 0 0 1.1rem;line-height:1.6}
+.duo .pour{border-top:4px solid #2e7d4f}
+.duo .contre{border-top:4px solid #b3402e}
+@media(max-width:640px){.duo{grid-template-columns:1fr}}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.tablewrap{overflow-x:auto;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:.93rem}
+th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--primary-blue);color:#fff;font-weight:600}
+tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
+details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
+details p{margin:.7rem 0 0}
+.q{border:1px solid #d9dee5;border-radius:8px;padding:1rem;margin:.9rem 0}
+.q p{font-weight:700;margin-bottom:.6rem}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1px solid #d9dee5;border-radius:6px;background:#fff;font:inherit;color:var(--text-dark);cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--gold-accent)}
+.q button.good{background:#e3f3e9;border-color:#2e7d4f}
+.q button.bad{background:#f8e5e1;border-color:#b3402e}
+.q .fb{font-size:.92rem;margin-top:.5rem;color:var(--text-muted)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+.subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
+.subnav .st{font-family:var(--font-title);font-size:.78rem;color:var(--text-muted);margin-right:.6rem}
+.subnav a{padding:.35rem .8rem;border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:600;color:var(--primary-blue)}
+.subnav a:hover{background:#e6ebf3}
+.subnav a.on{background:var(--primary-blue);color:#fff}
+@media(max-width:768px){nav.mobile-open{max-height:520px}}
+</style>
+</head>
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html" class="active">Économie & Géopolitique</a></li>
+      <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="etudes.html">Études de cas</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="subnav" aria-label="Dans cette rubrique"><span class="st">Économie & Géopolitique</span><a href="economie.html">Parcours débutant</a><a href="macro.html" class="on" aria-current="page">Macroéconomie</a><a href="geopolitique.html">Géopolitique & rapports de force</a></div>
+  <p class="crumbs"><a href="index.html">Accueil</a> › Macroéconomie</p>
+
+  <section class="hero">
+    <h1>Macroéconomie : le tableau de bord d'un pays</h1>
+    <p>PIB, inflation, chômage, taux, dette : les grands indicateurs, ceux qui agissent dessus, et ce que cela change pour les marchés.</p>
+    <a href="#intro" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire">
+    <a class="card" href="#intro"><h3>Les indicateurs</h3><p>Le tableau de bord d'un pays.</p></a>
+    <a class="card" href="#leviers"><h3>Qui peut agir ?</h3><p>Banque centrale et État.</p></a>
+    <a class="card" href="#cycles"><h3>Les cycles</h3><p>Indicateurs avancés et retardés.</p></a>
+    <a class="card" href="#dette"><h3>La dette</h3><p>Un débat ouvert.</p></a>
+  </section>
+
+  <article class="chapitre">
+    <h2 id="intro">Lire une économie d'un coup d'œil</h2>
+    <p class="accroche">« Comment savoir si l'économie d'un pays va bien ? »</p>
+    <p>Camille a compris qu'une boulangerie dépend de ses clients et de ses coûts. À l'échelle d'un pays, c'est la même logique, avec des millions de Camille. Les économistes suivent quelques <strong>grands indicateurs</strong>, qui forment le tableau de bord de la macroéconomie.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Ce qu'il mesure</th><th>Pourquoi le suivre</th></tr></thead>
+        <tbody><tr><th scope="row">PIB</th><td>La richesse produite dans un pays sur une période</td><td>Mesure la croissance : une baisse prolongée signale une récession</td></tr><tr><th scope="row">Inflation</th><td>La hausse générale des prix</td><td>Érode le pouvoir d'achat et guide les décisions des banques centrales</td></tr><tr><th scope="row">Chômage</th><td>La part de la population active sans emploi</td><td>Révèle la santé du marché du travail</td></tr><tr><th scope="row">Taux d'intérêt</th><td>Le coût de l'argent emprunté</td><td>Influence le crédit, l'immobilier, les obligations et les actions</td></tr><tr><th scope="row">Dette et déficit publics</th><td>Ce que l'État doit et ce qu'il dépense en plus de ses recettes</td><td>Affecte la confiance des prêteurs et les impôts futurs</td></tr><tr><th scope="row">Balance commerciale</th><td>La différence entre exportations et importations</td><td>Reflète la compétitivité et les dépendances d'un pays</td></tr><tr><th scope="row">Taux de change</th><td>Le prix d'une monnaie en une autre</td><td>Joue sur les prix à l'import, les exportations et les placements étrangers</td></tr></tbody>
+      </table>
+    </div>
+
+    <h2 id="leviers">Qui peut agir ? Politique monétaire et politique budgétaire</h2>
+    <p>Deux grands leviers permettent d'influencer l'économie :</p>
+    <ul class="liste">
+      <li><strong>La politique monétaire</strong>, menée par la banque centrale, agit sur les taux d'intérêt et la quantité de monnaie. La Banque centrale européenne (BCE) a pour objectif principal la stabilité des prix, avec une cible d'inflation de 2 % à moyen terme. La Réserve fédérale américaine a un double mandat : stabilité des prix et plein emploi.</li>
+      <li><strong>La politique budgétaire</strong>, menée par l'État : impôts, dépenses publiques, investissements, aides.</li>
+    </ul>
+    <figure>
+      <svg viewBox="0 0 600 150" role="img" aria-label="Quand les taux montent, le crédit devient plus cher, les dépenses et l'investissement ralentissent, et l'inflation ralentit">
+        <defs><marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C5A059"/></marker></defs>
+        <text x="300" y="18" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">Comment une hausse des taux se transmet à l'économie</text>
+        <g font-size="12" text-anchor="middle" fill="#1F2937">
+          <rect x="10" y="40" width="115" height="70" rx="8" fill="#FFFFFF" stroke="#102A56"/><text x="67" y="70" font-weight="700">Les taux</text><text x="67" y="88">augmentent</text>
+          <rect x="165" y="40" width="115" height="70" rx="8" fill="#FFFFFF" stroke="#102A56"/><text x="222" y="70" font-weight="700">Le crédit</text><text x="222" y="88">coûte plus cher</text>
+          <rect x="320" y="40" width="115" height="70" rx="8" fill="#FFFFFF" stroke="#102A56"/><text x="377" y="64" font-weight="700">Moins de</text><text x="377" y="80" font-weight="700">dépenses et</text><text x="377" y="96" font-weight="700">d'investissement</text>
+          <rect x="475" y="40" width="115" height="70" rx="8" fill="#FFFFFF" stroke="#C5A059" stroke-width="2"/><text x="532" y="70" font-weight="700">L'inflation</text><text x="532" y="88">ralentit</text>
+        </g>
+        <g stroke="#C5A059" stroke-width="3" marker-end="url(#ar2)"><line x1="128" y1="75" x2="160" y2="75"/><line x1="283" y1="75" x2="315" y2="75"/><line x1="438" y1="75" x2="470" y2="75"/></g>
+        <text x="300" y="140" text-anchor="middle" font-size="12" fill="#4B5563">En sens inverse, une baisse des taux stimule le crédit et l'activité, au risque de relancer l'inflation.</text>
+      </svg>
+      <figcaption>Un schéma simplifié : dans la réalité, les effets mettent du temps et varient d'un pays à l'autre.</figcaption>
+    </figure>
+
+    <h2 id="cycles">Les indicateurs qui annoncent, accompagnent ou suivent les cycles</h2>
+    <ul class="liste">
+      <li><strong>Indicateurs avancés</strong> : ils bougent avant l'économie. Exemples : la confiance des ménages et des entreprises, les commandes, les indices d'activité des directeurs d'achat (PMI), ou encore la courbe des taux.</li>
+      <li><strong>Indicateurs coïncidents</strong> : ils décrivent la situation actuelle, comme la production ou le PIB.</li>
+      <li><strong>Indicateurs retardés</strong> : ils réagissent après coup, comme le chômage ou, souvent, l'inflation.</li>
+    </ul>
+    <p>Comprendre cette chronologie évite une erreur fréquente : attendre que le chômage monte pour constater que le cycle s'est retourné, alors que les signes avant-coureurs étaient visibles plus tôt.</p>
+
+    <h2 id="dette">La dette publique : un sujet qui divise</h2>
+    <p>Un État n'est pas un ménage : il peut emprunter durablement, et sa dette est souvent rapportée au PIB. Mais le coût de cette dette dépend des taux d'intérêt et de la confiance des prêteurs. Les économistes débattent de la bonne politique :</p>
+    <ul class="liste">
+      <li>Certains défendent la <strong>relance</strong> : soutenir la demande et l'investissement en période de ralentissement, quitte à creuser le déficit à court terme.</li>
+      <li>D'autres défendent la <strong>rigueur</strong> : maîtriser la dette pour garder des marges de manœuvre et éviter que la charge d'intérêts ne pèse trop.</li>
+    </ul>
+    <p>Il n'y a pas de consensus : la réponse dépend du contexte, de la taille de la dette et de la situation économique.</p>
+
+    <h2 id="marches">Quand la macro bouge les marchés</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Si cela arrive…</th><th>Alors, souvent…</th></tr></thead>
+        <tbody><tr><th scope="row">Inflation plus forte que prévu</th><td>Les taux montent, le prix des obligations existantes baisse, et les actions de croissance peuvent souffrir</td></tr><tr><th scope="row">Ralentissement de l'activité</th><td>Les banques centrales peuvent baisser leurs taux, les valeurs défensives résistent mieux</td></tr><tr><th scope="row">Chômage en forte hausse</th><td>La consommation faiblit, les valeurs cycliques sont pénalisées</td></tr><tr><th scope="row">Euro qui monte face au dollar</th><td>Les exportateurs européens sont moins compétitifs, mais les importations deviennent moins chères</td></tr></tbody>
+      </table>
+    </div>
+    <p>Ce sont des tendances, pas des règles : les marchés anticipent souvent les annonces, et les réactions varient. C'est pourquoi on dit que les marchés « se nourrissent de surprises ».</p>
+    <div class="retenir"><strong>3 idées à retenir</strong><ul><li>Un indicateur isolé ne dit pas tout : c'est leur combinaison qui éclaire.</li><li>Banque centrale et État disposent de leviers différents, qu'ils combinent.</li><li>Les marchés réagissent aux surprises plus qu'aux nouvelles attendues.</li></ul></div>
+
+    <h3>Le jargon traduit</h3>
+    <dl>
+      <dt><strong>PIB</strong></dt><dd>La valeur de tout ce qu'un pays produit en un an.</dd>
+      <dt><strong>Politique monétaire</strong></dt><dd>Les décisions de la banque centrale sur les taux et la monnaie.</dd>
+      <dt><strong>Politique budgétaire</strong></dt><dd>Les décisions de l'État sur ses impôts et ses dépenses.</dd>
+      <dt><strong>Déficit public</strong></dt><dd>L'écart entre les dépenses de l'État et ses recettes sur une année.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Que mesure le PIB ?</p>
+      <button>Le niveau des prix</button>
+      <button>La richesse produite par un pays sur une période</button>
+      <button>Le nombre de chômeurs</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Quel est l'objectif principal de la BCE ?</p>
+      <button>La stabilité des prix</button>
+      <button>Le plein emploi uniquement</button>
+      <button>La baisse de la dette publique</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>3. Quand les taux d'intérêt montent, que fait en général le crédit ?</p>
+      <button>Il devient plus cher</button>
+      <button>Il devient moins cher</button>
+      <button>Rien ne change</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager">
+      <a href="economie.html">← Parcours débutant</a>
+      <a class="next" href="geopolitique.html">Géopolitique →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
+if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+document.querySelectorAll('.q').forEach(function(q){
+  var good=+q.dataset.good,btns=q.querySelectorAll('button'),fb=q.querySelector('.fb');
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.disabled=true});
+      btns[good].classList.add('good');
+      if(i===good){fb.textContent="Bravo, c'est la bonne réponse.";}
+      else{b.classList.add('bad');fb.textContent="Pas tout à fait : la bonne réponse est « "+btns[good].textContent+" ».";}
+    });
+  });
+});
+</script>
+</body>
+</html>
