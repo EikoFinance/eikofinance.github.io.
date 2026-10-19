@@ -38,6 +38,16 @@
 figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
 figure svg{width:100%;height:auto;display:block}
 figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.ctx{border:1px solid #d9dee5;border-radius:8px;padding:.9rem 1.1rem;margin:1rem 0}
+.ctx h3{margin:0 0 .3rem;font-size:1rem}
+.ctx .vol{font-size:.9rem;color:var(--text-muted);margin:0 0 .5rem}
+.ctx ul{list-style:none;margin:0;padding:0}
+.ctx li{display:flex;gap:.7rem;align-items:flex-start;padding:.4rem 0;border-top:1px dashed #e3e7ee;line-height:1.5;font-size:.95rem}
+.ctx li:first-child{border-top:0}
+.ctx .b{flex:0 0 6.8rem;text-align:center;border-radius:999px;font-size:.78rem;font-weight:700;padding:.12rem .4rem;color:#fff}
+.ctx .ok{background:#2e7d4f}.ctx .mid{background:#b9780f}.ctx .ko{background:#b3402e}
+.ctx .verdict{margin:.6rem 0 0;font-size:.93rem}
+@media(max-width:520px){.ctx li{flex-direction:column;gap:.2rem}.ctx .b{flex:none;align-self:flex-start;padding:.12rem .7rem}}
 .retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
 .retenir ul{margin:.5rem 0 0 1.2rem}
 .retenir li{margin-bottom:.4rem}
@@ -102,37 +112,16 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
   <article class="chapitre">
 
     <h2 id="intro">Le même départ, six chemins</h2>
-    <p class="accroche">« Si on me donne 10 000 € et 200 € par mois, que se passe-t-il selon ce que j'en fais ? »</p>
-    <p>Pour comparer à armes égales, imaginons six personnes qui commencent avec <strong>10 000 €</strong> et ajoutent <strong>200 € par mois pendant 20 ans</strong>, soit 58 000 € versés au total. Ce qui les distingue, ce n'est pas la somme, mais <strong>ce qu'elles en font</strong>.</p>
+    <p class="accroche">« Avec la même somme, que se passe-t-il selon ce que j'en fais ? »</p>
+    <p>Pour comparer à armes égales, imaginons six personnes qui disposent de la même somme au départ et la placent sur la même durée. Ce qui les distingue, ce n'est pas la somme, mais <strong>ce qu'elles en font</strong>.</p>
 
-    <figure>
-      <svg viewBox="0 0 600 340" role="img" aria-label="Fourchettes de capital final après 20 ans selon six stratégies, avec 58 000 euros versés au total">
-        <text x="300" y="16" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">Capital final possible après 20 ans (hypothèses)</text>
-        <line x1="290" y1="40" x2="290" y2="300" stroke="#d9dee5"/>
-        <line x1="430" y1="40" x2="430" y2="300" stroke="#d9dee5"/>
-        <line x1="570" y1="40" x2="570" y2="300" stroke="#d9dee5"/>
-        <line x1="204.1" y1="40" x2="204.1" y2="300" stroke="#b3402e" stroke-width="1.5" stroke-dasharray="4 3"/>
-        <text x="209" y="38" font-size="11" fill="#b3402e">Total versé : 58 000 €</text>
-        <text x="8" y="64" font-size="12" font-weight="700" fill="#1F2937">Épargne</text><text x="8" y="78" font-size="11" fill="#4B5563">65 k€ à 78 k€</text>
-        <rect x="210.9" y="52" width="12.2" height="26" rx="3" fill="#9fb0c9"/>
-        <text x="8" y="107" font-size="12" font-weight="700" fill="#1F2937">ETF</text><text x="8" y="121" font-size="11" fill="#4B5563">74 k€ à 184 k€</text>
-        <rect x="218.8" y="95" width="102.8" height="26" rx="3" fill="#102A56"/>
-        <text x="8" y="150" font-size="12" font-weight="700" fill="#1F2937">Stock picking</text><text x="8" y="164" font-size="11" fill="#4B5563">41 k€ à 279 k€</text>
-        <rect x="188.7" y="138" width="221.5" height="26" rx="3" fill="#C5A059"/>
-        <text x="8" y="193" font-size="12" font-weight="700" fill="#1F2937">SCPI</text><text x="8" y="207" font-size="11" fill="#4B5563">74 k€ à 123 k€</text>
-        <rect x="218.8" y="181" width="45.8" height="26" rx="3" fill="#6d8bb8"/>
-        <text x="8" y="236" font-size="12" font-weight="700" fill="#1F2937">Matières premières</text><text x="8" y="250" font-size="11" fill="#4B5563">41 k€ à 140 k€</text>
-        <rect x="188.7" y="224" width="92.2" height="26" rx="3" fill="#8c6d3f"/>
-        <text x="8" y="279" font-size="12" font-weight="700" fill="#1F2937">Crypto</text><text x="8" y="293" font-size="11" fill="#4B5563">21 k€ à 426 k€</text>
-        <rect x="169.9" y="267" width="377.7" height="26" rx="3" fill="#7a4fa0"/>
-        <line x1="150" y1="300" x2="570" y2="300" stroke="#4B5563"/>
-        <g font-size="11" fill="#4B5563" text-anchor="middle"><text x="150" y="316">0</text><text x="290" y="316">150 k€</text><text x="430" y="316">300 k€</text><text x="570" y="316">450 k€</text></g>
-      </svg>
-      <figcaption>Hypothèses de rendement annuel : épargne 1 à 2,5 %, ETF 2 à 9 %, stock picking de -3 à 12 %, SCPI 2 à 6 %, matières premières de -3 à 7 %, crypto de -10 à 15 %. Avant impôts, simplifié.</figcaption>
-    </figure>
 
-    <div class="alerte"><strong>À savoir :</strong> ces fourchettes sont des illustrations pédagogiques, pas des prévisions ni des promesses. Les personnages sont fictifs. Ce contenu ne constitue pas un conseil en investissement, et tout placement hors livrets comporte un risque de perte en capital.</div>
-    <p>Ce qu'on retient du graphique : <strong>plus la barre est large, plus le résultat est incertain</strong>. L'épargne est étroite et proche du total versé. Le stock picking, les matières premières et surtout la crypto sont très larges : ils peuvent faire gagner gros, comme faire perdre une grande partie de la mise.</p>
+    <div class="alerte"><strong>À savoir :</strong> ces profils sont des illustrations pédagogiques, pas des prévisions ni des promesses. Les personnages sont fictifs. Ce contenu ne constitue pas un conseil en investissement, et tout placement hors livrets comporte un risque de perte en capital.</div>
+    <h3>La volatilité, c'est quoi ?</h3>
+    <p>La <strong>volatilité</strong> mesure l'ampleur des variations de prix d'un actif autour de sa moyenne, ramenée sur un an. Plus elle est élevée, plus les prix « bougent ». Exemple : avec une volatilité de 15 % et un rendement moyen de 7 % par an, une année « normale » (environ deux années sur trois) se situe grosso modo entre -8 % et +22 %.</p>
+    <p>Les ordres de grandeur utilisés dans cette page sont des moyennes historiques : environ 14 à 18 % pour les actions mondiales, 60 à 80 % pour le Bitcoin et bien davantage pour beaucoup d'autres cryptos. Pour les matières premières, l'écart est large : l'or est nettement plus calme que le pétrole, dont la volatilité a dépassé 100 % lors de certaines crises. Pour un portefeuille concentré de quelques actions, on est plutôt autour de 20 à 30 %.</p>
+    <p>Deux précautions : la volatilité passée ne prédit pas l'avenir, et elle ne dit pas tout du risque. Elle traite de la même façon les hausses et les baisses, et une volatilité faible peut cacher un autre risque. C'est le cas des SCPI, dont la valeur des parts est fixée par des expertises plutôt que par le marché au jour le jour : leur volatilité apparente est très lissée.</p>
+
 
     <!-- CAS 1 -->
     <h2 id="cas1">Cas 1 : Marc, l'épargnant prudent</h2>
@@ -143,6 +132,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
       <div class="pour"><h3>Points forts</h3><ul><li>Capital garanti</li><li>Disponible à tout moment</li><li>Intérêts non imposés</li><li>Aucun effort de gestion</li></ul></div>
       <div class="contre"><h3>Points faibles</h3><ul><li>Rendement proche de l'inflation</li><li>Plafonds de dépôt</li><li>Compte courant : zéro rendement</li><li>Aucune croissance du capital</li></ul></div>
     </div>
+    <div class="ctx"><h3>Dans quel contexte économique ?</h3><p class="vol">Volatilité typique : ≈ 0 % (ordre de grandeur annuel)</p><ul><li><span class="b ko">Défavorable</span><span><strong>Forte inflation</strong> : les taux des livrets sont réglementés et ajustés avec retard : ils peuvent rester sous l'inflation, et le compte courant perd chaque année du pouvoir d'achat.</span></li><li><span class="b ok">Favorable</span><span><strong>Récession ou crise</strong> : le capital est garanti et disponible, sans baisse de valeur.</span></li><li><span class="b mid">Mitigé</span><span><strong>Hausse des taux</strong> : le taux du Livret A finit par suivre, mais avec un décalage.</span></li><li><span class="b mid">Mitigé</span><span><strong>Baisse des taux</strong> : le rendement diminue, mais le pouvoir d'achat est préservé si l'inflation est faible.</span></li><li><span class="b ok">Favorable</span><span><strong>Tension géopolitique</strong> : aucune exposition aux marchés, mais les plafonds limitent les sommes placées.</span></li></ul><p class="verdict"><strong>En résumé :</strong> viable comme coussin de sécurité et pour les projets à court terme, peu adapté comme seule stratégie de long terme en période d'inflation.</p></div>
     <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Les livrets sont idéaux pour l'<strong>épargne de précaution</strong> (souvent 3 à 6 mois de dépenses) et les projets à court terme. Pour le long terme, ils protègent le capital mais ne le font pas vraiment grandir.</li></ul></div>
 
     <!-- CAS 2 -->
@@ -154,17 +144,19 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
       <div class="pour"><h3>Points forts</h3><ul><li>Large diversification</li><li>Frais faibles</li><li>Simple, peu de temps requis</li><li>Potentiel de croissance à long terme</li></ul></div>
       <div class="contre"><h3>Points faibles</h3><ul><li>Fortes baisses possibles</li><li>Recouvrement S&P 500 / monde</li><li>Risque de change</li><li>Exige de tenir le cap quand ça baisse</li></ul></div>
     </div>
+    <div class="ctx"><h3>Dans quel contexte économique ?</h3><p class="vol">Volatilité typique : ≈ 15 % (ordre de grandeur annuel)</p><ul><li><span class="b ko">Défavorable</span><span><strong>Forte inflation et hausse rapide des taux</strong> : à court terme, les actions peuvent baisser nettement ; à plus long terme, les entreprises répercutent en partie la hausse des prix.</span></li><li><span class="b ko">Défavorable</span><span><strong>Récession ou crise</strong> : des baisses de 30 à 50 % ont déjà eu lieu, avec un redressement qui a pris du temps.</span></li><li><span class="b ok">Favorable</span><span><strong>Croissance et baisse des taux</strong> : c'est le contexte le plus favorable aux bénéfices et aux valorisations.</span></li><li><span class="b ok">Favorable</span><span><strong>Inflation modérée</strong> : les entreprises ajustent leurs prix et la croissance se poursuit.</span></li><li><span class="b mid">Mitigé</span><span><strong>Tension géopolitique</strong> : la volatilité augmente à court terme ; la diversification géographique atténue, sans protéger du risque de change.</span></li></ul><p class="verdict"><strong>En résumé :</strong> viable sur un horizon long, mais vulnérable aux récessions et aux chocs de taux brutaux.</p></div>
     <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Le principal risque de cette stratégie n'est pas le marché, c'est le comportement : vendre dans la panique transforme une baisse temporaire en perte réelle. L'enveloppe (PEA, compte-titres, assurance-vie) joue aussi : voir la page <a href="fiscalite.html">Fiscalité</a>.</li></ul></div>
 
     <!-- CAS 3 -->
     <h2 id="cas3">Cas 3 : Julien, le stock picker</h2>
     <div class="profil"><p><strong>Son choix :</strong> il n'investit que dans des actions qu'il sélectionne lui-même, une dizaine d'entreprises, après avoir lu leurs comptes et suivi l'actualité.</p></div>
     <p>Julien apprend beaucoup et peut, s'il choisit bien, faire mieux que le marché. Mais il se heurte à des obstacles : ses choix sont <strong>concentrés</strong> (dix entreprises, c'est peu), chaque erreur pèse lourd, et il y consacre beaucoup de temps. Les études comparant les gérants actifs à leur indice montrent que, sur le long terme, la majorité fait moins bien que l'indice.</p>
-    <p>Il y a aussi le facteur humain : garder trop longtemps une action qui baisse, vendre trop tôt celle qui monte, se laisser influencer par l'actualité. D'où la large fourchette du graphique.</p>
+    <p>Il y a aussi le facteur humain : garder trop longtemps une action qui baisse, vendre trop tôt celle qui monte, se laisser influencer par l'actualité. D'où des résultats très dispersés d'un investisseur à l'autre.</p>
     <div class="duo">
       <div class="pour"><h3>Points forts</h3><ul><li>Potentiel de surperformance</li><li>Comprendre ce que l'on possède</li><li>Liberté totale de choix</li></ul></div>
       <div class="contre"><h3>Points faibles</h3><ul><li>Forte concentration du risque</li><li>Résultats très dispersés</li><li>Beaucoup de temps nécessaire</li><li>Biais émotionnels</li></ul></div>
     </div>
+    <div class="ctx"><h3>Dans quel contexte économique ?</h3><p class="vol">Volatilité typique : 20 à 30 % (ordre de grandeur annuel)</p><ul><li><span class="b mid">Mitigé</span><span><strong>Forte inflation</strong> : tout dépend des entreprises choisies : celles qui peuvent relever leurs prix s'en sortent mieux.</span></li><li><span class="b ko">Défavorable</span><span><strong>Récession ou crise</strong> : les valeurs cycliques souffrent davantage, et la concentration amplifie les baisses ; les valeurs défensives résistent mieux.</span></li><li><span class="b ko">Défavorable</span><span><strong>Hausse des taux</strong> : les entreprises très endettées ou très valorisées sont particulièrement pénalisées.</span></li><li><span class="b ok">Favorable</span><span><strong>Croissance et baisse des taux</strong> : un marché porteur aide, mais ne garantit pas que les titres choisis en profitent.</span></li><li><span class="b mid">Mitigé</span><span><strong>Tension géopolitique</strong> : l'exposition à certains secteurs ou pays fait la différence, dans un sens ou dans l'autre.</span></li></ul><p class="verdict"><strong>En résumé :</strong> le résultat dépend davantage des titres choisis que du contexte, avec une forte sensibilité aux secteurs retenus.</p></div>
     <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Le stock picking peut avoir sa place en complément, avec une petite part du patrimoine, à côté d'un socle diversifié. Seul, il concentre le risque.</li></ul></div>
 
     <!-- CAS 4 -->
@@ -176,6 +168,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
       <div class="pour"><h3>Points forts</h3><ul><li>Revenus réguliers</li><li>Aucune gestion locative</li><li>Diversification entre plusieurs biens</li></ul></div>
       <div class="contre"><h3>Points faibles</h3><ul><li>Frais d'entrée élevés</li><li>Liquidité limitée</li><li>Fiscalité parfois lourde</li><li>Un seul type d'actif</li></ul></div>
     </div>
+    <div class="ctx"><h3>Dans quel contexte économique ?</h3><p class="vol">Volatilité typique : faible (apparente)* (ordre de grandeur annuel)</p><ul><li><span class="b mid">Mitigé</span><span><strong>Forte inflation</strong> : les loyers sont souvent indexés et peuvent suivre les prix, mais la hausse des taux qui l'accompagne pèse sur la valeur des immeubles.</span></li><li><span class="b ko">Défavorable</span><span><strong>Récession ou crise</strong> : vacance locative et pression sur les loyers, surtout pour les bureaux et les commerces ; certains secteurs (santé, logistique) sont réputés plus résilients.</span></li><li><span class="b ko">Défavorable</span><span><strong>Hausse des taux</strong> : les valeurs immobilières reculent, le crédit coûte plus cher aux SCPI endettées, et les placements sans risque deviennent plus attractifs.</span></li><li><span class="b ok">Favorable</span><span><strong>Baisse des taux</strong> : les valorisations immobilières sont soutenues et le crédit est moins cher.</span></li><li><span class="b mid">Mitigé</span><span><strong>Tension géopolitique</strong> : peu d'exposition directe, sauf pour les pays et secteurs concernés.</span></li></ul><p class="verdict"><strong>En résumé :</strong> viable en période de taux stables ou en baisse ; la correction de 2023 à 2025 a montré sa sensibilité à la hausse des taux. *La valeur des parts est fixée par expertise, donc lissée.</p></div>
     <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Les SCPI sont un placement de long terme (en général 8 à 10 ans minimum), qui convient comme complément de revenus. Un taux affiché élevé ne dit rien des frais, de la fiscalité ni du prix de revente.</li></ul></div>
 
     <!-- CAS 5 -->
@@ -188,6 +181,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
       <div class="pour"><h3>Points forts</h3><ul><li>Diversification par rapport aux actions</li><li>Protection partielle contre l'inflation et les chocs</li><li>Actifs concrets, dont le monde a besoin</li></ul></div>
       <div class="contre"><h3>Points faibles</h3><ul><li>Aucun revenu : seul le prix compte</li><li>Forte volatilité, cycles longs</li><li>Coûts de renouvellement des contrats à terme</li><li>Segments très différents, difficiles à anticiper</li></ul></div>
     </div>
+    <div class="ctx"><h3>Dans quel contexte économique ?</h3><p class="vol">Volatilité typique : 15 à 35 %, parfois bien plus (ordre de grandeur annuel)</p><ul><li><span class="b ok">Favorable</span><span><strong>Forte inflation (choc d'offre, énergie)</strong> : les matières premières sont souvent à l'origine de la hausse des prix : leurs cours montent avec elle.</span></li><li><span class="b ko">Défavorable</span><span><strong>Récession ou crise</strong> : la demande d'énergie et de métaux industriels recule ; l'or est souvent soutenu comme valeur refuge, sans garantie.</span></li><li><span class="b ko">Défavorable</span><span><strong>Hausse des taux et dollar fort</strong> : les prix sont généralement libellés en dollars, et l'or, qui ne rapporte rien, devient moins attractif.</span></li><li><span class="b mid">Mitigé</span><span><strong>Baisse des taux</strong> : favorable à l'or ; pour les métaux industriels, tout dépend de la croissance.</span></li><li><span class="b ok">Favorable</span><span><strong>Tension géopolitique</strong> : les perturbations d'approvisionnement font monter l'énergie, certaines céréales et l'or, mais avec de fortes variations.</span></li></ul><p class="verdict"><strong>En résumé :</strong> avantageuse dans un contexte de choc d'offre ou d'inflation, difficile en cas de récession mondiale.</p></div>
     <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Les matières premières peuvent compléter un portefeuille, mais comme unique stratégie, elles dépendent de cycles et d'événements impossibles à prévoir : voir les pages <a href="marches.html">Marchés & Actifs</a> et <a href="geopolitique.html">Géopolitique</a>.</li></ul></div>
 
     <!-- CAS 6 -->
@@ -200,7 +194,12 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
       <div class="pour"><h3>Points forts</h3><ul><li>Horizon de plusieurs décennies</li><li>Petits montants possibles, investissement régulier</li><li>Potentiel de très forte hausse</li></ul></div>
       <div class="contre"><h3>Points faibles</h3><ul><li>Volatilité extrême, perte totale possible</li><li>Aucun revenu, aucune garantie</li><li>Risques de piratage, de faillite et d'arnaques</li><li>Patrimoine entièrement concentré</li></ul></div>
     </div>
+    <div class="ctx"><h3>Dans quel contexte économique ?</h3><p class="vol">Volatilité typique : 60 à 80 % et plus (ordre de grandeur annuel)</p><ul><li><span class="b mid">Mitigé</span><span><strong>Forte inflation</strong> : la thèse d'une « réserve de valeur » n'est pas démontrée : en 2022, les cryptos ont fortement baissé malgré l'inflation.</span></li><li><span class="b ko">Défavorable</span><span><strong>Récession ou crise</strong> : elles se comportent souvent comme des actifs très risqués, avec des baisses de 70 % ou plus (2018, 2022).</span></li><li><span class="b ko">Défavorable</span><span><strong>Hausse des taux, resserrement de la liquidité</strong> : les actifs spéculatifs sont les premiers pénalisés (2022).</span></li><li><span class="b ok">Favorable</span><span><strong>Abondance de liquidités, appétit pour le risque</strong> : c'est le contexte qui leur a le plus profité, par exemple en 2020-2021.</span></li><li><span class="b mid">Mitigé</span><span><strong>Défiance envers les monnaies</strong> : l'argument d'une alternative existe, mais en cas de stress les cryptos baissent souvent avec les autres actifs risqués.</span></li></ul><p class="verdict"><strong>En résumé :</strong> viable surtout quand les liquidités abondent et que l'appétit pour le risque est fort ; très vulnérable aux phases de resserrement et de crise.</p></div>
     <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Ce type de pari ne devrait porter que sur une petite part d'un patrimoine, à côté d'un socle plus stable (épargne de précaution, placements diversifiés). Sa jeunesse permet de se relever d'une perte, mais pas d'ignorer le risque.</li></ul></div>
+
+    <h2>Le contexte change tout : l'exemple de 2022</h2>
+    <p>En 2022, l'inflation est repartie fortement et les banques centrales ont relevé leurs taux très rapidement. Cette année-là, les actions mondiales, les obligations et les cryptomonnaies ont toutes reculé en même temps. Les livrets sont restés sous le niveau de l'inflation, donc l'épargne a perdu du pouvoir d'achat. L'énergie et certaines matières premières, elles, ont progressé, et l'or est resté à peu près stable.</p>
+    <p>Aucune stratégie n'a été gagnante sur tous les plans. C'est le message de ces six profils : chacun est favorisé par certains contextes et pénalisé par d'autres, et c'est pourquoi beaucoup d'épargnants en combinent plusieurs. Attention : ces lectures sont des <strong>tendances</strong>, pas des lois. Les marchés anticipent souvent les événements, et un même contexte peut avoir des effets différents selon son ampleur et sa durée. Pour approfondir : <a href="macro.html">Macroéconomie</a> et <a href="geopolitique.html">Géopolitique</a>.</p>
 
     <h2>Les six profils côte à côte</h2>
     <div class="tablewrap">
@@ -208,6 +207,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
         <thead><tr><th></th><th>Marc : épargne</th><th>Sarah : ETF</th><th>Julien : stock picking</th><th>Claire : SCPI</th><th>Hugo : matières premières</th><th>Léa : crypto</th></tr></thead>
         <tbody>
           <tr><th scope="row">Risque de perte</th><td>Très faible</td><td>Moyen à élevé</td><td>Élevé</td><td>Moyen</td><td>Élevé</td><td>Très élevé</td></tr>
+          <tr><th scope="row">Volatilité annualisée (ordre de grandeur)</th><td>≈ 0 %</td><td>≈ 15 %</td><td>20 à 30 %</td><td>Faible (apparente)</td><td>15 à 35 %</td><td>60 à 80 % et plus</td></tr>
           <tr><th scope="row">Disponibilité</th><td>Immédiate</td><td>Rapide</td><td>Rapide</td><td>Limitée</td><td>Rapide (ETC, ETF)</td><td>Rapide (selon la plateforme)</td></tr>
           <tr><th scope="row">Revenus réguliers</th><td>Intérêts</td><td>Selon l'ETF</td><td>Dividendes</td><td>Loyers</td><td>Aucun</td><td>Aucun</td></tr>
           <tr><th scope="row">Diversification</th><td>Sans objet</td><td>Large</td><td>Faible</td><td>Moyenne</td><td>Faible à moyenne</td><td>Très faible</td></tr>
@@ -221,6 +221,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
     <ul class="liste">
       <li><strong>Il n'y a pas de bonne réponse unique.</strong> Chaque stratégie répond à un besoin, un horizon et une tolérance au risque différents.</li>
       <li><strong>Mettre tous ses œufs dans le même panier est risqué</strong>, que ce soit une seule action, un seul secteur ou… un seul livret.</li>
+      <li><strong>Aucune stratégie n'est favorable dans tous les contextes économiques</strong> : inflation, récession, hausse ou baisse des taux avantagent et pénalisent des profils différents.</li>
       <li><strong>Beaucoup d'épargnants combinent</strong> : livrets pour la sécurité, ETF pour la croissance, et éventuellement un peu de stock picking ou de SCPI en complément.</li>
       <li><strong>Certains actifs ne versent aucun revenu</strong> (matières premières, crypto) : leur gain dépend uniquement du prix, donc de ce que d'autres accepteront de payer.</li>
       <li><strong>Les frais, la fiscalité et le comportement</strong> comptent autant que le choix du produit.</li>
