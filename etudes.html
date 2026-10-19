@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Études de cas - EikoFinance</title>
-<meta name="description" content="Quatre profils d'épargnants : épargne seule, ETF, stock picking, SCPI. Comparer les approches pour comprendre risques, rendements et limites.">
+<meta name="description" content="Six profils d'épargnants : épargne seule, ETF, stock picking, SCPI, matières premières, crypto. Comparer les approches pour comprendre risques, rendements et limites.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@ figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:
 .retenir li{margin-bottom:.4rem}
 .alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
 .tablewrap{overflow-x:auto;margin:1.2rem 0}
-table{border-collapse:collapse;width:100%;min-width:640px;font-size:.93rem}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:.93rem}
 th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
 th{background:var(--primary-blue);color:#fff;font-weight:600}
 tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
@@ -85,8 +85,8 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
   <p class="crumbs"><a href="index.html">Accueil</a> › Études de cas</p>
 
   <section class="hero">
-    <h1>Études de cas : quatre façons de faire travailler son argent</h1>
-    <p>Même point de départ, quatre stratégies très différentes. On compare ce qu'elles demandent, ce qu'elles peuvent rapporter, et ce qu'elles peuvent coûter.</p>
+    <h1>Études de cas : six façons de faire travailler son argent</h1>
+    <p>Même point de départ, six stratégies très différentes. On compare ce qu'elles demandent, ce qu'elles peuvent rapporter, et ce qu'elles peuvent coûter.</p>
     <a href="#intro" class="btn-gold">Découvrir les profils</a>
   </section>
 
@@ -95,38 +95,44 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
     <a class="card" href="#cas2"><h3>Sarah, l'indicielle</h3><p>S&P 500 et ETF monde.</p></a>
     <a class="card" href="#cas3"><h3>Julien, le stock picker</h3><p>Des actions choisies une à une.</p></a>
     <a class="card" href="#cas4"><h3>Claire, la SCPI</h3><p>L'immobilier en pierre-papier.</p></a>
+    <a class="card" href="#cas5"><h3>Hugo, les matières premières</h3><p>Métaux, énergie, agriculture.</p></a>
+    <a class="card" href="#cas6"><h3>Léa, full crypto</h3><p>Une jeune investisseuse 100 % crypto.</p></a>
   </section>
 
   <article class="chapitre">
 
-    <h2 id="intro">Le même départ, quatre chemins</h2>
+    <h2 id="intro">Le même départ, six chemins</h2>
     <p class="accroche">« Si on me donne 10 000 € et 200 € par mois, que se passe-t-il selon ce que j'en fais ? »</p>
-    <p>Pour comparer à armes égales, imaginons quatre personnes qui commencent avec <strong>10 000 €</strong> et ajoutent <strong>200 € par mois pendant 20 ans</strong>, soit 58 000 € versés au total. Ce qui les distingue, ce n'est pas la somme, mais <strong>ce qu'elles en font</strong>.</p>
+    <p>Pour comparer à armes égales, imaginons six personnes qui commencent avec <strong>10 000 €</strong> et ajoutent <strong>200 € par mois pendant 20 ans</strong>, soit 58 000 € versés au total. Ce qui les distingue, ce n'est pas la somme, mais <strong>ce qu'elles en font</strong>.</p>
 
     <figure>
-      <svg viewBox="0 0 600 250" role="img" aria-label="Fourchettes de capital final après 20 ans selon quatre stratégies, avec 58 000 euros versés au total">
+      <svg viewBox="0 0 600 340" role="img" aria-label="Fourchettes de capital final après 20 ans selon six stratégies, avec 58 000 euros versés au total">
         <text x="300" y="16" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">Capital final possible après 20 ans (hypothèses)</text>
-        <g stroke="#d9dee5"><line x1="290" y1="40" x2="290" y2="218"/><line x1="430" y1="40" x2="430" y2="218"/><line x1="570" y1="40" x2="570" y2="218"/></g>
-        <line x1="231" y1="40" x2="231" y2="218" stroke="#b3402e" stroke-width="1.5" stroke-dasharray="4 3"/>
-        <text x="236" y="38" font-size="11" fill="#b3402e">Total versé : 58 000 €</text>
-        <g font-size="12" fill="#1F2937">
-          <text x="8" y="66" font-weight="700">Épargne</text><text x="8" y="80" font-size="11" fill="#4B5563">65 k€ à 78 k€</text>
-          <text x="8" y="109" font-weight="700">ETF</text><text x="8" y="123" font-size="11" fill="#4B5563">74 k€ à 184 k€</text>
-          <text x="8" y="152" font-weight="700">Stock picking</text><text x="8" y="166" font-size="11" fill="#4B5563">41 k€ à 279 k€</text>
-          <text x="8" y="195" font-weight="700">SCPI</text><text x="8" y="209" font-size="11" fill="#4B5563">74 k€ à 123 k€</text>
-        </g>
-        <rect x="241" y="52" width="19" height="26" rx="3" fill="#9fb0c9"/>
-        <rect x="253" y="95" width="154" height="26" rx="3" fill="#102A56"/>
-        <rect x="208" y="138" width="332" height="26" rx="3" fill="#C5A059"/>
-        <rect x="253" y="181" width="69" height="26" rx="3" fill="#6d8bb8"/>
-        <g font-size="11" fill="#4B5563" text-anchor="middle"><line x1="150" y1="218" x2="570" y2="218" stroke="#4B5563"/>
-          <text x="150" y="234">0</text><text x="290" y="234">100 k€</text><text x="430" y="234">200 k€</text><text x="570" y="234">300 k€</text></g>
+        <line x1="290" y1="40" x2="290" y2="300" stroke="#d9dee5"/>
+        <line x1="430" y1="40" x2="430" y2="300" stroke="#d9dee5"/>
+        <line x1="570" y1="40" x2="570" y2="300" stroke="#d9dee5"/>
+        <line x1="204.1" y1="40" x2="204.1" y2="300" stroke="#b3402e" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="209" y="38" font-size="11" fill="#b3402e">Total versé : 58 000 €</text>
+        <text x="8" y="64" font-size="12" font-weight="700" fill="#1F2937">Épargne</text><text x="8" y="78" font-size="11" fill="#4B5563">65 k€ à 78 k€</text>
+        <rect x="210.9" y="52" width="12.2" height="26" rx="3" fill="#9fb0c9"/>
+        <text x="8" y="107" font-size="12" font-weight="700" fill="#1F2937">ETF</text><text x="8" y="121" font-size="11" fill="#4B5563">74 k€ à 184 k€</text>
+        <rect x="218.8" y="95" width="102.8" height="26" rx="3" fill="#102A56"/>
+        <text x="8" y="150" font-size="12" font-weight="700" fill="#1F2937">Stock picking</text><text x="8" y="164" font-size="11" fill="#4B5563">41 k€ à 279 k€</text>
+        <rect x="188.7" y="138" width="221.5" height="26" rx="3" fill="#C5A059"/>
+        <text x="8" y="193" font-size="12" font-weight="700" fill="#1F2937">SCPI</text><text x="8" y="207" font-size="11" fill="#4B5563">74 k€ à 123 k€</text>
+        <rect x="218.8" y="181" width="45.8" height="26" rx="3" fill="#6d8bb8"/>
+        <text x="8" y="236" font-size="12" font-weight="700" fill="#1F2937">Matières premières</text><text x="8" y="250" font-size="11" fill="#4B5563">41 k€ à 140 k€</text>
+        <rect x="188.7" y="224" width="92.2" height="26" rx="3" fill="#8c6d3f"/>
+        <text x="8" y="279" font-size="12" font-weight="700" fill="#1F2937">Crypto</text><text x="8" y="293" font-size="11" fill="#4B5563">21 k€ à 426 k€</text>
+        <rect x="169.9" y="267" width="377.7" height="26" rx="3" fill="#7a4fa0"/>
+        <line x1="150" y1="300" x2="570" y2="300" stroke="#4B5563"/>
+        <g font-size="11" fill="#4B5563" text-anchor="middle"><text x="150" y="316">0</text><text x="290" y="316">150 k€</text><text x="430" y="316">300 k€</text><text x="570" y="316">450 k€</text></g>
       </svg>
-      <figcaption>Hypothèses de rendement annuel : épargne 1 à 2,5 %, ETF 2 à 9 %, stock picking de -3 à 12 %, SCPI 2 à 6 %. Avant impôts, simplifié.</figcaption>
+      <figcaption>Hypothèses de rendement annuel : épargne 1 à 2,5 %, ETF 2 à 9 %, stock picking de -3 à 12 %, SCPI 2 à 6 %, matières premières de -3 à 7 %, crypto de -10 à 15 %. Avant impôts, simplifié.</figcaption>
     </figure>
 
     <div class="alerte"><strong>À savoir :</strong> ces fourchettes sont des illustrations pédagogiques, pas des prévisions ni des promesses. Les personnages sont fictifs. Ce contenu ne constitue pas un conseil en investissement, et tout placement hors livrets comporte un risque de perte en capital.</div>
-    <p>Ce qu'on retient du graphique : <strong>plus la barre est large, plus le résultat est incertain</strong>. L'épargne est étroite et proche du total versé. Le stock picking est large : il peut faire gagner gros, comme faire perdre.</p>
+    <p>Ce qu'on retient du graphique : <strong>plus la barre est large, plus le résultat est incertain</strong>. L'épargne est étroite et proche du total versé. Le stock picking, les matières premières et surtout la crypto sont très larges : ils peuvent faire gagner gros, comme faire perdre une grande partie de la mise.</p>
 
     <!-- CAS 1 -->
     <h2 id="cas1">Cas 1 : Marc, l'épargnant prudent</h2>
@@ -172,25 +178,51 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
     </div>
     <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Les SCPI sont un placement de long terme (en général 8 à 10 ans minimum), qui convient comme complément de revenus. Un taux affiché élevé ne dit rien des frais, de la fiscalité ni du prix de revente.</li></ul></div>
 
-    <h2>Les quatre profils côte à côte</h2>
+    <!-- CAS 5 -->
+    <h2 id="cas5">Cas 5 : Hugo, l'investisseur en matières premières</h2>
+    <div class="profil"><p><strong>Son choix :</strong> il n'investit que dans les matières premières : métaux précieux (or, argent), métaux industriels (cuivre…), énergie (pétrole, gaz) et agriculture (blé, café, cacao…), via des ETC ou ETF et quelques actions de producteurs.</p></div>
+    <p>Hugo mise sur des biens dont le monde a besoin. Chaque segment réagit à des forces différentes : l'or sert de valeur refuge en période d'inquiétude, le cuivre suit l'industrie et la croissance mondiale (notamment celle de la Chine), l'énergie dépend de la géopolitique et de l'offre des pays producteurs, l'agriculture de la météo et des récoltes.</p>
+    <p>Sa stratégie présente une logique intéressante : les matières premières ne réagissent pas toujours comme les actions, et peuvent aider quand les prix montent. Mais elles <strong>ne versent aucun revenu</strong> : le gain vient uniquement de la variation des prix, et ceux-ci peuvent être très volatils (le pétrole américain a même été brièvement négatif sur un contrat à terme en avril 2020).</p>
+    <p>Autre subtilité : beaucoup d'ETF matières premières reproduisent des contrats à terme, dont le renouvellement peut coûter cher. Ces produits ne se logent en général pas dans un PEA, et l'or physique a sa propre fiscalité.</p>
+    <div class="duo">
+      <div class="pour"><h3>Points forts</h3><ul><li>Diversification par rapport aux actions</li><li>Protection partielle contre l'inflation et les chocs</li><li>Actifs concrets, dont le monde a besoin</li></ul></div>
+      <div class="contre"><h3>Points faibles</h3><ul><li>Aucun revenu : seul le prix compte</li><li>Forte volatilité, cycles longs</li><li>Coûts de renouvellement des contrats à terme</li><li>Segments très différents, difficiles à anticiper</li></ul></div>
+    </div>
+    <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Les matières premières peuvent compléter un portefeuille, mais comme unique stratégie, elles dépendent de cycles et d'événements impossibles à prévoir : voir les pages <a href="marches.html">Marchés & Actifs</a> et <a href="geopolitique.html">Géopolitique</a>.</li></ul></div>
+
+    <!-- CAS 6 -->
+    <h2 id="cas6">Cas 6 : Léa, jeune investisseuse 100 % crypto</h2>
+    <div class="profil"><p><strong>Son choix :</strong> à 24 ans, elle place tout dans les cryptomonnaies (Bitcoin, Ethereum et quelques autres), en achetant un peu chaque mois.</p></div>
+    <p>Léa a l'avantage du temps : elle peut attendre de longues années, et acheter régulièrement lisse son prix d'entrée, sans avoir à deviner le « bon moment ». Elle est à l'aise avec la technologie, et son marché est ouvert à tout moment avec de petits montants.</p>
+    <p>Mais son choix cumule les risques : volatilité extrême (des baisses de 70 % ou plus ont déjà eu lieu), aucun revenu, piratages et escroqueries, faillite possible des plateformes, cadre réglementaire encore en évolution. Et <strong>tout son patrimoine</strong> dépend d'une seule classe d'actifs, dont la valeur n'est pas adossée à des flux. Avoir du temps est un atout, mais « long terme » ne supprime pas le risque que l'actif perde durablement de sa valeur.</p>
+    <p>Côté impôts, ses gains sont taxés à la flat tax de 31,4 % lorsqu'elle revend contre des euros (voir la page <a href="crypto.html">Cryptomonnaies</a>).</p>
+    <div class="duo">
+      <div class="pour"><h3>Points forts</h3><ul><li>Horizon de plusieurs décennies</li><li>Petits montants possibles, investissement régulier</li><li>Potentiel de très forte hausse</li></ul></div>
+      <div class="contre"><h3>Points faibles</h3><ul><li>Volatilité extrême, perte totale possible</li><li>Aucun revenu, aucune garantie</li><li>Risques de piratage, de faillite et d'arnaques</li><li>Patrimoine entièrement concentré</li></ul></div>
+    </div>
+    <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Ce type de pari ne devrait porter que sur une petite part d'un patrimoine, à côté d'un socle plus stable (épargne de précaution, placements diversifiés). Sa jeunesse permet de se relever d'une perte, mais pas d'ignorer le risque.</li></ul></div>
+
+    <h2>Les six profils côte à côte</h2>
     <div class="tablewrap">
       <table>
-        <thead><tr><th></th><th>Marc : épargne</th><th>Sarah : ETF</th><th>Julien : stock picking</th><th>Claire : SCPI</th></tr></thead>
+        <thead><tr><th></th><th>Marc : épargne</th><th>Sarah : ETF</th><th>Julien : stock picking</th><th>Claire : SCPI</th><th>Hugo : matières premières</th><th>Léa : crypto</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Risque de perte</th><td>Très faible</td><td>Moyen à élevé</td><td>Élevé</td><td>Moyen</td></tr>
-          <tr><th scope="row">Disponibilité</th><td>Immédiate</td><td>Rapide (vente en bourse)</td><td>Rapide (vente en bourse)</td><td>Limitée</td></tr>
-          <tr><th scope="row">Diversification</th><td>Sans objet</td><td>Large</td><td>Faible</td><td>Moyenne (un seul secteur)</td></tr>
-          <tr><th scope="row">Temps demandé</th><td>Aucun</td><td>Très peu</td><td>Beaucoup</td><td>Peu</td></tr>
-          <tr><th scope="row">Fiscalité</th><td>Livrets exonérés</td><td>Selon l'enveloppe</td><td>Selon l'enveloppe</td><td>Revenus fonciers</td></tr>
+          <tr><th scope="row">Risque de perte</th><td>Très faible</td><td>Moyen à élevé</td><td>Élevé</td><td>Moyen</td><td>Élevé</td><td>Très élevé</td></tr>
+          <tr><th scope="row">Disponibilité</th><td>Immédiate</td><td>Rapide</td><td>Rapide</td><td>Limitée</td><td>Rapide (ETC, ETF)</td><td>Rapide (selon la plateforme)</td></tr>
+          <tr><th scope="row">Revenus réguliers</th><td>Intérêts</td><td>Selon l'ETF</td><td>Dividendes</td><td>Loyers</td><td>Aucun</td><td>Aucun</td></tr>
+          <tr><th scope="row">Diversification</th><td>Sans objet</td><td>Large</td><td>Faible</td><td>Moyenne</td><td>Faible à moyenne</td><td>Très faible</td></tr>
+          <tr><th scope="row">Temps demandé</th><td>Aucun</td><td>Très peu</td><td>Beaucoup</td><td>Peu</td><td>Moyen</td><td>Moyen</td></tr>
+          <tr><th scope="row">Fiscalité</th><td>Livrets exonérés</td><td>Selon l'enveloppe</td><td>Selon l'enveloppe</td><td>Revenus fonciers</td><td>Variable selon le support</td><td>Flat tax à la vente</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h2>Ce que ces quatre histoires nous apprennent</h2>
+    <h2>Ce que ces six histoires nous apprennent</h2>
     <ul class="liste">
       <li><strong>Il n'y a pas de bonne réponse unique.</strong> Chaque stratégie répond à un besoin, un horizon et une tolérance au risque différents.</li>
       <li><strong>Mettre tous ses œufs dans le même panier est risqué</strong>, que ce soit une seule action, un seul secteur ou… un seul livret.</li>
       <li><strong>Beaucoup d'épargnants combinent</strong> : livrets pour la sécurité, ETF pour la croissance, et éventuellement un peu de stock picking ou de SCPI en complément.</li>
+      <li><strong>Certains actifs ne versent aucun revenu</strong> (matières premières, crypto) : leur gain dépend uniquement du prix, donc de ce que d'autres accepteront de payer.</li>
       <li><strong>Les frais, la fiscalité et le comportement</strong> comptent autant que le choix du produit.</li>
     </ul>
     <p>Pour aller plus loin : les <a href="marches.html">actifs</a> en détail, les <a href="fiscalite.html">enveloppes</a>, et l'<a href="outils.html">application Monte Carlo</a> pour visualiser l'éventail des futurs possibles.</p>
@@ -222,6 +254,21 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
       <button>Un capital toujours garanti</button>
       <button>Une liquidité limitée et des frais d'entrée élevés</button>
       <button>Une interdiction de toucher des loyers</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="q" data-good="0">
+      <p>5. Quelle est la caractéristique commune aux matières premières et à la crypto, comme actifs ?</p>
+      <button>Elles ne versent aucun revenu : le gain vient uniquement de la variation du prix</button>
+      <button>Elles garantissent le capital</button>
+      <button>Elles versent des loyers</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>6. Pourquoi la jeunesse de Léa ne suffit-elle pas à effacer le risque de son choix ?</p>
+      <button>Parce que l'âge n'a aucun effet sur les placements</button>
+      <button>Parce que « long terme » n'empêche pas l'actif de perdre durablement de sa valeur</button>
+      <button>Parce que les cryptos sont garanties</button>
       <div class="fb" aria-live="polite"></div>
     </div>
 
