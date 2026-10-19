@@ -48,6 +48,12 @@ details p{margin:.7rem 0 0}
 .pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
 .pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
 .pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.tablewrap{overflow-x:auto;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.93rem}
+th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--primary-blue);color:#fff;font-weight:600}
+tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
 :focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
 </style>
 </head>
@@ -85,9 +91,9 @@ details p{margin:.7rem 0 0}
 
   <section class="card-grid" aria-label="Sommaire du parcours">
     <a class="card" href="#chap1"><h3>1. Mon quotidien</h3><p>Prix, salaire, épargne : pourquoi ma baguette coûte plus cher qu'avant ?</p></a>
-    <a class="card soon" href="#"><h3>2. Un circuit où tout se tient</h3><p>Bientôt disponible</p></a>
-    <a class="card soon" href="#"><h3>3. Les cycles</h3><p>Bientôt disponible</p></a>
-    <a class="card soon" href="#"><h3>4. Qui peut agir ?</h3><p>Bientôt disponible</p></a>
+    <a class="card" href="#chap2"><h3>2. Un circuit où tout se tient</h3><p>Ce que je dépense, quelqu'un d'autre le gagne.</p></a>
+    <a class="card" href="#chap3"><h3>3. Les cycles</h3><p>Pourquoi ça monte, puis ça redescend.</p></a>
+    <a class="card" href="#chap4"><h3>4. Qui peut agir ?</h3><p>Banques centrales, État et moi.</p></a>
   </section>
   <p style="text-align:center;margin:1.5rem 1rem 0;color:var(--text-muted)">Pour comprendre les rapports de force qui font bouger l'économie :</p>
   <section class="card-grid" aria-label="Autres pages de la rubrique">
@@ -172,7 +178,269 @@ details p{margin:.7rem 0 0}
 
     <div class="pager">
       <a href="index.html">← Accueil</a>
-      <a class="next" href="#">Chapitre 2 (bientôt) →</a>
+      <a class="next" href="#chap2">Chapitre 2 →</a>
+    </div>
+  </article>
+
+  <!-- ================= CHAPITRE 2 ================= -->
+  <article class="chapitre" id="chap2">
+    <h2>Chapitre 2 : l'économie, un circuit où tout se tient</h2>
+    <p class="accroche">« Ce que je dépense, quelqu'un d'autre le gagne. »</p>
+
+    <h3>Le village de Camille</h3>
+    <p>Camille achète sa farine à Paul, le meunier, et paie Léa, son employée. Avec son salaire, Léa achète du pain chez Camille et se fait couper les cheveux chez Inès. Inès, à son tour, vient acheter sa baguette chez Camille. L'argent circule : <strong>chaque dépense de l'un est un revenu pour un autre</strong>.</p>
+    <p>C'est le <strong>circuit économique</strong> : les ménages (nous tous) travaillent pour des entreprises, qui les paient en salaires. Les ménages dépensent ensuite ce revenu chez ces mêmes entreprises, qui s'en servent pour payer leurs fournisseurs, leurs salariés et leurs impôts.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 215" role="img" aria-label="Schéma du circuit économique : les ménages dépensent chez les entreprises, qui les paient en salaires ; les banques et l'État complètent le circuit">
+        <defs><marker id="c2a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C5A059"/></marker></defs>
+        <rect x="25" y="45" width="170" height="85" rx="10" fill="#FFFFFF" stroke="#102A56" stroke-width="2"/>
+        <text x="110" y="82" text-anchor="middle" font-size="16" font-weight="700" fill="#102A56">Ménages</text><text x="110" y="104" text-anchor="middle" font-size="12" fill="#4B5563">Nous tous</text>
+        <rect x="405" y="45" width="170" height="85" rx="10" fill="#FFFFFF" stroke="#102A56" stroke-width="2"/>
+        <text x="490" y="82" text-anchor="middle" font-size="16" font-weight="700" fill="#102A56">Entreprises</text><text x="490" y="104" text-anchor="middle" font-size="12" fill="#4B5563">Camille, Paul, Inès…</text>
+        <g stroke="#C5A059" stroke-width="3" fill="none" marker-end="url(#c2a)"><line x1="205" y1="70" x2="395" y2="70"/><line x1="395" y1="108" x2="205" y2="108"/></g>
+        <text x="300" y="62" text-anchor="middle" font-size="13" font-weight="700" fill="#102A56">Dépenses</text>
+        <text x="300" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#102A56">Salaires</text>
+        <rect x="110" y="160" width="180" height="40" rx="8" fill="#F4F6F9" stroke="#C5A059"/><text x="200" y="185" text-anchor="middle" font-size="12" font-weight="700" fill="#102A56">Banques : épargne et crédit</text>
+        <rect x="310" y="160" width="180" height="40" rx="8" fill="#F4F6F9" stroke="#C5A059"/><text x="400" y="185" text-anchor="middle" font-size="12" font-weight="700" fill="#102A56">État : impôts et services</text>
+      </svg>
+      <figcaption>Le circuit simplifié : l'argent des uns fait le revenu des autres.</figcaption>
+    </figure>
+
+    <h3>Deux acteurs de plus : les banques et l'État</h3>
+    <p>Les <strong>banques</strong> reçoivent l'épargne et accordent des crédits. Quand une banque prête 20 000 € à Camille pour acheter un nouveau four, elle crée de la monnaie : ces 20 000 € apparaissent sur le compte de Camille, puis circulent dans l'économie. La majeure partie de la monnaie en circulation est ainsi créée par les banques commerciales quand elles accordent des crédits, dans le cadre fixé par la banque centrale.</p>
+    <p>L'<strong>État</strong> prélève des impôts et des cotisations, et finance des services (écoles, hôpitaux, routes) et des aides. Il est à la fois un client, un employeur et un redistributeur.</p>
+
+    <h3>Quand tout le monde freine en même temps</h3>
+    <p>Imaginons une inquiétude : chacun décide d'épargner davantage. Léa ne va plus chez Inès ; Inès, qui gagne moins, achète moins de pain chez Camille ; Camille commande moins de farine à Paul. Chacun a agi avec prudence, mais ensemble ils ont réduit le revenu de tous.</p>
+    <p>C'est ce que les économistes appellent le <strong>paradoxe de l'épargne</strong> : ce qui est raisonnable pour une personne peut devenir un problème quand tout le monde le fait en même temps. Épargner reste utile, mais un freinage brutal et général ralentit l'économie.</p>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>L'économie est un circuit : la dépense de l'un est le revenu d'un autre.</li>
+        <li>Les banques créent de la monnaie en accordant des crédits, et l'État prélève et redistribue.</li>
+        <li>Si tout le monde réduit ses dépenses en même temps, les revenus de tous baissent.</li>
+      </ul>
+    </div>
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Le vrai circuit inclut aussi le reste du monde : nous achetons des produits importés, et nos entreprises exportent. Il existe aussi des « fuites » (épargne, impôts, importations) et des « injections » (investissement, dépenses publiques, exportations) qui font grossir ou rétrécir le circuit.</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Ménage</dt><dd>Une personne ou un foyer qui consomme, travaille et épargne.</dd>
+      <dt>Entreprise</dt><dd>Une organisation qui produit des biens ou des services et emploie des salariés.</dd>
+      <dt>Crédit</dt><dd>Une somme prêtée par une banque, à rembourser avec des intérêts.</dd>
+      <dt>Flux</dt><dd>Un mouvement d'argent d'un acteur vers un autre.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="0">
+      <p>1. Quand Léa dépense son salaire chez Camille, pour Camille c'est…</p>
+      <button>Un revenu</button>
+      <button>Une dépense</button>
+      <button>Un impôt</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>2. Quand une banque accorde un crédit, que se passe-t-il ?</p>
+      <button>Elle prête l'argent d'un autre client</button>
+      <button>Elle crée de la monnaie sur le compte de l'emprunteur</button>
+      <button>Elle imprime des billets</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. Pourquoi une baisse générale des dépenses ralentit-elle l'économie ?</p>
+      <button>Parce que les prix baissent forcément</button>
+      <button>Parce que l'État arrête les impôts</button>
+      <button>Parce que la dépense de l'un est le revenu de l'autre</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Et si ce circuit s'emballait, puis se grippait ?</strong> C'est l'objet du chapitre 3.</p>
+    <div class="pager">
+      <a href="#chap1">← Chapitre 1</a>
+      <a class="next" href="#chap3">Chapitre 3 →</a>
+    </div>
+  </article>
+
+  <!-- ================= CHAPITRE 3 ================= -->
+  <article class="chapitre" id="chap3">
+    <h2>Chapitre 3 : les cycles, pourquoi ça monte, puis ça redescend</h2>
+    <p class="accroche">« Pourquoi les crises reviennent-elles ? »</p>
+
+    <h3>Le village qui s'enthousiasme</h3>
+    <p>Les affaires de Camille vont bien. Les clients dépensent, sa banque lui prête volontiers pour agrandir. Ses voisins l'imitent : ils empruntent, investissent, embauchent. Tout le monde est optimiste, et les prix montent un peu partout. C'est l'<strong>expansion</strong>.</p>
+    <p>Peu à peu, l'enthousiasme dépasse la réalité : on emprunte plus qu'on ne peut rembourser, certains prix montent plus vite que les revenus. C'est le <strong>sommet</strong>.</p>
+    <p>Un jour, quelque chose se grippe : des taux plus élevés, un choc extérieur, ou simplement une perte de confiance. Les crédits coûtent plus cher, les dettes pèsent, on dépense moins, des entreprises licencient. L'économie ralentit : c'est la <strong>récession</strong>. On parle souvent de récession quand le PIB recule pendant deux trimestres consécutifs, selon une convention courante.</p>
+    <p>Puis les excès se résorbent, les taux baissent, la confiance revient peu à peu. Après le <strong>creux</strong>, la reprise démarre : un nouveau cycle commence.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 220" role="img" aria-label="Courbe d'un cycle économique en quatre phases : expansion, sommet, récession, creux">
+        <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">Les quatre phases d'un cycle</text>
+        <path d="M40,130 C110,130 130,40 200,40 C270,40 290,130 360,130 C430,130 450,40 520,40" fill="none" stroke="#102A56" stroke-width="3.5"/>
+        <g font-size="13" font-weight="700" text-anchor="middle" fill="#0A1C3B">
+          <circle cx="120" cy="85" r="12" fill="#C5A059"/><text x="120" y="90">1</text>
+          <circle cx="200" cy="40" r="12" fill="#C5A059"/><text x="200" y="45">2</text>
+          <circle cx="280" cy="85" r="12" fill="#C5A059"/><text x="280" y="90">3</text>
+          <circle cx="360" cy="130" r="12" fill="#C5A059"/><text x="360" y="135">4</text>
+        </g>
+        <g font-size="12" fill="#1F2937" text-anchor="middle">
+          <text x="75" y="178"><tspan font-weight="700">1 Expansion</tspan></text><text x="75" y="193">Crédit, confiance, emploi</text>
+          <text x="225" y="178"><tspan font-weight="700">2 Sommet</tspan></text><text x="225" y="193">Excès, prix élevés</text>
+          <text x="375" y="178"><tspan font-weight="700">3 Récession</tspan></text><text x="375" y="193">Dettes lourdes, doute</text>
+          <text x="525" y="178"><tspan font-weight="700">4 Creux</tspan></text><text x="525" y="193">Taux bas, reprise</text>
+        </g>
+      </svg>
+      <figcaption>Un cycle simplifié : dans la réalité, la forme, la durée et l'intensité varient beaucoup.</figcaption>
+    </figure>
+
+    <h3>Pourquoi ça recommence ?</h3>
+    <p>Ce n'est pas un hasard : la <strong>confiance alimente le crédit, le crédit alimente la dépense, et la dépense nourrit la confiance</strong>, jusqu'à ce que la dette devienne trop lourde. L'économiste Hyman Minsky résumait l'idée ainsi : les longues périodes de stabilité poussent à prendre davantage de risques, ce qui prépare l'instabilité suivante.</p>
+    <p>Mais les cycles ne sont pas des horloges. Leur durée et leur intensité changent, et des chocs extérieurs (pandémie, guerre, crise financière comme celle de 2008) peuvent les bousculer ou les provoquer.</p>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Un cycle est un mécanisme : la confiance et le crédit nourrissent l'expansion, puis la dette finit par peser.</li>
+        <li>Un cycle a quatre phases : expansion, sommet, récession, creux.</li>
+        <li>Les cycles ne sont pas des horloges : leur durée et leur intensité varient.</li>
+      </ul>
+    </div>
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Les économistes décrivent plusieurs cycles de durées différentes : le cycle de <strong>Kitchin</strong> (3 à 5 ans environ, lié aux stocks des entreprises), le cycle de <strong>Juglar</strong> (7 à 11 ans, lié à l'investissement) et le cycle de <strong>Kondratiev</strong> (40 à 60 ans, lié aux grandes innovations, dont l'existence fait débat). Ils se superposent et sont difficiles à isoler.</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Expansion</dt><dd>La phase où l'activité, l'emploi et le crédit progressent.</dd>
+      <dt>Récession</dt><dd>Une phase de recul de l'activité, souvent repérée par deux trimestres consécutifs de baisse du PIB.</dd>
+      <dt>Cycle économique</dt><dd>L'alternance de phases de croissance et de ralentissement.</dd>
+      <dt>Choc</dt><dd>Un événement extérieur et soudain qui perturbe l'économie.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Qu'est-ce qui alimente l'expansion dans le récit ?</p>
+      <button>Les impôts</button>
+      <button>La confiance et le crédit</button>
+      <button>La baisse des prix</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. On parle souvent de récession quand…</p>
+      <button>Le PIB recule pendant deux trimestres consécutifs</button>
+      <button>L'inflation dépasse 2 %</button>
+      <button>La Bourse baisse pendant une journée</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. Les cycles économiques sont…</p>
+      <button>Des horloges parfaitement régulières</button>
+      <button>Impossibles à observer</button>
+      <button>Des mécanismes aux durées variables</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Si les cycles sont inévitables, qui peut les atténuer ?</strong> C'est l'objet du dernier chapitre.</p>
+    <div class="pager">
+      <a href="#chap2">← Chapitre 2</a>
+      <a class="next" href="#chap4">Chapitre 4 →</a>
+    </div>
+  </article>
+
+  <!-- ================= CHAPITRE 4 ================= -->
+  <article class="chapitre" id="chap4">
+    <h2>Chapitre 4 : qui peut agir ? Banques centrales, État et moi</h2>
+    <p class="accroche">« Pourquoi tout le monde parle des taux d'intérêt ? »</p>
+
+    <h3>Le thermostat de l'économie</h3>
+    <p>Dans la zone euro, la Banque centrale européenne (BCE) joue le rôle de thermostat. Elle fixe des <strong>taux directeurs</strong>, c'est-à-dire les taux auxquels les banques se financent. Ces taux se répercutent sur ce que Camille paie pour un crédit, ou sur ce que lui rapporte un livret ou une obligation.</p>
+    <p>Quand l'économie s'emballe et que les prix montent trop vite, la BCE <strong>augmente ses taux</strong> : le crédit devient plus cher, les dépenses ralentissent, l'inflation se calme. Quand l'économie s'essouffle, elle <strong>baisse ses taux</strong> pour encourager à emprunter et à dépenser. Son objectif principal est la stabilité des prix, avec une cible d'inflation de 2 % à moyen terme.</p>
+    <p>Mais ce n'est pas un bouton magique : les effets mettent du temps à se diffuser, parfois plus d'un an, et la banque centrale ne contrôle pas tout (prix de l'énergie, tensions géopolitiques, comportement des banques).</p>
+
+    <figure>
+      <svg viewBox="0 0 600 210" role="img" aria-label="Comparaison : quand les taux sont bas le crédit est facile et l'activité repart, quand les taux sont hauts le crédit coûte cher et l'inflation ralentit">
+        <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">Taux bas, taux hauts : deux effets opposés</text>
+        <rect x="20" y="35" width="270" height="160" rx="10" fill="#FFFFFF" stroke="#102A56" stroke-width="2"/>
+        <rect x="310" y="35" width="270" height="160" rx="10" fill="#FFFFFF" stroke="#C5A059" stroke-width="2"/>
+        <g font-size="13" fill="#1F2937">
+          <text x="155" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Taux bas</text>
+          <text x="40" y="95">• Le crédit est bon marché</text><text x="40" y="120">• On emprunte et on investit</text><text x="40" y="145">• L'activité repart</text><text x="40" y="170">• Risque : l'inflation remonte</text>
+          <text x="445" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#8a6d2b">Taux hauts</text>
+          <text x="330" y="95">• Le crédit coûte cher</text><text x="330" y="120">• On emprunte et on dépense moins</text><text x="330" y="145">• L'inflation ralentit</text><text x="330" y="170">• Risque : l'activité s'affaiblit</text>
+        </g>
+      </svg>
+      <figcaption>Toute la difficulté pour une banque centrale est de doser : trop de freinage fait ralentir l'économie, trop peu laisse filer les prix.</figcaption>
+    </figure>
+
+    <h3>L'État, l'autre levier</h3>
+    <p>L'État agit avec son <strong>budget</strong> : impôts, dépenses publiques, aides, investissements. En période de ralentissement, il peut soutenir l'activité ; quand la dette est élevée, certains plaident plutôt pour la prudence budgétaire. Les économistes débattent de la bonne dose : on retrouve ce débat sur la page <a href="macro.html">Macroéconomie</a>.</p>
+
+    <h3>Et moi, dans tout ça ?</h3>
+    <p>Je ne contrôle ni les taux ni le budget de l'État, et personne ne sait prédire exactement le cycle. En revanche, je peux comprendre l'environnement dans lequel je prends mes décisions. Voici, en tendance, ce que change une hausse ou une baisse des taux :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Quand les taux montent</th><th>Quand les taux baissent</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Crédit (immobilier, conso)</th><td>Plus cher</td><td>Moins cher</td></tr>
+          <tr><th scope="row">Épargne sans risque</th><td>Rapporte souvent plus</td><td>Rapporte souvent moins</td></tr>
+          <tr><th scope="row">Obligations déjà émises</th><td>Leur prix a tendance à baisser</td><td>Leur prix a tendance à monter</td></tr>
+          <tr><th scope="row">Actions</th><td>Souvent sous pression, surtout les valeurs de croissance</td><td>Souvent soutenues</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Ce sont des tendances, pas des règles : les marchés anticipent souvent les décisions des banques centrales. Plutôt que de chercher à deviner le prochain virage, on peut se poser des questions plus utiles : quel est mon horizon ? Ai-je une épargne de précaution ? Mes placements sont-ils diversifiés ? Combien me coûtent mes dettes si les taux changent ?</p>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>La banque centrale agit sur les taux : les augmenter freine l'inflation, les baisser soutient l'activité.</li>
+        <li>L'État agit par son budget : impôts, dépenses et investissements.</li>
+        <li>Je ne peux pas prédire le cycle, mais je peux comprendre mon environnement et mes propres contraintes.</li>
+      </ul>
+    </div>
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement ni un conseil financier personnalisé.</div>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Taux directeur</dt><dd>Le taux fixé par la banque centrale, auquel les banques se financent.</dd>
+      <dt>Politique monétaire</dt><dd>Les décisions de la banque centrale sur les taux et la monnaie.</dd>
+      <dt>Politique budgétaire</dt><dd>Les décisions de l'État sur ses impôts et ses dépenses.</dd>
+      <dt>Inflation</dt><dd>La hausse générale des prix.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="2">
+      <p>1. Que fait généralement une banque centrale quand l'inflation est trop forte ?</p>
+      <button>Elle baisse ses taux</button>
+      <button>Elle achète des actions</button>
+      <button>Elle augmente ses taux</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Quand les taux montent, le crédit devient…</p>
+      <button>Plus cher</button>
+      <button>Moins cher</button>
+      <button>Gratuit</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Pourquoi les décisions d'une banque centrale n'ont-elles pas d'effet immédiat ?</p>
+      <button>Parce qu'elles sont secrètes</button>
+      <button>Parce que leurs effets se diffusent progressivement dans l'économie</button>
+      <button>Parce que l'État les annule</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+
+    <p style="margin-top:1.5rem"><strong>Bravo, tu as terminé le parcours !</strong> Pour aller plus loin : la <a href="macro.html">macroéconomie</a> en détail, les <a href="geopolitique.html">rapports de force entre pays</a>, ou les <a href="marches.html">marchés et actifs</a> pour voir comment tout cela touche tes placements.</p>
+    <div class="pager">
+      <a href="#chap3">← Chapitre 3</a>
+      <a class="next" href="macro.html">Macroéconomie →</a>
     </div>
   </article>
 </main>
