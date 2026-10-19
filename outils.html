@@ -29,6 +29,28 @@ figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:
 .retenir ul{margin:.5rem 0 0 1.2rem}
 .retenir li{margin-bottom:.4rem}
 .alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.interest-calculator{background:var(--bg-subtle);border:1px solid #d9dee5;border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.2rem;margin:1.5rem 0 2rem}
+.interest-calculator h2{margin-top:.2rem}
+.interest-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:1rem}
+.interest-field label{display:block;font-weight:700;color:var(--primary-blue);margin-bottom:.35rem}
+.interest-field input{width:100%;min-height:44px;border:1px solid #aeb8c6;border-radius:6px;padding:.6rem .7rem;font:inherit;color:var(--text-dark);background:#fff}
+.interest-field input:focus{outline:3px solid rgba(197,160,89,.35);border-color:var(--gold-accent)}
+.interest-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem;margin-top:1.2rem}
+.interest-result{background:#fff;border:1px solid #d9dee5;border-radius:6px;padding:.8rem}
+.interest-result span{display:block;color:var(--text-muted);font-size:.88rem}
+.interest-result output{display:block;margin-top:.2rem;color:var(--primary-blue);font-weight:700;font-size:1.25rem}
+.interest-chart{margin:1.2rem 0 0;background:#fff;border:1px solid #d9dee5;border-radius:6px;padding:.8rem}
+.interest-chart svg{display:block;width:100%;height:auto;overflow:visible}
+.interest-chart .chart-grid{stroke:#e3e7ed;stroke-width:1}
+.interest-chart .chart-axis{stroke:#718096;stroke-width:1.2}
+.interest-chart .chart-capital{fill:none;stroke:var(--primary-blue);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.interest-chart .chart-paid{fill:none;stroke:var(--gold-accent);stroke-width:2.5;stroke-dasharray:7 5;stroke-linecap:round;stroke-linejoin:round}
+.interest-chart text{fill:var(--text-muted);font:12px var(--font-body)}
+.interest-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:.5rem;font-size:.85rem;color:var(--text-muted)}
+.interest-legend span{display:inline-flex;align-items:center;gap:.4rem}
+.interest-legend i{display:inline-block;width:1.3rem;border-top:3px solid var(--primary-blue)}
+.interest-legend .paid-key{border-top:3px dashed var(--gold-accent)}
+.interest-note{font-size:.84rem;color:var(--text-muted);margin:1rem 0 0}
 .simulator-embed{margin:1rem 0 2rem;border:1px solid #d9dee5;border-radius:8px;overflow:hidden;background:#fff}
 .simulator-embed iframe{display:block;width:100%;height:1000px;border:0;background:#fff}
 .simulator-open{display:inline-block;margin:0 0 1rem;color:var(--primary-blue);font-weight:700}
@@ -135,6 +157,61 @@ details p{margin:.7rem 0 0}
       </ul>
     </div>
 
+    <section class="interest-calculator" aria-labelledby="interestCalculatorTitle">
+      <h2 id="interestCalculatorTitle">Calculateur d'intérêts composés</h2>
+      <p>Estime comment un capital et des versements réguliers pourraient évoluer dans le temps.</p>
+      <form id="interestCalculator">
+        <div class="interest-fields">
+          <div class="interest-field">
+            <label for="interestInitial">Capital initial (€)</label>
+            <input id="interestInitial" name="initial" type="number" min="0" max="1000000000" step="0.01" value="10000" required>
+          </div>
+          <div class="interest-field">
+            <label for="interestMonthly">Versement mensuel (€)</label>
+            <input id="interestMonthly" name="monthly" type="number" min="0" max="10000000" step="0.01" value="200" required>
+          </div>
+          <div class="interest-field">
+            <label for="interestRate">Rendement annuel moyen (%)</label>
+            <input id="interestRate" name="rate" type="number" min="-99.9" max="100" step="0.1" value="7" required>
+          </div>
+          <div class="interest-field">
+            <label for="interestYears">Durée (années)</label>
+            <input id="interestYears" name="years" type="number" min="1" max="60" step="1" value="20" required>
+          </div>
+        </div>
+        <div class="interest-results" aria-live="polite">
+          <div class="interest-result"><span>Capital final estimé</span><output id="interestFinal">—</output></div>
+          <div class="interest-result"><span>Total versé</span><output id="interestContributed">—</output></div>
+          <div class="interest-result"><span>Intérêts estimés</span><output id="interestGains">—</output></div>
+        </div>
+        <figure class="interest-chart">
+          <svg id="interestChart" viewBox="0 0 760 320" role="img" aria-labelledby="interestChartTitle interestChartDescription">
+            <title id="interestChartTitle">Évolution estimée du capital et des versements</title>
+            <desc id="interestChartDescription">Graphique mis à jour selon les paramètres du calculateur.</desc>
+            <line class="chart-grid" x1="68" y1="20" x2="744" y2="20"></line>
+            <line class="chart-grid" x1="68" y1="135" x2="744" y2="135"></line>
+            <line class="chart-grid" x1="68" y1="250" x2="744" y2="250"></line>
+            <line class="chart-axis" x1="68" y1="20" x2="68" y2="250"></line>
+            <line class="chart-axis" x1="68" y1="250" x2="744" y2="250"></line>
+            <text id="interestAxisMax" x="60" y="24" text-anchor="end"></text>
+            <text id="interestAxisMid" x="60" y="139" text-anchor="end"></text>
+            <text x="60" y="254" text-anchor="end">0 €</text>
+            <text id="interestYearStart" x="68" y="276" text-anchor="middle"></text>
+            <text id="interestYearMid" x="406" y="276" text-anchor="middle"></text>
+            <text id="interestYearEnd" x="744" y="276" text-anchor="middle"></text>
+            <text x="406" y="306" text-anchor="middle">Années</text>
+            <path id="interestPaidPath" class="chart-paid"></path>
+            <path id="interestCapitalPath" class="chart-capital"></path>
+          </svg>
+          <div class="interest-legend" aria-hidden="true">
+            <span><i></i>Capital estimé</span>
+            <span><i class="paid-key"></i>Total versé</span>
+          </div>
+        </figure>
+      </form>
+      <p class="interest-note">Estimation illustrative : rendement supposé constant, capitalisation mensuelle et versements effectués en fin de mois. Hors frais, fiscalité et inflation ; le rendement réel n'est pas garanti.</p>
+    </section>
+
     <div class="alerte"><strong>À savoir :</strong> les simulations sont des outils pédagogiques. Elles ne constituent ni une promesse de rendement ni un conseil en investissement. Les performances passées ne préjugent pas des performances futures.</div>
 
     <h2>Questions fréquentes</h2>
@@ -155,6 +232,63 @@ details p{margin:.7rem 0 0}
 <script>
 var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
 if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+var interestForm=document.getElementById('interestCalculator');
+if(interestForm){
+  var euroFormat=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+  var calculateCompoundInterest=function(){
+    if(!interestForm.checkValidity()){
+      document.getElementById('interestFinal').textContent='—';
+      document.getElementById('interestContributed').textContent='—';
+      document.getElementById('interestGains').textContent='—';
+      return;
+    }
+    var initial=Number(interestForm.elements.initial.value);
+    var monthly=Number(interestForm.elements.monthly.value);
+    var annualRate=Number(interestForm.elements.rate.value)/100;
+    var years=Number(interestForm.elements.years.value);
+    var months=years*12;
+    var monthlyRate=Math.pow(1+annualRate,1/12)-1;
+    var balance=initial;
+    var contributions=initial;
+    var capitalValues=[balance];
+    var contributionValues=[contributions];
+    for(var month=1;month<=months;month++){
+      balance=balance*(1+monthlyRate)+monthly;
+      contributions+=monthly;
+      if(month%12===0){
+        capitalValues.push(balance);
+        contributionValues.push(contributions);
+      }
+    }
+    var contributed=initial+monthly*months;
+    document.getElementById('interestFinal').textContent=euroFormat.format(balance);
+    document.getElementById('interestContributed').textContent=euroFormat.format(contributed);
+    document.getElementById('interestGains').textContent=euroFormat.format(balance-contributed);
+    var chartMax=Math.max(balance,contributed,1);
+    var magnitude=Math.pow(10,Math.floor(Math.log10(chartMax)));
+    var normalizedMax=chartMax/magnitude;
+    var chartStep=(normalizedMax<=1?1:normalizedMax<=2?2:normalizedMax<=5?5:10)*magnitude;
+    var chartTop=Math.ceil(chartMax/chartStep)*chartStep;
+    var chartX=function(year){return 68+676*year/years;};
+    var chartY=function(value){return 250-230*value/chartTop;};
+    var toPath=function(values){
+      return values.map(function(value,year){return (year===0?'M':'L')+chartX(year).toFixed(2)+' '+chartY(value).toFixed(2);}).join(' ');
+    };
+    document.getElementById('interestCapitalPath').setAttribute('d',toPath(capitalValues));
+    document.getElementById('interestPaidPath').setAttribute('d',toPath(contributionValues));
+    document.getElementById('interestAxisMax').textContent=euroFormat.format(chartTop);
+    document.getElementById('interestAxisMid').textContent=euroFormat.format(chartTop/2);
+    document.getElementById('interestYearStart').textContent='0';
+    document.getElementById('interestYearMid').textContent=(years/2)+' ans';
+    document.getElementById('interestYearEnd').textContent=years+' ans';
+  };
+  interestForm.addEventListener('input',calculateCompoundInterest);
+  interestForm.addEventListener('submit',function(event){
+    event.preventDefault();
+    if(interestForm.reportValidity()) calculateCompoundInterest();
+  });
+  calculateCompoundInterest();
+}
 </script>
 </body>
 </html>
