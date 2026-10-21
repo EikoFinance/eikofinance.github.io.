@@ -1,0 +1,103 @@
+/* =========================================================
+   EIKO FINANCE - HABILLAGE ARTISTIQUE
+   À charger APRÈS style.css et menu.css
+   Un seul geste fort : la courbe des cycles superposés.
+   Le reste reste sobre, aux couleurs de la charte.
+   ========================================================= */
+
+/* ---------- Hero : marine profond + courbe dorée ---------- */
+.hero-art {
+    position: relative;
+    overflow: hidden;
+    min-height: 580px;
+    padding: 4.5rem 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--dark-blue);
+    border-bottom: 3px solid var(--gold-accent);
+}
+
+.hero-art .cycles-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hero-art > *:not(.cycles-canvas) { position: relative; z-index: 1; }
+
+.hero-art h1 {
+    font-family: var(--font-title);
+    font-size: clamp(1.7rem, 4.2vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    max-width: 900px;
+    margin: 0 auto 1.1rem;
+}
+
+.hero-art p {
+    max-width: 680px;
+    margin: 0 auto 1.6rem;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    color: #C9D3E6;
+}
+
+/* Zone réservée à la courbe, entre le texte et la légende */
+.cycles-space { flex: 1 1 190px; min-height: 150px; width: 100%; }
+
+/* Légende : explique ce que l'on voit, sous la courbe */
+.cycles-legend {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.8rem;
+    font-size: 0.82rem;
+    color: #C9D3E6;
+}
+.cycles-legend li { display: flex; align-items: center; gap: 0.5rem; }
+.cycles-legend i {
+    display: inline-block;
+    width: 26px;
+    border-top: 2px solid var(--gold-accent);
+    opacity: 0.6;
+}
+.cycles-legend li.sum { color: #FFFFFF; font-weight: 600; }
+.cycles-legend li.sum i { border-top-width: 3px; border-color: var(--gold-bright); opacity: 1; }
+
+/* Version compacte, pour les pages d'entrée de rubrique */
+.hero-compact { min-height: 360px; padding-top: 3rem; padding-bottom: 0.5rem; }
+.hero-compact .cycles-space { flex-basis: 120px; min-height: 110px; }
+.hero-compact .cycles-legend { display: none; }
+.hero-compact p { margin-bottom: 1.4rem; }
+
+/* ---------- Cartes : pictogramme au trait doré ---------- */
+.card .ico {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.9rem;
+    display: block;
+}
+.card .ico path {
+    fill: none;
+    stroke: var(--gold-accent);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.card h3 { letter-spacing: 0.03em; }
+
+@media (max-width: 768px) {
+    .hero-art { min-height: 520px; padding-top: 2.5rem; }
+    .hero-compact { min-height: 340px; }
+    .hero-art p { font-size: 0.96rem; }
+    .cycles-space { min-height: 175px; }
+}
