@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/scene.css">
 <script src="js/site.js" defer></script>
 <style>
 @media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
@@ -63,7 +64,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
   <nav>
     <ul>
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="economie.html">Économie & Géopolitique</a></li>
+      <li><a href="economie.html">Économie globale</a></li>
       <li><a href="marches.html" class="active">Marchés & Actifs</a></li>
       <li><a href="fiscalite.html">Fiscalité</a></li>
       <li><a href="etudes.html">Études de cas</a></li>
@@ -76,7 +77,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
 <main>
   <p class="crumbs"><a href="index.html">Accueil</a> › <a href="marches.html">Marchés & Actifs</a> › Les classiques</p>
 
-  <section class="hero">
+  <section class="scene scene-hero img-wallstreet">
     <h1>Marchés & Actifs : comprendre ce que l'on achète</h1>
     <p>Actions, obligations, ETF, or et argent, valeurs cycliques : on découvre chaque grand actif avec un exemple simple, en expliquant à quoi il sert et quels risques il comporte.</p>
     <a href="#intro" class="btn-gold">Commencer</a>
@@ -176,6 +177,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
 
   <!-- ================= OR ET ARGENT ================= -->
   <article class="chapitre" id="metaux">
+    <div class="scene scene-banner scene--gleam img-gold" role="img" aria-label="Lingots d'or entourés de symboles de grandes monnaies"></div>
     <h2>4. L'or et l'argent : les valeurs refuges</h2>
     <p class="accroche">« Que garder quand tout le monde s'inquiète ? »</p>
     <p>L'or est utilisé comme réserve de valeur depuis des millénaires. En période d'incertitude, beaucoup d'investisseurs s'y réfugient : c'est pourquoi on parle de <strong>valeur refuge</strong>. Mais attention : l'or ne verse ni intérêts ni dividendes. Son gain dépend uniquement de la hausse de son prix.</p>
