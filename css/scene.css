@@ -1,0 +1,127 @@
+/* =========================================================
+   EIKO FINANCE - SCÈNES (fonds d'image animés)
+   À charger après style.css et menu.css.
+
+   Utilisation (une classe img-... choisit l'image) :
+   <section class="scene scene-hero img-gold"> ... </section>
+   <div class="scene scene-banner img-fed" role="img" aria-label="..."></div>
+
+   Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap
+   Variantes (attribut data-motion) : "drift" (par défaut), "pan" (balayage horizontal, pour les cartes)
+   Classe .scene--gleam : un reflet doré traverse lentement l'image (pour l'or)
+   ========================================================= */
+
+/* ---------- Catalogue d'images (chemins relatifs à ce fichier css) ---------- */
+.img-gold      { --img: url(../images/scene-gold.webp); }
+.img-fed       { --img: url(../images/scene-fed.webp); }
+.img-bce       { --img: url(../images/scene-bce.webp); }
+.img-brent     { --img: url(../images/scene-brent.webp); }
+.img-wallstreet{ --img: url(../images/scene-wallstreet.webp); }
+.img-worldmap  { --img: url(../images/scene-worldmap.webp); }
+
+.scene {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--dark-blue);
+    color: #FFFFFF;
+}
+
+/* L'image : plus grande que le cadre, pour pouvoir glisser sans montrer de bord */
+.scene::before {
+    content: "";
+    position: absolute;
+    inset: -6%;
+    z-index: -2;
+    background: var(--img) center / cover no-repeat;
+    animation: scene-drift 30s ease-in-out infinite alternate;
+    will-change: transform;
+}
+.scene[data-motion="pan"]::before { animation-name: scene-pan; animation-duration: 45s; }
+
+/* Le voile marine garantit la lisibilité du texte */
+.scene::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(10, 28, 59, 0.50) 0%, rgba(10, 28, 59, 0.84) 100%);
+}
+
+/* Reflet doré qui traverse l'image (réservé à l'or) */
+.scene--gleam::after {
+    background:
+        linear-gradient(115deg, transparent 42%, rgba(212, 175, 55, 0.20) 50%, transparent 58%) 130% 0 / 260% 100% no-repeat,
+        linear-gradient(180deg, rgba(10, 28, 59, 0.50) 0%, rgba(10, 28, 59, 0.84) 100%);
+    animation: scene-gleam 14s ease-in-out infinite;
+}
+
+@keyframes scene-drift {
+    from { transform: scale(1.02) translate3d(-1.5%, 0.5%, 0); }
+    to   { transform: scale(1.12) translate3d(1.5%, -1%, 0); }
+}
+@keyframes scene-pan {
+    from { transform: scale(1.08) translate3d(-4%, 0, 0); }
+    to   { transform: scale(1.08) translate3d(4%, 0, 0); }
+}
+@keyframes scene-gleam {
+    0%, 15%  { background-position: 130% 0, 0 0; }
+    75%, 100% { background-position: -30% 0, 0 0; }
+}
+
+/* ---------- Bandeau d'en-tête de leçon ---------- */
+.scene-hero {
+    min-height: 420px;
+    padding: 4rem 5% 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 3px solid var(--gold-accent);
+}
+.scene-hero h1 {
+    font-family: var(--font-title);
+    font-size: clamp(1.7rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    max-width: 900px;
+    margin: 0 auto 1rem;
+}
+.scene-hero p {
+    max-width: 680px;
+    margin: 0 auto 1.6rem;
+    font-size: 1.06rem;
+    line-height: 1.6;
+    color: #D8E0EE;
+}
+
+/* ---------- Bandeau décoratif en tête de chapitre ---------- */
+.scene-banner {
+    height: 190px;
+    margin: 0 0 1.4rem;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--gold-accent);
+}
+.scene-banner::after {
+    background: linear-gradient(180deg, rgba(10, 28, 59, 0.05) 0%, rgba(10, 28, 59, 0.55) 100%);
+}
+.scene-banner.scene--gleam::after {
+    background:
+        linear-gradient(115deg, transparent 42%, rgba(212, 175, 55, 0.20) 50%, transparent 58%) 130% 0 / 260% 100% no-repeat,
+        linear-gradient(180deg, rgba(10, 28, 59, 0.05) 0%, rgba(10, 28, 59, 0.55) 100%);
+}
+
+@media (max-width: 768px) {
+    .scene-hero { min-height: 340px; padding: 3rem 1rem 2.2rem; }
+    .scene-hero p { font-size: 0.96rem; }
+    .scene-banner { height: 130px; }
+    .scene::before { inset: -8%; }
+}
+
+/* Respect du réglage « réduire les animations » */
+@media (prefers-reduced-motion: reduce) {
+    .scene::before, .scene::after { animation: none !important; }
+}
