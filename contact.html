@@ -15,14 +15,16 @@
         @media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
 
         /* ---------- Présentation personnelle ---------- */
-        .intro-rdv{max-width:860px;margin:0.5rem auto 0;padding:2rem 2.2rem;background:#FFFFFF;border-top:4px solid var(--gold-accent);border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,.06);text-align:center}
-        .intro-rdv h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;letter-spacing:.03em;line-height:1.3;margin-bottom:1rem}
-        .intro-rdv p{max-width:680px;margin:0 auto .9rem;color:var(--text-muted);line-height:1.7}
-        .intro-rdv ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.8rem;margin:1.1rem 0 1.3rem;padding:0}
-        .intro-rdv li{position:relative;padding-left:1.1rem;color:var(--primary-blue);font-weight:600}
-        .intro-rdv li::before{content:"";position:absolute;left:0;top:.7em;width:.6rem;border-top:2px solid var(--gold-accent)}
+
+        /* ---------- Présentation personnelle (même largeur que les cartes du dessous) ---------- */
+        .about-container.intro-wrap{padding-top:1rem;padding-bottom:0}
+        .intro-rdv{padding:2.4rem 2.5rem 1.6rem;background:#FFFFFF;border-top:4px solid var(--gold-accent);border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,.05);text-align:center}
+        .intro-rdv p{max-width:760px;margin:0 auto 1.2rem;font-size:1.05rem;line-height:1.8;color:var(--text-muted)}
+        .intro-rdv .lead{font-size:1.2rem;color:var(--text-dark)}
         .intro-rdv .btn-gold{margin-top:.4rem}
-        .intro-rdv .note{margin:1rem auto 0;font-size:.86rem}
+        .intro-rdv .alt-mail{margin:.9rem auto 0;font-size:.92rem}
+        .intro-rdv .alt-mail a{color:var(--primary-blue);font-weight:600}
+        .intro-rdv .note{max-width:none;margin:1.6rem 0 0;padding-top:1rem;border-top:1px solid #E5E9F0;font-size:.85rem;line-height:1.5}
 
         /* ---------- Fondateur et certification ---------- */
         .about-container{max-width:1200px;margin:0 auto;padding:2.5rem 5% 4rem}
@@ -39,12 +41,10 @@
         .cert-text p{font-size:1.05rem;line-height:1.7;margin-bottom:1rem}
         .cert-text ul{list-style:none;padding-left:0;line-height:2}
         .cert-proof small{display:block;margin-top:.5rem;font-size:.85rem;color:#666666}
-        .direct-mail{margin-bottom:0}
-        .direct-mail a{color:var(--primary-blue);font-weight:600}
         @media (max-width:768px){
-            .intro-rdv{margin:1.5rem 1rem 0;padding:1.5rem 1.2rem}
-            .intro-rdv h2{font-size:1.3rem}
             .about-container{padding:1.5rem 1rem 3rem}
+            .intro-rdv{padding:1.8rem 1.3rem 1.3rem}
+            .intro-rdv .lead{font-size:1.08rem}
             .profile-card,.certification-card{padding:1.5rem;gap:1.5rem}
             .profile-text h2{font-size:1.6rem}
         }
@@ -88,25 +88,20 @@
         </section>
 
         <!-- Présentation personnelle et invitation à prendre rendez-vous -->
-        <section class="intro-rdv" aria-labelledby="intro-rdv-titre">
-            <h2 id="intro-rdv-titre">Faisons le point sur votre situation</h2>
+        <div class="about-container intro-wrap">
+            <section class="intro-rdv">
+                <p class="lead">Depuis Mougins, au cœur de la Côte d'Azur, j'explore et je pratique depuis six ans les différents domaines de l'investissement. Cette expérience m'a appris une chose : chaque situation est unique, et la bonne démarche commence toujours par une conversation, avant toute décision.</p>
 
-            <p>Je suis de Mougins, dans les Alpes-Maritimes. Depuis six ans, j'explore et je pratique les différents domaines de l'investissement. Cette expérience m'a appris une chose : chaque situation est unique, et la bonne démarche commence toujours par une conversation, avant toute décision.</p>
+                <p>Que vous souhaitiez obtenir un simple renseignement, vous lancer et savoir par où commencer, ou mieux comprendre les options qui existent pour votre situation, un échange suffit souvent pour y voir plus clair. Réservez par e-mail un <strong>rendez-vous gratuit de 30 minutes</strong> : nous ferons le point, sans engagement, sur votre situation et vos questions.</p>
 
-            <p>Que vous souhaitiez…</p>
-            <ul>
-                <li>obtenir un simple renseignement</li>
-                <li>vous lancer et savoir par où commencer</li>
-                <li>mieux comprendre les options qui existent pour votre situation</li>
-            </ul>
+                <a class="btn-gold" href="mailto:contacteikofinance@gmail.com?subject=Rendez-vous%20gratuit%20de%2030%20minutes&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20rendez-vous%20gratuit%20de%2030%20minutes.%0A%0AMa%20situation%20en%20quelques%20mots%20%3A%0A%0AMes%20disponibilit%C3%A9s%20%3A%0A">Réserver mon rendez-vous</a>
 
-            <p>…un échange suffit souvent pour y voir plus clair. Réservez par e-mail un <strong>rendez-vous gratuit de 30 minutes</strong> : nous ferons le point, sans engagement, sur votre situation et vos questions.</p>
+                <p class="alt-mail">Vous utilisez Gmail ? <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contacteikofinance@gmail.com&amp;su=Rendez-vous%20gratuit%20de%2030%20minutes&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20rendez-vous%20gratuit%20de%2030%20minutes.%0A%0AMa%20situation%20en%20quelques%20mots%20%3A%0A%0AMes%20disponibilit%C3%A9s%20%3A%0A" target="_blank" rel="noopener">Ouvrir directement dans Gmail</a></p>
 
-            <a class="btn-gold" href="mailto:contacteikofinance@gmail.com?subject=Rendez-vous%20gratuit%20de%2030%20minutes&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20rendez-vous%20gratuit%20de%2030%20minutes.%0A%0AMa%20situation%20en%20quelques%20mots%20%3A%0A%0AMes%20disponibilit%C3%A9s%20%3A%0A">Réserver mon rendez-vous gratuit</a>
-
-            <!-- Mention de prudence : à conserver -->
-            <p class="note">Échange à visée pédagogique : il ne constitue pas un conseil en investissement personnalisé.</p>
-        </section>
+                <!-- Mention de prudence : à conserver -->
+                <p class="note">Échange à visée pédagogique : il ne constitue pas un conseil en investissement personnalisé.</p>
+            </section>
+        </div>
 
         <section class="about-container">
 
@@ -118,7 +113,6 @@
                 <div class="profile-text">
                     <h2>À propos du fondateur</h2>
                     <p>Fondateur d'<strong>EikoFinance</strong>, ma mission est de rendre la culture financière et économique accessible à tous grâce à des clés de lecture claires, concrètes et pédagogiques.</p>
-                    <p class="direct-mail">Pour une question rapide, vous pouvez aussi m'écrire directement : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
                 </div>
             </div>
 
