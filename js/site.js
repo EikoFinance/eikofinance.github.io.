@@ -8,12 +8,15 @@
     sections: [
       {
         id: 'economie',
-        title: 'Économie & Géopolitique',
+        icon: ['M3 28C9 8 17 8 24 24S39 40 45 18', 'M3 41H45'],
+        title: 'Économie globale',
         hub: 'economie.html',
-        intro: 'Cycles (Kitchin, Juglar, Kondratiev), macroéconomie, création monétaire, rapports de force entre pays.',
+        intro: "L'argent, l'économie et le monde : histoire de la monnaie, cycles, macroéconomie et rapports de force entre pays.",
         lessons: [
           { title: 'Parcours débutant : Économie & Cycles', file: 'economie-cycles.html',
             desc: 'Quatre chapitres de 5 minutes : on part du quotidien et on remonte vers les grands mécanismes.' },
+          { title: "L'histoire de la monnaie", file: 'monnaie.html',
+            desc: "Du troc aux monnaies d'aujourd'hui : étalon-or, Bretton Woods, économie de la dette, QE et QT." },
           { title: 'Macroéconomie', file: 'macro.html',
             desc: 'Les indicateurs, les leviers des États et des banques centrales, et ce que les chiffres changent pour les marchés.' },
           { title: 'Géopolitique & rapports de force', file: 'geopolitique.html',
@@ -22,6 +25,7 @@
       },
       {
         id: 'marches',
+        icon: ['M10 38V26', 'M20 38V18', 'M30 38V24', 'M40 38V8', 'M4 42H46'],
         title: 'Marchés & Actifs',
         hub: 'marches.html',
         intro: 'Actions, obligations, ETF, or et argent, cryptomonnaies, SCPI, investissements alternatifs et trading.',
@@ -40,13 +44,16 @@
       },
       {
         id: 'fiscalite',
+        icon: ['M5 17L24 6L43 17Z', 'M10 21V37', 'M19 21V37', 'M29 21V37', 'M38 21V37', 'M5 42H43'],
         title: 'Fiscalité & Transmission',
+        short: 'Fiscalité',
         hub: 'fiscalite.html',
         intro: 'PEA, compte-titres, assurance-vie, PER, donations et succession.',
         lessons: []
       },
       {
         id: 'etudes',
+        icon: ['M21 8A13 13 0 1 1 21 34A13 13 0 1 1 21 8Z', 'M31 31L43 43'],
         title: 'Études de cas',
         hub: 'etudes.html',
         intro: "Six profils d'épargnants comparés : livrets, ETF, stock picking, SCPI, matières premières et crypto.",
@@ -70,6 +77,19 @@
     (kids || []).forEach(function (c) { e.appendChild(c); });
     return e;
   }
+  function svgIcon(paths) {
+    var NS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 48 48');
+    svg.setAttribute('class', 'ico');
+    svg.setAttribute('aria-hidden', 'true');
+    paths.forEach(function (d) {
+      var p = document.createElementNS(NS, 'path');
+      p.setAttribute('d', d);
+      svg.appendChild(p);
+    });
+    return svg;
+  }
   function link(file, title, isActive) {
     return h('a', isActive ? { href: file, text: title, class: 'active' } : { href: file, text: title });
   }
@@ -88,7 +108,7 @@
 
     SITE.sections.forEach(function (s) {
       var li = h('li', s.lessons.length ? { class: 'has-sub' } : {});
-      li.appendChild(link(s.hub, s.title, current === s));
+      li.appendChild(link(s.hub, s.short || s.title, current === s));
       if (s.lessons.length) {
         var btn = h('button', {
           type: 'button', class: 'sub-toggle', text: '▾',
@@ -120,6 +140,7 @@
     if (!box) return;
     SITE.sections.forEach(function (s) {
       var card = h('div', { class: 'card' });
+      if (s.icon) card.appendChild(svgIcon(s.icon));
       card.appendChild(h('h3', {}, [h('a', { href: s.hub, text: s.title })]));
       card.appendChild(h('p', { text: s.intro }));
       if (s.lessons.length) {
