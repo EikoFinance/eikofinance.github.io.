@@ -4,85 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EikoFinance - Contact & Certification</title>
-    <!-- Polices Google Fonts -->
+    <meta name="description" content="Contact EikoFinance, depuis Mougins (Alpes-Maritimes) : un rendez-vous gratuit de 30 minutes pour un renseignement, un premier pas en investissement ou une meilleure compréhension des options qui s'offrent à vous.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/site.js" defer></script>
+    <style>
+        @media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+
+        /* ---------- Présentation personnelle ---------- */
+        .intro-rdv{max-width:860px;margin:0.5rem auto 0;padding:2rem 2.2rem;background:#FFFFFF;border-top:4px solid var(--gold-accent);border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,.06);text-align:center}
+        .intro-rdv h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;letter-spacing:.03em;line-height:1.3;margin-bottom:1rem}
+        .intro-rdv p{max-width:680px;margin:0 auto .9rem;color:var(--text-muted);line-height:1.7}
+        .intro-rdv ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.8rem;margin:1.1rem 0 1.3rem;padding:0}
+        .intro-rdv li{position:relative;padding-left:1.1rem;color:var(--primary-blue);font-weight:600}
+        .intro-rdv li::before{content:"";position:absolute;left:0;top:.7em;width:.6rem;border-top:2px solid var(--gold-accent)}
+        .intro-rdv .btn-gold{margin-top:.4rem}
+        .intro-rdv .note{margin:1rem auto 0;font-size:.86rem}
+
+        /* ---------- Fondateur et certification ---------- */
+        .about-container{max-width:1200px;margin:0 auto;padding:2.5rem 5% 4rem}
+        .profile-card,.certification-card{display:flex;flex-wrap:wrap;align-items:center;gap:2.5rem;background:#FFFFFF;padding:2.5rem;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,.05)}
+        .profile-card{border-top:4px solid var(--gold-accent);margin-bottom:3rem}
+        .certification-card{border-top:4px solid var(--primary-blue)}
+        .profile-photo,.cert-proof{flex:1;min-width:280px;text-align:center}
+        .profile-text,.cert-text{flex:2;min-width:300px}
+        .profile-photo img{width:100%;max-width:320px;border-radius:8px;box-shadow:0 8px 20px rgba(11,44,103,.15)}
+        .cert-proof img{width:100%;max-width:300px;border:1px solid #DDDDDD;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+        .profile-text h2{font-family:var(--font-title);color:var(--primary-blue);font-size:2rem;margin-bottom:1rem}
+        .cert-text h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;margin-bottom:1rem}
+        .profile-text p{font-size:1.1rem;line-height:1.8;margin-bottom:1.2rem}
+        .cert-text p{font-size:1.05rem;line-height:1.7;margin-bottom:1rem}
+        .cert-text ul{list-style:none;padding-left:0;line-height:2}
+        .cert-proof small{display:block;margin-top:.5rem;font-size:.85rem;color:#666666}
+        .direct-mail{margin-bottom:0}
+        .direct-mail a{color:var(--primary-blue);font-weight:600}
+        @media (max-width:768px){
+            .intro-rdv{margin:1.5rem 1rem 0;padding:1.5rem 1.2rem}
+            .intro-rdv h2{font-size:1.3rem}
+            .about-container{padding:1.5rem 1rem 3rem}
+            .profile-card,.certification-card{padding:1.5rem;gap:1.5rem}
+            .profile-text h2{font-size:1.6rem}
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleBtn = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav');
+            if (toggleBtn && navMenu) {
+                toggleBtn.addEventListener('click', function() { navMenu.classList.toggle('mobile-open'); });
+            }
+        });
+    </script>
 </head>
 <body>
 
-    <!-- En-tête et Navigation -->
     <header>
         <div class="logo-container">
+            <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
             <span class="logo-text">EIKO FINANCE</span>
         </div>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+        <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="economie.html">Économie & Cycles</a></li>
+                <li><a href="economie.html">Économie & Géopolitique</a></li>
                 <li><a href="marches.html">Marchés & Actifs</a></li>
                 <li><a href="fiscalite.html">Fiscalité</a></li>
+                <li><a href="etudes.html">Études de cas</a></li>
                 <li><a href="outils.html">Outils & Simulateurs</a></li>
                 <li><a href="contact.html" class="active">Contact & À propos</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Content / Présentation -->
     <main>
         <section class="hero">
-            <h1>Contact & Accompagnement Personnalisé</h1>
-            <p>Une expertise certifiée pour vous guider dans votre compréhension des marchés et de vos investissements.</p>
+            <h1>Contact & À propos</h1>
+            <p>Des clés de lecture claires pour comprendre les marchés et vos investissements.</p>
         </section>
 
-        <section class="about-container" style="padding: 4rem 5%; max-width: 1200px; margin: 0 auto;">
-            
-            <!-- Profil Fondateur -->
-            <div class="profile-card" style="display: flex; flex-wrap: wrap; gap: 2.5rem; background: #fff; padding: 2.5rem; border-radius: 8px; border-top: 4px solid var(--gold-accent); box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 3rem; align-items: center;">
-                <div style="flex: 1; min-width: 280px; text-align: center;">
-                    <img src="images/profil.png" alt="Ricardo Nibau - Fondateur EikoFinance" style="width: 100%; max-width: 320px; border-radius: 8px; box-shadow: 0 8px 20px rgba(11,44,103,0.15);">
+        <!-- Présentation personnelle et invitation à prendre rendez-vous -->
+        <section class="intro-rdv" aria-labelledby="intro-rdv-titre">
+            <h2 id="intro-rdv-titre">Faisons le point sur votre situation</h2>
+
+            <p>Je suis de Mougins, dans les Alpes-Maritimes. Depuis six ans, j'explore et je pratique les différents domaines de l'investissement. Cette expérience m'a appris une chose : chaque situation est unique, et la bonne démarche commence toujours par une conversation, avant toute décision.</p>
+
+            <p>Que vous souhaitiez…</p>
+            <ul>
+                <li>obtenir un simple renseignement</li>
+                <li>vous lancer et savoir par où commencer</li>
+                <li>mieux comprendre les options qui existent pour votre situation</li>
+            </ul>
+
+            <p>…un échange suffit souvent pour y voir plus clair. Réservez par e-mail un <strong>rendez-vous gratuit de 30 minutes</strong> : nous ferons le point, sans engagement, sur votre situation et vos questions.</p>
+
+            <a class="btn-gold" href="mailto:contacteikofinance@gmail.com?subject=Rendez-vous%20gratuit%20de%2030%20minutes&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20rendez-vous%20gratuit%20de%2030%20minutes.%0A%0AMa%20situation%20en%20quelques%20mots%20%3A%0A%0AMes%20disponibilit%C3%A9s%20%3A%0A">Réserver mon rendez-vous gratuit</a>
+
+            <!-- Mention de prudence : à conserver -->
+            <p class="note">Échange à visée pédagogique : il ne constitue pas un conseil en investissement personnalisé.</p>
+        </section>
+
+        <section class="about-container">
+
+            <!-- Profil du fondateur -->
+            <div class="profile-card">
+                <div class="profile-photo">
+                    <img src="images/profil.png" alt="Ricardo Nibau - Fondateur EikoFinance">
                 </div>
-                <div style="flex: 2; min-width: 300px;">
-                    <h2 style="font-family: var(--font-title); color: var(--primary-blue); margin-bottom: 1rem; font-size: 2rem;">À propos du fondateur</h2>
-                    <p style="margin-bottom: 1.2rem; font-size: 1.1rem; line-height: 1.8;">
-                        Fondateur d'<strong>EikoFinance</strong>, ma mission est de rendre la culture financière et économique accessible à tous grâce à des clés de lecture claires, concrètes et pédagogiques.
-                    </p>
-                    <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                        Pour toute question, demande de renseignements ou accompagnement personnalisé, vous pouvez me contacter directement par e-mail.
-                    </p>
-                    <a href="mailto:contacteikofinance@gmail.com" class="btn-gold" style="font-size: 1.1rem;">
-                        ✉ Me contacter : contacteikofinance@gmail.com
-                    </a>
+                <div class="profile-text">
+                    <h2>À propos du fondateur</h2>
+                    <p>Fondateur d'<strong>EikoFinance</strong>, ma mission est de rendre la culture financière et économique accessible à tous grâce à des clés de lecture claires, concrètes et pédagogiques.</p>
+                    <p class="direct-mail">Pour une question rapide, vous pouvez aussi m'écrire directement : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
                 </div>
             </div>
 
             <!-- Certification AMF -->
-            <div class="certification-card" style="display: flex; flex-wrap: wrap; gap: 2.5rem; background: #fff; padding: 2.5rem; border-radius: 8px; border-top: 4px solid var(--primary-blue); box-shadow: 0 4px 15px rgba(0,0,0,0.05); align-items: center;">
-                <div style="flex: 2; min-width: 300px;">
-                    <h3 style="font-family: var(--font-title); color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.6rem;">Certification Professionnelle AMF</h3>
-                    <p style="margin-bottom: 1rem; font-size: 1.05rem; line-height: 1.7;">
-                        Titulaire de la certification délivrée par l'<strong>Autorité des Marchés Financiers (AMF)</strong>, gage d'une maîtrise rigoureuse des connaissances réglementaires, économiques et techniques liées aux marchés financiers.
-                    </p>
-                    <ul style="list-style: none; padding-left: 0; line-height: 2;">
-                        <li>✔ Examen certifié AMF (Connaissances professionnelles)</li>
+            <div class="certification-card">
+                <div class="cert-text">
+                    <h3>Certification Professionnelle AMF</h3>
+                    <p>Titulaire de la certification délivrée par l'<strong>Autorité des Marchés Financiers (AMF)</strong>, gage d'une maîtrise rigoureuse des connaissances réglementaires, économiques et techniques liées aux marchés financiers. Il s'agit d'un examen de connaissances : il ne constitue ni une inscription à un registre professionnel, ni une habilitation à fournir du conseil en investissement personnalisé.</p>
+                    <ul>
+                        <li>✔ Examen AMF réussi (connaissances professionnelles)</li>
                         <li>✔ Maîtrise des règles de protection des investisseurs</li>
                         <li>✔ Rigueur et éthique financière</li>
                     </ul>
                 </div>
-                <div style="flex: 1; min-width: 280px; text-align: center;">
-                    <a href="images/certification-amf.jpg" target="_blank">
-                        <img src="images/certification-amf.jpg" alt="Attestation de réussite Examen AMF - Ricardo Nibau" style="width: 100%; max-width: 300px; border: 1px solid #ddd; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                <div class="cert-proof">
+                    <a href="images/certification-amf.jpg" target="_blank" rel="noopener">
+                        <img src="images/certification-amf.jpg" alt="Attestation de réussite Examen AMF - Ricardo Nibau">
                     </a>
-                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Cliquez sur l'image pour agrandir l'attestation</p>
+                    <small>Cliquez sur l'image pour agrandir l'attestation</small>
                 </div>
             </div>
 
         </section>
     </main>
 
-    <!-- Pied de page -->
     <footer>
         <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
         <p>Contact Direct : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
