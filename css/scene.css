@@ -7,7 +7,8 @@
    <div class="scene scene-banner img-fed" role="img" aria-label="..."></div>
 
    Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap
-   Variantes (attribut data-motion) : "drift" (par défaut), "pan" (balayage horizontal, pour les cartes)
+   Variantes (attribut data-motion) : "drift" (par défaut), "pan" (balayage horizontal, pour les cartes),
+   "loop" (défilement continu et sans coupure, pour une image conçue en tuile, comme img-accueil)
    Classe .scene--gleam : un reflet doré traverse lentement l'image (pour l'or)
    ========================================================= */
 
@@ -18,6 +19,7 @@
 .img-brent     { --img: url(../images/scene-brent.webp); }
 .img-wallstreet{ --img: url(../images/scene-wallstreet.webp); }
 .img-worldmap  { --img: url(../images/scene-worldmap.webp); }
+.img-accueil   { --img: url(../images/scene-accueil.webp); }
 
 .scene {
     position: relative;
@@ -119,6 +121,33 @@
     .scene-hero p { font-size: 0.96rem; }
     .scene-banner { height: 130px; }
     .scene::before { inset: -8%; }
+}
+
+/* ---------- Carte du monde derrière la courbe des cycles ---------- */
+/* voile plus dense en haut (titre) et en bas (légende), plus léger au milieu (courbe) */
+.hero-art.scene::after {
+    background: linear-gradient(180deg, rgba(10, 28, 59, 0.76) 0%, rgba(10, 28, 59, 0.46) 50%, rgba(10, 28, 59, 0.78) 100%);
+}
+
+/* ---------- Défilement continu (image-tuile dont les bords se fondent dans le fond) ---------- */
+/* La bande fait 4 tuiles de large, proportionnelles à la hauteur du bandeau ; elle glisse d'une tuile, puis recommence. */
+.scene[data-motion="loop"]::before {
+    inset: auto;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 5504 / 768;               /* 4 tuiles de 1376 x 768 */
+    background: var(--img) 0 0 / 25% 100% repeat-x;
+    animation: scene-loop 80s linear infinite;
+}
+@keyframes scene-loop {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-25%, 0, 0); }
+}
+/* L'illustration est lumineuse : voile un peu plus dense pour garder le texte lisible */
+.hero-art.scene[data-motion="loop"]::after {
+    background: linear-gradient(180deg, rgba(5, 20, 46, 0.90) 0%, rgba(5, 20, 46, 0.68) 50%, rgba(5, 20, 46, 0.88) 100%);
 }
 
 /* Respect du réglage « réduire les animations » */
