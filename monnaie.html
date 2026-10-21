@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'histoire de la monnaie - EikoFinance</title>
+<meta name="description" content="Du troc aux monnaies d'aujourd'hui : pièces, billets, étalon-or, Bretton Woods, économie de la dette, QE et QT, expliqués simplement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<script src="js/site.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="economie.html" class="active">Économie globale</a></li>
+      <li><a href="marches.html">Marchés & Actifs</a></li>
+      <li><a href="fiscalite.html">Fiscalité</a></li>
+      <li><a href="etudes.html">Études de cas</a></li>
+      <li><a href="outils.html">Outils & Simulateurs</a></li>
+      <li><a href="contact.html">Contact & À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="economie.html">Économie globale</a> › L'histoire de la monnaie</p>
+
+  <section class="hero">
+    <h1>L'histoire de la monnaie : d'où vient l'argent ?</h1>
+    <p>Du troc aux monnaies d'aujourd'hui : comment l'argent est né, pourquoi il a changé de nature, et ce que font les banques centrales quand elles créent ou retirent de la monnaie.</p>
+    <a href="#chap1" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#chap1"><h3>1. Le troc</h3><p>Pourquoi échanger directement ne suffit pas.</p></a>
+    <a class="card" href="#chap2"><h3>2. Pièces et billets</h3><p>Quand la confiance s'organise.</p></a>
+    <a class="card" href="#chap3"><h3>3. L'or et Bretton Woods</h3><p>Le lien avec l'or, puis sa rupture.</p></a>
+    <a class="card" href="#chap4"><h3>4. Dette, QE et QT</h3><p>Qui ouvre et ferme le robinet ?</p></a>
+  </section>
+
+  <article class="chapitre" id="chap1">
+    <h2>Chapitre 1 : avant l'argent, le troc et ses limites</h2>
+    <p class="accroche">« Et si on échangeait directement nos produits ? »</p>
+    <p>Camille la boulangère a besoin de chaussures. Le cordonnier, lui, n'a pas besoin de pain : il voudrait de la viande. L'éleveur voudrait du pain. Le troc ne fonctionne que si <strong>chacun veut ce que l'autre propose, au même moment</strong> : c'est la « double coïncidence des besoins », rarement réunie.</p>
+    <p>Le troc a d'autres limites. Comment payer une baguette avec une vache, qu'on ne peut pas couper en morceaux ? Comment comparer la valeur d'un sac de blé et d'une paire de sabots, sans <strong>unité de compte</strong> commune ? Et comment garder sa richesse quand le pain rassit ?</p>
+    <p>Les sociétés ont donc fini par adopter un bien que tout le monde accepte : sel, coquillages, bétail, puis métaux. C'est la naissance de la <strong>monnaie</strong>.</p>
+    <figure>
+      <svg viewBox="0 0 760 230" role="img" aria-label="Trois personnes dont les besoins se répondent en boucle : sans monnaie, l'échange ne marche que si la boucle se referme">
+        <defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#C5A059"/></marker></defs>
+        <g fill="#FFFFFF" stroke="#102A56" stroke-width="2"><rect x="295" y="8" width="170" height="56" rx="8"/><rect x="60" y="150" width="190" height="56" rx="8"/><rect x="510" y="150" width="190" height="56" rx="8"/></g>
+        <g font-size="15" fill="#1F2937" text-anchor="middle">
+          <text x="380" y="31" font-weight="700">Camille</text><text x="380" y="51">a du pain</text>
+          <text x="155" y="173" font-weight="700">Le cordonnier</text><text x="155" y="193">a des chaussures</text>
+          <text x="605" y="173" font-weight="700">L'éleveur</text><text x="605" y="193">a de la viande</text>
+        </g>
+        <g stroke="#C5A059" stroke-width="2.5" fill="none" marker-end="url(#fl)">
+          <path d="M310 66L200 146"/><path d="M254 178L506 178"/><path d="M560 146L450 66"/>
+        </g>
+        <g font-size="13" fill="#4B5563" text-anchor="middle">
+          <text x="215" y="96">veut des chaussures</text><text x="380" y="170">veut de la viande</text><text x="545" y="96">veut du pain</text>
+        </g>
+      </svg>
+      <figcaption>Sans monnaie, l'échange n'aboutit que si la boucle se referme. Avec une monnaie, chacun vend à qui veut, puis achète à qui il veut.</figcaption>
+    </figure>
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Le troc exige que les besoins de chacun coïncident, au même moment.</li>
+        <li>La monnaie sert d'unité de compte, d'intermédiaire des échanges et de réserve de valeur.</li>
+        <li>Elle repose sur une seule chose : la confiance que les autres l'accepteront à leur tour.</li>
+      </ul>
+    </div>
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Les historiens nuancent ce récit : le troc pur n'a sans doute jamais été le mode d'échange dominant. Beaucoup de sociétés anciennes fonctionnaient surtout par le don, la dette et le crédit entre proches. Le troc généralisé apparaît plutôt quand la confiance et la monnaie manquent.</p>
+    </details>
+    <div class="pager"><a href="economie-cycles.html">← Parcours débutant</a><a class="next" href="#chap2">Chapitre 2 →</a></div>
+  </article>
+
+  <article class="chapitre" id="chap2">
+    <h2>Chapitre 2 : des pièces aux billets, la confiance s'organise</h2>
+    <p class="accroche">« Pourquoi accepter un simple bout de papier ? »</p>
+    <p>Les métaux précieux s'imposent : durables, divisibles, transportables et rares. Vers le VIIe siècle avant notre ère, en Lydie (actuelle Turquie), apparaissent des <strong>pièces frappées</strong> dont une autorité garantit le poids et la qualité. Plus besoin de tout peser à chaque achat.</p>
+    <p>Transporter des sacs de métal est pourtant risqué. On les confie à un orfèvre ou à un banquier, qui remet un <strong>reçu</strong>. Très vite, on échange le reçu plutôt que le métal : en Chine dès le XIe siècle, puis en Europe, ce sont les premiers billets.</p>
+    <p>Les banquiers constatent que tous les déposants ne réclament pas leur or le même jour. Ils prêtent donc plus qu'ils ne détiennent : c'est la <strong>monnaie de crédit</strong>. Aujourd'hui, la plus grande part de la monnaie n'est plus ni pièce ni billet, mais une écriture dans un compte en banque.</p>
+    <figure>
+      <svg viewBox="0 0 760 120" role="img" aria-label="Évolution de la monnaie : marchandises, pièces, billets, monnaie en compte">
+        <defs><marker id="fl2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#C5A059"/></marker></defs>
+        <g fill="#FFFFFF" stroke="#102A56" stroke-width="2"><rect x="8" y="26" width="162" height="66" rx="8"/><rect x="198" y="26" width="162" height="66" rx="8"/><rect x="388" y="26" width="162" height="66" rx="8"/><rect x="578" y="26" width="162" height="66" rx="8"/></g>
+        <g stroke="#C5A059" stroke-width="2.5" marker-end="url(#fl2)"><path d="M172 59H194"/><path d="M362 59H384"/><path d="M552 59H574"/></g>
+        <g text-anchor="middle" fill="#1F2937"><g font-size="15" font-weight="700"><text x="89" y="54">Marchandises</text><text x="279" y="54">Pièces frappées</text><text x="469" y="54">Reçus et billets</text><text x="659" y="54">Comptes en banque</text></g>
+        <g font-size="12" fill="#4B5563"><text x="89" y="74">sel, bétail, coquillages</text><text x="279" y="74">Lydie, VIIe s. av. J.-C.</text><text x="469" y="74">Chine dès le XIe s.</text><text x="659" y="74">monnaie scripturale</text></g></g>
+      </svg>
+      <figcaption>La monnaie devient de plus en plus abstraite : elle repose de moins en moins sur un objet, et de plus en plus sur la confiance.</figcaption>
+    </figure>
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Une pièce ou un billet vaut ce que la confiance dans son émetteur lui donne.</li>
+        <li>En prêtant plus qu'elles ne détiennent, les banques créent de la monnaie.</li>
+        <li>Aujourd'hui, l'essentiel de la monnaie est numérique, inscrit dans des comptes.</li>
+      </ul>
+    </div>
+    <div class="pager"><a href="#chap1">← Chapitre 1</a><a class="next" href="#chap3">Chapitre 3 →</a></div>
+  </article>
+
+  <article class="chapitre" id="chap3">
+    <h2>Chapitre 3 : l'or, Bretton Woods et la fin du lien avec l'or</h2>
+    <p class="accroche">« Et si chaque billet valait un poids d'or précis ? »</p>
+    <p>Au XIXe siècle et jusqu'en 1914, c'est l'<strong>étalon-or</strong> : chaque monnaie est définie par un poids d'or et peut être convertie. Les taux de change sont stables, mais la quantité de monnaie dépend de l'or disponible, ce qui complique la vie des économies en crise. Les guerres et la crise des années 1930 mettent ce système à mal.</p>
+    <p>En juillet 1944, à Bretton Woods, aux États-Unis, 44 pays bâtissent un nouvel ordre : le <strong>dollar est convertible en or</strong> (35 dollars l'once), et les autres monnaies sont rattachées au dollar. Le FMI et la Banque mondiale naissent à cette occasion.</p>
+    <p>Mais les États-Unis émettent de plus en plus de dollars, et beaucoup doutent qu'ils puissent tous être échangés contre de l'or. Le 15 août 1971, le président Nixon suspend la convertibilité. Les monnaies deviennent <strong>fiduciaires</strong> (du latin <em>fiducia</em>, la confiance) et leurs taux de change se mettent à flotter.</p>
+    <figure>
+      <svg viewBox="0 0 760 150" role="img" aria-label="Frise : étalon-or, Bretton Woods en 1944, fin de la convertibilité en 1971, monnaies flottantes aujourd'hui">
+        <line x1="40" y1="52" x2="720" y2="52" stroke="#102A56" stroke-width="3"/>
+        <g fill="#C5A059" stroke="#FFFFFF" stroke-width="3"><circle cx="110" cy="52" r="11"/><circle cx="290" cy="52" r="11"/><circle cx="470" cy="52" r="11"/><circle cx="650" cy="52" r="11"/></g>
+        <g text-anchor="middle" fill="#1F2937"><g font-size="15" font-weight="700"><text x="110" y="92">1870-1914</text><text x="290" y="92">1944</text><text x="470" y="92">1971</text><text x="650" y="92">Aujourd'hui</text></g>
+        <g font-size="14"><text x="110" y="114">Étalon-or</text><text x="290" y="114">Bretton Woods</text><text x="470" y="114">Fin de la convertibilité</text><text x="650" y="114">Monnaies flottantes</text></g></g>
+      </svg>
+      <figcaption>Frise simplifiée, qui n'est pas à l'échelle.</figcaption>
+    </figure>
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Étalon-or : la monnaie est liée à un poids d'or, ce qui limite sa création.</li>
+        <li>Bretton Woods (1944) : le dollar, lié à l'or, devient l'ancre des autres monnaies.</li>
+        <li>Depuis 1971, plus aucun lien avec l'or : la valeur d'une monnaie dépend de la confiance et des politiques monétaires.</li>
+      </ul>
+    </div>
+    <div class="pager"><a href="#chap2">← Chapitre 2</a><a class="next" href="#chap4">Chapitre 4 →</a></div>
+  </article>
+
+  <article class="chapitre" id="chap4">
+    <h2>Chapitre 4 : une économie de dette, QE et QT</h2>
+    <p class="accroche">« Sans l'or, qui contrôle le robinet de la monnaie ? »</p>
+    <p>Sans l'or comme garde-fou, la monnaie naît surtout du crédit : <strong>chaque prêt crée de la monnaie, chaque remboursement en détruit</strong>. Ménages, entreprises et États empruntent, et l'économie fonctionne largement à crédit : c'est ce qu'on appelle une économie de dette. Les banques centrales surveillent ce mouvement avec leurs taux directeurs.</p>
+    <p>Quand les taux sont déjà proches de zéro (crise de 2008, pandémie), elles utilisent un autre outil : le <strong>quantitative easing (QE)</strong>, ou assouplissement quantitatif. Elles créent de la monnaie pour acheter des obligations, surtout d'État. Les taux à long terme baissent et la liquidité augmente. En contrepartie, ces achats peuvent nourrir l'inflation et la hausse du prix des actifs.</p>
+    <p>L'inverse, le <strong>quantitative tightening (QT)</strong>, ou resserrement quantitatif, consiste à laisser le bilan se réduire : la banque centrale ne remplace plus les titres arrivés à échéance. Exemple : le bilan de la Réserve fédérale américaine est passé d'environ 4 000 milliards de dollars fin 2019 à près de 9 000 milliards en 2022. Il a ensuite reculé d'environ 2 400 milliards, jusqu'à la fin officielle du QT le 1er décembre 2025. La Fed a ensuite recommencé à acheter des bons du Trésor à court terme, pour des raisons techniques de liquidité.</p>
+    <figure>
+      <svg viewBox="0 0 760 210" role="img" aria-label="QE : le bilan de la banque centrale gonfle ; QT : il se réduit">
+        <g text-anchor="middle" font-size="15" fill="#1F2937"><text x="190" y="24" font-weight="700">QE : le bilan gonfle</text><text x="570" y="24" font-weight="700">QT : le bilan se réduit</text></g>
+        <g fill="#C5A059"><rect x="110" y="110" width="40" height="40"/><rect x="170" y="70" width="40" height="80"/><rect x="230" y="30" width="40" height="120"/></g>
+        <g fill="#102A56"><rect x="490" y="30" width="40" height="120"/><rect x="550" y="70" width="40" height="80"/><rect x="610" y="110" width="40" height="40"/></g>
+        <line x1="60" y1="150" x2="700" y2="150" stroke="#9DB2D3" stroke-width="1.5"/>
+        <g text-anchor="middle" font-size="14" fill="#4B5563"><text x="190" y="176">Achats d'obligations</text><text x="190" y="195">plus de liquidités</text><text x="570" y="176">Titres arrivés à échéance non remplacés</text><text x="570" y="195">moins de liquidités</text></g>
+      </svg>
+      <figcaption>Schéma de principe : la hauteur des barres représente la taille du bilan de la banque centrale.</figcaption>
+    </figure>
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Chaque crédit crée de la monnaie, chaque remboursement en détruit.</li>
+        <li>QE : la banque centrale achète des titres et injecte de la liquidité. QT : elle laisse son bilan se réduire et en retire.</li>
+        <li>Ces outils soutiennent ou freinent l'économie, mais ont des effets secondaires : inflation, prix des actifs, dette.</li>
+      </ul>
+    </div>
+
+    <p class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les chiffres cités sont des ordres de grandeur, et les politiques des banques centrales évoluent.</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Double coïncidence des besoins</dt><dd>La condition du troc : chacun doit vouloir ce que l'autre propose, au même moment.</dd>
+      <dt>Monnaie fiduciaire</dt><dd>Une monnaie qui ne vaut que par la confiance, sans lien avec l'or.</dd>
+      <dt>Étalon-or</dt><dd>Un système où chaque monnaie est définie par un poids d'or.</dd>
+      <dt>Bretton Woods</dt><dd>L'accord de 1944 qui a fait du dollar, convertible en or, la monnaie pivot.</dd>
+      <dt>QE</dt><dd>L'achat massif de titres par une banque centrale, qui injecte de la monnaie.</dd>
+      <dt>QT</dt><dd>Le mouvement inverse : le bilan de la banque centrale se réduit et la liquidité se retire.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="0">
+      <p>1. Le principal problème du troc, c'est…</p>
+      <button>Qu'il faut que chacun veuille ce que l'autre propose, au même moment</button>
+      <button>Qu'il n'existe pas assez de marchandises</button>
+      <button>Que l'État en fixe les prix</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>2. Depuis 1971, la valeur du dollar repose…</p>
+      <button>Sur une quantité d'or fixée par la loi</button>
+      <button>Sur la confiance et sur la politique de la banque centrale</button>
+      <button>Sur le prix du pétrole</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>3. Les accords de Bretton Woods (1944) ont placé au centre…</p>
+      <button>Le dollar, convertible en or</button>
+      <button>La livre sterling, convertible en argent-métal</button>
+      <button>Une monnaie unique mondiale</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>4. Quand une banque centrale pratique le QE, elle…</p>
+      <button>Achète des obligations en créant de la monnaie</button>
+      <button>Vend son or pour réduire la dette</button>
+      <button>Augmente les impôts</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="#chap3">← Chapitre 3</a><a class="next" href="macro.html">Macroéconomie →</a></div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>
