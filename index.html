@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/art.css">
     <link rel="stylesheet" href="css/scene.css">
+    <link rel="stylesheet" href="css/tree.css">
     <script src="js/site.js" defer></script>
     <script src="js/cycles.js" defer></script>
     <style>
@@ -76,23 +77,20 @@
         <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="economie.html">Économie globale</a></li>
-                <li><a href="marches.html">Marchés & Actifs</a></li>
-                <li><a href="fiscalite.html">Fiscalité</a></li>
-                <li><a href="etudes.html">Études de cas</a></li>
-                <li><a href="outils.html">Outils & Simulateurs</a></li>
-                <li><a href="contact.html">Contact & À propos</a></li>
+                <li><a href="index.html#comprendre">Comprendre</a></li>
+                <li><a href="index.html#investir">Investir</a></li>
+                <li><a href="index.html#mesurer">Mesurer</a></li>
+                <li><a href="index.html#optimiser">Optimiser</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero-art scene img-accueil" data-motion="loop">
+        <section class="hero-art hero-home scene img-accueil" data-motion="loop">
             <canvas class="cycles-canvas" aria-hidden="true"></canvas>
             <h1>Comprendre l'Économie & Maîtriser vos Investissements</h1>
             <p>Une approche pédagogique, claire et structurée pour appréhender les cycles économiques, la gestion d'actifs et l'optimisation financière.</p>
-            <a href="economie-cycles.html" class="btn-gold">Commencer le parcours débutant</a>
             <div class="cycles-space" aria-hidden="true"></div>
             <ul class="cycles-legend" aria-label="Légende du graphique">
                 <li><i></i>Cycle de Kitchin : 3 à 5 ans</li>
@@ -102,8 +100,12 @@
             </ul>
         </section>
 
-        <!-- Cartes générées par js/site.js : une par rubrique, avec la liste de ses leçons -->
-        <section class="card-grid" data-eiko="cards"></section>
+        <!-- Arbre de décision généré par js/site.js : quatre chemins, chacun menant à ses leçons -->
+        <section class="tree" id="tree" aria-labelledby="tree-titre">
+            <h2 id="tree-titre">Par où voulez-vous commencer ?</h2>
+            <p class="tree-lead">Choisissez un chemin : chaque étape vous mène à une leçon.</p>
+            <div data-eiko="tree"></div>
+        </section>
     </main>
 
     <footer>
