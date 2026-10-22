@@ -156,6 +156,11 @@
     background: linear-gradient(180deg, rgba(10, 28, 59, 0.70) 0%, rgba(10, 28, 59, 0.86) 100%);
 }
 
+/* Champ pétrolier au couchant : ciel clair, voile plus dense pour garder le titre lisible */
+.scene-hero.img-brent::after {
+    background: linear-gradient(180deg, rgba(10, 28, 59, 0.68) 0%, rgba(10, 28, 59, 0.86) 100%);
+}
+
 /* Respect du réglage « réduire les animations » */
 @media (prefers-reduced-motion: reduce) {
     .scene::before, .scene::after { animation: none !important; }
