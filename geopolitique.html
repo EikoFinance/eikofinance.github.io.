@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/scene.css">
+<script src="js/site.js" defer></script>
 <style>
 @media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
 .chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
@@ -71,22 +74,19 @@ details p{margin:.7rem 0 0}
   <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
   <nav>
     <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="economie.html" class="active">Économie & Géopolitique</a></li>
-      <li><a href="marches.html">Marchés & Actifs</a></li>
-      <li><a href="fiscalite.html">Fiscalité</a></li>
-      <li><a href="etudes.html">Études de cas</a></li>
-      <li><a href="outils.html">Outils & Simulateurs</a></li>
-      <li><a href="contact.html">Contact & À propos</a></li>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <div class="subnav" aria-label="Dans cette rubrique"><span class="st">Économie & Géopolitique</span><a href="economie.html">Parcours débutant</a><a href="macro.html">Macroéconomie</a><a href="geopolitique.html" class="on" aria-current="page">Géopolitique & rapports de force</a></div>
-  <p class="crumbs"><a href="index.html">Accueil</a> › Géopolitique</p>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#comprendre">Comprendre</a> › Géopolitique & rapports de force</p>
 
-  <section class="hero">
+  <section class="scene scene-hero img-brent">
     <h1>Géopolitique & rapports de force : comprendre ce qui bouge l'économie</h1>
     <p>Commerce, énergie, monnaies, dette, technologie : comment les rapports de force entre les pays se transmettent aux prix, aux taux et aux marchés.</p>
     <a href="#intro" class="btn-gold">Commencer</a>
@@ -185,8 +185,8 @@ details p{margin:.7rem 0 0}
     </div>
 
     <div class="pager">
-      <a href="macro.html">← Macroéconomie</a>
-      <a class="next" href="marches.html">Marchés & Actifs →</a>
+      <a href="economie-cycles.html">← L'économie et les cycles</a>
+      <a class="next" href="macro.html">La macroéconomie →</a>
     </div>
   </article>
 </main>
