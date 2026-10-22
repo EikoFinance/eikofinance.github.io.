@@ -101,3 +101,7 @@
     .hero-art p { font-size: 0.96rem; }
     .cycles-space { min-height: 175px; }
 }
+
+/* Bandeau de l'accueil : un peu moins haut, l'arbre prend le relais */
+.hero-art.hero-home { min-height: 500px; padding-top: 3.5rem; }
+@media (max-width: 768px) { .hero-art.hero-home { min-height: 470px; } }

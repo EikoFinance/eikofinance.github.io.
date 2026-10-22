@@ -1,0 +1,124 @@
+/* =========================================================
+   EIKO FINANCE - LES QUATRE BOUTONS DE L'ACCUEIL
+   Chaque bouton affiche, juste en dessous, la liste de ses leçons.
+   ========================================================= */
+
+.tree {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 5% 4rem;
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+.tree h2 {
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    letter-spacing: 0.03em;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+.tree .tree-lead { color: var(--text-muted); margin-bottom: 2rem; }
+
+/* ---------- Les quatre boutons ---------- */
+.roots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+
+.root {
+    font: inherit;
+    cursor: pointer;
+    padding: 1.3rem 1rem 1.1rem;
+    background: #FFFFFF;
+    color: var(--primary-blue);
+    border: 1px solid #D9DEE5;
+    border-top: 4px solid var(--gold-accent);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, opacity 0.25s ease;
+}
+.root-title {
+    display: block;
+    font-family: var(--font-title);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+.root small {
+    display: block;
+    margin-top: 0.45rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text-muted);
+}
+.root:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(16, 42, 86, 0.12); }
+.root:focus-visible { outline: 2px solid var(--gold-accent); outline-offset: 3px; }
+.root[aria-expanded="true"] { background: var(--primary-blue); border-color: var(--primary-blue); border-top-color: var(--gold-bright); transform: none; }
+.root[aria-expanded="true"] .root-title { color: #FFFFFF; }
+.root[aria-expanded="true"] small { color: #C9D3E6; }
+.tree.has-open .root[aria-expanded="false"] { opacity: 0.6; }
+.tree.has-open .root[aria-expanded="false"]:hover { opacity: 1; }
+
+/* ---------- Les leçons du chemin choisi ---------- */
+.branch { padding-top: 1.8rem; }
+.branch[hidden] { display: none; }
+
+.leaves {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+.leaf {
+    position: relative;
+    text-align: left;
+    padding: 1.1rem 1.1rem 1rem;
+    background: #FFFFFF;
+    border: 1px solid #E5E9F0;
+    border-top: 3px solid var(--gold-accent);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+.leaf-no {
+    display: inline-block;
+    min-width: 1.7rem;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    background: #F4EBD6;
+    border-radius: 50%;
+}
+.leaf h3 { font-family: var(--font-title); font-size: 1.05rem; line-height: 1.3; margin-bottom: 0.45rem; }
+.leaf h3 a { color: var(--primary-blue); text-decoration: none; }
+/* toute la carte est cliquable */
+.leaf h3 a::after { content: ""; position: absolute; inset: 0; }
+.leaf p { font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+.leaf:hover { box-shadow: 0 10px 20px rgba(16, 42, 86, 0.12); }
+.leaf:hover h3 a { color: var(--gold-accent); }
+
+.leaf-sub { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.8rem; }
+.leaf-sub a {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-decoration: none;
+    background: var(--bg-subtle);
+    border: 1px solid #D9DEE5;
+    border-radius: 999px;
+}
+.leaf-sub a:hover { background: var(--primary-blue); color: #FFFFFF; border-color: var(--primary-blue); }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+    .tree { padding: 2rem 1rem 3rem; }
+    .roots { grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+    .root { padding: 1rem 0.6rem 0.9rem; }
+    .root-title { font-size: 1.1rem; }
+    .root small { font-size: 0.78rem; }
+    .branch { padding-top: 1.2rem; }
+    .leaves { grid-template-columns: 1fr; gap: 0.8rem; }
+}
