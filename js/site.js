@@ -1,68 +1,78 @@
 /* =========================================================
    EIKO FINANCE - ARBORESCENCE DU SITE (source unique)
-   Le menu, l'accueil, les pages d'entrée et le jeu lisent
-   tous cet objet : pour ajouter une leçon, on l'ajoute ici.
+   Quatre chemins : Comprendre, Investir, Mesurer, Optimiser.
+   Le menu, l'arbre de l'accueil et le jeu lisent cet objet :
+   pour ajouter une leçon, on l'ajoute ici, dans le bon chemin.
    ========================================================= */
 (function () {
   var SITE = {
-    sections: [
+    branches: [
       {
-        id: 'economie',
-        icon: ['M3 28C9 8 17 8 24 24S39 40 45 18', 'M3 41H45'],
-        title: 'Économie globale',
-        hub: 'economie.html',
-        intro: "L'argent, l'économie et le monde : histoire de la monnaie, cycles, macroéconomie et rapports de force entre pays.",
-        lessons: [
-          { title: 'Parcours débutant : Économie & Cycles', file: 'economie-cycles.html',
-            desc: 'Quatre chapitres de 5 minutes : on part du quotidien et on remonte vers les grands mécanismes.' },
+        id: 'comprendre',
+        title: 'Comprendre',
+        tagline: "L'argent, l'économie et le monde",
+        items: [
           { title: "L'histoire de la monnaie", file: 'monnaie.html',
             desc: "Du troc aux monnaies d'aujourd'hui : étalon-or, Bretton Woods, économie de la dette, QE et QT." },
-          { title: 'Macroéconomie', file: 'macro.html',
-            desc: 'Les indicateurs, les leviers des États et des banques centrales, et ce que les chiffres changent pour les marchés.' },
+          { title: "L'économie et les cycles", file: 'economie-cycles.html',
+            desc: 'Un parcours en quatre chapitres de 5 minutes, du quotidien aux grands mécanismes.' },
           { title: 'Géopolitique & rapports de force', file: 'geopolitique.html',
-            desc: 'Commerce, énergie, monnaies, dette, technologie : comment les tensions entre pays atteignent les prix et les marchés.' }
+            desc: 'Commerce, énergie, monnaies, technologie : comment les tensions entre pays touchent les prix.' },
+          { title: 'La macroéconomie', file: 'macro.html',
+            desc: "Indicateurs, taux, dette : le tableau de bord d'un pays et les leviers des banques centrales." }
         ]
       },
       {
-        id: 'marches',
-        icon: ['M10 38V26', 'M20 38V18', 'M30 38V24', 'M40 38V8', 'M4 42H46'],
-        title: 'Marchés & Actifs',
-        hub: 'marches.html',
-        intro: 'Actions, obligations, ETF, or et argent, cryptomonnaies, SCPI, investissements alternatifs et trading.',
-        lessons: [
+        id: 'investir',
+        title: 'Investir',
+        tagline: 'Actions, immobilier, crypto et autres actifs',
+        items: [
           { title: 'Les classiques', file: 'marches-classiques.html',
-            desc: 'Actions, obligations, ETF, or et argent, valeurs cycliques : à quoi sert chaque actif et quel risque il comporte.' },
+            desc: 'À quoi sert chaque actif, et quel risque il comporte.',
+            sub: [
+              { title: 'Actions', file: 'marches-classiques.html#actions' },
+              { title: 'Obligations', file: 'marches-classiques.html#obligations' },
+              { title: 'ETF', file: 'marches-classiques.html#etf' },
+              { title: 'Or & argent', file: 'marches-classiques.html#metaux' },
+              { title: 'Valeurs cycliques', file: 'marches-classiques.html#cycliques' }
+            ] },
           { title: 'Cryptomonnaies', file: 'crypto.html',
             desc: 'Bitcoin, Ethereum, stablecoins : fonctionnement, risques et fiscalité.' },
           { title: 'SCPI', file: 'scpi.html',
-            desc: "L'immobilier en pierre-papier : France, Europe, frais, avantages et limites." },
+            desc: "L'immobilier en pierre-papier : frais, avantages et limites." },
           { title: 'Investissements alternatifs', file: 'alternatifs.html',
-            desc: 'Private equity, vin, montres, automobiles de collection, art.' },
+            desc: 'Private equity, vin, montres, voitures de collection, art.' },
           { title: 'Trading', file: 'trading.html',
             desc: 'Day trading, CFD, levier : ce que disent les chiffres et comment limiter les risques.' }
         ]
       },
       {
-        id: 'fiscalite',
-        icon: ['M5 17L24 6L43 17Z', 'M10 21V37', 'M19 21V37', 'M29 21V37', 'M38 21V37', 'M5 42H43'],
-        title: 'Fiscalité & Transmission',
-        short: 'Fiscalité',
-        hub: 'fiscalite.html',
-        intro: 'PEA, compte-titres, assurance-vie, PER, donations et succession.',
-        lessons: []
+        id: 'mesurer',
+        title: 'Mesurer',
+        tagline: 'Simuler pour décider avec des chiffres',
+        items: [
+          { title: 'Simulation Monte Carlo', file: 'outils.html',
+            desc: "L'application Android qui teste des milliers d'évolutions possibles d'un portefeuille." },
+          { title: 'Intérêts composés', file: 'outils.html',
+            desc: 'Voir comment le temps et la régularité font grandir un capital.' }
+        ]
       },
       {
-        id: 'etudes',
-        icon: ['M21 8A13 13 0 1 1 21 34A13 13 0 1 1 21 8Z', 'M31 31L43 43'],
-        title: 'Études de cas',
-        hub: 'etudes.html',
-        intro: "Six profils d'épargnants comparés : livrets, ETF, stock picking, SCPI, matières premières et crypto.",
-        lessons: []
+        id: 'optimiser',
+        title: 'Optimiser',
+        tagline: 'Fiscalité, enveloppes et transmission',
+        items: [
+          { title: 'Placements et enveloppes fiscales', file: 'fiscalite.html',
+            desc: 'PEA, compte-titres, assurance-vie, PER : où placer, et avec quelle fiscalité.' },
+          { title: 'Transmission et dons', file: 'fiscalite.html',
+            desc: 'Donations et succession : préparer et organiser la transmission.' },
+          { title: 'Études de cas', file: 'etudes.html',
+            desc: "Six profils d'épargnants comparés : livrets, ETF, stock picking, SCPI, matières premières et crypto." }
+        ]
       }
     ],
     extras: [
-      { title: 'Outils & Simulateurs', file: 'outils.html' },
-      { title: 'Contact & À propos', file: 'contact.html' }
+      { title: 'Contact', file: 'contact.html' }
     ]
   };
   window.EIKO_SITE = SITE;
@@ -77,101 +87,137 @@
     (kids || []).forEach(function (c) { e.appendChild(c); });
     return e;
   }
-  function svgIcon(paths) {
-    var NS = 'http://www.w3.org/2000/svg';
-    var svg = document.createElementNS(NS, 'svg');
-    svg.setAttribute('viewBox', '0 0 48 48');
-    svg.setAttribute('class', 'ico');
-    svg.setAttribute('aria-hidden', 'true');
-    paths.forEach(function (d) {
-      var p = document.createElementNS(NS, 'path');
-      p.setAttribute('d', d);
-      svg.appendChild(p);
-    });
-    return svg;
-  }
   function link(file, title, isActive) {
     return h('a', isActive ? { href: file, text: title, class: 'active' } : { href: file, text: title });
   }
 
   var page = location.pathname.split('/').pop() || 'index.html';
-  var current = SITE.sections.filter(function (s) {
-    return s.hub === page || s.lessons.some(function (l) { return l.file === page; });
+  var isHome = page === 'index.html';
+  var current = SITE.branches.filter(function (b) {
+    return b.items.some(function (i) { return i.file === page; });
   })[0];
 
-  /* ---------- Menu (remplace le menu écrit dans la page) ---------- */
+  /* ---------- Menu ---------- */
   function buildNav() {
     var nav = document.querySelector('header nav');
     if (!nav) return;
     var ul = h('ul');
-    ul.appendChild(h('li', {}, [link('index.html', 'Accueil', page === 'index.html')]));
 
-    SITE.sections.forEach(function (s) {
-      var li = h('li', s.lessons.length ? { class: 'has-sub' } : {});
-      li.appendChild(link(s.hub, s.short || s.title, current === s));
-      if (s.lessons.length) {
+    /* Sur l'accueil, l'arbre remplace le menu : seul le contact reste en haut */
+    if (!isHome) {
+      SITE.branches.forEach(function (b) {
+        var li = h('li', { class: 'has-sub' });
+        li.appendChild(h('a', Object.assign({ href: 'index.html#' + b.id, text: b.title }, current === b ? { class: 'active' } : {})));
         var btn = h('button', {
           type: 'button', class: 'sub-toggle', text: '▾',
-          'aria-expanded': 'false', 'aria-label': 'Afficher les leçons : ' + s.title
+          'aria-expanded': 'false', 'aria-label': 'Afficher les leçons : ' + b.title
         });
         btn.addEventListener('click', function () {
           var open = li.classList.toggle('open');
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
         var sub = h('ul', { class: 'sub' });
-        s.lessons.forEach(function (l) {
-          sub.appendChild(h('li', {}, [link(l.file, l.title, l.file === page)]));
+        b.items.forEach(function (it) {
+          sub.appendChild(h('li', {}, [link(it.file, it.title, it.file === page)]));
         });
         li.appendChild(btn);
         li.appendChild(sub);
-      }
-      ul.appendChild(li);
-    });
-
+        ul.appendChild(li);
+      });
+    }
     SITE.extras.forEach(function (x) {
       ul.appendChild(h('li', {}, [link(x.file, x.title, x.file === page)]));
     });
     nav.replaceChildren(ul);
+
+    /* Le logo ramène à l'accueil */
+    var logo = document.querySelector('header .logo-container');
+    if (logo && !isHome) {
+      logo.setAttribute('role', 'link');
+      logo.setAttribute('tabindex', '0');
+      logo.setAttribute('aria-label', "Retour à l'accueil");
+      logo.addEventListener('click', function () { location.href = 'index.html'; });
+      logo.addEventListener('keydown', function (e) { if (e.key === 'Enter') location.href = 'index.html'; });
+    }
   }
 
-  /* ---------- Accueil : une carte par rubrique, avec ses leçons ---------- */
-  function buildCards() {
-    var box = document.querySelector('[data-eiko="cards"]');
+  /* ---------- Accueil : quatre boutons, chacun donne accès à ses leçons ---------- */
+  function buildTree() {
+    var box = document.querySelector('[data-eiko="tree"]');
     if (!box) return;
-    SITE.sections.forEach(function (s) {
-      var card = h('div', { class: 'card' });
-      if (s.icon) card.appendChild(svgIcon(s.icon));
-      card.appendChild(h('h3', {}, [h('a', { href: s.hub, text: s.title })]));
-      card.appendChild(h('p', { text: s.intro }));
-      if (s.lessons.length) {
-        var ul = h('ul', { class: 'card-links' });
-        s.lessons.forEach(function (l) {
-          ul.appendChild(h('li', {}, [h('a', { href: l.file, text: l.title })]));
-        });
-        card.appendChild(ul);
-      }
-      box.appendChild(card);
-    });
-  }
 
-  /* ---------- Pages d'entrée : la liste des leçons de la rubrique ---------- */
-  function buildLessons() {
-    var box = document.querySelector('[data-eiko="lessons"]');
-    if (!box || !current) return;
-    current.lessons.forEach(function (l, i) {
-      box.appendChild(h('a', { class: 'card', href: l.file }, [
-        h('span', { class: 'lesson-no', text: 'Leçon ' + (i + 1) }),
-        h('h3', { text: l.title }),
-        h('p', { text: l.desc })
-      ]));
+    var roots = h('div', { class: 'roots', role: 'group', 'aria-label': 'Choisissez un chemin' });
+    var branches = h('div', { class: 'branches' });
+    var views = {};
+
+    SITE.branches.forEach(function (b) {
+      var btn = h('button', {
+        type: 'button', class: 'root', 'data-id': b.id,
+        'aria-expanded': 'false', 'aria-controls': 'branch-' + b.id
+      }, [h('span', { class: 'root-title', text: b.title }), h('small', { text: b.tagline })]);
+      roots.appendChild(btn);
+
+      var list = h('ol', { class: 'leaves' });
+      list.style.setProperty('--n', b.items.length);
+      b.items.forEach(function (it, j) {
+        var li = h('li', { class: 'leaf' }, [
+          h('span', { class: 'leaf-no', text: String(j + 1) }),
+          h('h3', {}, [h('a', { href: it.file, text: it.title })]),
+          h('p', { text: it.desc })
+        ]);
+        if (it.sub) {
+          var chips = h('div', { class: 'leaf-sub' });
+          it.sub.forEach(function (s) { chips.appendChild(h('a', { href: s.file, text: s.title })); });
+          li.appendChild(chips);
+        }
+        list.appendChild(li);
+      });
+      var br = h('div', { class: 'branch', id: 'branch-' + b.id, role: 'region', 'aria-label': b.title + ' : leçons', hidden: '' }, [list]);
+      branches.appendChild(br);
+      views[b.id] = { btn: btn, br: br };
     });
+
+    box.appendChild(roots);
+    box.appendChild(branches);
+
+    var openId = null;
+    function close() {
+      if (!openId) return;
+      views[openId].btn.setAttribute('aria-expanded', 'false');
+      views[openId].br.hidden = true;
+      box.classList.remove('has-open');
+      openId = null;
+    }
+    function open(id) {
+      close();
+      views[id].btn.setAttribute('aria-expanded', 'true');
+      views[id].br.hidden = false;
+      box.classList.add('has-open');
+      openId = id;
+    }
+
+    SITE.branches.forEach(function (b) {
+      views[b.id].btn.addEventListener('click', function () {
+        if (openId === b.id) { close(); history.replaceState(null, '', location.pathname); }
+        else { open(b.id); history.replaceState(null, '', '#' + b.id); }
+      });
+    });
+
+    /* Un lien du type index.html#investir ouvre directement le bon chemin */
+    function fromHash() {
+      var id = location.hash.replace('#', '');
+      if (views[id] && id !== openId) {
+        open(id);
+        box.scrollIntoView({ block: 'start' });
+      }
+    }
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
   }
 
   function init() {
     buildNav();
-    buildCards();
-    buildLessons();
-    /* La barre de sous-menu est remplacée par le menu déroulant */
+    buildTree();
     document.querySelectorAll('.subnav').forEach(function (n) { n.remove(); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
