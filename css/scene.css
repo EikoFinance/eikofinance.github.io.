@@ -6,7 +6,7 @@
    <section class="scene scene-hero img-gold"> ... </section>
    <div class="scene scene-banner img-fed" role="img" aria-label="..."></div>
 
-   Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap
+   Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap, img-accueil, img-monnaie
    Variantes (attribut data-motion) : "drift" (par défaut), "pan" (balayage horizontal, pour les cartes),
    "loop" (défilement continu et sans coupure, pour une image conçue en tuile, comme img-accueil)
    Classe .scene--gleam : un reflet doré traverse lentement l'image (pour l'or)
@@ -20,6 +20,7 @@
 .img-wallstreet{ --img: url(../images/scene-wallstreet.webp); }
 .img-worldmap  { --img: url(../images/scene-worldmap.webp); }
 .img-accueil   { --img: url(../images/scene-accueil.webp); }
+.img-monnaie   { --img: url(../images/scene-monnaie.webp); }
 
 .scene {
     position: relative;
@@ -148,6 +149,11 @@
 /* L'illustration est lumineuse : voile un peu plus dense pour garder le texte lisible */
 .hero-art.scene[data-motion="loop"]::after {
     background: linear-gradient(180deg, rgba(5, 20, 46, 0.90) 0%, rgba(5, 20, 46, 0.68) 50%, rgba(5, 20, 46, 0.88) 100%);
+}
+
+/* Billets et pièces : image très colorée, voile plus dense pour garder le titre lisible */
+.scene-hero.img-monnaie::after {
+    background: linear-gradient(180deg, rgba(10, 28, 59, 0.70) 0%, rgba(10, 28, 59, 0.86) 100%);
 }
 
 /* Respect du réglage « réduire les animations » */
