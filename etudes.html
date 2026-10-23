@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
 <style>
 @media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
 .subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
@@ -74,19 +75,18 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
 
 <header>
   <div class="logo-container">
-    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
     <span class="logo-text">EIKO FINANCE</span>
   </div>
   <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
   <nav>
     <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="economie.html">Économie & Géopolitique</a></li>
-      <li><a href="marches.html">Marchés & Actifs</a></li>
-      <li><a href="fiscalite.html">Fiscalité</a></li>
-      <li><a href="etudes.html" class="active">Études de cas</a></li>
-      <li><a href="outils.html">Outils & Simulateurs</a></li>
-      <li><a href="contact.html">Contact & À propos</a></li>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -182,7 +182,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
       <div class="contre"><h3>Points faibles</h3><ul><li>Aucun revenu : seul le prix compte</li><li>Forte volatilité, cycles longs</li><li>Coûts de renouvellement des contrats à terme</li><li>Segments très différents, difficiles à anticiper</li></ul></div>
     </div>
     <div class="ctx"><h3>Dans quel contexte économique ?</h3><p class="vol">Volatilité typique : 15 à 35 %, parfois bien plus (ordre de grandeur annuel)</p><ul><li><span class="b ok">Favorable</span><span><strong>Forte inflation (choc d'offre, énergie)</strong> : les matières premières sont souvent à l'origine de la hausse des prix : leurs cours montent avec elle.</span></li><li><span class="b ko">Défavorable</span><span><strong>Récession ou crise</strong> : la demande d'énergie et de métaux industriels recule ; l'or est souvent soutenu comme valeur refuge, sans garantie.</span></li><li><span class="b ko">Défavorable</span><span><strong>Hausse des taux et dollar fort</strong> : les prix sont généralement libellés en dollars, et l'or, qui ne rapporte rien, devient moins attractif.</span></li><li><span class="b mid">Mitigé</span><span><strong>Baisse des taux</strong> : favorable à l'or ; pour les métaux industriels, tout dépend de la croissance.</span></li><li><span class="b ok">Favorable</span><span><strong>Tension géopolitique</strong> : les perturbations d'approvisionnement font monter l'énergie, certaines céréales et l'or, mais avec de fortes variations.</span></li></ul><p class="verdict"><strong>En résumé :</strong> avantageuse dans un contexte de choc d'offre ou d'inflation, difficile en cas de récession mondiale.</p></div>
-    <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Les matières premières peuvent compléter un portefeuille, mais comme unique stratégie, elles dépendent de cycles et d'événements impossibles à prévoir : voir les pages <a href="marches.html">Marchés & Actifs</a> et <a href="geopolitique.html">Géopolitique</a>.</li></ul></div>
+    <div class="retenir"><strong>L'idée à retenir</strong><ul><li>Les matières premières peuvent compléter un portefeuille, mais comme unique stratégie, elles dépendent de cycles et d'événements impossibles à prévoir : voir les pages <a href="index.html#investir">Marchés & Actifs</a> et <a href="geopolitique.html">Géopolitique</a>.</li></ul></div>
 
     <!-- CAS 6 -->
     <h2 id="cas6">Cas 6 : Léa, jeune investisseuse 100 % crypto</h2>
@@ -226,7 +226,7 @@ tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
       <li><strong>Certains actifs ne versent aucun revenu</strong> (matières premières, crypto) : leur gain dépend uniquement du prix, donc de ce que d'autres accepteront de payer.</li>
       <li><strong>Les frais, la fiscalité et le comportement</strong> comptent autant que le choix du produit.</li>
     </ul>
-    <p>Pour aller plus loin : les <a href="marches.html">actifs</a> en détail, les <a href="fiscalite.html">enveloppes</a>, et l'<a href="outils.html">application Monte Carlo</a> pour visualiser l'éventail des futurs possibles.</p>
+    <p>Pour aller plus loin : les <a href="index.html#investir">actifs</a> en détail, les <a href="fiscalite.html">enveloppes</a>, et l'<a href="outils.html">application Monte Carlo</a> pour visualiser l'éventail des futurs possibles.</p>
 
     <h3>Teste-toi</h3>
     <div class="q" data-good="2">

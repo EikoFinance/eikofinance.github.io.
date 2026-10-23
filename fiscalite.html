@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
 <style>
 @media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
 .subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
@@ -60,19 +61,18 @@ details p{margin:.7rem 0 0}
 
 <header>
   <div class="logo-container">
-    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
     <span class="logo-text">EIKO FINANCE</span>
   </div>
   <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
   <nav>
     <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="economie.html">Économie & Géopolitique</a></li>
-      <li><a href="marches.html">Marchés & Actifs</a></li>
-      <li><a href="fiscalite.html" class="active">Fiscalité</a></li>
-      <li><a href="etudes.html">Études de cas</a></li>
-      <li><a href="outils.html">Outils & Simulateurs</a></li>
-      <li><a href="contact.html">Contact & À propos</a></li>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
