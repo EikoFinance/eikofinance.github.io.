@@ -82,17 +82,19 @@ details p{margin:.7rem 0 0}
 <main>
   <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#optimiser">Optimiser</a> › Fiscalité & Enveloppes</p>
 
-  <section class="scene scene-hero img-fiscalite">
+  <section class="scene scene-hero img-sobre">
     <h1>Fiscalité & Enveloppes : comprendre où placer son argent</h1>
     <p>Compte-titres, PEA, assurance-vie, PER : quatre « contenants » pour investir, quatre façons d'être imposé. Pas à pas, avec des exemples concrets.</p>
     <a href="#intro" class="btn-gold">Commencer</a>
   </section>
 
   <section class="card-grid" aria-label="Sommaire">
+    <a class="card" href="#livrets"><h3>Les livrets</h3><p>L'épargne de précaution, sans impôt.</p></a>
     <a class="card" href="#cto"><h3>Compte-titres</h3><p>Le plus libre, mais le plus taxé.</p></a>
     <a class="card" href="#pea"><h3>PEA</h3><p>Le grand allié fiscal des actions.</p></a>
     <a class="card" href="#av"><h3>Assurance-vie</h3><p>Souple, avec un avantage après 8 ans.</p></a>
     <a class="card" href="#per"><h3>PER</h3><p>Préparer sa retraite et réduire son impôt.</p></a>
+    <a class="card" href="#choisir"><h3>Comparer et choisir</h3><p>Un exemple chiffré et les pièges à éviter.</p></a>
   </section>
 
   <article class="chapitre">
@@ -101,46 +103,68 @@ details p{margin:.7rem 0 0}
     <h2 id="intro">L'enveloppe compte autant que le placement</h2>
     <p class="accroche">« Deux personnes achètent le même fonds. Pourquoi l'une garde plus d'argent que l'autre ? »</p>
     <p>Imagine Camille, la boulangère, qui réalise <strong>1 000 € de gain</strong> en investissant. Ce que l'État prélève ensuite ne dépend pas seulement de <em>ce qu'elle a acheté</em>, mais de <strong>l'enveloppe</strong> dans laquelle elle l'a logé.</p>
-    <p>Une enveloppe fiscale, c'est un contenant avec ses propres règles : ce qu'on peut y mettre, quand on peut en sortir, et comment les gains sont imposés. L'impôt n'est généralement dû qu'à la sortie, quand on retire des gains.</p>
+    <p>Une enveloppe fiscale, c'est un contenant avec ses propres règles : ce qu'on peut y mettre, quand on peut en sortir, et comment les gains sont imposés. Pour s'y retrouver, on peut toujours se poser trois questions :</p>
+    <ul class="liste">
+      <li><strong>À l'entrée</strong> : combien puis-je verser, et mes versements me font-ils économiser de l'impôt tout de suite ?</li>
+      <li><strong>Pendant la vie du placement</strong> : les gains sont-ils taxés chaque année, ou seulement quand je retire ?</li>
+      <li><strong>À la sortie</strong> : à partir de quand puis-je retirer, et combien l'État prélève-t-il sur mes gains ?</li>
+    </ul>
+    <p>Dans la plupart des enveloppes, l'impôt n'est dû qu'à la sortie, et uniquement sur les <strong>gains</strong>, pas sur l'argent que tu as toi-même versé.</p>
 
     <figure>
-      <svg viewBox="0 0 600 230" role="img" aria-label="Sur 1000 euros de gain, il reste 686 euros sur un compte-titres, 814 sur un PEA de plus de 5 ans, 700 sur une assurance-vie de plus de 8 ans">
+      <svg viewBox="0 0 600 230" role="img" aria-label="Sur 1000 euros de gain, il reste 686 euros sur un compte-titres, 814 sur un PEA de plus de 5 ans, 753 sur une assurance-vie de plus de 8 ans">
         <text x="300" y="22" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Sur 1 000 € de gain, combien reste-t-il ?</text>
         <text x="10" y="70" font-size="14" fill="#1F2937">Compte-titres</text>
         <rect x="150" y="52" width="343" height="28" rx="4" fill="#102A56"/><text x="500" y="72" font-size="14" font-weight="700" fill="#102A56">686 €</text>
         <text x="10" y="125" font-size="14" fill="#1F2937">PEA (&gt; 5 ans)</text>
         <rect x="150" y="107" width="407" height="28" rx="4" fill="#C5A059"/><text x="500" y="127" font-size="14" font-weight="700" fill="#0A1C3B" text-anchor="end" dx="-10">814 €</text>
         <text x="10" y="180" font-size="14" fill="#1F2937">Assurance-vie (&gt; 8 ans)</text>
-        <rect x="150" y="162" width="350" height="28" rx="4" fill="#102A56"/><text x="507" y="182" font-size="14" font-weight="700" fill="#102A56">700 €</text>
-        <text x="300" y="218" text-anchor="middle" font-size="12" fill="#4B5563">Hypothèses simplifiées, barème 2026, sans abattement.</text>
+        <rect x="150" y="162" width="376" height="28" rx="4" fill="#102A56"/><text x="533" y="182" font-size="14" font-weight="700" fill="#102A56">753 €</text>
+        <text x="300" y="218" text-anchor="middle" font-size="12" fill="#4B5563">Hypothèses simplifiées, taux 2026, sans abattement.</text>
       </svg>
       <figcaption>Même gain de départ, trois enveloppes, trois résultats.</figcaption>
     </figure>
 
     <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil fiscal ni en investissement. Les taux indiqués sont ceux de 2026 et peuvent évoluer : vérifie toujours sur <a href="https://www.impots.gouv.fr" target="_blank" rel="noopener">impots.gouv.fr</a> ou auprès d'un professionnel.</div>
 
-    <h3>Deux mots à connaître</h3>
+    <h3>Les mots à connaître avant de commencer</h3>
     <ul class="liste">
-      <li><strong>Prélèvements sociaux (PS)</strong> : une contribution qui finance la protection sociale. En 2026, elle est de 18,6 % sur la plupart des placements, et de 17,2 % sur l'assurance-vie.</li>
+      <li><strong>Plus-value</strong> : le gain réalisé quand on vend plus cher qu'on n'a acheté. Tant qu'on n'a pas vendu, c'est une plus-value « latente », non imposée.</li>
+      <li><strong>Prélèvements sociaux (PS)</strong> : une contribution qui finance la protection sociale. En 2026, elle est de 18,6 % sur la plupart des placements financiers, et de 17,2 % sur l'assurance-vie.</li>
       <li><strong>PFU, ou « flat tax »</strong> : un taux unique appliqué aux gains, qui additionne l'impôt sur le revenu (12,8 %) et les prélèvements sociaux. Soit <strong>31,4 %</strong> en 2026 (30 % sur l'assurance-vie).</li>
+      <li><strong>TMI (tranche marginale d'imposition)</strong> : le taux d'impôt sur le revenu qui s'applique à <em>ton dernier euro gagné</em> (0 %, 11 %, 30 %, 41 % ou 45 %). Elle compte surtout pour le PER, dont l'avantage dépend directement d'elle.</li>
     </ul>
+
+    <!-- LIVRETS -->
+    <h2 id="livrets">0. Avant les enveloppes : l'épargne de précaution</h2>
+    <p class="accroche">« Et si j'ai besoin de mon argent demain ? »</p>
+    <p>Avant d'investir, on garde généralement une réserve disponible tout de suite pour les imprévus. Pour cela, il existe les <strong>livrets réglementés</strong> : le Livret A, le LDDS et, sous conditions de revenus, le LEP.</p>
+    <p>Leur grande force fiscale : les intérêts sont <strong>exonérés d'impôt sur le revenu et de prélèvements sociaux</strong>. Leur limite : des plafonds de dépôt (22 950 € pour le Livret A, 12 000 € pour le LDDS, 10 000 € pour le LEP) et un taux fixé par l'État, qui varie dans le temps et reste modeste. L'argent est sans risque et disponible à tout moment, mais il n'est pas fait pour faire croître un capital sur le long terme.</p>
+    <p>Les livrets bancaires ordinaires, eux, sont imposés comme le reste des revenus de l'épargne.</p>
 
     <!-- COMPTE-TITRES -->
     <h2 id="cto">1. Le compte-titres : la liberté, au prix fort</h2>
     <p class="accroche">« Je veux investir sans aucune contrainte. »</p>
     <p>Le compte-titres ordinaire (CTO) est le plus ouvert : actions du monde entier, ETF, obligations… tout est possible, sans plafond de versement, et tu peux retirer quand tu veux.</p>
     <p>La contrepartie, c'est la fiscalité : chaque gain (plus-value à la vente, dividendes) est taxé au PFU, soit <strong>31,4 %</strong> en 2026. Sur les 1 000 € de Camille, 314 € partent en impôts et prélèvements.</p>
+
+    <h3>Comment ça se passe concrètement</h3>
+    <ul class="liste">
+      <li><strong>Quand tu vends avec un gain.</strong> Camille achète des titres 5 000 € et les revend 6 000 € : la plus-value est de 1 000 €, imposée à 31,4 %, soit 314 €.</li>
+      <li><strong>Quand tu reçois un dividende.</strong> Une entreprise lui verse 200 € de dividendes : ils sont taxés l'année où ils sont perçus, à 31,4 %, soit 62,80 €, même si elle n'a rien vendu.</li>
+      <li><strong>Quand tu perds.</strong> Une moins-value (une perte réalisée) se déduit des plus-values. Si Camille vend un titre avec 400 € de perte la même année qu'un gain de 1 000 €, elle n'est taxée que sur 600 € : 188,40 € au lieu de 314 €.</li>
+    </ul>
     <div class="retenir">
       <strong>3 idées à retenir</strong>
       <ul>
         <li>Aucun plafond, aucun délai : c'est l'enveloppe la plus flexible.</li>
         <li>Les gains sont imposés à 31,4 % (12,8 % d'impôt + 18,6 % de prélèvements sociaux).</li>
-        <li>On ne paie que sur les gains réalisés, pas tant que l'on n'a pas vendu.</li>
+        <li>On ne paie que sur les gains réalisés, pas tant que l'on n'a pas vendu. Les dividendes, eux, sont taxés dès qu'ils sont versés.</li>
       </ul>
     </div>
     <details>
       <summary>Pour aller plus loin</summary>
-      <p>Les moins-values (pertes) réalisées se déduisent des plus-values et se reportent pendant 10 ans. Il est aussi possible d'opter pour le barème progressif de l'impôt sur le revenu plutôt que le PFU, ce qui peut être intéressant selon ta tranche d'imposition.</p>
+      <p>Les moins-values non utilisées se reportent pendant 10 ans sur les plus-values futures. Il est aussi possible d'opter pour le barème progressif de l'impôt sur le revenu plutôt que le PFU : l'option concerne l'ensemble des revenus du capital de l'année, et peut être intéressante si ta tranche d'imposition est faible (0 % ou 11 %). Autre point utile : un ETF « capitalisant » réinvestit lui-même ses dividendes, ce qui évite de payer l'impôt chaque année : on n'est alors imposé qu'au moment de la vente.</p>
     </details>
 
     <!-- PEA -->
@@ -149,6 +173,15 @@ details p{margin:.7rem 0 0}
     <p>Le Plan d'Épargne en Actions (PEA) est conçu pour encourager l'investissement en actions, principalement européennes. En échange, l'État offre un avantage de taille : <strong>après 5 ans, plus d'impôt sur le revenu</strong> sur les gains.</p>
     <p>Il ne reste que les prélèvements sociaux, à 18,6 % en 2026. Camille ne verse plus que 186 € sur ses 1 000 € de gain, contre 314 € sur un compte-titres.</p>
     <p>Pendant que l'argent reste dans le PEA, les dividendes et les gains ne sont pas taxés : l'impôt n'est calculé qu'au moment d'un retrait.</p>
+
+    <h3>Les règles du jeu</h3>
+    <ul class="liste">
+      <li><strong>Le plafond.</strong> 150 000 € de versements sur un PEA classique. Il existe aussi un PEA-PME, réservé aux petites et moyennes entreprises, plafonné à 75 000 €, pour un total maximum de 225 000 € sur les deux.</li>
+      <li><strong>Un seul PEA par personne.</strong> Tu peux en revanche cumuler un PEA et un PEA-PME.</li>
+      <li><strong>Le chronomètre de 5 ans.</strong> Il démarre au premier versement. Avant 5 ans, un retrait entraîne en principe la clôture du plan et l'imposition des gains comme sur un compte-titres (31,4 %). Après 5 ans, tu peux retirer une partie de l'argent sans fermer le plan.</li>
+      <li><strong>Les titres éligibles.</strong> Surtout des actions d'entreprises de l'Union européenne ou de l'Espace économique européen, et certains ETF. Les actions américaines ou asiatiques ne sont pas éligibles en direct, mais certains ETF du PEA permettent d'y accéder indirectement.</li>
+    </ul>
+    <p>Un exemple chiffré : Camille verse 10 000 € dans son PEA. Huit ans plus tard, il vaut 15 000 €, soit 5 000 € de gain. Elle paie 18,6 % de prélèvements sociaux, soit <strong>930 €</strong>. Sur un compte-titres, la même plus-value aurait coûté 1 570 € (31,4 %).</p>
     <div class="retenir">
       <strong>3 idées à retenir</strong>
       <ul>
@@ -159,7 +192,7 @@ details p{margin:.7rem 0 0}
     </div>
     <details>
       <summary>Pour aller plus loin</summary>
-      <p>Seuls certains titres sont éligibles au PEA : surtout des actions d'entreprises de l'Union européenne ou de l'Espace économique européen, et certains ETF. Des règles particulières existent pour les plans ouverts avant 2018 : renseigne-toi si c'est ton cas.</p>
+      <p>Il existe des cas particuliers de retrait avant 5 ans sans clôture ni perte de l'avantage (licenciement, invalidité, mise à la retraite anticipée, création ou reprise d'une entreprise…). À la retraite, le PEA peut aussi être converti en rente viagère, exonérée d'impôt sur le revenu (hors prélèvements sociaux). Des règles particulières existent pour les plans ouverts avant 2018 : renseigne-toi si c'est ton cas.</p>
     </details>
 
     <!-- ASSURANCE-VIE -->
@@ -171,25 +204,55 @@ details p{margin:.7rem 0 0}
       <li><strong>Les unités de compte</strong> : des supports investis en actions, ETF, immobilier… sans garantie du capital, mais avec un potentiel de gain plus élevé.</li>
     </ul>
     <p>Tu peux retirer ton argent à tout moment, mais c'est avec le temps que la fiscalité s'allège : <strong>après 8 ans</strong>, un abattement annuel s'applique sur les gains retirés (4 600 € pour une personne seule, 9 200 € pour un couple), et les prélèvements sociaux restent à 17,2 % en 2026.</p>
+
+    <h3>Le point clé : on ne taxe que la part de gains</h3>
+    <p>Quand tu retires de l'argent (on parle de « rachat »), le fisc ne taxe pas toute la somme, mais seulement la <strong>part de gains</strong> qu'elle contient. Exemple : le contrat de Camille vaut 100 000 €, dont 20 000 € de gains. Elle retire 10 000 € : 20 % de cette somme sont des gains, soit <strong>2 000 €</strong> imposables, et les 8 000 € restants sont simplement son capital qui lui revient.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Sur 2 000 € de gains retirés</th><th>Contrat de moins de 8 ans</th><th>Contrat de plus de 8 ans</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Impôt sur le revenu</th><td>12,8 % : 256 €</td><td>0 € (les 2 000 € sont couverts par l'abattement de 4 600 €)</td></tr>
+          <tr><th scope="row">Prélèvements sociaux (17,2 %)</th><td>344 €</td><td>344 €</td></tr>
+          <tr><th scope="row">Total</th><td>600 €</td><td>344 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="retenir">
       <strong>3 idées à retenir</strong>
       <ul>
         <li>Pas de plafond de versement, et deux types de supports (sécurisé ou dynamique).</li>
-        <li>La fiscalité s'allège après 8 ans de contrat, avec un abattement sur les gains.</li>
-        <li>L'assurance-vie a aussi un rôle en matière de transmission aux proches.</li>
+        <li>Un retrait ne taxe que la part de gains qu'il contient, pas le capital.</li>
+        <li>La fiscalité s'allège après 8 ans de contrat, avec un abattement sur les gains. Le chronomètre part du premier versement.</li>
       </ul>
     </div>
     <details>
       <summary>Pour aller plus loin</summary>
-      <p>En cas de décès, les sommes versées aux bénéficiaires désignés bénéficient d'un régime fiscal avantageux, avec notamment un abattement de 152 500 € par bénéficiaire pour les primes versées avant 70 ans. Les règles varient selon l'âge au moment des versements : à vérifier selon ta situation.</p>
+      <p>Après 8 ans, l'impôt sur les gains au-delà de l'abattement est de 7,5 % tant que le total de tes versements (nets des retraits) sur l'ensemble de tes contrats reste sous 150 000 €, puis de 12,8 % au-delà. Pour la partie en fonds en euros, les prélèvements sociaux sont déjà prélevés chaque année par l'assureur : ils ne sont donc pas dus une seconde fois au retrait. Enfin, l'assurance-vie joue un rôle important pour la transmission : tout est détaillé dans la page <a href="transmission.html#av-transmission">Transmission et dons</a>.</p>
     </details>
 
     <!-- PER -->
     <h2 id="per">4. Le PER : préparer sa retraite, et réduire son impôt aujourd'hui</h2>
     <p class="accroche">« Comment alléger mes impôts cette année tout en préparant mes vieux jours ? »</p>
-    <p>Le Plan d'Épargne Retraite (PER) est une enveloppe pensée pour la retraite. Sa particularité : les sommes que tu y verses volontairement peuvent être <strong>déduites de ton revenu imposable</strong>, dans la limite d'un plafond annuel qui dépend de tes revenus.</p>
-    <p>Prenons Camille. Elle verse 3 000 € sur son PER. Si sa tranche marginale d'imposition est de 30 %, elle réduit son impôt d'environ <strong>900 €</strong> cette année-là.</p>
+    <p>Le Plan d'Épargne Retraite (PER) est une enveloppe pensée pour la retraite. Sa particularité : les sommes que tu y verses volontairement peuvent être <strong>déduites de ton revenu imposable</strong>, dans la limite d'un plafond annuel qui dépend de tes revenus (en général, 10 % de tes revenus professionnels de l'année précédente, avec un minimum et un maximum). Ton plafond personnel figure sur ton avis d'impôt, et les plafonds non utilisés se reportent sur les années suivantes.</p>
+    <p>Prenons Camille. Elle verse 3 000 € sur son PER. L'économie d'impôt dépend de sa tranche marginale d'imposition :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Sa TMI</th><th>11 %</th><th>30 %</th><th>41 %</th><th>45 %</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Impôt économisé sur 3 000 € versés</th><td>330 €</td><td>900 €</td><td>1 230 €</td><td>1 350 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Plus tu es imposé, plus la déduction rapporte. Si ta TMI est de 0 %, elle ne rapporte rien.</p>
     <p>En contrepartie, l'argent est en principe <strong>bloqué jusqu'à la retraite</strong>, et il sera imposé au moment de la sortie. L'avantage est donc un report d'impôt : on paie moins aujourd'hui, et l'on espère être moins taxé plus tard.</p>
+
+    <h3>La sortie : capital ou rente</h3>
+    <ul class="liste">
+      <li><strong>Si tu as déduit tes versements</strong> : la part de capital correspondante est imposée au barème de l'impôt sur le revenu à la sortie, et les gains au PFU (31,4 % en 2026).</li>
+      <li><strong>Si tu n'as pas déduit tes versements</strong> : le capital que tu as versé est exonéré d'impôt à la sortie, seuls les gains sont taxés. Cela peut être un bon choix si ta TMI est basse aujourd'hui.</li>
+      <li><strong>En rente</strong> : tu perçois un revenu régulier à vie, imposé comme une pension de retraite.</li>
+    </ul>
     <div class="retenir">
       <strong>3 idées à retenir</strong>
       <ul>
@@ -200,11 +263,12 @@ details p{margin:.7rem 0 0}
     </div>
     <details>
       <summary>Pour aller plus loin</summary>
-      <p>À la retraite, on peut sortir en rente (un revenu régulier) ou en capital. Pour les versements déduits, la part correspondante est imposée au barème de l'impôt sur le revenu, tandis que les gains relèvent du PFU. Si tu n'as pas déduit tes versements, seuls les gains sont imposés à la sortie. Le plafond de déduction se retrouve sur ton avis d'impôt.</p>
+      <p>Le PER peut être mis en place auprès d'une banque, d'un assureur ou d'une société de gestion, et un PER déjà ouvert peut être transféré. La plupart des contrats proposent une « gestion pilotée » qui réduit progressivement le risque à l'approche de la retraite. Les couples peuvent mettre en commun leurs plafonds de déduction. Les règles de plafond évoluent régulièrement : vérifie les chiffres de l'année sur ton avis d'impôt ou sur service-public.fr.</p>
     </details>
 
     <!-- COMPARATIF -->
-    <h2>Les quatre enveloppes côte à côte</h2>
+    <h2 id="choisir">Comparer et choisir</h2>
+    <h3>Les quatre enveloppes côte à côte</h3>
     <div class="tablewrap">
       <table>
         <thead><tr><th></th><th>Compte-titres</th><th>PEA</th><th>Assurance-vie</th><th>PER</th></tr></thead>
@@ -216,13 +280,46 @@ details p{margin:.7rem 0 0}
         </tbody>
       </table>
     </div>
+
+    <h3>Un exemple chiffré : 10 000 € pendant 10 ans</h3>
+    <p>Imaginons que Camille place 10 000 € dans chaque enveloppe, avec un rendement de 5 % par an, sans frais, et qu'elle retire tout au bout de 10 ans. Son placement vaut alors environ 16 289 €, soit <strong>6 289 € de gain</strong>.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Enveloppe</th><th>Impôts et prélèvements</th><th>Gain net qui lui reste</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Compte-titres</th><td>≈ 1 975 € (31,4 %)</td><td>≈ 4 314 €</td></tr>
+          <tr><th scope="row">PEA (après 5 ans)</th><td>≈ 1 170 € (18,6 %)</td><td>≈ 5 119 €</td></tr>
+          <tr><th scope="row">Assurance-vie (après 8 ans, personne seule)</th><td>≈ 1 208 €</td><td>≈ 5 081 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Ce calcul est purement illustratif : dans la vraie vie, les supports, les frais et les rendements ne sont pas identiques d'une enveloppe à l'autre. Il montre surtout l'ordre de grandeur de l'écart : plus de 700 € de différence sur 10 000 € placés, uniquement à cause du contenant.</p>
+
+    <h3>Quelques pistes de réflexion, selon l'objectif</h3>
+    <ul class="liste">
+      <li><strong>« Je veux garder l'argent disponible »</strong> : les livrets, puis éventuellement le compte-titres pour investir sans contrainte.</li>
+      <li><strong>« Je veux investir en actions sur au moins 5 ans »</strong> : le PEA est souvent le premier réflexe, pour son avantage fiscal.</li>
+      <li><strong>« J'épargne sur 8 ans ou plus, et je pense à ma famille »</strong> : l'assurance-vie, pour sa souplesse et son rôle en transmission.</li>
+      <li><strong>« Je prépare ma retraite et je suis fortement imposé »</strong> : le PER, pour la déduction à l'entrée.</li>
+    </ul>
     <p>Ces enveloppes ne s'excluent pas : beaucoup d'investisseurs en combinent plusieurs, selon leurs objectifs et la durée de leurs placements.</p>
+
+    <h3>Les pièges à éviter</h3>
+    <ul class="liste">
+      <li><strong>Retirer son PEA avant 5 ans</strong> : on perd l'avantage fiscal et le plan est en principe clôturé.</li>
+      <li><strong>Attendre pour ouvrir son assurance-vie</strong> : le chronomètre de 8 ans ne démarre qu'à l'ouverture, donc plus tôt on l'ouvre, plus tôt l'avantage arrive (même avec un petit versement).</li>
+      <li><strong>Déduire ses versements PER sans regarder sa TMI</strong> : l'économie est faible, voire nulle, si ta tranche d'imposition est basse.</li>
+      <li><strong>Raisonner seulement sur la fiscalité</strong> : une enveloppe avantageuse ne rend pas un mauvais placement bon. Les frais, le risque et la durée comptent autant.</li>
+    </ul>
 
     <h3>Le jargon traduit</h3>
     <dl class="glossaire">
       <dt>Enveloppe fiscale</dt><dd>Le contenant dans lequel on place ses investissements, avec ses règles fiscales propres.</dd>
       <dt>Plus-value</dt><dd>Le gain réalisé quand on vend un actif plus cher qu'on ne l'a acheté.</dd>
+      <dt>Moins-value</dt><dd>La perte réalisée quand on vend un actif moins cher qu'on ne l'a acheté. Elle peut se déduire des gains.</dd>
       <dt>Abattement</dt><dd>Une part des gains qui n'est pas imposée.</dd>
+      <dt>TMI</dt><dd>Tranche marginale d'imposition : le taux d'impôt sur le revenu appliqué à ton dernier euro gagné.</dd>
+      <dt>Rachat</dt><dd>Un retrait d'argent sur une assurance-vie.</dd>
       <dt>Unité de compte</dt><dd>Un support d'investissement non garanti, dans une assurance-vie.</dd>
       <dt>PER</dt><dd>Plan d'Épargne Retraite : une enveloppe bloquée jusqu'à la retraite, avec des versements déductibles.</dd>
     </dl>
@@ -249,12 +346,39 @@ details p{margin:.7rem 0 0}
       <button>8 ans</button>
       <div class="fb" aria-live="polite"></div>
     </div>
-
     <div class="q" data-good="1">
       <p>4. Que permet principalement le PER ?</p>
       <button>Retirer son argent librement à tout moment</button>
       <button>Déduire ses versements de son revenu imposable, avec un blocage jusqu'à la retraite</button>
       <button>Ne jamais payer d'impôt sur ses gains</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>5. Le contrat d'assurance-vie de Camille vaut 100 000 €, dont 20 000 € de gains. Elle retire 10 000 €. Quelle somme est considérée comme des gains imposables ?</p>
+      <button>2 000 €</button>
+      <button>10 000 €</button>
+      <button>20 000 €</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>6. Camille, dont la TMI est de 30 %, verse 3 000 € sur son PER. Quelle économie d'impôt réalise-t-elle environ cette année-là ?</p>
+      <button>300 €</button>
+      <button>90 €</button>
+      <button>900 €</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>7. Que se passe-t-il en principe si l'on retire de l'argent de son PEA avant 5 ans ?</p>
+      <button>Rien, c'est sans conséquence</button>
+      <button>Le plan est clôturé et les gains sont imposés comme sur un compte-titres</button>
+      <button>Les gains sont exonérés d'impôt et de prélèvements sociaux</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>8. Parmi ces placements, lequel est exonéré d'impôt sur le revenu et de prélèvements sociaux ?</p>
+      <button>Le Livret A</button>
+      <button>Le compte-titres</button>
+      <button>Le PER</button>
       <div class="fb" aria-live="polite"></div>
     </div>
 
