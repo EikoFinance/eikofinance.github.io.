@@ -44,9 +44,11 @@
 
   <section class="card-grid" aria-label="Sommaire de la leçon">
     <a class="card" href="#familles"><h3>Les familles</h3><p>Bitcoin, Ethereum, stablecoins.</p></a>
+    <a class="card" href="#fonctionne"><h3>Comment ça marche</h3><p>Blockchain, clés, portefeuilles.</p></a>
     <a class="card" href="#valeur"><h3>Que valent-elles ?</h3><p>Pas de revenu, beaucoup de volatilité.</p></a>
     <a class="card" href="#risques"><h3>Les risques</h3><p>Escroqueries, conservation, faillites.</p></a>
-    <a class="card" href="#cadre"><h3>Cadre et fiscalité</h3><p>MiCA, flat tax à 31,4 %.</p></a>
+    <a class="card" href="#cadre"><h3>Cadre et fiscalité</h3><p>MiCA, flat tax, un calcul pas à pas.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Huit questions pour vérifier.</p></a>
   </section>
 
   <article class="chapitre">
@@ -55,6 +57,7 @@
 <p>Le Bitcoin, lancé en 2009, a proposé une réponse : une monnaie numérique qui repose sur une <strong>blockchain</strong>, un registre partagé et copié sur un très grand nombre d'ordinateurs. Chaque transaction y est enregistrée dans l'ordre, et il est extrêmement difficile de la modifier après coup. Aucune autorité centrale ne le contrôle, et l'offre de Bitcoin est limitée à <strong>21 millions d'unités</strong>.</p>
 <p>C'est l'inverse des monnaies classiques, dont la création est pilotée par les banques centrales et les banques commerciales (voir la page <a href="economie.html">Économie</a>). Les <strong>cryptomonnaies</strong> (ou crypto-actifs) forment aujourd'hui un marché de milliers de jetons très différents.</p>
 <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les cryptomonnaies sont un actif très risqué, et leur valeur peut s'effondrer : n'y place que de l'argent que tu peux te permettre de perdre. Méfie-toi de toute promesse de gain garanti.</div>
+
 <h2 id="familles">Les grandes familles</h2>
 <ul class="liste">
 <li><strong>Bitcoin</strong> : le plus ancien et le plus gros. Certains y voient une « réserve de valeur numérique », d'autres un actif purement spéculatif.</li>
@@ -68,11 +71,39 @@
 <tbody><tr><th scope="row">Bitcoin</th><td>Réserve de valeur, actif spéculatif</td><td>Volatilité</td></tr><tr><th scope="row">Ethereum</th><td>Plateforme d'applications</td><td>Volatilité, risques technologiques</td></tr><tr><th scope="row">Stablecoins</th><td>Transférer de l'argent, rester stable</td><td>Réserves de l'émetteur, décrochage</td></tr><tr><th scope="row">Autres crypto</th><td>Spéculation</td><td>Perte totale, escroqueries</td></tr></tbody>
 </table>
 </div>
+
+<h2 id="fonctionne">Comment ça marche, concrètement</h2>
+<p class="accroche">« Quand j'envoie du Bitcoin, qu'est-ce qui se passe vraiment ? »</p>
+<p>Imagine un grand cahier de comptes que des milliers de personnes tiennent en même temps, chacune avec sa propre copie. Quand Camille envoie du Bitcoin à un ami, la transaction est diffusée à tout le réseau. Des participants (les <em>mineurs</em> ou <em>validateurs</em>, selon la blockchain) vérifient qu'elle est valide, puis l'ajoutent au cahier. Une fois inscrite, elle ne peut pratiquement plus être effacée.</p>
+<p>Deux idées aident à comprendre pourquoi le Bitcoin garde de la valeur pour ceux qui y croient :</p>
+<ul class="liste">
+<li><strong>L'offre est limitée.</strong> Il n'existera jamais plus de 21 millions de Bitcoin. Environ tous les quatre ans, un événement appelé « halving » divise par deux le rythme de création de nouveaux Bitcoin : le dernier a eu lieu en 2024. Une offre qui se raréfie ne garantit pas une hausse du prix, mais c'est l'argument le plus souvent avancé par ses défenseurs.</li>
+<li><strong>Personne ne peut le créer à volonté.</strong> Contrairement à une banque centrale, aucune institution ne peut décider d'en émettre davantage. C'est aussi pour cette raison qu'aucune institution ne peut te dépanner si tu perds l'accès à tes Bitcoin.</li>
+</ul>
+
+<h3>Où sont mes cryptos ? Les deux façons de les conserver</h3>
+<p>Une cryptomonnaie n'est pas « stockée » quelque part comme un billet : ce que tu détiens, c'est une <strong>clé privée</strong>, un code secret qui prouve que les fonds sont à toi. La question est donc : qui garde cette clé ?</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th></th><th>Sur une plateforme (conservation par un tiers)</th><th>Dans ton propre portefeuille (« self-custody »)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Qui garde la clé ?</th><td>La plateforme</td><td>Toi</td></tr>
+<tr><th scope="row">Avantage</th><td>Simple, on peut récupérer son compte en cas d'oubli de mot de passe</td><td>Aucune dépendance à une entreprise</td></tr>
+<tr><th scope="row">Risque</th><td>Faillite, piratage ou blocage de la plateforme (comme FTX en 2022)</td><td>Perdre ta phrase de récupération revient à perdre tes cryptos, sans recours possible</td></tr>
+<tr><th scope="row">À retenir</th><td>Choisis une plateforme agréée, et ne laisse pas tout au même endroit</td><td>Garde ta phrase de récupération hors ligne et ne la partage jamais</td></tr>
+</tbody>
+</table>
+</div>
+<p>Un portefeuille « matériel » (hardware wallet) est un petit boîtier qui garde la clé hors d'internet : c'est la solution la plus courante pour les montants importants. Dans tous les cas, <strong>aucun site sérieux ne te demandera jamais ta phrase de récupération</strong>.</p>
+
+<h3>Les stablecoins en deux mots</h3>
+<p>Un stablecoin vise à valoir toujours un euro ou un dollar. Pour cela, son émetteur est censé détenir des réserves (de l'argent et des titres très sûrs) en face des jetons en circulation. La confiance repose donc sur la qualité et la transparence de ces réserves. En Europe, le règlement MiCA impose désormais des règles aux émetteurs de stablecoins, mais un décrochage reste possible en cas de problème.</p>
+
 <h2 id="valeur">Que vaut une crypto ?</h2>
 <p class="accroche">« Si elle ne verse rien, pourquoi prend-elle de la valeur ? »</p>
 <p>Une action donne droit à des bénéfices, une obligation verse des intérêts, un immeuble rapporte des loyers. Une cryptomonnaie classique <strong>ne verse aucun revenu</strong> : sa valeur dépend de ce que d'autres acceptent de payer, donc de l'offre, de la demande, de la confiance et de l'adoption. D'où une <strong>volatilité extrême</strong> : des baisses de plus de 70 % ont déjà eu lieu sur le Bitcoin, par exemple en 2018 et en 2022.</p>
 <figure>
-<svg aria-label="Après une baisse de 50 pour cent il faut gagner 100 pour cent pour revenir à l'équilibre, après 80 pour cent de baisse il faut gagner 400 pour cent" role="img" viewbox="0 0 600 215">
+<svg aria-label="Après une baisse de 50 pour cent il faut gagner 100 pour cent pour revenir à l'équilibre, après 80 pour cent de baisse il faut gagner 400 pour cent" role="img" viewBox="0 0 600 215">
 <text fill="#102A56" font-size="14" font-weight="700" text-anchor="middle" x="300" y="20">Plus on perd, plus il est difficile de remonter</text>
 <line stroke="#4B5563" x1="30" x2="570" y1="170" y2="170"></line>
 <rect fill="#102A56" height="120" rx="3" width="100" x="60" y="50"></rect>
@@ -83,6 +114,8 @@
 </svg>
 <figcaption>Une perte de 50 % doit être compensée par un gain de 100 %. C'est pourquoi la gestion du risque compte plus que le rendement espéré.</figcaption>
 </figure>
+<p>Cette volatilité a une conséquence pratique : le moment d'entrée et la taille de la mise comptent énormément. Beaucoup de débutants se laissent attirer par une hausse déjà bien avancée, puis vendent dans la panique lors d'une baisse. Investir progressivement, par petites sommes régulières, est une façon courante de réduire ce risque de mauvais timing, sans pour autant le supprimer.</p>
+
 <h2 id="risques">Les risques à connaître</h2>
 <ul class="liste">
 <li><strong>La volatilité</strong> : des variations de plusieurs dizaines de pourcents en quelques semaines sont fréquentes.</li>
@@ -91,17 +124,58 @@
 <li><strong>Pas de garantie</strong> : contrairement aux livrets, aucun mécanisme public ne garantit tes dépôts en cryptomonnaies.</li>
 <li><strong>La réglementation</strong> : elle évolue, et peut changer les règles du jeu.</li>
 </ul>
+<h3>Les signaux d'alarme d'une arnaque</h3>
+<ul class="liste">
+<li>On te promet un rendement garanti ou « sans risque », surtout s'il est élevé.</li>
+<li>Quelqu'un que tu ne connais pas te contacte de lui-même (réseaux sociaux, messagerie, application de rencontre) pour te proposer un placement.</li>
+<li>On te met la pression : « offre limitée », « décide aujourd'hui ».</li>
+<li>On te demande ta phrase de récupération, un accès à distance à ton ordinateur, ou de « débloquer » tes gains en payant des frais.</li>
+<li>La plateforme n'apparaît pas sur les listes de l'AMF, ou son adresse est introuvable.</li>
+</ul>
+<div class="retenir"><strong>Avant d'acheter : 4 vérifications</strong><ul><li>La plateforme est-elle agréée ou enregistrée (liste de l'AMF) ?</li><li>Ai-je activé la double authentification, avec un mot de passe unique ?</li><li>Ma phrase de récupération est-elle notée hors ligne, à l'abri ?</li><li>La somme investie est-elle une somme que je peux me permettre de perdre ?</li></ul></div>
+
 <h2 id="cadre">Cadre réglementaire et fiscalité en France</h2>
-<p>En Europe, le règlement <strong>MiCA</strong> encadre les prestataires de services sur crypto-actifs : avant d'ouvrir un compte, vérifie que la plateforme est bien agréée ou enregistrée (les listes sont publiées par l'AMF).</p>
+<p>En Europe, le règlement <strong>MiCA</strong> encadre les prestataires de services sur crypto-actifs : avant d'ouvrir un compte, vérifie que la plateforme est bien agréée ou enregistrée (les listes sont publiées par l'AMF). La période transitoire qui permettait aux anciens prestataires enregistrés (les « PSAN ») de continuer sans agrément européen a pris fin le <strong>1er juillet 2026</strong> : depuis cette date, un prestataire sans agrément ne devrait plus opérer en France.</p>
 <p>Côté impôts, en 2026 (particulier, activité non professionnelle) :</p>
 <ul class="liste">
 <li>Les plus-values sont imposées à la <strong>flat tax de 31,4 %</strong> (12,8 % d'impôt sur le revenu et 18,6 % de prélèvements sociaux), avec option possible pour le barème progressif.</li>
 <li>L'impôt n'est dû que lorsque tu <strong>vends contre des euros</strong> ou que tu <strong>achètes un bien ou un service</strong> avec tes cryptos. Un échange de crypto contre une autre crypto n'est pas imposé à ce moment.</li>
-<li>Un seuil de 305 € de cessions sur l'année permet une exonération en dessous.</li>
+<li>Un seuil de 305 € de cessions sur l'année permet une exonération en dessous. Attention : ce seuil porte sur le <strong>total des ventes</strong>, pas sur le gain.</li>
 <li>Les moins-values ne se reportent pas d'une année sur l'autre.</li>
 <li>Les cessions se déclarent (formulaire 2086), de même que les comptes détenus à l'étranger (formulaire 3916-bis). Depuis 2026, les plateformes transmettent des informations à l'administration (directive DAC8).</li>
 </ul>
+
+<h3>Comment la plus-value est calculée : un exemple pas à pas</h3>
+<p>Le calcul n'est pas « prix de vente moins prix d'achat de la crypto vendue ». La loi raisonne sur <strong>l'ensemble de ton portefeuille de cryptos</strong>. Pour chaque vente, la plus-value est :</p>
+<p><strong>prix de cession − (prix total d'acquisition × prix de cession ÷ valeur globale du portefeuille)</strong></p>
+<p>Exemple : Camille a investi 2 000 € au total, et son portefeuille vaut aujourd'hui 10 000 €. Elle vend pour 5 000 € contre des euros.</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Étape</th><th>Calcul</th><th>Résultat</th></tr></thead>
+<tbody>
+<tr><th scope="row">Part du prix d'achat imputée à cette vente</th><td>2 000 × 5 000 ÷ 10 000</td><td>1 000 €</td></tr>
+<tr><th scope="row">Plus-value imposable</th><td>5 000 − 1 000</td><td>4 000 €</td></tr>
+<tr><th scope="row">Flat tax à 31,4 %</th><td>4 000 × 31,4 %</td><td>1 256 € (dont 512 € d'impôt et 744 € de prélèvements sociaux)</td></tr>
+</tbody>
+</table>
+</div>
+<p>Cette méthode a un effet surprenant : si tu as d'abord acheté pas cher puis plus cher, c'est bien le coût moyen de l'ensemble de ton portefeuille qui compte, et non celui d'une transaction en particulier. Les plateformes ne font généralement pas ce calcul pour toi : garde l'historique de toutes tes opérations, ou utilise un logiciel dédié.</p>
+
+<h3>Flat tax ou barème progressif ?</h3>
+<p>L'option pour le barème progressif concerne l'ensemble de tes revenus du capital de l'année. Elle peut être avantageuse si ta tranche marginale d'imposition est inférieure à 12,8 % (donc 0 % ou 11 %), car les prélèvements sociaux de 18,6 % restent dus dans les deux cas. Par exemple, sur 10 000 € de plus-value, un foyer à 11 % de TMI paierait environ 2 960 € au barème contre 3 140 € à la flat tax. Au-delà de 11 %, la flat tax est en général plus favorable.</p>
+
+<h3>Les déclarations, en trois lignes</h3>
+<ul class="liste">
+<li><strong>Formulaire 2086</strong> : le détail de chaque vente imposable, avec le calcul de la plus-value.</li>
+<li><strong>Formulaire 2042-C</strong> : le report du total (case 3AN en cas de plus-value, 3BN en cas de moins-value).</li>
+<li><strong>Formulaire 3916-bis</strong> : la déclaration de chaque compte ouvert auprès d'une plateforme à l'étranger, même inactif. Une omission peut coûter 750 € par compte, et jusqu'à 1 500 € si le compte a dépassé 50 000 €. Un portefeuille que tu gères toi-même, hors plateforme, n'entre en principe pas dans cette déclaration.</li>
+</ul>
+<div class="alerte"><strong>Attention :</strong> si tu trades très souvent et avec des moyens organisés, l'administration peut te considérer comme un investisseur « habituel » : tes gains relèvent alors des bénéfices non commerciaux, avec un régime différent. Les règles sur le staking, les airdrops et les NFT restent floues : pour des montants importants, demande conseil à un professionnel.</div>
 <p>Voir aussi la page <a href="fiscalite.html">Fiscalité &amp; Enveloppes</a>. Ces règles évoluent : vérifie-les avant de déclarer.</p>
+
+<h3>Et en cas de décès ? Le problème des clés</h3>
+<p>En succession, les cryptos entrent dans le patrimoine à leur valeur en euros au jour du décès, comme n'importe quel bien (voir <a href="transmission.html">Transmission et dons</a>). La vraie difficulté est pratique : sans clé privée ou phrase de récupération transmise, les héritiers ne peuvent pas accéder à des cryptos conservées dans un portefeuille personnel. Penser à un moyen sûr de transmettre cet accès fait partie du sujet.</p>
+
 <h2 id="macro">Crypto et économie : un lien fragile</h2>
 <p>Les cryptomonnaies sont souvent présentées comme une alternative aux monnaies classiques. Mais en période d'inquiétude sur les marchés, elles se comportent fréquemment comme des actifs risqués, sensibles aux taux d'intérêt, à la liquidité et à l'appétit pour le risque. Cela nuance l'idée d'une « valeur refuge », à la différence de l'or (voir <a href="index.html#investir">Marchés &amp; Actifs</a>).</p>
 <div class="duo">
@@ -109,13 +183,18 @@
 <div class="contre"><h3>Inconvénients</h3><ul><li>Volatilité extrême, aucun revenu</li><li>Escroqueries et piratages fréquents</li><li>Cadre réglementaire encore en construction</li></ul></div>
 </div>
 <div class="retenir"><strong>3 idées à retenir</strong><ul><li>Une crypto ne verse aucun revenu : sa valeur dépend de la demande.</li><li>La volatilité est extrême : les pertes de 50 à 80 % sont possibles.</li><li>Sécurité et fiscalité demandent de la rigueur : plateforme agréée, déclaration, conservation des clés.</li></ul></div>
+
 <h3>Le jargon traduit</h3>
 <dl class="glossaire">
 <dt><strong>Blockchain</strong></dt><dd>Registre numérique partagé où les transactions sont enregistrées dans l'ordre.</dd>
 <dt><strong>Stablecoin</strong></dt><dd>Crypto conçue pour garder une valeur stable, souvent indexée sur le dollar.</dd>
 <dt><strong>Clé privée</strong></dt><dd>Le code secret qui donne accès à tes cryptos : à ne jamais partager ni perdre.</dd>
+<dt><strong>Phrase de récupération</strong></dt><dd>Une suite de 12 ou 24 mots qui permet de retrouver ton portefeuille. Qui la possède contrôle tes cryptos.</dd>
+<dt><strong>Halving</strong></dt><dd>L'événement, environ tous les quatre ans, qui divise par deux la création de nouveaux Bitcoin.</dd>
 <dt><strong>MiCA</strong></dt><dd>Le règlement européen qui encadre les crypto-actifs et leurs prestataires.</dd>
+<dt><strong>DAC8</strong></dt><dd>La directive européenne qui oblige les prestataires crypto à transmettre des informations aux administrations fiscales.</dd>
 </dl>
+
 <h3 id="quiz">Teste-toi</h3>
 <div class="q" data-good="2">
 <p>1. Que verse une cryptomonnaie classique comme le Bitcoin ?</p>
@@ -136,6 +215,41 @@
 <button>Dès qu'on les achète</button>
 <button>Quand on les vend contre des euros ou qu'on achète un bien avec</button>
 <button>Jamais</button>
+<div aria-live="polite" class="fb"></div>
+</div>
+<div class="q" data-good="0">
+<p>4. Qu'est-ce que la clé privée ?</p>
+<button>Le code secret qui prouve que les cryptos t'appartiennent</button>
+<button>Le nom de ta plateforme d'échange</button>
+<button>Un mot de passe que le support peut te redemander</button>
+<div aria-live="polite" class="fb"></div>
+</div>
+<div class="q" data-good="2">
+<p>5. Camille a investi 2 000 € au total et son portefeuille vaut 10 000 €. Elle vend 5 000 € contre des euros. Quelle est sa plus-value imposable ?</p>
+<button>5 000 €</button>
+<button>8 000 €</button>
+<button>4 000 €</button>
+<div aria-live="polite" class="fb"></div>
+</div>
+<div class="q" data-good="1">
+<p>6. Échanger du Bitcoin contre une autre crypto, sans repasser par les euros, est en principe…</p>
+<button>Imposé à 31,4 % immédiatement</button>
+<button>Non imposé à ce moment-là</button>
+<button>Interdit</button>
+<div aria-live="polite" class="fb"></div>
+</div>
+<div class="q" data-good="0">
+<p>7. À quoi sert le seuil de 305 € ?</p>
+<button>Il exonère les années où le total des ventes ne dépasse pas ce montant</button>
+<button>Il fixe le montant minimum d'un achat</button>
+<button>Il limite le gain annuel à 305 €</button>
+<div aria-live="polite" class="fb"></div>
+</div>
+<div class="q" data-good="2">
+<p>8. Lequel de ces signaux doit te faire fuir immédiatement ?</p>
+<button>Une plateforme qui figure sur la liste de l'AMF</button>
+<button>Une plateforme qui propose l'authentification à deux facteurs</button>
+<button>Un inconnu qui te promet un rendement garanti</button>
 <div aria-live="polite" class="fb"></div>
 </div>
 
