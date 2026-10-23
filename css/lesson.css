@@ -40,3 +40,13 @@ th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-ali
 th{background:var(--primary-blue);color:#fff;font-weight:600}
 tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
 :focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+
+/* ---------- Avantages / inconvénients, listes (pages par classe d'actif) ---------- */
+.chapitre ul.liste{margin:0 0 1rem 1.2rem;line-height:1.7}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.duo>div{border:1px solid #d9dee5;border-radius:8px;padding:.9rem 1.1rem}
+.duo h3{margin:0 0 .4rem;font-size:1rem}
+.duo ul{margin:0 0 0 1.1rem;line-height:1.6}
+.duo .pour{border-top:4px solid #2e7d4f}
+.duo .contre{border-top:4px solid #b3402e}
+@media(max-width:640px){.duo{grid-template-columns:1fr}}

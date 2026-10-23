@@ -21,6 +21,8 @@
 .img-worldmap  { --img: url(../images/scene-worldmap.webp); }
 .img-accueil   { --img: url(../images/scene-accueil.webp); }
 .img-monnaie   { --img: url(../images/scene-monnaie.webp); }
+/* Fond sobre (dégradé marine) en attendant une image dédiée : à remplacer par url(../images/scene-xxx.webp) */
+.img-sobre     { --img: linear-gradient(135deg, #0A1C3B 0%, #17335f 100%); }
 
 .scene {
     position: relative;
