@@ -73,7 +73,7 @@
         items: [
           { title: 'Placements et enveloppes fiscales', file: 'fiscalite.html',
             desc: 'PEA, compte-titres, assurance-vie, PER : où placer, et avec quelle fiscalité.' },
-          { title: 'Transmission et dons', file: 'fiscalite.html',
+          { title: 'Transmission et dons', file: 'transmission.html',
             desc: 'Donations et succession : préparer et organiser la transmission.' },
           { title: 'Études de cas', file: 'etudes.html',
             desc: "Six profils d'épargnants comparés : livrets, ETF, stock picking, SCPI, matières premières et crypto." }
