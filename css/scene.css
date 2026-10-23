@@ -6,7 +6,7 @@
    <section class="scene scene-hero img-gold"> ... </section>
    <div class="scene scene-banner img-fed" role="img" aria-label="..."></div>
 
-   Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap, img-accueil, img-monnaie, img-crypto, img-obligations, img-scpi
+   Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap, img-accueil, img-monnaie, img-crypto, img-obligations, img-scpi, img-fiscalite, img-transmission
    Variantes (attribut data-motion) : "drift" (par défaut), "pan" (balayage horizontal, pour les cartes),
    "loop" (défilement continu et sans coupure, pour une image conçue en tuile, comme img-accueil)
    Classe .scene--gleam : un reflet doré traverse lentement l'image (pour l'or)
@@ -24,6 +24,8 @@
 .img-crypto    { --img: url(../images/scene-crypto.webp); }
 .img-obligations{ --img: url(../images/scene-obligations.webp); }
 .img-scpi      { --img: url(../images/scene-scpi.webp); }
+.img-fiscalite  { --img: url(../images/scene-fiscalite.webp); }
+.img-transmission{ --img: url(../images/scene-transmission.webp); }
 /* Fond sobre (dégradé marine) en attendant une image dédiée : à remplacer par url(../images/scene-xxx.webp) */
 .img-sobre     { --img: linear-gradient(135deg, #0A1C3B 0%, #17335f 100%); }
 
@@ -161,9 +163,11 @@
     background: linear-gradient(180deg, rgba(10, 28, 59, 0.70) 0%, rgba(10, 28, 59, 0.86) 100%);
 }
 
-/* Obligations (papier clair) et SCPI (ville au crépuscule) : voile dense pour garder le titre lisible */
+/* Obligations, fiscalité, transmission (papier clair) et SCPI (ville au crépuscule) : voile dense pour garder le titre lisible */
 .scene-hero.img-obligations::after,
-.scene-hero.img-scpi::after {
+.scene-hero.img-scpi::after,
+.scene-hero.img-fiscalite::after,
+.scene-hero.img-transmission::after {
     background: linear-gradient(180deg, rgba(10, 28, 59, 0.70) 0%, rgba(10, 28, 59, 0.86) 100%);
 }
 
