@@ -47,9 +47,11 @@
     <a class="card" href="#fonctionnement"><h3>Comment ça marche</h3><p>Réplication, cotation, types d'ETF.</p></a>
     <a class="card" href="#indice"><h3>Que contient l'indice ?</h3><p>L'exemple du MSCI World.</p></a>
     <a class="card" href="#frais"><h3>Les frais</h3><p>Un exemple chiffré sur 20 ans.</p></a>
+    <a class="card" href="#ponderation"><h3>Capi ou équipondéré</h3><p>S&amp;P 500 : deux façons de peser.</p></a>
+    <a class="card" href="#thematiques"><h3>ETF thématiques</h3><p>IA, robotique : atouts et pièges.</p></a>
     <a class="card" href="#choisir"><h3>Bien choisir</h3><p>Critères et pièges à éviter.</p></a>
     <a class="card" href="#enveloppes"><h3>Où le loger</h3><p>PEA, compte-titres, assurance-vie.</p></a>
-    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Huit questions pour vérifier.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Douze questions pour vérifier.</p></a>
   </section>
 
   <article class="chapitre" id="principe-chap">
@@ -80,7 +82,7 @@
     <h3>Tous les ETF ne se ressemblent pas</h3>
     <ul class="liste">
       <li><strong>Les ETF « monde » ou « pays »</strong> : ils suivent un grand indice d'actions (monde, États-Unis, Europe, marchés émergents…).</li>
-      <li><strong>Les ETF sectoriels ou thématiques</strong> : ils se concentrent sur un secteur ou une idée (technologie, énergie, intelligence artificielle…). Moins diversifiés, donc plus risqués.</li>
+      <li><strong>Les ETF sectoriels ou thématiques</strong> : ils se concentrent sur un secteur ou une idée (technologie, énergie, intelligence artificielle…). Moins diversifiés, donc plus risqués (voir plus bas la section <a href="#thematiques">ETF thématiques</a>).</li>
       <li><strong>Les ETF obligataires</strong> : ils détiennent un panier d'obligations (voir la page <a href="obligations.html">Obligations</a>).</li>
       <li><strong>Les ETF de matières premières, d'or</strong> : ils répliquent le prix d'un métal ou d'une matière première (voir la page <a href="or-argent.html">Or &amp; argent</a>).</li>
       <li><strong>Les ETF à effet de levier ou inverses</strong> : ils amplifient (ou inversent) la variation quotidienne de l'indice. Ils sont conçus pour des durées très courtes, et leur résultat sur plusieurs mois peut s'éloigner fortement de ce que l'on attend. À réserver à des investisseurs avertis.</li>
@@ -120,6 +122,101 @@
 </table>
     </div>
     <p>Cet exemple suppose, par simplicité, le même rendement avant frais. Dans la réalité, des études régulières (comme les rapports SPIVA) montrent que la plupart des fonds actifs font moins bien que leur indice sur de longues périodes, une fois leurs frais déduits. À côté du TER, il y a aussi les frais de courtage que ton intermédiaire prélève à chaque achat ou vente : compare-les.</p>
+
+    <h2 id="ponderation">Capitalisation ou équipondération : l'exemple du S&amp;P 500</h2>
+    <p class="accroche">« Faut-il donner le même poids à toutes les entreprises de l'indice ? »</p>
+    <p>Un indice doit décider quelle part donner à chaque entreprise. Il existe deux grandes méthodes, qui donnent des ETF très différents même quand ils portent sur les mêmes 500 entreprises.</p>
+    <ul class="liste">
+      <li><strong>La pondération par capitalisation</strong> (la méthode classique) : plus une entreprise vaut cher en Bourse, plus son poids est grand. Quand une entreprise monte, son poids augmente automatiquement, sans que le fonds ait à agir.</li>
+      <li><strong>L'équipondération</strong> : chaque entreprise a le <strong>même poids</strong> (environ 0,2 % chacune dans un indice de 500 valeurs), et le fonds rééquilibre régulièrement, par exemple chaque trimestre, pour revenir à l'égalité. Concrètement, il vend un peu de ce qui a monté et rachète un peu de ce qui a baissé.</li>
+    </ul>
+
+    <h3>Un exemple à trois entreprises</h3>
+    <p>Imaginons un mini-indice de trois entreprises : A pèse 60 %, B 30 % et C 10 % de la capitalisation totale. Voyons ce que donnent les deux méthodes selon qui monte.</p>
+    <div class="tablewrap">
+<table>
+<thead><tr><th>Scénario</th><th>Variation de A / B / C</th><th>Pondéré par capitalisation</th><th>Équipondéré</th></tr></thead>
+<tbody>
+<tr><th scope="row">1. La plus grosse mène</th><td>+20 % / 0 % / -10 %</td><td><strong>+11 %</strong> (0,6 × 20 + 0,3 × 0 + 0,1 × -10)</td><td>+3,3 % (moyenne simple)</td></tr>
+<tr><th scope="row">2. Les petites rattrapent</th><td>-20 % / +10 % / +30 %</td><td>-6 % (0,6 × -20 + 0,3 × 10 + 0,1 × 30)</td><td><strong>+6,7 %</strong> (moyenne simple)</td></tr>
+</tbody>
+</table>
+    </div>
+    <p>Aucune méthode n'est « meilleure » en soi : tout dépend de <strong>qui monte</strong>. La pondération par capitalisation gagne quand les plus grosses entreprises mènent la hausse, l'équipondération quand les plus petites rattrapent ou quand les géants baissent.</p>
+
+    <h3>Pourquoi cette question est devenue importante : la concentration</h3>
+    <p>Dans le S&amp;P 500 pondéré par capitalisation, les <strong>10 premières entreprises</strong> pesaient environ <strong>38 à 40 %</strong> de l'indice en 2026, contre environ 23 % en 2019. Les 100 plus grosses pèsent environ 75 % de l'indice classique, mais seulement 20 % de sa version équipondérée. Une seule entreprise, Nvidia, représente à elle seule environ 7 à 8 % de l'indice. Ainsi, un « ETF S&amp;P 500 » est en pratique très dépendant de quelques géants, surtout technologiques, la technologie pesant environ un tiers de l'indice.</p>
+    <p>La version équipondérée a l'effet inverse : aucune entreprise ne pèse plus de 0,2 %, les 10 premières lignes ne représentent qu'environ 2 à 3 %, et la part des secteurs hors technologie (industrie, santé, finance, consommation) est nettement plus importante.</p>
+
+    <h3>Forces et faiblesses</h3>
+    <div class="tablewrap">
+<table>
+<thead><tr><th></th><th>Pondération par capitalisation</th><th>Équipondération</th></tr></thead>
+<tbody>
+<tr><th scope="row">Forces</th><td>Frais très bas ; peu d'opérations, donc peu de coûts cachés ; les gagnants « courent » librement ; très grande liquidité</td><td>Diversification plus large entre entreprises et secteurs ; moins dépendante de quelques géants ; rééquilibrage automatique qui « vend haut, achète bas »</td></tr>
+<tr><th scope="row">Faiblesses</th><td>Forte concentration ; dépendance à un thème (ici la technologie) ; on achète davantage ce qui a déjà beaucoup monté</td><td>Frais plus élevés (de l'ordre de 0,20 % contre moins de 0,10 % pour un S&amp;P 500 classique, par exemple) ; rotation plus forte ; plus de poids aux entreprises plus petites, parfois moins liquides ; moins exposée aux géants quand ils réussissent</td></tr>
+<tr><th scope="row">Ce que ça cache</th><td>Une moyenne n'est « diversifiée » que par le nombre de lignes, pas par le poids de chacune</td><td>Elle n'est pas « sans risque » : elle est surtout une autre façon de répartir le risque, et sa volatilité reste proche de celle de l'indice classique</td></tr>
+</tbody>
+</table>
+    </div>
+
+    <h3>Que dit l'histoire ?</h3>
+    <p>Sur le long terme, les deux méthodes sont proches. Depuis la création du premier ETF équipondéré sur le S&amp;P 500 en 2003, l'indice équipondéré a rapporté environ <strong>11,8 % par an</strong>, contre environ <strong>11,6 %</strong> pour l'indice classique (données à fin juin 2026). Selon l'émetteur d'un ETF équipondéré, l'équipondération a battu la pondération par capitalisation sur environ la moitié des périodes glissantes de 3, 5 et 10 ans : un résultat proche d'un pile ou face.</p>
+    <p>Mais les périodes comptent beaucoup. Sur les dix dernières années, la pondération par capitalisation a nettement dominé (environ +250 % contre environ +207 % pour une version équipondérée), portée par les géants technologiques et l'intelligence artificielle. En 2026, la hiérarchie a changé plusieurs fois : au premier semestre, l'ETF équipondéré a fait un peu mieux (environ +12,0 % contre +10,1 %), puis, selon des données de la mi-octobre, les géants ont repris l'avantage sur les trois derniers mois. Les sources divergent légèrement selon les dates et les fonds comparés, ce qui montre à quel point ces écarts sont sensibles à la période choisie.</p>
+
+    <h3>Dans quel contexte chaque méthode gagne-t-elle ?</h3>
+    <div class="tablewrap">
+<table>
+<thead><tr><th>Contexte de marché</th><th>Plutôt favorable à…</th><th>Pourquoi</th></tr></thead>
+<tbody>
+<tr><th scope="row">Quelques géants mènent la hausse (boom technologique, thème dominant comme l'IA ces dernières années)</th><td>La capitalisation</td><td>Les gagnants pèsent de plus en plus lourd dans l'indice</td></tr>
+<tr><th scope="row">La hausse s'élargit : beaucoup de secteurs et d'entreprises plus petites rattrapent leur retard</th><td>L'équipondération</td><td>Chaque entreprise compte autant, donc les « retardataires » comptent plus</td></tr>
+<tr><th scope="row">Les géants se replient (par exemple après l'éclatement de la bulle internet en 2000, ou lors du recul de la technologie en 2022)</th><td>L'équipondération</td><td>Elle est moins exposée aux plus grosses valeurs qui baissent</td></tr>
+<tr><th scope="row">Reprise économique, taux en baisse, entreprises plus petites et plus cycliques favorisées</th><td>L'équipondération</td><td>Elle donne plus de poids aux entreprises de taille moyenne et aux secteurs sensibles à la conjoncture</td></tr>
+<tr><th scope="row">Marché porté par l'élan (momentum), faible rotation, priorité aux frais bas</th><td>La capitalisation</td><td>Elle laisse courir les gagnants et coûte moins cher</td></tr>
+</tbody>
+</table>
+    </div>
+    <p>Ce sont des tendances, pas des lois : personne ne sait à l'avance quel contexte va dominer. Certains investisseurs choisissent donc un ETF classique comme base et un ETF équipondéré en complément, pour ne pas dépendre à 100 % d'un seul scénario. Il existe aussi d'autres façons de pondérer (par taille des bénéfices, par faible volatilité, par « facteurs »), avec leurs propres compromis. Pour un investisseur européen, des ETF équipondérés existent aussi sur le monde ou sur l'Europe : leurs frais et leur éligibilité au PEA sont à vérifier un par un.</p>
+    <div class="retenir"><strong>À retenir sur la pondération</strong><ul><li>Même 500 entreprises, deux ETF différents : l'un suit la capitalisation (concentré sur les géants), l'autre donne le même poids à chacune.</li><li>Sur le très long terme, les deux se valent à peu près ; sur quelques années, l'un domine souvent nettement l'autre.</li><li>Ce n'est pas une question de « bon » ou « mauvais » ETF, mais de contexte et de ce qu'on veut éviter.</li></ul></div>
+
+    <h2 id="thematiques">ETF thématiques : IA, robotique et autres paris</h2>
+    <p class="accroche">« Et si je misais directement sur l'intelligence artificielle ? »</p>
+    <p>Un <strong>ETF thématique</strong> ne suit pas un marché entier, mais un <strong>thème</strong> : intelligence artificielle, robotique et automatisation, cybersécurité, énergies propres, défense, eau, semi-conducteurs, santé… Pour l'IA et la robotique, on y trouve des fabricants de puces, des éditeurs de logiciels, des acteurs du cloud, des industriels de l'automatisation et des fabricants de capteurs. L'argument est séduisant : une histoire simple, un secteur en forte croissance, et un seul achat plutôt que de choisir soi-même des actions.</p>
+
+    <h3>Les cinq questions à se poser</h3>
+    <ul class="liste">
+      <li><strong>1. Est-ce vraiment différent de ce que je détiens déjà ?</strong> Les grandes entreprises d'un ETF IA (Nvidia, Microsoft, Apple…) sont déjà dans un ETF monde ou S&amp;P 500, où Nvidia pèse à elle seule 7 à 8 % de l'indice. En ajoutant un ETF IA, on renforce son exposition aux mêmes entreprises au lieu de diversifier. Par exemple, les principales positions d'un grand ETF « robotique et IA » sont Apple, Cisco, Microsoft, Nvidia et Stryker.</li>
+      <li><strong>2. Que contient-il réellement ?</strong> « IA » n'est pas une catégorie précise : selon l'indice, on y trouve des puces, du logiciel, des industriels ou des robots japonais. Deux ETF portant le même nom peuvent avoir des paniers très différents. Les comparatifs de 2026 montrent d'ailleurs des écarts énormes de performance d'un an, de légèrement négative à plus de 50 % selon le fonds, le thème exact et la date.</li>
+      <li><strong>3. À quel moment entre-t-on dans la mode ?</strong> Les thèmes attirent les investisseurs surtout après une forte hausse, donc souvent au sommet. L'ETF ARK Innovation a perdu environ 78 % entre son sommet de février 2021 et la fin 2022, et Morningstar l'a classé parmi les fonds ayant le plus « détruit de valeur » sur la période 2014-2023, parce que beaucoup d'investisseurs y sont entrés tard. Plus loin dans le temps, le Nasdaq, porté par l'euphorie d'internet, a perdu environ 78 % entre mars 2000 et octobre 2002, et il a fallu quinze ans pour retrouver son sommet : internet a pourtant bien changé le monde. Que l'IA soit ou non une bulle, personne ne le sait ; ce qu'on sait, c'est que les thèmes ont des cycles marqués.</li>
+      <li><strong>4. Combien ça coûte ?</strong> Les ETF thématiques coûtent en général de 0,35 % à 0,80 % par an, contre 0,07 % à 0,20 % pour un ETF sur un indice large. Sur 10 000 € placés pendant 20 ans, avec un même rendement de 6 % avant frais, un écart de frais de 0,2 % à 0,45 % coûte environ <strong>1 400 € de moins</strong> à l'arrivée (≈ 29 500 € contre ≈ 30 900 €). Et cela sans compter que le thème peut moins bien faire que le marché.</li>
+      <li><strong>5. Est-il solide ?</strong> Un petit fonds de 100 à 200 millions d'euros peut être moins liquide, avec des écarts de prix plus larges, et fermer si peu d'investisseurs le choisissent. Certains « ETF » thématiques sont aussi gérés activement (un gérant choisit les titres) : les frais sont alors plus élevés et le résultat dépend de ses choix.</li>
+    </ul>
+
+    <h3>Un exemple : combien pèse un pari thématique ?</h3>
+    <p>Camille a 10 000 €. Deux façons d'investir dans l'IA :</p>
+    <div class="tablewrap">
+<table>
+<thead><tr><th>Allocation</th><th>Si le thème baisse de 50 %</th><th>Si le thème monte de 80 %</th></tr></thead>
+<tbody>
+<tr><th scope="row">100 % dans l'ETF IA (10 000 €)</th><td>-5 000 € (-50 % du portefeuille)</td><td>+8 000 € (+80 %)</td></tr>
+<tr><th scope="row">90 % dans un ETF monde et 10 % dans l'ETF IA (1 000 €)</th><td>-500 € (-5 % du portefeuille)</td><td>+800 € (+8 %)</td></tr>
+</tbody>
+</table>
+    </div>
+    <p>(en supposant, pour l'exemple, que le reste du portefeuille ne bouge pas). Une petite part dédiée à un thème permet de s'y intéresser sans que le résultat de l'ensemble dépende de lui : c'est l'idée du « socle et satellite », où un ETF large forme le socle et un ou deux paris thématiques restent de petites positions. Cette approche n'est qu'une façon de raisonner, pas un conseil.</p>
+
+    <h3>Comment évaluer un ETF thématique</h3>
+    <ul class="liste">
+      <li><strong>La méthode de l'indice</strong> : quels critères définissent l'appartenance au thème ?</li>
+      <li><strong>Le nombre de lignes et le poids des 10 premières</strong> : plus c'est concentré, plus c'est risqué.</li>
+      <li><strong>Le recoupement avec ton ETF monde</strong> : regarde ce que les deux contiennent en commun.</li>
+      <li><strong>Les frais (TER) et la taille</strong> du fonds.</li>
+      <li><strong>L'ancienneté</strong> : a-t-il déjà traversé une période de baisse ?</li>
+      <li><strong>L'enveloppe</strong> : ces ETF, qui détiennent des titres mondiaux, sont rarement éligibles au PEA ; ils se logent surtout en compte-titres ou en assurance-vie.</li>
+    </ul>
+    <div class="alerte"><strong>Attention :</strong> un thème qui a fait ses preuves n'est pas un thème qui continuera à monter. Les ETF thématiques sont des paris concentrés, pas des placements « de base ».</div>
+    <div class="retenir"><strong>À retenir sur les ETF thématiques</strong><ul><li>Ils recoupent souvent ce qu'on détient déjà dans un ETF large.</li><li>Ils sont plus chers, plus concentrés et plus soumis aux effets de mode.</li><li>Si on y touche, mieux vaut en faire une petite position, pas le cœur du portefeuille.</li></ul></div>
 
     <h2 id="choisir">Bien choisir son ETF</h2>
     <details open>
@@ -184,6 +281,11 @@
       <dt>Capitalisant / distribuant</dt><dd>Un ETF capitalisant réinvestit les dividendes ; un ETF distribuant les verse.</dd>
       <dt>Capitalisation boursière</dt><dd>La valeur totale d'une entreprise en Bourse : c'est elle qui détermine son poids dans un indice.</dd>
       <dt>Spread</dt><dd>L'écart entre le prix d'achat et le prix de vente d'un titre.</dd>
+          <dt>Pondération par capitalisation</dt><dd>Une méthode où le poids de chaque entreprise dans l'indice dépend de sa valeur en Bourse : plus elle vaut cher, plus son poids est grand.</dd>
+      <dt>Équipondération</dt><dd>Une méthode où chaque entreprise a le même poids dans l'indice, avec un rééquilibrage régulier.</dd>
+      <dt>Rééquilibrage</dt><dd>L'opération qui ramène les poids à leur cible, en vendant ce qui a monté et en rachetant ce qui a baissé.</dd>
+      <dt>ETF thématique</dt><dd>Un ETF qui suit un thème précis (IA, robotique, énergie propre…) plutôt qu'un marché entier.</dd>
+      <dt>Socle et satellite</dt><dd>Une façon d'organiser un portefeuille : un socle large et diversifié, complété par de petites positions plus ciblées.</dd>
     </dl>
 
     <h3 id="quiz">Teste-toi</h3>
@@ -241,6 +343,35 @@
       <button>Parce qu'ils sont interdits en France</button>
       <button>Parce qu'ils sont conçus pour le très court terme et leur résultat peut s'éloigner fortement de l'indice</button>
       <button>Parce qu'ils n'ont aucun frais</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+        <div class="q" data-good="0">
+      <p>9. Dans quel contexte la pondération par capitalisation du S&amp;P 500 a-t-elle tendance à faire mieux que l'équipondération ?</p>
+      <button>Quand quelques géants mènent la hausse du marché</button>
+      <button>Quand les géants s'effondrent</button>
+      <button>Quand toutes les entreprises montent exactement du même pourcentage</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>10. Que fait un ETF équipondéré lors de son rééquilibrage ?</p>
+      <button>Il achète ce qui a le plus monté</button>
+      <button>Il ne fait rien pendant dix ans</button>
+      <button>Il vend un peu de ce qui a monté et rachète un peu de ce qui a baissé</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>11. Pourquoi un ETF « IA » peut-il ne pas diversifier un portefeuille qui contient déjà un ETF monde ?</p>
+      <button>Parce qu'il est toujours garanti</button>
+      <button>Parce qu'il contient souvent les mêmes grandes entreprises, déjà présentes dans l'ETF monde</button>
+      <button>Parce qu'il n'a pas de frais</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>12. Camille place 10 % de son portefeuille dans un ETF thématique qui perd 50 %, le reste étant stable. Que perd son portefeuille ?</p>
+      <button>50 %</button>
+      <button>10 %</button>
+      <button>5 %</button>
       <div class="fb" aria-live="polite"></div>
     </div>
 
