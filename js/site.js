@@ -19,7 +19,9 @@
           { title: 'Géopolitique & rapports de force', file: 'geopolitique.html',
             desc: 'Commerce, énergie, monnaies, technologie : comment les tensions entre pays touchent les prix.' },
           { title: 'La macroéconomie', file: 'macro.html',
-            desc: "Indicateurs, taux, dette : le tableau de bord d'un pays et les leviers des banques centrales." }
+            desc: "Indicateurs, taux, dette : le tableau de bord d'un pays et les leviers des banques centrales." },
+          { title: 'Les courants de pensée économique', file: 'courants.html',
+            desc: 'Capitalisme, socialisme, Smith, Marx, Keynes, Friedman, Hayek, Schumpeter : pourquoi les experts divergent.' }
         ]
       },
       {
