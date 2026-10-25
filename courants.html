@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les courants de pensée économique - EikoFinance</title>
+<meta name="description" content="Capitalisme, socialisme, Smith, Marx, Keynes, Friedman, école autrichienne, Schumpeter : les grands courants de pensée économique expliqués simplement, sans parti pris.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<script src="js/site.js" defer></script>
+<style>
+@media (min-width:769px) and (max-width:1500px){nav{padding-right:1rem}nav ul{gap:1rem;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:.86rem}}
+.subnav{display:flex;gap:.3rem;align-items:center;overflow-x:auto;white-space:nowrap;background:var(--bg-subtle);border-bottom:1px solid #d9dee5;padding:.5rem 5%}
+.subnav .st{font-family:var(--font-title);font-size:.78rem;color:var(--text-muted);margin-right:.6rem}
+.subnav a{padding:.35rem .8rem;border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:600;color:var(--primary-blue)}
+.subnav a:hover{background:#e6ebf3}
+.subnav a.on{background:var(--primary-blue);color:#fff}
+@media(max-width:768px){nav.mobile-open{max-height:520px}}
+/* Styles propres à cette page, basés sur les variables de style.css */
+.chapitre{max-width:760px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.crumbs{font-size:.88rem;color:var(--text-muted);padding:1rem 5% 0}
+.crumbs a{color:var(--text-muted)}
+.card-grid a.card{display:block;text-decoration:none;color:inherit}
+.card-grid a.card.soon{opacity:.55;pointer-events:none;border-top-color:#cbd2dc}
+.chapitre h2{font-family:var(--font-title);color:var(--primary-blue);font-size:1.6rem;line-height:1.3;margin:1.5rem 0 1rem}
+.chapitre h3{font-family:var(--font-title);color:var(--primary-blue);font-size:1.2rem;margin:1.8rem 0 .6rem}
+.chapitre p{margin-bottom:1rem;line-height:1.7}
+.accroche{font-size:1.25rem;font-style:italic;color:var(--primary-blue);border-left:4px solid var(--gold-accent);padding-left:1rem;margin:0 0 1.5rem}
+figure{margin:1.5rem 0;background:var(--bg-subtle);border-radius:8px;padding:1rem}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.9rem;color:var(--text-muted);text-align:center;margin-top:.5rem}
+.retenir{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.1rem 1.4rem;margin:1.5rem 0}
+.retenir ul{margin:.5rem 0 0 1.2rem}
+.retenir li{margin-bottom:.4rem}
+.glossaire dt{font-weight:700;color:var(--primary-blue);margin-top:.7rem}
+.glossaire dd{margin:0;color:var(--text-muted)}
+details{border:1px solid #d9dee5;border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+summary{cursor:pointer;font-weight:700;color:var(--primary-blue)}
+details p{margin:.7rem 0 0}
+.q{border:1px solid #d9dee5;border-radius:8px;padding:1rem;margin:.9rem 0}
+.q p{font-weight:700;margin-bottom:.6rem}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1px solid #d9dee5;border-radius:6px;background:#fff;font:inherit;color:var(--text-dark);cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--gold-accent)}
+.q button.good{background:#e3f3e9;border-color:#2e7d4f}
+.q button.bad{background:#f8e5e1;border-color:#b3402e}
+.q .fb{font-size:.92rem;margin-top:.5rem;color:var(--text-muted)}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #d9dee5}
+.pager a{text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border:1px solid var(--primary-blue);border-radius:4px;color:var(--primary-blue)}
+.pager a.next{background:linear-gradient(45deg,var(--gold-accent),var(--gold-bright));border-color:transparent;color:var(--dark-blue)}
+.alerte{background:#fff8e6;border:1px solid var(--gold-accent);border-radius:8px;padding:.9rem 1.1rem;font-size:.95rem;margin:1.5rem 0}
+.tablewrap{overflow-x:auto;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.93rem}
+th,td{border:1px solid #d9dee5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--primary-blue);color:#fff;font-weight:600}
+tbody th{background:var(--bg-subtle);color:var(--primary-blue)}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:2px}
+</style>
+</head>
+<!-- no-intro : pas d'écran d'intro sur les pages intérieures -->
+<body class="no-intro">
+
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpeg" alt="Logo Eiko Finance" class="logo-img" onerror="this.src='images/logo.jpg';">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#comprendre">Comprendre</a> › Les courants de pensée économique</p>
+
+  <section class="hero">
+    <h1>Les courants de pensée économique : pourquoi les experts ne sont pas d'accord</h1>
+    <p>Capitalisme, socialisme, Adam Smith, Marx, Keynes, Friedman, Hayek, Schumpeter : un parcours en 6 chapitres de 5 minutes, avec des exemples simples et sans parti pris.</p>
+    <a href="#chap1" class="btn-gold">Commencer le chapitre 1</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire du parcours">
+    <a class="card" href="#chap1"><h3>1. Pourquoi des courants ?</h3><p>Capitalisme, socialisme, économie mixte : les systèmes.</p></a>
+    <a class="card" href="#chap2"><h3>2. Les fondateurs</h3><p>Adam Smith, Ricardo, Say… et Karl Marx.</p></a>
+    <a class="card" href="#chap3"><h3>3. Le marché au centre</h3><p>Néoclassiques, école autrichienne, Schumpeter.</p></a>
+    <a class="card" href="#chap4"><h3>4. Keynes</h3><p>Quand personne n'achète.</p></a>
+    <a class="card" href="#chap5"><h3>5. Friedman et le retour du marché</h3><p>Monétarisme, anticipations, synthèse actuelle.</p></a>
+    <a class="card" href="#chap6"><h3>6. Aujourd'hui, et comment s'en servir</h3><p>Un même problème, plusieurs lectures.</p></a>
+  </section>
+  <p style="text-align:center;margin:1.5rem 1rem 0;color:var(--text-muted)">À relier avec le reste du chemin Comprendre :</p>
+  <section class="card-grid" aria-label="Pages liées">
+    <a class="card" href="macro.html"><h3>Macroéconomie</h3><p>Inflation, taux, dette : le tableau de bord d'un pays et les leviers de l'État et de la banque centrale.</p></a>
+    <a class="card" href="economie-cycles.html"><h3>L'économie et les cycles</h3><p>Le circuit de l'argent et les cycles, expliqués avec Camille.</p></a>
+  </section>
+  <div class="chapitre"><div class="alerte"><strong>Comment lire ce parcours :</strong> chaque courant est présenté avec ses meilleurs arguments, ses limites et ses critiques, sans dire qui a raison. Les économistes eux-mêmes en débattent encore. Contenu pédagogique : ce n'est ni un conseil politique, ni un conseil en investissement.</div></div>
+
+  <!-- ================= CHAPITRE 1 ================= -->
+  <article class="chapitre" id="chap1">
+    <h2>Chapitre 1 : pourquoi des courants de pensée, et quels systèmes économiques ?</h2>
+    <p class="accroche">« Pourquoi deux économistes sérieux peuvent-ils donner des conseils opposés ? »</p>
+
+    <h3>Le même patient, plusieurs diagnostics</h3>
+    <p>Imagine un patient que trois médecins examinent. Ils voient les mêmes symptômes, mais l'un pense à une cause, l'autre à une autre, et leurs traitements diffèrent. En économie, c'est pareil : le « patient » est l'économie d'un pays, et on ne peut pas la mettre en laboratoire pour tester deux traitements. Les économistes se forment donc des visions différentes, qu'on appelle des <strong>courants de pensée</strong> (ou « écoles »).</p>
+    <p>Ces désaccords viennent surtout de quatre sources :</p>
+    <ul>
+      <li><strong>Les valeurs et les priorités</strong> : liberté individuelle, égalité, stabilité, croissance… ne pèsent pas pareil pour tous.</li>
+      <li><strong>Les hypothèses sur les comportements</strong> : les gens sont-ils rationnels ? les marchés se corrigent-ils vite ?</li>
+      <li><strong>L'horizon de temps</strong> : une mesure peut aider à court terme et poser problème à long terme.</li>
+      <li><strong>L'interprétation des faits</strong> : les mêmes chiffres peuvent se lire de plusieurs façons.</li>
+    </ul>
+    <p>Un point à retenir dès le départ : il y a ce qui <strong>est</strong> (les faits, mesurables) et ce qui <strong>devrait être</strong> (les choix de société, qui relèvent des valeurs). Beaucoup de débats mélangent les deux.</p>
+
+    <h3>Deux niveaux à ne pas confondre</h3>
+    <p>On parle souvent dans le même souffle de « capitalisme », de « socialisme » et de « keynésianisme ». Pourtant, ce ne sont pas des choses du même type :</p>
+    <ul>
+      <li>Un <strong>système économique</strong> décrit <em>comment une société organise la production</em> : qui possède les entreprises, qui décide de ce qu'on produit.</li>
+      <li>Un <strong>courant de pensée</strong> est une <em>façon d'analyser</em> l'économie et d'en tirer des politiques. On verra les principaux dans les chapitres 2 à 6.</li>
+    </ul>
+
+    <h3>Les trois grands systèmes</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>Capitalisme</th><th>Socialisme</th><th>Économie mixte</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Qui possède les entreprises ?</th><td>Surtout des personnes et des sociétés privées</td><td>La collectivité ou l'État, en tout ou en grande partie</td><td>Un mélange : secteur privé dominant, avec un secteur public important</td></tr>
+          <tr><th scope="row">Qui décide de ce qu'on produit ?</th><td>Les entreprises, selon la demande et le profit attendu</td><td>Un plan collectif ou démocratique, plus ou moins centralisé</td><td>Le marché, encadré par des règles et des services publics</td></tr>
+          <tr><th scope="row">Comment les prix se fixent-ils ?</th><td>Par l'offre et la demande</td><td>Par le plan, ou par un marché régulé selon les variantes</td><td>Le plus souvent par le marché, avec des prix régulés pour certains biens</td></tr>
+          <tr><th scope="row">Les arguments de ses partisans</th><td>Innovation, efficacité, liberté d'entreprendre, incitations à travailler et à investir</td><td>Moins d'inégalités, priorité aux besoins collectifs, stabilité de l'emploi</td><td>Concilier efficacité du marché et protection sociale</td></tr>
+          <tr><th scope="row">Les critiques qu'on lui adresse</th><td>Inégalités, crises récurrentes, pollution, pouvoir des grandes entreprises</td><td>Difficulté à coordonner sans prix (information, incitations), pénuries, limites aux libertés dans plusieurs expériences historiques</td><td>Coût des dépenses publiques, dette, lourdeur administrative, débat permanent sur la juste taille de l'État</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Dans la réalité, les systèmes sont rarement « purs ». La France, l'Allemagne, les pays nordiques ou les États-Unis sont des économies de marché avec une part d'État plus ou moins grande (assurance maladie, retraites, éducation, régulation). Le mot « socialisme » recouvre des réalités très différentes : la planification de l'Union soviétique (dissoute en 1991), le « socialisme de marché » de la Chine (qui a ouvert son économie à partir de 1978), ou la social-démocratie, qui accepte le marché mais redistribue davantage. Pour la France, on parle des « Trente Glorieuses » (1945-1975) comme d'une période de forte croissance dans une économie mixte.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 210" role="img" aria-label="Frise des grandes dates : 1776 Adam Smith, 1867 Marx, 1871 révolution marginaliste, 1936 Keynes, 1942 Schumpeter, 1962 Friedman, années 1970 stagflation, 2008 crise financière">
+        <text x="380" y="22" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Quelques repères dans le temps</text>
+        <line x1="30" y1="105" x2="730" y2="105" stroke="#102A56" stroke-width="3"/>
+        <g fill="#C5A059" stroke="#FFFFFF" stroke-width="2">
+          <circle cx="60" cy="105" r="9"/><circle cx="170" cy="105" r="9"/><circle cx="260" cy="105" r="9"/><circle cx="360" cy="105" r="9"/><circle cx="450" cy="105" r="9"/><circle cx="540" cy="105" r="9"/><circle cx="630" cy="105" r="9"/><circle cx="715" cy="105" r="9"/>
+        </g>
+        <g font-size="13" font-weight="700" fill="#102A56" text-anchor="middle">
+          <text x="60" y="85">1776</text><text x="170" y="85">1867</text><text x="260" y="85">1871</text><text x="360" y="85">1936</text><text x="450" y="85">1942</text><text x="540" y="85">1962</text><text x="630" y="85">1970s</text><text x="715" y="85">2008</text>
+        </g>
+        <g font-size="12" fill="#1F2937" text-anchor="middle">
+          <text x="60" y="130">Smith,</text><text x="60" y="146">La Richesse</text><text x="60" y="162">des nations</text>
+          <text x="170" y="130">Marx,</text><text x="170" y="146">Le Capital</text>
+          <text x="260" y="130">Menger,</text><text x="260" y="146">Jevons,</text><text x="260" y="162">Walras</text>
+          <text x="360" y="130">Keynes,</text><text x="360" y="146">Théorie</text><text x="360" y="162">générale</text>
+          <text x="450" y="130">Schumpeter,</text><text x="450" y="146">destruction</text><text x="450" y="162">créatrice</text>
+          <text x="540" y="130">Friedman,</text><text x="540" y="146">Capitalisme</text><text x="540" y="162">et liberté</text>
+          <text x="630" y="130">Chocs</text><text x="630" y="146">pétroliers,</text><text x="630" y="162">stagflation</text>
+          <text x="715" y="130">Crise</text><text x="715" y="146">financière</text>
+        </g>
+        <text x="380" y="195" text-anchor="middle" font-size="12" fill="#4B5563">Les dates sont celles des œuvres ou des événements marquants, pas des « débuts » stricts d'un courant.</text>
+      </svg>
+      <figcaption>Chaque courant naît en général d'une époque, de ses problèmes et de ses crises.</figcaption>
+    </figure>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Les économistes divergent à cause de leurs valeurs, de leurs hypothèses, de l'horizon de temps et de la lecture des faits.</li>
+        <li>Un système (capitalisme, socialisme, économie mixte) n'est pas un courant de pensée.</li>
+        <li>Presque toutes les économies réelles sont mixtes : le débat porte sur le « dosage ».</li>
+      </ul>
+    </div>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Courant (ou école) de pensée</dt><dd>Un groupe d'économistes qui partagent des idées sur le fonctionnement de l'économie.</dd>
+      <dt>Système économique</dt><dd>La façon dont une société organise la production : propriété, décisions, prix.</dd>
+      <dt>Économie mixte</dt><dd>Une économie qui combine marché et intervention de l'État.</dd>
+      <dt>Moyens de production</dt><dd>Les usines, les machines, les terres, les outils avec lesquels on produit.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="2">
+      <p>1. Quelle est la différence entre un système économique et un courant de pensée ?</p>
+      <button>Il n'y en a aucune</button>
+      <button>Le système est une théorie, le courant est un pays</button>
+      <button>Le système décrit comment une société organise la production, le courant est une façon d'analyser l'économie</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>2. Dans une économie mixte, qui décide de ce qu'on produit ?</p>
+      <button>Uniquement l'État</button>
+      <button>Surtout le marché, encadré par des règles et des services publics</button>
+      <button>Uniquement les entreprises, sans aucune règle</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>3. Pourquoi deux économistes sérieux peuvent-ils être en désaccord ?</p>
+      <button>À cause de valeurs, d'hypothèses, d'horizons de temps et d'interprétations différents</button>
+      <button>Parce que l'un d'eux ne connaît pas les chiffres</button>
+      <button>Parce que l'économie est une science exacte</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Qui a eu l'idée que les marchés s'organisent d'eux-mêmes, et qui l'a contestée ?</strong> C'est l'objet du chapitre 2.</p>
+    <div class="pager">
+      <a href="index.html">← Accueil</a>
+      <a class="next" href="#chap2">Chapitre 2 →</a>
+    </div>
+  </article>
+
+  <!-- ================= CHAPITRE 2 ================= -->
+  <article class="chapitre" id="chap2">
+    <h2>Chapitre 2 : les fondateurs, Adam Smith, Ricardo, Say… et Karl Marx</h2>
+    <p class="accroche">« Un boulanger travaille pour lui, pourquoi cela profite-t-il à tous ? »</p>
+
+    <h3>Adam Smith : la division du travail et la concurrence</h3>
+    <p>Adam Smith (1723-1790), philosophe écossais, publie en 1776 <em>La Richesse des nations</em>, souvent considéré comme l'acte de naissance de l'économie moderne. Son idée centrale : les richesses d'un pays viennent surtout du <strong>travail</strong> et de sa <strong>spécialisation</strong>. Il prend l'exemple d'une fabrique d'épingles : en divisant la fabrication en une vingtaine d'opérations, dix ouvriers peuvent produire environ 48 000 épingles par jour, alors que chacun, seul, n'en ferait qu'une poignée.</p>
+    <p>Camille ne fabrique pas sa farine, elle ne cultive pas son blé : elle se spécialise dans le pain, et d'autres se spécialisent ailleurs. Chacun poursuit son intérêt, et la <strong>concurrence</strong> oblige à bien faire pour attirer des clients. Smith résume l'idée par la « main invisible » : en cherchant son propre intérêt, chacun contribue sans le vouloir au bien de tous, à condition que la concurrence joue.</p>
+    <div class="alerte"><strong>À ne pas caricaturer :</strong> Smith n'était pas un défenseur de l'égoïsme. Il avait écrit en 1759 une <em>Théorie des sentiments moraux</em> sur la sympathie et la morale, et il confiait à l'État des rôles essentiels (justice, défense, infrastructures). La « main invisible » n'apparaît que quelques fois dans son œuvre.</div>
+
+    <h3>Ricardo et Say : le commerce et les débouchés</h3>
+    <ul>
+      <li><strong>David Ricardo</strong> (1772-1823) défend, dans ses <em>Principes</em> (1817), l'idée d'<strong>avantage comparatif</strong> : deux pays (ou deux personnes) ont intérêt à échanger même si l'un est meilleur partout.</li>
+      <li><strong>Jean-Baptiste Say</strong> (1767-1832) formule la « loi des débouchés » : produire crée des revenus, donc de la demande. L'offre créerait donc sa propre demande. Cette idée sera fortement contestée plus tard par Keynes (chapitre 4).</li>
+    </ul>
+    <p><strong>Un exemple d'avantage comparatif.</strong> En une heure, Camille peut cuire 20 baguettes ou ranger 10 rayonnages ; Léa peut cuire 5 baguettes ou en ranger 8. Camille est meilleure dans les deux. Pourtant, pour Camille, ranger un rayonnage « coûte » 2 baguettes ; pour Léa, il ne coûte que 0,6 baguette. Si Camille cuit et que Léa range, elles obtiennent ensemble 20 baguettes et 8 rayonnages rangés en une heure chacune. Si c'est l'inverse, elles n'obtiennent que 5 baguettes et 10 rayonnages : la première répartition est nettement meilleure. C'est la logique du commerce entre pays : ce qui compte, c'est ce qu'on sacrifie, pas seulement ce qu'on sait faire.</p>
+
+    <h3>Les « classiques » : ce qu'ils ont en commun</h3>
+    <ul>
+      <li>L'économie est portée par le <strong>travail</strong> et l'<strong>épargne</strong> qui devient investissement.</li>
+      <li>Les <strong>marchés</strong> tendent à s'équilibrer d'eux-mêmes sur le long terme.</li>
+      <li>Une confiance dans la <strong>concurrence</strong> et le libre-échange, avec un État limité.</li>
+    </ul>
+
+    <h3>Karl Marx : la critique du capitalisme</h3>
+    <p>Karl Marx (1818-1883), philosophe et économiste allemand, publie avec Friedrich Engels le <em>Manifeste du parti communiste</em> (1848), puis <em>Le Capital</em> (livre I en 1867). Il observe l'industrialisation du XIXe siècle et en tire une analyse critique :</p>
+    <ul>
+      <li><strong>Deux grandes classes</strong> : ceux qui possèdent les moyens de production (les capitalistes) et ceux qui vendent leur travail (les salariés).</li>
+      <li><strong>La plus-value</strong> : selon Marx, le profit vient de la différence entre la valeur créée par le travail et le salaire versé.</li>
+      <li><strong>Les crises et la concentration</strong> : la concurrence pousse à accumuler et à concentrer le capital, et le système serait traversé de crises récurrentes.</li>
+      <li><strong>Une alternative</strong> : la propriété collective des moyens de production, vers une société sans classes.</li>
+    </ul>
+    <p>L'influence de Marx a été immense : mouvements ouvriers, syndicats, partis socialistes, et régimes se réclamant du marxisme-léninisme au XXe siècle. Ses critiques lui reprochent surtout une théorie de la valeur fondée sur le travail, que la plupart des économistes ont abandonnée, des prévisions non réalisées dans les économies avancées, et les difficultés d'incitations et d'information des économies planifiées. Ses défenseurs soulignent la pertinence de son analyse des inégalités, du pouvoir économique et des crises. Marx ne doit pas être confondu avec les régimes qui s'en sont réclamés : c'est un auteur, pas un système politique.</p>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Pour les classiques, spécialisation, concurrence et échange créent de la richesse.</li>
+        <li>Un pays gagne à échanger même s'il est meilleur partout : c'est l'avantage comparatif.</li>
+        <li>Marx critique le capitalisme (classes, plus-value, crises) et propose la propriété collective.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Les classiques s'intéressaient à ce qui fait grandir la richesse d'une nation sur le long terme (travail, capital, population). Malthus s'inquiétait de la croissance de la population face aux ressources ; Ricardo, de la rente foncière. Marx est parfois rangé parmi les derniers « classiques » parce qu'il part de leur cadre (la valeur-travail) pour en tirer des conclusions opposées.</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Main invisible</dt><dd>L'idée que la recherche de l'intérêt personnel, dans un cadre concurrentiel, peut profiter à l'ensemble.</dd>
+      <dt>Division du travail</dt><dd>La répartition d'une production en tâches spécialisées.</dd>
+      <dt>Avantage comparatif</dt><dd>Le fait de se spécialiser là où son désavantage relatif est le plus faible.</dd>
+      <dt>Plus-value (chez Marx)</dt><dd>La part de la valeur créée par le travail qui n'est pas payée en salaire, selon lui.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Dans quel ouvrage Adam Smith expose-t-il sa théorie de la richesse (1776) ?</p>
+      <button>Le Capital</button>
+      <button>La Richesse des nations</button>
+      <button>La Théorie générale</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Que veut dire « avantage comparatif » ?</p>
+      <button>On a intérêt à se spécialiser là où son désavantage relatif est le plus faible</button>
+      <button>Il faut être meilleur que les autres dans tous les domaines</button>
+      <button>Il faut éviter tout échange avec l'étranger</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. Selon Marx, la société est divisée en deux grandes classes. Lesquelles ?</p>
+      <button>Les riches et les pauvres, sans autre critère</button>
+      <button>Les jeunes et les anciens</button>
+      <button>Ceux qui possèdent les moyens de production et ceux qui vendent leur travail</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Et si la valeur d'un bien ne venait pas du travail, mais de l'usage qu'on en fait ?</strong> C'est ce que propose le chapitre 3.</p>
+    <div class="pager">
+      <a href="#chap1">← Chapitre 1</a>
+      <a class="next" href="#chap3">Chapitre 3 →</a>
+    </div>
+  </article>
+
+  <!-- ================= CHAPITRE 3 ================= -->
+  <article class="chapitre" id="chap3">
+    <h2>Chapitre 3 : le marché au centre, néoclassiques, école autrichienne et Schumpeter</h2>
+    <p class="accroche">« Comment un prix se fixe-t-il, et à quoi sert-il ? »</p>
+
+    <h3>La révolution marginaliste : la valeur vient de l'utilité</h3>
+    <p>Dans les années 1870, trois économistes, presque en même temps et sans se concerter, changent la façon de penser la valeur : Carl Menger (Vienne, 1871), William Stanley Jevons (Angleterre, 1871) et Léon Walras (Lausanne, 1874). Leur idée : un bien vaut ce qu'il apporte comme satisfaction <strong>à la marge</strong>, c'est-à-dire pour l'<em>unité supplémentaire</em>. Alfred Marshall (1890) y ajoute les courbes d'offre et de demande que l'on apprend encore aujourd'hui.</p>
+    <p>Un exemple : la première baguette que Camille mange à midi lui est très utile. La deuxième l'est moins, la troisième encore moins. Elle n'achètera une baguette de plus que si sa satisfaction vaut au moins le prix. Les prix se forment donc par la rencontre de ce que les acheteurs acceptent de payer pour une unité de plus et de ce qu'il en coûte aux vendeurs pour la produire. C'est la base de ce qu'on appelle l'économie <strong>néoclassique</strong> : des individus qui comparent des coûts et des avantages, des marchés qui tendent vers un prix d'équilibre, et une analyse mathématique.</p>
+
+    <h3>L'école autrichienne : le prix comme message</h3>
+    <p>L'école « autrichienne » naît avec Menger et se poursuit avec Eugen von Böhm-Bawerk, Ludwig von Mises (<em>L'Action humaine</em>, 1949) et Friedrich Hayek (1899-1992, Nobel d'économie en 1974, auteur de <em>La Route de la servitude</em>, 1944). Ses idées de base :</p>
+    <ul>
+      <li><strong>La valeur est subjective</strong> : elle dépend des préférences de chacun, pas d'une valeur objective.</li>
+      <li><strong>Le prix transmet de l'information.</strong> Personne ne connaît à lui seul tout ce que savent des millions d'acteurs. Un prix qui monte dit « ce bien devient rare » et pousse chacun à s'adapter, sans qu'un chef d'orchestre ait besoin de tout savoir. D'où la méfiance de Mises et de Hayek envers la planification centrale (le « problème du calcul économique », posé par Mises en 1920).</li>
+      <li><strong>La monnaie et le crédit comptent.</strong> Selon la théorie autrichienne du cycle, un crédit trop facile (des taux artificiellement bas) pousse à des investissements qui ne se justifient pas, les « malinvestissements » ; la crise vient alors corriger ces erreurs.</li>
+      <li><strong>Une méfiance envers l'intervention de l'État et des banques centrales</strong>, à des degrés divers : Mises et ses héritiers radicaux (comme Murray Rothbard) sont très opposés à l'intervention, Hayek plus nuancé.</li>
+    </ul>
+    <p>Aujourd'hui, la grande majorité des économistes professionnels ne se disent pas autrichiens, et l'école est considérée comme <strong>hétérodoxe</strong> (en dehors du courant dominant). On lui reproche notamment de faire peu de place aux méthodes mathématiques et à la vérification statistique. Ses défenseurs répondent que ses intuitions (information dispersée, rôle des prix, dangers du crédit facile) ont influencé les autres courants.</p>
+
+    <h3>Schumpeter : la « destruction créatrice »</h3>
+    <p>Joseph Schumpeter (1883-1950), économiste autrichien installé aux États-Unis, ne rentre dans aucune case. Pour lui, le capitalisme n'est pas un équilibre calme mais un <strong>processus permanent de changement</strong>, porté par l'<strong>entrepreneur innovateur</strong>. Dans <em>Capitalisme, socialisme et démocratie</em> (1942), il parle de <strong>destruction créatrice</strong> : les innovations détruisent d'anciennes activités pour en créer de nouvelles.</p>
+    <p>L'automobile a fait disparaître les métiers de l'attelage, la photographie numérique a emporté la pellicule (Kodak), les plateformes en ligne ont bousculé les commerces traditionnels. Le profit n'est pas un « vol » ni une simple rente : c'est une récompense temporaire pour celui qui innove, que ses concurrents finissent par rattraper. Schumpeter pensait aussi que le capitalisme pourrait s'affaiblir par ses propres succès (bureaucratisation, hostilité d'une partie des élites), une thèse qui reste débattue.</p>
+    <p>Pour un investisseur, c'est la raison pour laquelle un avantage concurrentiel (un « moat », voir la page <a href="actions.html#moat">Actions</a>) n'est jamais éternel : l'innovation d'un concurrent peut le dissoudre.</p>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Pour les néoclassiques, les prix se forment par l'utilité marginale et la rencontre de l'offre et de la demande.</li>
+        <li>Pour les Autrichiens, les prix transmettent une information qu'aucun planificateur ne peut rassembler.</li>
+        <li>Pour Schumpeter, l'innovation détruit et crée sans cesse : le changement, pas l'équilibre, est la norme.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Les trois pôles néoclassiques (Lausanne avec Walras et Pareto, Cambridge avec Marshall, Vienne avec Menger) ont fondé l'économie « standard » enseignée aujourd'hui, avec ses modèles d'équilibre. Hayek et Keynes ont débattu pendant les années 1930, dans une rivalité intellectuelle courtoise : Hayek mettait l'accent sur les distorsions causées par le crédit, Keynes sur l'insuffisance de la demande.</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Utilité marginale</dt><dd>La satisfaction supplémentaire apportée par une unité de plus d'un bien.</dd>
+      <dt>Néoclassique</dt><dd>Le courant qui explique les prix par l'utilité marginale et l'équilibre entre offre et demande.</dd>
+      <dt>Hétérodoxe</dt><dd>Qui s'écarte de la pensée économique dominante.</dd>
+      <dt>Destruction créatrice</dt><dd>Le processus par lequel les innovations détruisent d'anciennes activités et en créent de nouvelles.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="0">
+      <p>1. Pour les économistes marginalistes, un bien vaut…</p>
+      <button>Ce qu'apporte son unité supplémentaire à celui qui l'acquiert</button>
+      <button>Le nombre d'heures de travail qu'il a fallu pour le fabriquer</button>
+      <button>Le prix fixé par l'État</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>2. Pourquoi Hayek est-il méfiant envers la planification centrale ?</p>
+      <button>Parce qu'elle est toujours plus chère</button>
+      <button>Parce que les marchés n'ont besoin d'aucune règle</button>
+      <button>Parce qu'aucun planificateur ne peut rassembler l'information dispersée que transmettent les prix</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Que signifie « destruction créatrice » chez Schumpeter ?</p>
+      <button>Les crises détruisent forcément l'économie</button>
+      <button>Les innovations font disparaître d'anciennes activités et en créent de nouvelles</button>
+      <button>L'État détruit les entreprises pour en créer d'autres</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Et si, malgré des prix flexibles, plus personne n'achetait et l'économie restait bloquée ?</strong> C'est la question de Keynes, au chapitre 4.</p>
+    <div class="pager">
+      <a href="#chap2">← Chapitre 2</a>
+      <a class="next" href="#chap4">Chapitre 4 →</a>
+    </div>
+  </article>
+
+  <!-- ================= CHAPITRE 4 ================= -->
+  <article class="chapitre" id="chap4">
+    <h2>Chapitre 4 : Keynes, quand personne n'achète</h2>
+    <p class="accroche">« Et si le vrai problème, c'était un manque de clients ? »</p>
+
+    <h3>Le choc de 1929</h3>
+    <p>Après le krach de 1929, l'économie mondiale s'effondre. Aux États-Unis, le chômage grimpe jusqu'à environ un quart de la population active en 1933. Selon la vision classique, le marché devait se corriger de lui-même : les prix et les salaires allaient baisser, les entreprises allaient réembaucher. Pourtant, la crise dure des années.</p>
+    <p>John Maynard Keynes (1883-1946), économiste britannique, propose en 1936, dans sa <em>Théorie générale de l'emploi, de l'intérêt et de la monnaie</em>, une explication différente.</p>
+
+    <h3>L'idée centrale : c'est la demande qui commande</h3>
+    <p>Reprenons le village de Camille. Ses clients ont peur et dépensent moins. Camille vend moins de pain, elle réduit les heures de Léa. Léa, moins payée, dépense moins chez Inès, la coiffeuse. Inès commande moins de produits, et ainsi de suite : la <strong>chute de la demande</strong> alimente une spirale. Pour Keynes, une économie peut rester bloquée dans une situation de chômage durable, sans que le marché la remette automatiquement debout, parce que :</p>
+    <ul>
+      <li>les <strong>prix et les salaires sont rigides</strong> à la baisse (on réduit rarement un salaire) ;</li>
+      <li>l'épargne ne se transforme pas toujours en investissement, notamment quand les entreprises ne voient pas de clients ;</li>
+      <li>l'<strong>incertitude</strong> et les émotions, que Keynes appelle les « <strong>esprits animaux</strong> » (animal spirits), influencent fortement l'investissement.</li>
+    </ul>
+    <p>Son remède : quand le privé n'achète plus, l'<strong>État peut prendre le relais</strong> en dépensant et en investissant (même en creusant le déficit), puis rembourser en période de reprise. La banque centrale peut aussi baisser ses taux pour encourager le crédit. Un euro dépensé par l'État devient le revenu de quelqu'un, qui en dépense une partie à son tour : c'est le <strong>multiplicateur</strong>.</p>
+    <p>Dans un modèle très simplifié, si chacun dépense 80 % de tout euro reçu, le multiplicateur théorique est de 1 ÷ (1 − 0,8) = 5 : 1 € dépensé peut en générer jusqu'à 5 € d'activité au total. Dans la réalité, il est bien plus faible, car une partie de l'argent est épargnée, taxée ou dépensée à l'étranger, et l'effet dépend du contexte.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 150" role="img" aria-label="Schéma keynésien : la demande baisse, les entreprises produisent et embauchent moins, les revenus baissent, la demande baisse encore ; l'État peut relancer le circuit">
+        <defs><marker id="k4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C5A059"/></marker></defs>
+        <text x="300" y="18" text-anchor="middle" font-size="14" font-weight="700" fill="#102A56">La spirale de la demande, vue par Keynes</text>
+        <g font-size="12" text-anchor="middle" fill="#1F2937">
+          <rect x="10" y="40" width="115" height="70" rx="8" fill="#FFFFFF" stroke="#102A56"/><text x="67" y="70" font-weight="700">La demande</text><text x="67" y="88">baisse</text>
+          <rect x="165" y="40" width="115" height="70" rx="8" fill="#FFFFFF" stroke="#102A56"/><text x="222" y="64" font-weight="700">Les entreprises</text><text x="222" y="80" font-weight="700">produisent et</text><text x="222" y="96" font-weight="700">embauchent moins</text>
+          <rect x="320" y="40" width="115" height="70" rx="8" fill="#FFFFFF" stroke="#102A56"/><text x="377" y="70" font-weight="700">Les revenus</text><text x="377" y="88">baissent</text>
+          <rect x="475" y="40" width="115" height="70" rx="8" fill="#FFFFFF" stroke="#C5A059" stroke-width="2"/><text x="532" y="64" font-weight="700">Moins de</text><text x="532" y="80" font-weight="700">dépenses :</text><text x="532" y="96" font-weight="700">on recommence</text>
+        </g>
+        <g stroke="#C5A059" stroke-width="3" marker-end="url(#k4)"><line x1="128" y1="75" x2="160" y2="75"/><line x1="283" y1="75" x2="315" y2="75"/><line x1="438" y1="75" x2="470" y2="75"/></g>
+        <text x="300" y="140" text-anchor="middle" font-size="12" fill="#4B5563">Pour Keynes, l'État peut interrompre la spirale en dépensant à la place du privé.</text>
+      </svg>
+      <figcaption>Un schéma simplifié : la logique est celle d'un cercle, qui peut tourner dans un sens ou dans l'autre.</figcaption>
+    </figure>
+
+    <h3>Une autre idée de Keynes : la Bourse comme concours de beauté</h3>
+    <p>Dans la <em>Théorie générale</em>, Keynes compare la Bourse à un concours de beauté où l'on gagne en choisissant non pas le plus beau visage, mais celui que les autres jugeront le plus beau. Autrement dit, un investisseur cherche souvent à deviner ce que les autres vont penser plutôt que la valeur réelle. C'est l'une des premières intuitions de ce qu'on appellera plus tard la <strong>finance comportementale</strong> (voir chapitre 6).</p>
+
+    <h3>L'héritage de Keynes</h3>
+    <ul>
+      <li>Keynes participe à la conférence de <strong>Bretton Woods</strong> (1944), qui organise le système monétaire de l'après-guerre.</li>
+      <li>Après 1945, l'idée que l'État peut stabiliser l'activité inspire les politiques économiques de nombreux pays pendant les « Trente Glorieuses ».</li>
+      <li>Ses successeurs bâtissent des outils (comme le modèle IS-LM) et une relation entre inflation et chômage (la courbe de Phillips).</li>
+      <li>Keynes ne prônait pas des déficits permanents : l'idée est de dépenser en récession et de redresser les comptes quand l'économie va mieux.</li>
+    </ul>
+    <p>Les critiques du keynésianisme sont aussi anciennes que lui : risque d'inflation, retards dans la décision et l'effet des mesures (quand la relance arrive, la crise est peut-être déjà passée), accumulation de dettes si l'on ne rembourse jamais, et « effet d'éviction » (l'emprunt public peut raréfier le crédit privé). Ces critiques ont pris de l'ampleur dans les années 1970 (chapitre 5).</p>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Pour Keynes, une économie peut rester bloquée faute de demande, sans se corriger seule.</li>
+        <li>En récession, l'État peut dépenser à la place du privé, grâce à l'effet multiplicateur.</li>
+        <li>Le but est de stabiliser le cycle : dépenser en creux, redresser les comptes en haut de cycle.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Le courant « post-keynésien » prolonge Keynes en insistant sur l'incertitude radicale et sur l'instabilité financière : l'économiste Hyman Minsky (1919-1996) a montré que les périodes de calme poussent à prendre plus de risques (donc à des excès) jusqu'au « moment Minsky » où le crédit se retourne. Cette idée est souvent citée à propos de la crise de 2008.</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Demande globale</dt><dd>L'ensemble des dépenses des ménages, des entreprises, de l'État et de l'étranger dans l'économie.</dd>
+      <dt>Multiplicateur</dt><dd>L'effet d'entraînement d'une dépense supplémentaire, qui devient le revenu de quelqu'un d'autre.</dd>
+      <dt>Esprits animaux</dt><dd>Les émotions, la confiance ou la peur qui poussent à investir ou à s'abstenir.</dd>
+      <dt>Politique contra-cyclique</dt><dd>Une politique qui soutient l'activité en creux de cycle et la freine en haut de cycle.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Selon Keynes, pourquoi une économie peut-elle rester bloquée ?</p>
+      <button>Parce que l'État dépense trop</button>
+      <button>Parce que la demande est insuffisante et que le marché ne la rétablit pas seul</button>
+      <button>Parce que les prix baissent trop vite</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>2. Que veut dire « multiplicateur » ?</p>
+      <button>Le nombre de fois où un gouvernement change de politique</button>
+      <button>Le nombre de produits fabriqués par une usine</button>
+      <button>L'effet d'entraînement d'une dépense, qui devient le revenu de quelqu'un d'autre</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>3. Keynes recommandait-il des déficits permanents ?</p>
+      <button>Non, l'idée est de dépenser en récession et de rétablir les comptes quand l'économie va mieux</button>
+      <button>Oui, quelle que soit la situation</button>
+      <button>Non, il refusait toute dépense publique</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Et si, dans les années 1970, la recette de Keynes ne marchait plus ?</strong> C'est le chapitre 5.</p>
+    <div class="pager">
+      <a href="#chap3">← Chapitre 3</a>
+      <a class="next" href="#chap5">Chapitre 5 →</a>
+    </div>
+  </article>
+
+  <!-- ================= CHAPITRE 5 ================= -->
+  <article class="chapitre" id="chap5">
+    <h2>Chapitre 5 : Friedman, le monétarisme et le retour du marché</h2>
+    <p class="accroche">« Et si l'État aggravait le problème qu'il veut résoudre ? »</p>
+
+    <h3>Les années 1970 : la stagflation</h3>
+    <p>Dans les années 1970, deux chocs pétroliers (1973 et 1979) font flamber les prix de l'énergie. Une situation que les keynésiens avaient du mal à expliquer apparaît : l'<strong>inflation</strong> s'envole alors que l'<strong>activité stagne</strong> et que le chômage monte. On l'appelle la <strong>stagflation</strong>. La relation simple entre inflation et chômage (la courbe de Phillips) semble ne plus fonctionner, et les critiques de Keynes prennent de l'ampleur.</p>
+
+    <h3>Milton Friedman et l'école de Chicago</h3>
+    <p>Milton Friedman (1912-2006), économiste américain, fondateur de l'« école de Chicago », reçoit le prix Nobel en 1976. Il publie <em>Capitalisme et liberté</em> en 1962 et, avec Anna Schwartz, une <em>Histoire monétaire des États-Unis</em> (1963). Ses idées principales :</p>
+    <ul>
+      <li><strong>La monnaie compte.</strong> Pour lui, l'inflation est « toujours et partout un phénomène monétaire » : elle apparaît quand la quantité de monnaie augmente plus vite que la production. La banque centrale doit donc contrôler la masse monétaire, par exemple selon une règle de croissance stable plutôt qu'au cas par cas. Il soutient aussi que la Grande Dépression a été aggravée par une contraction de la monnaie.</li>
+      <li><strong>Le chômage « naturel ».</strong> Il existe un niveau de chômage qu'on ne peut pas faire baisser durablement par la relance : essayer fait monter l'inflation, sans effet durable sur l'emploi.</li>
+      <li><strong>Méfiance envers les interventions de court terme.</strong> Les décisions publiques sont lentes, leurs effets retardés : une relance risque d'arriver au mauvais moment et d'aggraver les cycles.</li>
+      <li><strong>Un rôle plus limité de l'État</strong> et plus de liberté de marché. Dans <em>Capitalisme et liberté</em>, il soutient que la liberté économique est une condition de la liberté politique.</li>
+    </ul>
+    <p>Ses idées ont inspiré, directement ou indirectement, des politiques de privatisation, de baisse d'impôts et de dérégulation dans les années 1980 (États-Unis de Ronald Reagan, Royaume-Uni de Margaret Thatcher), même si leur lien exact avec ces politiques est débattu.</p>
+
+    <h3>Le test grandeur nature : Volcker</h3>
+    <p>En 1979, Paul Volcker prend la tête de la banque centrale américaine (la Fed) et relève fortement les taux d'intérêt pour casser l'inflation. Les États-Unis traversent une forte récession (le chômage approche 11 % fin 1982), mais l'inflation, qui était à environ 13,5 % en 1981, retombe à environ 3,2 % en 1983. Les partisans y voient la preuve qu'une banque centrale ferme peut vaincre l'inflation ; les critiques soulignent le coût social et se demandent si d'autres chemins étaient possibles.</p>
+
+    <h3>Après Friedman : anticipations et synthèse</h3>
+    <ul>
+      <li><strong>La nouvelle économie classique</strong> (Robert Lucas, Nobel 1995) introduit les <strong>anticipations rationnelles</strong> : si Camille sait que l'État va relancer, elle anticipe la hausse des prix et augmente ses tarifs à l'avance ; la politique perd alors une partie de son effet. C'est la « critique de Lucas » (1976).</li>
+      <li><strong>La nouvelle économie keynésienne</strong> (Joseph Stiglitz, George Akerlof, Gregory Mankiw…) reprend l'idée que les prix et les salaires sont rigides et que l'information est imparfaite, mais avec des bases solides en micro-économie : le marché ne se corrige pas toujours vite, d'où un rôle pour la politique économique.</li>
+    </ul>
+    <p>En pratique, la plupart des gouvernements et banques centrales d'aujourd'hui <strong>empruntent aux deux traditions</strong> : une banque centrale indépendante visant 2 % d'inflation (héritage monétariste), et des stabilisateurs budgétaires en cas de récession (héritage keynésien). C'est ce qu'on a vu avec la BCE : sa mission est la stabilité des prix, mais elle regarde aussi la croissance.</p>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Friedman insiste sur la monnaie : une inflation durable vient d'un excès de monnaie.</li>
+        <li>Il se méfie des relances de court terme et défend plus de marché.</li>
+        <li>Aujourd'hui, la politique économique combine des idées de plusieurs courants.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>Pour aller plus loin</summary>
+      <p>Friedman a aussi défendu des idées précises, comme l'impôt négatif sur le revenu ou les chèques-éducation, qui continuent de faire débat. Son influence s'est mesurée autant en politique qu'en théorie : certains de ses héritiers sont critiques envers l'idée d'une règle monétaire mécanique, d'autres l'ont défendue. Un exemple de débat actuel : comment une banque centrale doit-elle réagir à une inflation venue d'un choc d'énergie (voir chapitre 6) ?</p>
+    </details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Monétarisme</dt><dd>Le courant qui met la masse monétaire au centre de l'analyse de l'inflation.</dd>
+      <dt>Stagflation</dt><dd>La combinaison d'une forte inflation et d'une activité qui stagne.</dd>
+      <dt>Anticipations rationnelles</dt><dd>L'idée que les agents devinent les politiques à venir et ajustent leurs comportements à l'avance.</dd>
+      <dt>Chômage naturel</dt><dd>Le niveau de chômage qu'on ne peut pas faire baisser durablement par la relance, selon Friedman.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="0">
+      <p>1. Quelle est la thèse centrale de Friedman sur l'inflation ?</p>
+      <button>Elle est toujours liée à un excès de monnaie par rapport à la production</button>
+      <button>Elle vient toujours des salaires</button>
+      <button>Elle disparaît d'elle-même</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>2. Que montre l'épisode Volcker (1979-1983) pour les partisans de la rigueur monétaire ?</p>
+      <button>Que la hausse des taux aggrave toujours l'inflation</button>
+      <button>Que la relance par la dépense publique fonctionne toujours</button>
+      <button>Qu'une banque centrale ferme peut faire baisser l'inflation, au prix d'une récession</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Que dit la « critique de Lucas » ?</p>
+      <button>Que l'État doit toujours dépenser plus</button>
+      <button>Que si les agents anticipent la politique, elle peut perdre une partie de son effet</button>
+      <button>Que les prix sont fixés par la banque centrale</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Et aujourd'hui, face à une inflation d'origine énergétique ou à une dette élevée, que dirait chaque courant ?</strong> C'est l'objet du dernier chapitre.</p>
+    <div class="pager">
+      <a href="#chap4">← Chapitre 4</a>
+      <a class="next" href="#chap6">Chapitre 6 →</a>
+    </div>
+  </article>
+
+  <!-- ================= CHAPITRE 6 ================= -->
+  <article class="chapitre" id="chap6">
+    <h2>Chapitre 6 : aujourd'hui, et comment s'en servir</h2>
+    <p class="accroche">« Aucun courant n'a raison tout le temps : alors, à quoi servent-ils ? »</p>
+
+    <h3>De nouveaux regards sur l'économie</h3>
+    <ul>
+      <li><strong>L'économie comportementale</strong> (Daniel Kahneman, Nobel 2002 ; Richard Thaler, Nobel 2017) montre que les gens ne sont pas toujours rationnels : biais de perte, excès de confiance, effet de troupeau. Elle a donné les « coups de pouce » (<em>nudges</em>) en politique publique, et nourrit la compréhension des bulles financières (voir pages <a href="trading.html">Trading</a> et <a href="crypto.html">Cryptomonnaies</a>).</li>
+      <li><strong>L'instabilité financière</strong> (Hyman Minsky) : les périodes de calme poussent à l'endettement, ce qui prépare les crises. Le sujet est revenu au premier plan après 2008.</li>
+      <li><strong>Les inégalités</strong> : Thomas Piketty (<em>Le Capital au XXIe siècle</em>, 2013) a relancé le débat sur la concentration des patrimoines, en montrant que le rendement du capital peut durablement dépasser la croissance. Ses conclusions et ses méthodes sont discutées.</li>
+      <li><strong>L'économie écologique</strong> : elle prend en compte les limites des ressources et les « externalités » (coûts que subit la société sans que le prix les reflète), comme la pollution ou le carbone.</li>
+      <li><strong>La théorie monétaire moderne (MMT)</strong> : un État qui émet sa propre monnaie n'est pas contraint comme un ménage ; son vrai garde-fou est l'inflation. Ses critiques jugent qu'elle sous-estime les risques d'inflation et de perte de confiance.</li>
+      <li><strong>L'ordolibéralisme</strong> (école allemande, Walter Eucken) : un marché libre, mais dans un cadre de règles strictes (concurrence, stabilité monétaire). Il est souvent cité comme une influence de la construction de l'euro.</li>
+    </ul>
+
+    <h3>Un même problème, plusieurs lectures</h3>
+    <p>Voici, de façon très simplifiée, ce que chaque courant tend à suggérer face à trois situations. Ce sont des tendances générales, pas des citations : au sein d'un même courant, les économistes se divisent, et la plupart mêlent plusieurs approches.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>A. Une récession : la demande s'effondre</th><th>B. Une inflation due à un choc énergétique</th><th>C. Une dette publique élevée</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Classiques et néoclassiques</th><td>Laisser les prix et salaires s'ajuster et lever les rigidités ; le marché finit par retrouver l'équilibre</td><td>Laisser le prix de l'énergie jouer son rôle de signal de rareté, qui pousse à économiser et à substituer</td><td>Veiller à la soutenabilité et à l'effet d'éviction : l'emprunt public peut raréfier le crédit privé</td></tr>
+          <tr><th scope="row">École autrichienne</th><td>La crise corrige des erreurs passées (crédit trop facile) ; éviter de les prolonger par de nouvelles relances</td><td>Limiter la création monétaire, pour ne pas ajouter une inflation de monnaie à celle de l'énergie</td><td>Réduire le poids de l'État ; la dette publique favorise le gaspillage et peut mener à la monétisation</td></tr>
+          <tr><th scope="row">Keynésiens</th><td>L'État relance la demande (dépenses, investissements) et la banque centrale baisse ses taux</td><td>Distinguer choc d'offre et de demande : relever fortement les taux peut aggraver la récession ; soutenir ciblé les plus touchés</td><td>En récession, réduire trop vite le déficit peut aggraver la situation ; consolider quand l'économie va mieux</td></tr>
+          <tr><th scope="row">Monétaristes (Friedman)</th><td>Éviter une contraction de la monnaie ; privilégier une règle stable à la relance au cas par cas</td><td>Une inflation durable exige de contrôler la monnaie : resserrer pour ancrer les anticipations, au prix d'un ralentissement (comme Volcker)</td><td>Une dette élevée tente de pousser la banque centrale à créer de la monnaie : il faut de la discipline</td></tr>
+          <tr><th scope="row">Schumpeter</th><td>Les crises accélèrent la « destruction créatrice » : elles éliminent des activités dépassées et font place à l'innovation</td><td>Un prix de l'énergie élevé stimule l'innovation et l'efficacité énergétique</td><td>L'innovation et la croissance qu'elle porte sont le principal moyen d'alléger durablement le poids de la dette</td></tr>
+          <tr><th scope="row">Pratique actuelle (synthèse)</th><td>Une banque centrale qui baisse ses taux et un budget qui amortit le choc (stabilisateurs automatiques)</td><td>Une banque centrale indépendante qui vise 2 % ; elle pèse choc d'offre, anticipations et croissance, comme la BCE en 2026</td><td>Des règles de dette et de déficit, avec un équilibre entre rythme de réduction et soutien à l'activité (voir la page <a href="macro.html#dette">Macroéconomie</a>)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Une précision : Schumpeter a peu écrit de recommandations de politique conjoncturelle, donc sa ligne dans le tableau est une lecture de ce que son analyse suggère, pas un programme qu'il aurait défendu.</p>
+
+    <h3>Les pièges à éviter quand on débute</h3>
+    <ul>
+      <li><strong>Croire qu'un courant a « gagné ».</strong> Les débats évoluent avec les crises et les données : Keynes est revenu au premier plan après 2008, Friedman après les années 1970.</li>
+      <li><strong>Classer quelqu'un dans une case.</strong> Les économistes mélangent souvent plusieurs idées, et un même auteur évolue avec le temps.</li>
+      <li><strong>Les caricatures</strong> : Keynes n'est pas « toujours plus de dépenses », Friedman n'est pas « zéro État », Marx n'est pas l'Union soviétique, Smith n'est pas l'apologie de l'égoïsme.</li>
+      <li><strong>Confondre ce qui est et ce qui devrait être</strong> : une analyse peut être juste sur les faits sans répondre à la question « que doit-on faire ? », qui relève aussi de valeurs.</li>
+    </ul>
+
+    <h3>Pourquoi cela compte pour un investisseur</h3>
+    <ul>
+      <li><strong>Lire les décisions des banques centrales.</strong> Quand la BCE parle de « stabilité des prix » ou d'« ancrer les anticipations », on retrouve un vocabulaire monétariste. Quand un gouvernement parle de « soutenir la demande », on retrouve du Keynes. Comprendre l'héritage aide à comprendre la logique.</li>
+      <li><strong>Mieux juger les entreprises.</strong> La destruction créatrice de Schumpeter rappelle qu'un avantage durable n'existe pas (voir la page <a href="actions.html">Actions</a>).</li>
+      <li><strong>Mieux comprendre son comportement.</strong> Le concours de beauté de Keynes et l'économie comportementale aident à se méfier de l'effet de mode.</li>
+      <li><strong>Garder de la distance.</strong> Aucun portefeuille ne devrait reposer sur une seule idéologie : si ton raisonnement est « tel courant a raison, donc tel actif va monter », c'est un signal d'alarme.</li>
+    </ul>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Chaque courant éclaire une partie de la réalité, aucun ne l'explique entièrement.</li>
+        <li>La politique économique réelle combine plusieurs héritages : monétariste, keynésien, ordolibéral…</li>
+        <li>Mieux vaut comprendre les arguments de chacun que se ranger dans un camp.</li>
+      </ul>
+    </div>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Orthodoxe / hétérodoxe</dt><dd>Orthodoxe : le courant dominant. Hétérodoxe : les approches qui s'en écartent.</dd>
+      <dt>Économie comportementale</dt><dd>L'étude des biais et des émotions qui influencent les décisions économiques.</dd>
+      <dt>Externalité</dt><dd>Un coût ou un bénéfice subi par d'autres, sans qu'il soit inclus dans le prix.</dd>
+      <dt>Choc d'offre</dt><dd>Une perturbation qui touche la production ou les coûts, comme une hausse brutale de l'énergie.</dd>
+    </dl>
+
+    <h3>Teste-toi</h3>
+    <div class="q" data-good="2">
+      <p>1. Face à une récession, quelle réponse est la plus typique d'une approche keynésienne ?</p>
+      <button>Attendre que le marché se corrige seul</button>
+      <button>Réduire immédiatement les dépenses publiques</button>
+      <button>Soutenir la demande par la dépense publique et des taux plus bas</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Quelle idée est le plus liée à Schumpeter ?</p>
+      <button>La destruction créatrice</button>
+      <button>Le multiplicateur</button>
+      <button>La main invisible</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Parmi ces phrases, laquelle est une caricature à éviter ?</p>
+      <button>« Les économistes divergent à cause de valeurs et d'hypothèses différentes. »</button>
+      <button>« Marx, c'est l'Union soviétique. »</button>
+      <button>« La plupart des politiques actuelles combinent plusieurs traditions. »</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <p style="margin-top:1.5rem"><strong>Pour la suite du chemin Comprendre :</strong> la géopolitique, ou comment les tensions entre pays touchent les prix et les marchés.</p>
+    <div class="pager">
+      <a href="#chap5">← Chapitre 5</a>
+      <a class="next" href="geopolitique.html">Géopolitique →</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+
+<script>
+var t=document.querySelector('.menu-toggle'),n=document.querySelector('nav');
+if(t&&n){t.addEventListener('click',function(){n.classList.toggle('mobile-open');});}
+document.querySelectorAll('.q').forEach(function(q){
+  var good=+q.dataset.good,btns=q.querySelectorAll('button'),fb=q.querySelector('.fb');
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.disabled=true});
+      btns[good].classList.add('good');
+      if(i===good){fb.textContent="Bravo, c'est la bonne réponse.";}
+      else{b.classList.add('bad');fb.textContent="Pas tout à fait : la bonne réponse est « "+btns[good].textContent+" ».";}
+    });
+  });
+});
+</script>
+</body>
+</html>
