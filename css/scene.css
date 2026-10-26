@@ -6,7 +6,7 @@
    <section class="scene scene-hero img-gold"> ... </section>
    <div class="scene scene-banner img-fed" role="img" aria-label="..."></div>
 
-   Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap, img-accueil, img-monnaie, img-crypto, img-obligations, img-scpi, img-fiscalite, img-transmission, img-montres
+   Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap, img-accueil, img-monnaie, img-crypto, img-obligations, img-scpi, img-fiscalite, img-transmission, img-art, img-montres
    Variantes (attribut data-motion) : "drift" (par défaut), "pan" (balayage horizontal, pour les cartes),
    "loop" (défilement continu et sans coupure, pour une image conçue en tuile, comme img-accueil)
    Classe .scene--gleam : un reflet doré traverse lentement l'image (pour l'or)
@@ -26,6 +26,7 @@
 .img-scpi      { --img: url(../images/scene-scpi.webp); }
 .img-fiscalite  { --img: url(../images/scene-fiscalite.webp); }
 .img-transmission{ --img: url(../images/scene-transmission.webp); }
+.img-art       { --img: url(../images/scene-art.webp); }
 .img-montres   { --img: url(../images/scene-montres.webp); }
 /* Fond sobre (dégradé marine) en attendant une image dédiée : à remplacer par url(../images/scene-xxx.webp) */
 .img-sobre     { --img: linear-gradient(135deg, #0A1C3B 0%, #17335f 100%); }
