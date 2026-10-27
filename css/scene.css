@@ -6,7 +6,7 @@
    <section class="scene scene-hero img-gold"> ... </section>
    <div class="scene scene-banner img-fed" role="img" aria-label="..."></div>
 
-   Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap, img-accueil, img-monnaie, img-crypto, img-obligations, img-scpi, img-fiscalite, img-transmission, img-art, img-vin, img-autos, img-trading, img-montres
+   Images : img-gold, img-fed, img-bce, img-brent, img-wallstreet, img-worldmap, img-accueil, img-monnaie, img-crypto, img-obligations, img-scpi, img-fiscalite, img-transmission, img-art, img-vin, img-autos, img-trading, img-pe, img-courants, img-macro, img-etudes, img-montres
    Variantes (attribut data-motion) : "drift" (par défaut), "pan" (balayage horizontal, pour les cartes),
    "loop" (défilement continu et sans coupure, pour une image conçue en tuile, comme img-accueil)
    Classe .scene--gleam : un reflet doré traverse lentement l'image (pour l'or)
@@ -31,6 +31,10 @@
 .img-autos    { --img: url(../images/scene-autos.webp); }
 .img-montres   { --img: url(../images/scene-montres.webp); }
 .img-trading   { --img: url(../images/scene-trading.webp); }
+.img-pe       { --img: url(../images/scene-private-equity.webp); }
+.img-courants { --img: url(../images/scene-courants.webp); }
+.img-macro    { --img: url(../images/scene-macro.webp); }
+.img-etudes   { --img: url(../images/scene-etudes.webp); }
 /* Fond sobre (dégradé marine) en attendant une image dédiée : à remplacer par url(../images/scene-xxx.webp) */
 .img-sobre     { --img: linear-gradient(135deg, #0A1C3B 0%, #17335f 100%); }
 
@@ -173,7 +177,10 @@
 .scene-hero.img-scpi::after,
 .scene-hero.img-fiscalite::after,
 .scene-hero.img-transmission::after,
-.scene-hero.img-trading::after {
+.scene-hero.img-trading::after,
+.scene-hero.img-pe::after,
+.scene-hero.img-macro::after,
+.scene-hero.img-etudes::after {
     background: linear-gradient(180deg, rgba(10, 28, 59, 0.70) 0%, rgba(10, 28, 59, 0.86) 100%);
 }
 
