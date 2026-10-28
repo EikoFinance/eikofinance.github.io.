@@ -62,9 +62,9 @@
         title: 'Mesurer',
         tagline: 'Simuler pour décider avec des chiffres',
         items: [
-          { title: 'Simulation Monte Carlo', file: 'outils.html',
-            desc: "L'application Android qui teste des milliers d'évolutions possibles d'un portefeuille." },
-          { title: 'Intérêts composés', file: 'outils.html',
+          { title: 'Simulation Monte Carlo', file: 'monte-carlo.html',
+            desc: "Le simulateur en ligne et l'application Android qui testent des milliers d'évolutions possibles d'un portefeuille." },
+          { title: 'Intérêts composés', file: 'interets-composes.html',
             desc: 'Voir comment le temps et la régularité font grandir un capital.' }
         ]
       },
