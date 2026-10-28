@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulation Monte Carlo - EikoFinance</title>
+<meta name="description" content="Simulateur Monte Carlo en ligne et application Android : comprendre la méthode, lire les résultats et connaître ses limites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<style>
+.download{background:var(--bg-subtle);border-top:4px solid var(--gold-accent);border-radius:8px;padding:1.5rem;text-align:center;margin:1rem 0 2rem}
+.download h3{margin-top:0}
+.download p{color:var(--text-muted);margin-bottom:1.2rem}
+.download small{display:block;margin-top:.9rem;color:var(--text-muted)}
+.simulator-embed{margin:1rem 0 2rem;border:1px solid #d9dee5;border-radius:8px;overflow:hidden;background:#fff}
+.simulator-embed iframe{display:block;width:100%;height:1000px;border:0;background:#fff}
+.simulator-open{display:inline-block;margin:0 0 1rem;color:var(--primary-blue);font-weight:700}
+</style>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#mesurer">Mesurer</a> › Simulation Monte Carlo</p>
+
+  <section class="scene scene-hero img-sobre">
+    <h1>Simulation Monte Carlo : explorer des milliers d'avenirs possibles</h1>
+    <p>Au lieu de parier sur un seul scénario, teste des milliers de trajectoires pour ton portefeuille : utilise le simulateur en ligne ou télécharge l'application Android.</p>
+    <a href="#simulateur" class="btn-gold">Ouvrir le simulateur</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la page">
+    <a class="card" href="#simulateur"><h3>Le simulateur en ligne</h3><p>Lance une simulation dans ton navigateur.</p></a>
+    <a class="card" href="#android"><h3>Application Android</h3><p>Télécharge et installe l'APK.</p></a>
+    <a class="card" href="#comprendre"><h3>C'est quoi ?</h3><p>Le principe, avec des exemples chiffrés.</p></a>
+    <a class="card" href="#lire"><h3>Lire les résultats</h3><p>Médiane, fourchette, probabilité de succès.</p></a>
+    <a class="card" href="#limites"><h3>Les limites</h3><p>Ce que la simulation ne sait pas faire.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Cinq questions pour vérifier.</p></a>
+  </section>
+
+  <article class="chapitre">
+
+    <h2 id="simulateur">Le simulateur Monte Carlo en ligne</h2>
+    <p class="accroche">« Et si, au lieu de prédire un seul avenir, on en simulait des milliers ? »</p>
+    <p>Lance une simulation directement dans ton navigateur. Les données saisies restent privées et sont enregistrées uniquement dans ton navigateur.</p>
+    <div class="simulator-embed">
+      <iframe src="simulateur-monte-carlo.html" title="Simulateur Monte Carlo EikoFinance" loading="lazy" allow="clipboard-read; clipboard-write"></iframe>
+    </div>
+    <a class="simulator-open" href="simulateur-monte-carlo.html" target="_blank" rel="noopener">Ouvrir le simulateur dans un nouvel onglet</a>
+
+    <details>
+      <summary>Les sept onglets du simulateur, en un coup d'œil</summary>
+      <ul class="liste">
+        <li><strong>Allocation</strong> : tu saisis la composition de ton portefeuille (actifs, poids, rendement attendu et volatilité de chacun).</li>
+        <li><strong>Simulation</strong> : tu fixes le capital initial, l'horizon, les versements et le nombre de simulations, puis tu lances.</li>
+        <li><strong>Pistes d'équilibrage</strong> : des idées pour limiter la volatilité ou chercher plus de performance, selon ton profil.</li>
+        <li><strong>Stratégie et DCA</strong> : un plan d'achats réguliers et un calcul de rééquilibrage vers une allocation cible.</li>
+        <li><strong>Ressources</strong> : des portefeuilles de référence et des listes d'ETF courants pour t'inspirer.</li>
+        <li><strong>Notes personnelles</strong> : un espace libre, sauvegardé sur ton appareil.</li>
+        <li><strong>Profil et réglages</strong> : ton profil investisseur, l'apparence, la langue et la devise.</li>
+      </ul>
+    </details>
+
+    <h2 id="android">L'application Android</h2>
+    <div class="download">
+      <h3>Application EikoFinance, Monte Carlo</h3>
+      <p>Lance des simulations de Monte Carlo sur ton smartphone Android.</p>
+      <!-- Remplace le nom du fichier par celui de ton APK, placé dans le dossier downloads/ -->
+      <a class="btn-gold" href="downloads/eiko-montecarlo.apk" download>Télécharger l'APK</a>
+      <small>Compatible Android uniquement (non disponible sur iPhone).</small>
+    </div>
+    <h3>Comment l'installer</h3>
+    <ol>
+      <li>Ouvre cette page depuis ton téléphone Android et appuie sur « Télécharger l'APK ».</li>
+      <li>Une fois le fichier téléchargé, ouvre-le depuis la notification ou le dossier « Téléchargements ».</li>
+      <li>Si Android te le demande, autorise ton navigateur à installer des applications inconnues (Paramètres &gt; Applications &gt; Accès spécial).</li>
+      <li>Valide l'installation, puis ouvre l'application.</li>
+    </ol>
+    <div class="alerte"><strong>Sécurité :</strong> cette application est distribuée directement, en dehors du Play Store. Android peut donc afficher un avertissement à l'installation. Ne télécharge un fichier APK qu'à partir de sources que tu connais, et uniquement depuis ce site pour cette application.</div>
+
+    <h2 id="comprendre">C'est quoi, une simulation de Monte Carlo ?</h2>
+    <p>Impossible de connaître à l'avance le rendement exact d'un investissement : il change chaque année, au gré des marchés. Plutôt que de parier sur un seul scénario, la méthode de Monte Carlo en <strong>génère des milliers</strong>, chacun avec des rendements tirés au hasard, mais cohérents avec des hypothèses de départ (un rendement moyen attendu et une volatilité).</p>
+    <p>On obtient ainsi non pas une prévision, mais une <strong>fourchette de résultats possibles</strong> : un scénario pessimiste, un scénario médian, un scénario optimiste.</p>
+
+    <figure>
+      <svg viewBox="0 0 600 230" role="img" aria-label="Plusieurs trajectoires simulées d'un capital dans le temps, formant un éventail autour d'un scénario médian">
+        <text x="300" y="20" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">Évolution simulée d'un capital</text>
+        <line x1="50" y1="30" x2="50" y2="190" stroke="#4B5563"/><line x1="50" y1="190" x2="570" y2="190" stroke="#4B5563"/>
+        <g fill="none" stroke="#9fb0c9" stroke-width="1.6">
+          <polyline points="50,120 150,98 250,110 350,80 450,92 550,70"/>
+          <polyline points="50,120 150,130 250,115 350,122 450,105 550,95"/>
+          <polyline points="50,120 150,105 250,85 350,65 450,45 550,28" stroke="#C5A059" stroke-width="2.4"/>
+          <polyline points="50,120 150,125 250,128 350,126 450,122 550,118" stroke="#C5A059" stroke-width="2.4"/>
+        </g>
+        <polyline points="50,120 150,112 250,100 350,88 450,76 550,62" fill="none" stroke="#102A56" stroke-width="3.2"/>
+        <circle cx="50" cy="120" r="5" fill="#102A56"/>
+        <g font-size="12" fill="#1F2937">
+          <text x="552" y="52" text-anchor="end" fill="#8a6d2b" font-weight="700">Optimiste</text>
+          <text x="552" y="82" fill="#102A56" font-weight="700" text-anchor="end">Médian</text>
+          <text x="552" y="136" fill="#8a6d2b" font-weight="700" text-anchor="end">Pessimiste</text>
+          <text x="300" y="212" text-anchor="middle" fill="#4B5563">Temps</text>
+        </g>
+      </svg>
+      <figcaption>Illustration : chaque ligne est un scénario possible. Le départ est identique, les trajectoires divergent.</figcaption>
+    </figure>
+
+    <h3>Pourquoi un seul scénario ne suffit pas : le piège de la moyenne</h3>
+    <p>Un rendement « moyen de 10 % par an » ne veut pas dire +10 % chaque année. Deux placements peuvent avoir la même moyenne et finir très différemment, dès que les rendements varient :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>10 000 € sur 2 ans</th><th>Rendement de l'année 1</th><th>Rendement de l'année 2</th><th>Moyenne</th><th>Valeur finale</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Placement régulier</th><td>+10 %</td><td>+10 %</td><td>10 %</td><td><strong>12 100 €</strong> (+21 %)</td></tr>
+          <tr><th scope="row">Placement volatil</th><td>+30 %</td><td>-10 %</td><td>10 %</td><td><strong>11 700 €</strong> (+17 %)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Un cas extrême : +50 % une année, puis -50 % l'année suivante donnent une moyenne de 0 %, mais 10 000 € deviennent <strong>7 500 €</strong>, soit -25 %. Plus la volatilité est forte, plus l'écart entre la « moyenne » et ce qu'on obtient réellement se creuse. C'est une première raison de simuler plutôt que de moyenner.</p>
+
+    <h3>Le risque de séquence : l'ordre des rendements compte</h3>
+    <p>Quand on <strong>retire de l'argent</strong> (une retraite, par exemple), l'ordre dans lequel arrivent les bons et les mauvais rendements change tout. Exemple : un capital de 100 000 €, 5 000 € retirés à la fin de chaque année, et les mêmes quatre rendements, dans deux ordres différents :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Ordre des rendements sur 4 ans</th><th>Sans retrait</th><th>Avec 5 000 € de retrait par an</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">+20 %, +20 %, -20 %, -20 % (les baisses à la fin)</th><td>92 160 €</td><td><strong>76 120 €</strong></td></tr>
+          <tr><th scope="row">-20 %, -20 %, +20 %, +20 % (les baisses au début)</th><td>92 160 €</td><td><strong>68 200 €</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Sans retrait, les deux ordres donnent le même résultat. Avec des retraits, les baisses du début sont bien plus coûteuses : on vend des parts quand elles sont basses, et elles ne profitent pas ensuite du rebond. Une simple moyenne ne voit pas cela ; Monte Carlo, qui tire des milliers de séquences, le fait apparaître.</p>
+
+    <div class="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Monte Carlo ne prédit pas l'avenir : il explore l'éventail des futurs possibles.</li>
+        <li>Plus la volatilité supposée est élevée, plus l'éventail s'élargit.</li>
+        <li>Les résultats valent ce que valent les hypothèses de départ.</li>
+      </ul>
+    </div>
+
+    <h2 id="lire">Comment lire les résultats</h2>
+    <ul class="liste">
+      <li><strong>La médiane</strong> : la moitié des simulations finit au-dessus, l'autre moitié en dessous. C'est un repère central, pas une promesse.</li>
+      <li><strong>La fourchette</strong> : les scénarios « pessimiste » et « optimiste » correspondent à des seuils proches des extrêmes (par exemple 1 simulation sur 10 finit en dessous du pessimiste, 1 sur 10 au-dessus de l'optimiste). Ce ne sont pas le pire ni le meilleur résultat possibles : il existe des cas encore plus extrêmes.</li>
+      <li><strong>La probabilité d'atteindre un objectif</strong> : la part des simulations qui dépassent le montant visé. Exemple purement illustratif : sur 10 000 simulations, 7 200 finissent au-dessus de l'objectif de 100 000 € ; la probabilité estimée de succès est de 72 %. Les 28 % restants montrent combien le plan reste exposé à de mauvaises séquences.</li>
+      <li><strong>La largeur de l'éventail</strong> : plus elle est grande, plus l'incertitude est forte. Elle augmente avec l'horizon et avec la volatilité.</li>
+    </ul>
+    <p>Quand la fourchette te semble trop large, tu peux agir sur plusieurs leviers : augmenter les versements, allonger l'horizon, réduire la part des actifs les plus volatils, ou revoir l'objectif. Les onglets « Pistes d'équilibrage » et « Stratégie et DCA » du simulateur sont faits pour cela.</p>
+
+    <h3>Les hypothèses qui comptent</h3>
+    <ul class="liste">
+      <li><strong>Le rendement attendu</strong> de chaque actif : plus il est optimiste, plus les résultats le sont.</li>
+      <li><strong>La volatilité</strong> : l'amplitude des variations annuelles. À titre d'ordre de grandeur souvent cité, elle est de l'ordre de 15 à 20 % par an pour un indice d'actions diversifié, et de quelques pourcents pour des obligations de qualité (à vérifier selon la période et la source).</li>
+      <li><strong>La durée, les versements et les retraits</strong> : ils changent fortement la forme de l'éventail.</li>
+      <li><strong>Les corrélations</strong> entre actifs : si tous baissent ensemble, la diversification protège moins.</li>
+    </ul>
+    <p>On dit parfois « garbage in, garbage out » : si les hypothèses de départ sont fausses, le résultat l'est aussi, même s'il est présenté avec précision.</p>
+
+    <h2 id="limites">Ce que Monte Carlo ne sait pas faire</h2>
+    <ul class="liste">
+      <li><strong>Il ne prédit pas.</strong> Il montre ce qui pourrait arriver si le monde se comporte comme les hypothèses le supposent.</li>
+      <li><strong>Il sous-estime souvent les crises.</strong> Beaucoup de modèles supposent des variations « en cloche » ; or les krachs sont en pratique plus fréquents et plus violents que cette courbe ne le suggère.</li>
+      <li><strong>Les corrélations changent en crise</strong> : des actifs qui semblaient indépendants peuvent baisser ensemble.</li>
+      <li><strong>Il ne tient pas compte du comportement</strong> : vendre dans la panique ou arrêter ses versements change les résultats, mais n'apparaît pas dans la simulation.</li>
+      <li><strong>Frais et impôts</strong> : ils ne sont pris en compte que si tu les intègres dans tes hypothèses (voir la page <a href="fiscalite.html">Fiscalité &amp; Enveloppes</a>).</li>
+    </ul>
+
+    <div class="alerte"><strong>À savoir :</strong> les simulations sont des outils pédagogiques. Elles ne constituent ni une promesse de rendement ni un conseil en investissement. Les performances passées ne préjugent pas des performances futures.</div>
+
+    <h2>Questions fréquentes</h2>
+    <details><summary>Et sur iPhone ou sur ordinateur ?</summary><p>Le simulateur en ligne ci-dessus fonctionne dans un navigateur récent, sur ordinateur, Android et iPhone. Le fichier APK, lui, ne fonctionne que sur Android.</p></details>
+    <details><summary>Pourquoi les résultats changent-ils un peu à chaque lancement ?</summary><p>Parce que chaque simulation tire des rendements au hasard. Plus le nombre de simulations est élevé, plus les résultats se stabilisent d'un lancement à l'autre.</p></details>
+    <details><summary>Quelle différence entre médiane et moyenne ?</summary><p>La médiane est le résultat « du milieu ». La moyenne additionne tous les résultats : elle peut être tirée vers le haut par quelques scénarios exceptionnels. Pour juger un résultat réaliste, la médiane est souvent plus parlante.</p></details>
+    <details><summary>Mes données sont-elles envoyées quelque part ?</summary><p>Les données saisies restent privées : elles sont enregistrées uniquement dans ton navigateur.</p></details>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Monte Carlo</dt><dd>Une méthode qui tire au hasard des milliers de scénarios pour explorer la variété des résultats possibles.</dd>
+      <dt>Volatilité</dt><dd>L'ampleur des variations annuelles d'un actif.</dd>
+      <dt>Médiane</dt><dd>La valeur du milieu : la moitié des résultats est au-dessus, l'autre moitié en dessous.</dd>
+      <dt>Risque de séquence</dt><dd>Le risque que de mauvais rendements arrivent au début d'une période de retraits.</dd>
+      <dt>DCA</dt><dd>L'investissement à intervalles réguliers d'un montant fixe (achats programmés).</dd>
+      <dt>Rééquilibrage</dt><dd>Le fait de ramener un portefeuille vers son allocation cible en vendant ce qui a monté et en rachetant ce qui a baissé.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Que fait une simulation de Monte Carlo ?</p>
+      <button>Elle prédit exactement le rendement futur</button>
+      <button>Elle génère des milliers de scénarios possibles à partir d'hypothèses</button>
+      <button>Elle garantit un rendement minimal</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>2. Quand la volatilité supposée augmente, l'éventail des résultats…</p>
+      <button>Se resserre</button>
+      <button>Reste identique</button>
+      <button>S'élargit</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>3. +30 % puis -10 % sur 10 000 € donnent…</p>
+      <button>11 700 €, moins que +10 % deux années de suite (12 100 €), malgré la même moyenne</button>
+      <button>12 100 €, comme +10 % deux années de suite</button>
+      <button>10 000 €, car les gains compensent les pertes</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>4. Pourquoi l'ordre des rendements compte-t-il quand on retire de l'argent ?</p>
+      <button>Parce qu'on paie plus d'impôts</button>
+      <button>Parce que les baisses du début obligent à vendre des parts à bas prix, qui ne profitent pas du rebond</button>
+      <button>Il ne compte pas</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>5. Que veut dire « garbage in, garbage out » ?</p>
+      <button>Qu'une simulation est toujours exacte</button>
+      <button>Que les frais sont inclus d'office</button>
+      <button>Que des hypothèses erronées donnent un résultat erroné, même s'il paraît précis</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager">
+      <a href="fiscalite.html">← Fiscalité & Enveloppes</a>
+      <a class="next" href="interets-composes.html">Intérêts composés →</a>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>
