@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les matières premières - EikoFinance</title>
+<meta name="description" content="Hard et soft commodities : pétrole, métaux, céréales, café. Comment se forment les prix, contrats à terme, coût du roulement, façons d'investir et fiscalité.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<style>
+/* page leçon : styles dans css/lesson.css */
+</style>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#investir">Investir</a> › Les matières premières</p>
+
+  <section class="scene scene-hero img-sobre">
+    <h1>Les matières premières : hard et soft commodities</h1>
+    <p>Pétrole, cuivre, blé, café : ce qui fait bouger leurs prix, pourquoi on parle de « hard » et de « soft », et comment (et à quel prix) on peut y investir.</p>
+    <a href="#principe" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#principe"><h3>Hard et soft</h3><p>Deux grandes familles.</p></a>
+    <a class="card" href="#prix"><h3>Comment se forme le prix</h3><p>Offre, demande, stocks, météo.</p></a>
+    <a class="card" href="#terme"><h3>Les contrats à terme</h3><p>Contango, backwardation, un exemple.</p></a>
+    <a class="card" href="#investir"><h3>Comment y investir</h3><p>ETC, actions, futures : atouts et pièges.</p></a>
+    <a class="card" href="#instantane"><h3>L'énergie en 2026</h3><p>Un instantané daté d'octobre.</p></a>
+    <a class="card" href="#inflation"><h3>Matières premières et inflation</h3><p>Un refuge ?</p></a>
+    <a class="card" href="#fiscalite"><h3>Fiscalité</h3><p>Ce qui dépend de la forme choisie.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Huit questions pour vérifier.</p></a>
+  </section>
+
+  <article class="chapitre" id="principe-chap">
+    <h2 id="principe">Les matières premières : hard et soft commodities</h2>
+    <p class="accroche">« Pourquoi le prix de l'essence, du café et du cuivre bouge-t-il tout le temps ? »</p>
+    <p>Les <strong>matières premières</strong> (en anglais <em>commodities</em>) sont des biens bruts, interchangeables, que l'on extrait ou que l'on cultive avant de les transformer : le pétrole avant l'essence, le blé avant le pain, le cuivre avant les câbles. Peu importe qui les produit : un baril de pétrole d'une qualité donnée vaut le même prix, d'où leur cotation sur des marchés mondiaux.</p>
+    <p>On les classe en deux grandes familles :</p>
+    <div class="tablewrap">
+<table>
+<thead><tr><th></th><th>Hard commodities (« dures »)</th><th>Soft commodities (« tendres »)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Origine</th><td>Elles sont <strong>extraites</strong> du sol ou de la mer</td><td>Elles sont <strong>cultivées</strong> ou élevées</td></tr>
+<tr><th scope="row">Exemples</th><td>Énergie (pétrole, gaz, charbon, uranium), métaux industriels (cuivre, aluminium, nickel, minerai de fer), métaux précieux (or, argent, platine)</td><td>Céréales (blé, maïs), soja, sucre, café, cacao, coton, jus d'orange, et l'élevage (bovins, porcs)</td></tr>
+<tr><th scope="row">Facteurs clés du prix</th><td>Investissements miniers et pétroliers, industrie, géopolitique, cycle économique, dollar</td><td>Météo, récoltes, maladies, saisons, politiques agricoles, consommation</td></tr>
+<tr><th scope="row">Stockage</th><td>Généralement durable (certaines énergies sont plus difficiles à stocker, comme le gaz)</td><td>Périssable, avec une saisonnalité (récolte, soudure)</td></tr>
+<tr><th scope="row">Rythme de l'offre</th><td>Lent : une mine ou un puits de pétrole demande des années</td><td>Annuel : on peut replanter, mais une mauvaise récolte se subit une année entière</td></tr>
+</tbody>
+</table>
+    </div>
+    <p>Les métaux précieux, dont on parle sur la page <a href="or-argent.html">Or &amp; argent</a>, sont des <em>hard commodities</em> un peu à part : ils servent aussi de réserve de valeur.</p>
+
+    <h2 id="prix">Comment se forme le prix ?</h2>
+    <p>Comme pour toute marchandise, le prix résulte de l'<strong>offre</strong> et de la <strong>demande</strong>. Mais pour les matières premières, deux particularités les rendent très volatiles :</p>
+    <ul class="liste">
+      <li><strong>L'offre est lente à réagir.</strong> Une mine ou un champ pétrolier met des années à se développer ; un agriculteur ne peut pas « décider » d'avoir une meilleure météo.</li>
+      <li><strong>La demande est peu flexible à court terme.</strong> On ne cesse pas de se chauffer ou de manger parce que les prix montent.</li>
+    </ul>
+    <p>Avec une offre et une demande rigides, le prix doit faire tout le travail. <strong>Un exemple simplifié :</strong> si la récolte de blé baisse de 10 % et que la demande est peu sensible aux prix (une variation de 1 % du prix ne change la consommation que de 0,25 %), le prix doit monter d'environ <strong>40 %</strong> pour que la demande s'ajuste à l'offre. Une petite variation de quantité provoque une grosse variation de prix.</p>
+    <p>D'autres facteurs jouent :</p>
+    <ul class="liste">
+      <li><strong>Les stocks.</strong> Des stocks abondants amortissent les chocs ; des stocks bas les amplifient.</li>
+      <li><strong>Le dollar.</strong> La plupart des matières premières sont cotées en dollars : un dollar fort rend leur prix plus élevé pour les acheteurs étrangers, ce qui pèse sur la demande.</li>
+      <li><strong>La géopolitique.</strong> Guerres, sanctions, embargos, interdictions d'exportation (voir la page <a href="geopolitique.html#energie">Géopolitique</a>).</li>
+      <li><strong>Le cycle économique.</strong> En période de croissance, l'industrie demande plus de métaux et d'énergie (voir la page <a href="valeurs-cycliques.html">Valeurs cycliques</a>).</li>
+      <li><strong>La météo et le climat</strong> pour les soft commodities : sécheresse, gel, inondations, phénomènes comme El Niño.</li>
+    </ul>
+    <p>Quelques exemples récents de ces chocs : le café arabica a atteint un record historique d'environ 441 cents la livre en février 2025 ; le cacao a dépassé 12 000 dollars la tonne fin 2024, après des mauvaises récoltes en Afrique de l'Ouest ; le blé et l'huile de tournesol ont flambé en 2022 après l'invasion de l'Ukraine, avant de retomber. Dans chaque cas, des prix très élevés ont fini par stimuler l'offre et freiner la demande : c'est ce qui rend ces marchés cycliques.</p>
+
+    <div class="retenir" id="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Hard = extraites (énergie, métaux). Soft = cultivées ou élevées (céréales, café, cacao…).</li>
+        <li>Offre et demande rigides à court terme : de petits chocs causent de grands mouvements de prix.</li>
+        <li>Une matière première ne verse aucun revenu : seul son prix compte.</li>
+      </ul>
+    </div>
+
+    <h2 id="terme">Les contrats à terme : le piège du « roulement »</h2>
+    <p class="accroche">« Pourquoi un fonds sur le pétrole peut-il perdre de l'argent alors que le pétrole ne bouge pas ? »</p>
+    <p>On n'achète presque jamais le pétrole « en vrac » : stocker des barils coûte cher. Les marchés financiers passent par des <strong>contrats à terme</strong> (<em>futures</em>) : un engagement d'acheter ou de vendre une quantité donnée à une date d'échéance et à un prix fixés aujourd'hui. Le prix du contrat le plus proche est proche du prix « au comptant » (<em>spot</em>), mais les contrats plus lointains peuvent coûter plus cher, ou moins cher.</p>
+    <figure>
+      <svg viewBox="0 0 600 220" role="img" aria-label="Deux courbes de prix à terme selon l'échéance : contango (les échéances lointaines coûtent plus cher) et backwardation (elles coûtent moins cher)">
+        <text x="300" y="20" text-anchor="middle" font-size="15" font-weight="700" fill="#102A56">La courbe des prix à terme</text>
+        <line x1="60" y1="35" x2="60" y2="175" stroke="#4B5563"/><line x1="60" y1="175" x2="570" y2="175" stroke="#4B5563"/>
+        <polyline points="70,120 170,108 270,94 370,78 470,60 560,44" fill="none" stroke="#C5A059" stroke-width="3.2"/>
+        <polyline points="70,100 170,112 270,125 370,138 470,148 560,156" fill="none" stroke="#102A56" stroke-width="3.2"/>
+        <circle cx="70" cy="120" r="5" fill="#C5A059"/><circle cx="70" cy="100" r="5" fill="#102A56"/>
+        <g font-size="12" fill="#1F2937">
+          <text x="556" y="40" text-anchor="end" fill="#8a6d2b" font-weight="700">Contango : les échéances lointaines coûtent plus cher</text>
+          <text x="556" y="170" text-anchor="end" fill="#102A56" font-weight="700">Backwardation : elles coûtent moins cher</text>
+          <text x="300" y="200" text-anchor="middle" fill="#4B5563">Échéance du contrat →</text>
+        </g>
+      </svg>
+      <figcaption>Un schéma simplifié : la forme de la courbe dépend des coûts de stockage et des tensions sur l'offre.</figcaption>
+    </figure>
+    <ul class="liste">
+      <li><strong>Contango</strong> : les échéances lointaines sont plus chères (le marché est bien approvisionné, stocker coûte de l'argent).</li>
+      <li><strong>Backwardation</strong> : les échéances lointaines sont moins chères (pénurie immédiate, on paie un supplément pour avoir la matière tout de suite).</li>
+    </ul>
+    <p>Un fonds qui veut garder une exposition permanente doit « rouler » ses contrats : vendre celui qui arrive à échéance et en acheter un plus lointain. En contango, il rachète plus cher ce qu'il vend : <strong>le roulement coûte de l'argent</strong>, même si le prix « spot » ne bouge pas.</p>
+    <p><strong>Un exemple chiffré (simplifié) :</strong> le prix spot reste stable toute une année, mais chaque contrat du mois suivant est 1,5 % plus cher que celui du mois en cours. À chaque roulement, le fonds perd environ 1,5 %. Sur 12 mois : (1 ÷ 1,015)<sup>12</sup> ≈ 0,836, soit environ <strong>-16 %</strong>, alors que le prix du pétrole n'a pas changé. À l'inverse, en backwardation, le roulement peut rapporter.</p>
+    <div class="alerte"><strong>L'épisode d'avril 2020 :</strong> pendant la crise du Covid, les stockages de pétrole américain étaient saturés. Le 20 avril 2020, le contrat à terme du WTI proche de son échéance a clôturé à environ -37 dollars le baril : des investisseurs devaient payer pour ne pas recevoir de pétrole physique. Des fonds qui détenaient ces contrats de court terme, dont certains destinés aux particuliers, ont subi de lourdes pertes. C'est un cas extrême, mais il illustre pourquoi un fonds sur contrats à terme n'est pas « le prix du pétrole en direct ».</div>
+
+    <h2 id="investir">Comment y investir ? Les voies, avec leurs pièges</h2>
+    <div class="tablewrap">
+<table>
+<thead><tr><th>Voie</th><th>Principe</th><th>Points d'attention</th></tr></thead>
+<tbody>
+<tr><th scope="row">ETC / ETF sur contrats à terme</th><td>Un titre coté qui suit un indice de contrats à terme (pétrole, panier de matières premières, agricoles)</td><td>Coût du roulement, écart possible avec le prix spot, frais annuels, risque de l'émetteur (pour certains ETC). Généralement hors PEA.</td></tr>
+<tr><th scope="row">ETC adossés à du métal physique</th><td>Un titre coté garanti par du métal stocké (or, argent, platine)</td><td>Frais de garde, pas de revenu ; voir la page <a href="or-argent.html">Or &amp; argent</a></td></tr>
+<tr><th scope="row">Actions de producteurs</th><td>Entreprises pétrolières, minières, agricoles ou d'engrais</td><td>Leur résultat dépend du prix de la matière, mais aussi de leurs coûts, de leur dette et de leur gestion ; elles peuvent verser des dividendes. Cela reste une action, avec ses risques.</td></tr>
+<tr><th scope="row">Fonds actifs ou thématiques</th><td>Un gérant choisit des producteurs ou des positions</td><td>Frais plus élevés, résultats dispersés</td></tr>
+<tr><th scope="row">Contrats à terme, CFD</th><td>Une position directe, souvent avec levier</td><td>Risque de perte supérieure au capital selon le produit, très volatil. La réglementation européenne limite le levier à 10:1 sur la plupart des matières premières (voir la page <a href="trading.html">Trading</a>).</td></tr>
+</tbody>
+</table>
+    </div>
+    <p>Aucune voie n'est « sans défaut ». Les ETC sur contrats à terme exposent au coût de roulement ; les actions de producteurs exposent à la gestion d'une entreprise ; les produits à levier exposent à des pertes rapides.</p>
+
+    <h2 id="instantane">Un instantané : l'énergie, fin octobre 2026</h2>
+    <p>L'actualité de 2026 est un cas d'école de choc sur une <em>hard commodity</em>. Voici quelques repères, relevés à la fin octobre 2026 (ils changent chaque jour) :</p>
+    <div class="tablewrap">
+<table>
+<thead><tr><th>Matière</th><th>Niveau (fin octobre 2026)</th><th>Ce qu'il illustre</th></tr></thead>
+<tbody>
+<tr><th scope="row">Pétrole Brent</th><td>≈ 114 à 117 $ le baril, soit près de +80 % sur un an</td><td>Un choc d'offre lié aux tensions au Moyen-Orient</td></tr>
+<tr><th scope="row">Gaz européen (TTF)</th><td>≈ 95 à 100 € le MWh, soit plus que triplé depuis janvier</td><td>Le gaz est difficile à transporter : l'Europe, dépendante des importations, subit un choc bien plus fort que les États-Unis</td></tr>
+<tr><th scope="row">Gaz naturel américain (Henry Hub)</th><td>≈ 2,6 à 3,1 $ le MMBtu, en baisse sur un an</td><td>Un marché plus régional, avec une offre locale abondante</td></tr>
+<tr><th scope="row">Cuivre</th><td>≈ 6,5 $ la livre (soit environ 14 300 $ la tonne), en hausse d'environ 27 % sur un an</td><td>Un métal industriel porté par l'électrification, mais sensible à la conjoncture</td></tr>
+</tbody>
+</table>
+    </div>
+    <p>Deux enseignements : d'abord, une même famille peut se comporter très différemment (le pétrole et le gaz américain n'ont pas suivi la même trajectoire en 2026). Ensuite, ce choc se retrouve partout ailleurs : dans l'inflation, la politique des banques centrales et la balance commerciale des pays importateurs (voir la page <a href="macro.html">Macroéconomie</a>). Les agricoles, eux, sont restés contrastés : leurs prix suivent la météo et les récoltes plus que l'énergie.</p>
+    <div class="alerte"><strong>À savoir :</strong> ces niveaux sont un instantané : les sources divergent légèrement selon l'heure et le contrat suivi. Vérifie toujours les cours du jour avant toute décision.</div>
+
+    <h2 id="inflation">Matières premières et inflation : un refuge ?</h2>
+    <p>On dit souvent que les matières premières protègent de l'inflation. L'argument est logique : elles font partie des prix, surtout l'énergie et l'alimentation, donc quand l'inflation vient d'elles, leur prix monte aussi. Mais ce lien n'est ni automatique ni régulier :</p>
+    <ul class="liste">
+      <li>Quand l'inflation vient de <strong>salaires ou de services</strong>, les matières premières peuvent ne pas bouger.</li>
+      <li>Une <strong>hausse des taux</strong> destinée à freiner l'inflation peut faire baisser les matières premières (demande plus faible, dollar plus fort).</li>
+      <li>Un prix élevé stimule l'offre et freine la demande : il finit souvent par retomber, parfois brutalement.</li>
+    </ul>
+    <p>Des études académiques ont relevé que les matières premières pouvaient apporter une diversification, car elles ne réagissent pas comme les actions et les obligations, mais ces résultats dépendent beaucoup de la période et de la méthode (notamment du coût du roulement). Autrement dit : <strong>un diversifieur possible, pas une assurance</strong>.</p>
+
+    <h3>Avantages et limites</h3>
+    <div class="duo">
+<div class="pour"><h3>Avantages</h3><ul><li>Diversification : elles ne réagissent pas comme les actions et obligations</li><li>Lien avec l'économie réelle et avec certaines poussées d'inflation</li><li>Plusieurs voies d'accès, du simple ETC aux actions de producteurs</li></ul></div>
+<div class="contre"><h3>Inconvénients</h3><ul><li>Aucun revenu (pas d'intérêts ni de dividendes pour la matière elle-même)</li><li>Très volatiles, avec des chocs brutaux (météo, géopolitique)</li><li>Coûts cachés : roulement des contrats, frais, écart avec le prix spot</li><li>Un choix de produits et un levier qui peuvent faire perdre vite</li></ul></div>
+</div>
+
+    <h2 id="fiscalite">Fiscalité</h2>
+    <p>La fiscalité dépend de la <strong>forme</strong> choisie :</p>
+    <ul class="liste">
+      <li><strong>ETC et ETF</strong> détenus en compte-titres : en général, flat tax de <strong>31,4 %</strong> sur les gains en 2026. Ils sont, pour l'essentiel, exclus du PEA.</li>
+      <li><strong>Actions de producteurs</strong> : régime des actions (dividendes et plus-values). Celles d'entreprises européennes peuvent entrer dans un PEA.</li>
+      <li><strong>Métaux précieux physiques</strong> : régime particulier (taxe forfaitaire de 11,5 % ou plus-value), détaillé sur la page <a href="or-argent.html">Or &amp; argent</a>.</li>
+      <li><strong>Contrats à terme, CFD</strong> : voir la page <a href="trading.html">Trading</a>.</li>
+    </ul>
+    <p>Les règles évoluent : vérifie-les avant de souscrire (voir la page <a href="fiscalite.html">Fiscalité &amp; Enveloppes</a>).</p>
+
+    <h3>Les pièges à éviter</h3>
+    <ul class="liste">
+      <li><strong>Confondre un ETC sur contrats à terme avec le prix spot.</strong> Le coût de roulement peut faire une grande différence sur la durée.</li>
+      <li><strong>Acheter après une flambée.</strong> Les prix très élevés ont tendance à stimuler l'offre et à retomber.</li>
+      <li><strong>Utiliser le levier sans en mesurer les risques.</strong></li>
+      <li><strong>Penser que « matière première » veut dire « valeur sûre ».</strong> Un baril ou une tonne de blé peut perdre la moitié de sa valeur en peu de temps.</li>
+    </ul>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les performances passées ne préjugent pas des performances futures, et le capital investi peut être perdu.</div>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Matière première (commodity)</dt><dd>Un bien brut, interchangeable, extrait ou cultivé, qui s'échange sur un marché mondial.</dd>
+      <dt>Hard commodity</dt><dd>Une matière première extraite : énergie, métaux.</dd>
+      <dt>Soft commodity</dt><dd>Une matière première cultivée ou élevée : céréales, café, cacao, sucre, bétail.</dd>
+      <dt>Spot</dt><dd>Le prix « au comptant », pour une livraison immédiate.</dd>
+      <dt>Contrat à terme (future)</dt><dd>Un engagement d'acheter ou de vendre à une date et à un prix fixés à l'avance.</dd>
+      <dt>Contango / backwardation</dt><dd>Des prix à terme plus élevés (contango) ou moins élevés (backwardation) que le prix spot.</dd>
+      <dt>Roulement (roll)</dt><dd>Le remplacement d'un contrat proche de l'échéance par un contrat plus lointain, qui peut coûter ou rapporter de l'argent.</dd>
+      <dt>ETC</dt><dd>Un titre coté qui suit le prix d'une matière première, sans être un fonds d'actions.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="2">
+      <p>1. Laquelle de ces matières premières est une « soft commodity » ?</p>
+      <button>Le cuivre</button>
+      <button>Le pétrole</button>
+      <button>Le café</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Lequel de ces biens est une « hard commodity » ?</p>
+      <button>Le pétrole</button>
+      <button>Le blé</button>
+      <button>Le cacao</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Pourquoi une petite baisse de l'offre peut-elle provoquer une forte hausse du prix ?</p>
+      <button>Parce que les prix sont fixés par l'État</button>
+      <button>Parce que l'offre et la demande réagissent lentement à court terme</button>
+      <button>Parce que les agriculteurs refusent de vendre</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>4. Que signifie « contango » ?</p>
+      <button>Un prix spot négatif</button>
+      <button>Une interdiction d'exporter</button>
+      <button>Des prix à terme plus élevés que le prix spot</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>5. Le prix spot reste stable, mais chaque contrat du mois suivant coûte 1,5 % de plus que le contrat en cours. Que devient la valeur d'un fonds qui roule ses contrats pendant un an ?</p>
+      <button>Elle baisse d'environ 16 %</button>
+      <button>Elle reste stable</button>
+      <button>Elle monte de 18 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>6. Que s'est-il passé le 20 avril 2020 sur le pétrole américain (WTI) ?</p>
+      <button>Le baril a atteint un record historique</button>
+      <button>Le contrat proche de l'échéance a clôturé à un prix négatif, faute de stockage</button>
+      <button>Le marché a été fermé pendant un mois</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>7. Pourquoi le gaz européen peut-il coûter beaucoup plus cher que le gaz américain ?</p>
+      <button>Parce que l'Europe produit plus de gaz</button>
+      <button>Parce que le gaz est coté en euros</button>
+      <button>Parce que le gaz se transporte difficilement et que les marchés sont régionaux</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>8. Un ETC sur contrats à terme suit-il toujours exactement le prix spot de la matière ?</p>
+      <button>Oui, toujours</button>
+      <button>Non, il peut s'en écarter à cause du coût de roulement des contrats</button>
+      <button>Oui, car il détient toujours la matière physique</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="or-argent.html">← Or &amp; argent</a><a class="next" href="valeurs-cycliques.html">Valeurs cycliques →</a></div>
+  </article>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>
