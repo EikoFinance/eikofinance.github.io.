@@ -37,6 +37,8 @@
             desc: 'Un panier diversifié en un seul achat.' },
           { title: 'Or & argent', file: 'or-argent.html',
             desc: 'Des valeurs refuges, sans revenu.' },
+          { title: 'Matières premières', file: 'matieres-premieres.html',
+            desc: 'Hard et soft commodities : pétrole, métaux, céréales, café, et comment y investir.' },
           { title: 'Valeurs cycliques', file: 'valeurs-cycliques.html',
             desc: 'Ces entreprises qui suivent la conjoncture.' },
           { title: 'Cryptomonnaies', file: 'crypto.html',
