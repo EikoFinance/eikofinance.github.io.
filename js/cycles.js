@@ -12,6 +12,16 @@
   var GOLD = '197,160,89';
   var BRIGHT = '212,175,55';
 
+  /* Vitesse de défilement des courbes, calée sur celle de l'image de fond.
+     L'image glisse d'une tuile (1376 x 768 px, mise à la hauteur du bandeau) toutes les
+     80 s (animation « scene-loop » dans css/scene.css). Les courbes avancent à
+     PARALLAXE fois cette vitesse : 1 = même vitesse, 1.4 = 40 % plus vite.
+     Pour changer l'écart, ne modifier que PARALLAXE (si tu changes la durée de
+     « scene-loop » dans scene.css, reporte-la dans BG_DUREE). */
+  var PARALLAXE = 1.4;
+  var BG_DUREE = 80;                 /* secondes pour une tuile (voir scene.css) */
+  var BG_TUILE = 1376 / 768;         /* largeur d'une tuile / hauteur du bandeau */
+
   /* p : durée du cycle (années) · a : poids relatif de l'amplitude · ph : décalage */
   var CYCLES = [
     { p: 4,  a: 0.146, ph: 0.6, alpha: 0.40 },
@@ -55,7 +65,9 @@
       var progress = Math.min(1, el / 3.2);
       progress = 1 - Math.pow(1 - progress, 3);           /* le tracé ralentit en arrivant */
       var span = Math.max(30, W / 21);                      /* années visibles à l'écran */
-      var drift = reduce ? 0 : el * 0.55;                   /* dérive lente : années par seconde */
+      var pxParAn = W / span;                               /* pixels par année à l'écran */
+      var vitesseFond = (H * BG_TUILE) / BG_DUREE;          /* pixels par seconde de l'image de fond */
+      var drift = reduce ? 0 : el * (vitesseFond * PARALLAXE) / pxParAn;  /* dérive : années par seconde */
       var base = zoneTop + zoneH / 2;
       var xmax = W * progress;
 
