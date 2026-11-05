@@ -24,16 +24,22 @@
 @media (max-width: 1000px) { .roots { grid-template-columns: repeat(3, 1fr); } }
 
 .root {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     font: inherit;
     cursor: pointer;
     padding: 1.3rem 1rem 1.1rem;
-    background: #FFFFFF;
+    /* gris clair légèrement glossy : un reflet blanc dans la moitié haute, sur un dégradé gris */
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.28) 48%, rgba(255, 255, 255, 0) 52%),
+        linear-gradient(165deg, #F4F6F9 0%, #E8ECF1 100%);
     color: var(--primary-blue);
     border: 1px solid #D9DEE5;
     border-top: 4px solid var(--gold-accent);
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, opacity 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.25s ease, opacity 0.25s ease;
 }
 .root-title {
     display: block;
@@ -49,7 +55,7 @@
     line-height: 1.4;
     color: var(--text-muted);
 }
-.root:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(16, 42, 86, 0.12); }
+.root:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 24px rgba(16, 42, 86, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9); }
 .root:focus-visible { outline: 2px solid var(--gold-accent); outline-offset: 3px; }
 .root[aria-expanded="true"] { background: var(--primary-blue); border-color: var(--primary-blue); border-top-color: var(--gold-bright); transform: none; }
 .root[aria-expanded="true"] .root-title { color: #FFFFFF; }
@@ -71,13 +77,18 @@
 }
 .leaf {
     position: relative;
+    isolation: isolate;
+    overflow: hidden;
     text-align: left;
     padding: 1.1rem 1.1rem 1rem;
-    background: #FFFFFF;
-    border: 1px solid #E5E9F0;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.28) 48%, rgba(255, 255, 255, 0) 52%),
+        linear-gradient(165deg, #F4F6F9 0%, #E8ECF1 100%);
+    border: 1px solid #E1E6ED;
     border-top: 3px solid var(--gold-accent);
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .leaf-no {
     display: inline-block;
@@ -97,7 +108,7 @@
 /* toute la carte est cliquable */
 .leaf h3 a::after { content: ""; position: absolute; inset: 0; }
 .leaf p { font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
-.leaf:hover { box-shadow: 0 10px 20px rgba(16, 42, 86, 0.12); }
+.leaf:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 24px rgba(16, 42, 86, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9); }
 .leaf:hover h3 a { color: var(--gold-accent); }
 
 .leaf-sub { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.8rem; }
@@ -112,6 +123,43 @@
     border-radius: 999px;
 }
 .leaf-sub a:hover { background: var(--primary-blue); color: #FFFFFF; border-color: var(--primary-blue); }
+
+/* ---------- Reflet diffus qui traverse le bloc au survol ---------- */
+/* Un voile blanc incliné et flou passe une fois de gauche à droite, derrière le texte. */
+.root::before,
+.leaf::before {
+    content: "";
+    position: absolute;
+    top: -25%;
+    bottom: -25%;
+    left: 0;
+    width: 55%;
+    z-index: -1;                               /* au-dessus du fond, sous le texte */
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.70) 50%, rgba(255, 255, 255, 0) 100%);
+    filter: blur(6px);
+    transform: translateX(-140%) skewX(-18deg);
+}
+.root:hover::before,
+.root:focus-visible::before,
+.leaf:hover::before {
+    opacity: 1;
+    animation: eiko-reflet 1s ease-out;
+}
+@keyframes eiko-reflet {
+    from { transform: translateX(-140%) skewX(-18deg); }
+    to   { transform: translateX(270%)  skewX(-18deg); }
+}
+/* Sur un bouton ouvert (fond bleu), le reflet est plus discret */
+.root[aria-expanded="true"]::before { background: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.28) 50%, rgba(255, 255, 255, 0) 100%); }
+
+/* Respect du réglage « réduire les animations » */
+@media (prefers-reduced-motion: reduce) {
+    .root, .leaf { transition: none; }
+    .root:hover, .leaf:hover { transform: none; }
+    .root::before, .leaf::before { display: none; }
+}
 
 /* ---------- Mobile ---------- */
 @media (max-width: 760px) {
