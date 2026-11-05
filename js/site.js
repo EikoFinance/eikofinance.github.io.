@@ -61,7 +61,9 @@
         tagline: 'Lire les marchés, maîtriser le risque',
         items: [
           { title: 'Le trading', file: 'trading.html',
-            desc: 'Day trading, CFD, levier : ce que disent les chiffres et comment limiter les risques.' }
+            desc: 'Day trading, CFD, levier : ce que disent les chiffres et comment limiter les risques.' },
+          { title: 'Analyse graphique', file: 'analyse-graphique.html',
+            desc: 'Bougies japonaises, théorie de Dow, figures, supports et résistances, gaps, moyennes mobiles, RSI, MACD.' }
         ]
       },
       {
@@ -159,7 +161,7 @@
     }
   }
 
-  /* ---------- Accueil : cinq boutons, chacun donne accès à ses leçons ---------- */
+  /* ---------- Accueil : quatre boutons, chacun donne accès à ses leçons ---------- */
   function buildTree() {
     var box = document.querySelector('[data-eiko="tree"]');
     if (!box) return;
