@@ -27,6 +27,8 @@
         title: 'Investir',
         tagline: 'Actions, immobilier, crypto et autres actifs',
         items: [
+          { title: "L'histoire des marchés", file: 'histoire-marches.html',
+            desc: "De l'OTC médiéval aux marchés électroniques : mille ans de Bourse, de bulles et de krachs." },
           { title: 'Actions', file: 'actions.html',
             desc: "Posséder un morceau d'entreprise." },
           { title: 'Obligations', file: 'obligations.html',
