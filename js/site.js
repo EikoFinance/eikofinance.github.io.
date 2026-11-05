@@ -19,7 +19,9 @@
           { title: 'Géopolitique & rapports de force', file: 'geopolitique.html',
             desc: 'Commerce, énergie, monnaies, technologie : comment les tensions entre pays touchent les prix.' },
           { title: 'La macroéconomie', file: 'macro.html',
-            desc: "Indicateurs, taux, dette : le tableau de bord d'un pays et les leviers des banques centrales." }
+            desc: "Indicateurs, taux, dette : le tableau de bord d'un pays et les leviers des banques centrales." },
+          { title: 'Les courants de pensée économique', file: 'courants.html',
+            desc: 'Capitalisme, socialisme, Smith, Marx, Keynes, Friedman, Hayek, Schumpeter : pourquoi les experts divergent.' }
         ]
       },
       {
@@ -37,6 +39,8 @@
             desc: 'Un panier diversifié en un seul achat.' },
           { title: 'Or & argent', file: 'or-argent.html',
             desc: 'Des valeurs refuges, sans revenu.' },
+          { title: 'Matières premières', file: 'matieres-premieres.html',
+            desc: 'Hard et soft commodities : pétrole, métaux, céréales, café, et comment y investir.' },
           { title: 'Valeurs cycliques', file: 'valeurs-cycliques.html',
             desc: 'Ces entreprises qui suivent la conjoncture.' },
           { title: 'Cryptomonnaies', file: 'crypto.html',
@@ -71,9 +75,9 @@
         title: 'Mesurer',
         tagline: 'Simuler pour décider avec des chiffres',
         items: [
-          { title: 'Simulation Monte Carlo', file: 'outils.html',
-            desc: "L'application Android qui teste des milliers d'évolutions possibles d'un portefeuille." },
-          { title: 'Intérêts composés', file: 'outils.html',
+          { title: 'Simulation Monte Carlo', file: 'monte-carlo.html',
+            desc: "Le simulateur en ligne et l'application Android qui testent des milliers d'évolutions possibles d'un portefeuille." },
+          { title: 'Intérêts composés', file: 'interets-composes.html',
             desc: 'Voir comment le temps et la régularité font grandir un capital.' }
         ]
       },
@@ -161,7 +165,7 @@
     }
   }
 
-  /* ---------- Accueil : quatre boutons, chacun donne accès à ses leçons ---------- */
+  /* ---------- Accueil : cinq boutons, chacun donne accès à ses leçons ---------- */
   function buildTree() {
     var box = document.querySelector('[data-eiko="tree"]');
     if (!box) return;
