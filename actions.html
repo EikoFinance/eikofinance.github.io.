@@ -43,10 +43,16 @@
   </section>
 
   <section class="card-grid" aria-label="Sommaire de la leçon">
-    <a class="card" href="#principe"><h3>Le principe</h3><p>Ce que c'est et comment ça rapporte.</p></a>
-    <a class="card" href="#retenir"><h3>À retenir</h3><p>Trois idées pour s'en souvenir.</p></a>
-    <a class="card" href="#comparer"><h3>Côte à côte</h3><p>Comparer avec les autres actifs.</p></a>
-    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Trois questions pour vérifier.</p></a>
+    <a class="card" href="#principe"><h3>Le principe</h3><p>Ce qu'on achète, comment ça rapporte.</p></a>
+    <a class="card" href="#lire"><h3>Lire une action</h3><p>PER, dividende, ROE, dette : un exemple.</p></a>
+    <a class="card" href="#baisse"><h3>Pourquoi ça baisse</h3><p>Risques et grandes chutes du passé.</p></a>
+    <a class="card" href="#styles"><h3>Value, growth, quality</h3><p>Trois façons de choisir.</p></a>
+    <a class="card" href="#graham"><h3>Benjamin Graham</h3><p>Les 7 critères de l'Investisseur intelligent.</p></a>
+    <a class="card" href="#moat"><h3>Qualité et « moat »</h3><p>Les entreprises à douves.</p></a>
+    <a class="card" href="#valeur"><h3>Valeur et marge de sécurité</h3><p>Estimer, puis se protéger.</p></a>
+    <a class="card" href="#dividendes"><h3>Dividendes</h3><p>Atouts et pièges.</p></a>
+    <a class="card" href="#pratique"><h3>En pratique</h3><p>Combien d'actions, quelle enveloppe.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Dix questions pour vérifier.</p></a>
   </section>
 
   <article class="chapitre" id="avant">
@@ -81,14 +87,236 @@
 <p>Une action est une <strong>part du capital</strong> d'une entreprise. Si Camille achète des actions d'un grand groupe, elle en devient actionnaire : elle possède, à toute petite échelle, une partie de cette entreprise.</p>
 <p>Elle peut y gagner de deux façons : le cours de l'action monte (<em>plus-value</em>), et l'entreprise verse une partie de ses bénéfices (<em>dividendes</em>). Mais le cours peut aussi baisser, parfois fortement et rapidement : c'est ce qu'on appelle la <strong>volatilité</strong>.</p>
 
-    <div class="retenir" id="retenir">
-      <strong>3 idées à retenir</strong>
-      <ul>
-        <li>Une action est une part d'entreprise, pas une promesse de gain.</li>
-        <li>Deux sources de gain : la hausse du cours et les dividendes.</li>
-        <li>Le risque de baisse est réel, surtout à court terme.</li>
-      </ul>
-    </div>
+<h3>Un exemple chiffré</h3>
+<p>Camille achète <strong>10 actions à 50 €</strong>, soit 500 €. Un an plus tard, le cours est à 60 € et l'entreprise a versé 2 € de dividende par action.</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Source de gain</th><th>Calcul</th><th>Montant</th></tr></thead>
+<tbody>
+<tr><th scope="row">Plus-value (non réalisée tant qu'elle ne vend pas)</th><td>10 × (60 − 50)</td><td>+100 €</td></tr>
+<tr><th scope="row">Dividendes</th><td>10 × 2 €</td><td>+20 €</td></tr>
+<tr><th scope="row"><strong>Gain total avant impôt</strong></th><td></td><td><strong>+120 € (+24 %)</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Si le cours avait chuté à 40 € et que le dividende avait été supprimé, la même position aurait été en perte de 100 € (-20 %). Ce que tu achètes, ce n'est pas un rendement, c'est une <strong>part d'une activité</strong> dont les résultats varient.</p>
+
+<h3>Ce que ça veut dire d'être actionnaire</h3>
+<ul class="liste">
+<li><strong>Tu es propriétaire d'une fraction de l'entreprise</strong>, avec le droit de voter aux assemblées générales et de toucher une part des bénéfices distribués.</li>
+<li><strong>Tu passes en dernier</strong> : en cas de faillite, l'entreprise rembourse d'abord ses créanciers (banques, obligataires, salariés…). Les actionnaires ne récupèrent quelque chose que s'il reste de l'argent, ce qui est rare. Une action peut donc valoir zéro.</li>
+<li><strong>Tu peux être dilué</strong> : si l'entreprise émet de nouvelles actions pour lever de l'argent, ta part du gâteau diminue, sauf si tu participes.</li>
+<li><strong>Tu peux revendre à tout moment</strong> sur le marché, à condition de trouver un acheteur au prix voulu : c'est la liquidité.</li>
+</ul>
+
+<div class="retenir" id="retenir">
+  <strong>3 idées à retenir</strong>
+  <ul>
+    <li>Une action est une part d'entreprise, pas une promesse de gain.</li>
+    <li>Deux sources de gain : la hausse du cours et les dividendes.</li>
+    <li>Le risque de baisse est réel, surtout à court terme.</li>
+  </ul>
+</div>
+
+<h2 id="lire">Lire une action : les chiffres qui comptent</h2>
+<p class="accroche">« Comment savoir si une action est chère ou bon marché ? »</p>
+<p>Le cours seul ne dit rien : une action à 500 € n'est pas « plus chère » qu'une action à 5 €. Ce qui compte, c'est ce qu'on paie <strong>par rapport à ce que l'entreprise gagne, possède et distribue</strong>. Voici les indicateurs de base, illustrés avec une société fictive, « Alpha » : cours de 80 €, 10 millions d'actions, bénéfice par action de 5 €, dividende de 2,40 €, capitaux propres de 40 € par action.</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Indicateur</th><th>Ce qu'il mesure</th><th>Calcul pour Alpha</th></tr></thead>
+<tbody>
+<tr><th scope="row">Capitalisation boursière</th><td>La valeur de l'entreprise en Bourse</td><td>80 € × 10 M = 800 M€</td></tr>
+<tr><th scope="row">PER (cours / bénéfice)</th><td>Combien d'années de bénéfices on paie</td><td>80 ÷ 5 = <strong>16</strong></td></tr>
+<tr><th scope="row">Rendement du dividende</th><td>Le dividende rapporté au cours</td><td>2,40 ÷ 80 = <strong>3 %</strong></td></tr>
+<tr><th scope="row">Taux de distribution</th><td>La part des bénéfices versée en dividende</td><td>2,40 ÷ 5 = <strong>48 %</strong></td></tr>
+<tr><th scope="row">Price-to-book (cours / valeur comptable)</th><td>Le prix par rapport aux capitaux propres</td><td>80 ÷ 40 = <strong>2</strong></td></tr>
+<tr><th scope="row">ROE (rentabilité des capitaux propres)</th><td>Ce que l'entreprise gagne sur l'argent de ses actionnaires</td><td>5 ÷ 40 = <strong>12,5 %</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>On regarde aussi la <strong>dette</strong> (la dette nette rapportée à la capacité de l'entreprise à générer de l'argent, par exemple 2 fois son résultat d'exploitation avant amortissements, ce qui est déjà élevé), la <strong>stabilité des marges</strong> et le <strong>flux de trésorerie disponible</strong> : l'argent réellement dégagé après les investissements. Un bénéfice comptable peut être embelli ; un flux de trésorerie négatif durable, beaucoup moins.</p>
+<p>Aucun de ces chiffres ne suffit seul : un PER bas peut signaler une bonne affaire ou une entreprise en déclin, un PER élevé une entreprise surévaluée ou une croissance exceptionnelle. Ils servent à <strong>poser les bonnes questions</strong>, pas à décider mécaniquement.</p>
+
+<h2 id="baisse">Pourquoi une action baisse, et ce que montre l'histoire</h2>
+<ul class="liste">
+<li><strong>Le risque propre à l'entreprise</strong> : mauvais résultats, perte d'un client majeur, erreur de gestion, scandale, innovation d'un concurrent.</li>
+<li><strong>Le risque de marché</strong> : une crise, une récession, une hausse des taux ou une panique entraînent presque toutes les actions à la baisse en même temps.</li>
+<li><strong>Le risque de valorisation</strong> : même une excellente entreprise peut baisser si on l'a payée trop cher.</li>
+<li><strong>Le risque comportemental</strong> : vendre dans la panique ou acheter par euphorie.</li>
+</ul>
+<p>L'histoire de l'indice américain S&amp;P 500 donne l'ampleur de ces mouvements :</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Épisode</th><th>Baisse maximale (environ)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Crise financière, d'octobre 2007 à mars 2009</th><td>-57 % (et près de cinq ans pour retrouver le niveau de 2007, hors dividendes)</td></tr>
+<tr><th scope="row">Choc du Covid, février-mars 2020</th><td>-34 % en environ un mois (retour au sommet en quelques mois)</td></tr>
+<tr><th scope="row">Hausse des taux, 2022</th><td>-25 %</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ces chutes sont normales sur le marché actions : elles font partie du prix à payer pour un rendement espéré supérieur à celui des placements sans risque. Elles rappellent surtout qu'il ne faut investir en actions que de l'argent dont on n'aura pas besoin avant plusieurs années.</p>
+
+<h2 id="styles">Trois grandes philosophies : value, growth, quality</h2>
+<p class="accroche">« Acheter pas cher, acheter ce qui grandit, ou acheter ce qui est excellent ? »</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th></th><th>Value (valeur)</th><th>Growth (croissance)</th><th>Quality (qualité)</th></tr></thead>
+<tbody>
+<tr><th scope="row">L'idée</th><td>Acheter une entreprise nettement moins cher que ce qu'elle vaut, et attendre que le marché s'en rende compte</td><td>Acheter des entreprises dont les ventes et les bénéfices progressent vite, quitte à les payer cher</td><td>Acheter des entreprises durablement très rentables, avec un avantage difficile à copier, à un prix raisonnable</td></tr>
+<tr><th scope="row">Ce qu'on regarde</th><td>PER bas, price-to-book bas, dividende, solidité du bilan</td><td>Croissance du chiffre d'affaires et des bénéfices, taille du marché visé</td><td>Rentabilité du capital (ROIC), marges stables, faible dette, avantage concurrentiel</td></tr>
+<tr><th scope="row">Le risque principal</th><td>Le « piège à valeur » : une action bon marché qui reste bon marché parce que l'entreprise décline</td><td>Payer trop cher : si la croissance déçoit, le cours peut s'effondrer</td><td>Payer trop cher une belle entreprise, ou voir son avantage s'éroder</td></tr>
+<tr><th scope="row">Figures associées</th><td>Benjamin Graham, David Dodd</td><td>Philip Fisher, Peter Lynch (« croissance à prix raisonnable »)</td><td>Warren Buffett (période avec Charlie Munger)</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ces catégories se recoupent et ne sont pas étanches. Warren Buffett, élève de Graham, a fait évoluer sa méthode : il a gardé l'idée de ne pas surpayer, mais a préféré acheter de très bonnes entreprises à un prix correct plutôt que des entreprises médiocres à un prix très bas. Aucune philosophie ne gagne tout le temps : les périodes de domination de la croissance (comme le boom de la technologie) alternent avec celles où les valeurs « value » reprennent le dessus.</p>
+
+<h2 id="graham">Benjamin Graham et « L'Investisseur intelligent »</h2>
+<p class="accroche">« Et si on cherchait d'abord à ne pas perdre d'argent ? »</p>
+<p>Benjamin Graham (1894-1976) est considéré comme le père du <strong>value investing</strong> et fut le mentor de Warren Buffett. Il publie <em>L'Investisseur intelligent</em> en 1949 (<em>The Intelligent Investor</em>), un livre que Buffett qualifie de meilleur ouvrage sur l'investissement qu'il ait lu. Après la crise de 1929, qui l'a durement touché, Graham construit une méthode fondée sur la prudence. Quelques idées clés :</p>
+<ul class="liste">
+<li><strong>Investir n'est pas spéculer.</strong> Pour Graham, une vraie opération d'investissement repose sur une analyse sérieuse, promet la sécurité du capital et un rendement satisfaisant. Le reste est de la spéculation.</li>
+<li><strong>Monsieur Marché.</strong> Imagine un associé lunatique, qui te propose chaque jour de t'acheter ta part ou de te vendre la sienne, à un prix parfois absurde : euphorique un jour, déprimé le lendemain. Tu n'es pas obligé de l'écouter : tu profites de ses excès (acheter quand il est pessimiste, vendre quand il est euphorique).</li>
+<li><strong>La marge de sécurité.</strong> N'acheter qu'avec une décote importante par rapport à la valeur estimée, pour te protéger de tes propres erreurs d'estimation. C'est, selon Graham, le concept central.</li>
+<li><strong>Deux profils d'investisseur.</strong> Le <em>défensif</em>, qui veut peu de travail et peu de soucis, et l'<em>entreprenant</em>, prêt à y consacrer beaucoup de temps. Pour le défensif, Graham suggère de répartir son capital entre actions et obligations de qualité, avec une répartition de départ de 50/50, qui peut varier entre 25 % et 75 % d'actions selon le niveau du marché.</li>
+</ul>
+
+<h3>Les 7 critères de l'investisseur défensif</h3>
+<p>Pour l'investisseur défensif, Graham propose une grille de sélection d'actions (chapitre 14 du livre, dans l'édition révisée de 1973). Les seuils chiffrés datent de leur époque, mais l'esprit reste instructif :</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Critère</th><th>Seuil de Graham</th><th>Ce que ça protège</th></tr></thead>
+<tbody>
+<tr><th scope="row">1. Taille adéquate</th><td>Une entreprise de taille suffisante (à l'époque, au moins 100 M$ de ventes annuelles pour l'industrie)</td><td>Les petites entreprises sont plus fragiles et plus sensibles aux aléas</td></tr>
+<tr><th scope="row">2. Situation financière solide</th><td>Actif courant au moins 2 fois le passif courant ; dette à long terme inférieure au fonds de roulement net (pour l'industrie)</td><td>Le risque de manquer de liquidités à court terme</td></tr>
+<tr><th scope="row">3. Stabilité des bénéfices</th><td>Bénéfices positifs sur chacune des 10 dernières années</td><td>Les entreprises à résultats irréguliers</td></tr>
+<tr><th scope="row">4. Dividendes</th><td>Versés sans interruption depuis au moins 20 ans</td><td>Les entreprises sans historique de rémunération stable</td></tr>
+<tr><th scope="row">5. Croissance des bénéfices</th><td>Bénéfice par action en hausse d'au moins un tiers sur 10 ans (soit environ 3 % par an), en comparant des moyennes de 3 ans</td><td>Les entreprises sans croissance, dont la valeur s'érode avec l'inflation</td></tr>
+<tr><th scope="row">6. PER modéré</th><td>Cours inférieur à 15 fois le bénéfice moyen des 3 dernières années</td><td>Le risque de surpayer les bénéfices</td></tr>
+<tr><th scope="row">7. Cours/valeur comptable modéré</th><td>Cours inférieur à 1,5 fois la valeur comptable ; ou PER × price-to-book inférieur à 22,5</td><td>Le risque de surpayer les actifs</td></tr>
+</tbody>
+</table>
+</div>
+<p>Le critère 7 est plus souple qu'il n'y paraît : un PER de 10 autorise un price-to-book de 2,25 (10 × 2,25 = 22,5), un PER de 15 impose un price-to-book d'au plus 1,5.</p>
+
+<h3>Un exemple : appliquer la grille</h3>
+<p>Voici deux sociétés fictives passées au crible (hors critère de taille, supposé satisfait).</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Critère</th><th>Beta (industriel mature)</th><th>Gamma (technologie à forte croissance)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Ratio de liquidité (≥ 2)</th><td>2,3 ✓</td><td>1,4 ✗</td></tr>
+<tr><th scope="row">Bénéfices positifs 10 ans</th><td>Oui ✓</td><td>Non, pertes il y a 4 ans ✗</td></tr>
+<tr><th scope="row">Dividendes 20 ans</th><td>25 ans ✓</td><td>Aucun ✗</td></tr>
+<tr><th scope="row">Croissance du BPA sur 10 ans (≥ 33 %)</th><td>+40 % ✓</td><td>Très supérieure ✓</td></tr>
+<tr><th scope="row">PER (cours 60 € ; bénéfice moyen 3 ans 4,20 €)</th><td>14,3 ✓</td><td>28 ✗</td></tr>
+<tr><th scope="row">Price-to-book</th><td>1,33 ✓ (PER × PB = 19)</td><td>6 ✗ (PER × PB = 168)</td></tr>
+<tr><th scope="row"><strong>Résultat</strong></th><td><strong>Passe la grille</strong></td><td><strong>Ne passe pas</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Cela ne veut pas dire que Beta est un bon investissement et que Gamma en est un mauvais. La grille ne juge pas l'avenir : elle écarte les entreprises trop chères, trop fragiles ou trop incertaines au regard de la prudence de Graham, quitte à rater de grands gagnants comme Gamma.</p>
+
+<h3>Le « nombre de Graham » et la marge de sécurité</h3>
+<p>Une formule popularisée à partir de Graham estime un prix maximal raisonnable : le <strong>nombre de Graham</strong> = √(22,5 × bénéfice par action × valeur comptable par action). Exemple : une société qui gagne 6 € par action, avec 30 € de capitaux propres par action, a un nombre de Graham de √(22,5 × 6 × 30) = √4 050 ≈ <strong>63,6 €</strong>. Si l'action cote 55 €, elle est environ 14 % sous cette valeur. Graham recommandait une marge de sécurité d'au moins un tiers (cours inférieur à 0,67 fois la valeur estimée), soit ici un prix d'achat d'environ <strong>42,6 €</strong>. La formule n'est qu'un repère pour les entreprises stables ; elle convient mal aux entreprises de croissance ou à celles dont les capitaux propres sont négatifs.</p>
+
+<h3>L'investisseur entreprenant et le « net-net »</h3>
+<p>Pour l'investisseur entreprenant, Graham assouplit les critères (par exemple un actif courant d'au moins 1,5 fois le passif courant) et décrit surtout des « situations spéciales ». La plus célèbre est le <strong>net-net</strong> : acheter une action dont le cours est inférieur aux deux tiers de sa <strong>valeur d'actif courant net</strong> (les actifs à court terme, moins <em>toutes</em> les dettes, sans compter l'usine ni la marque).</p>
+<p>Exemple : une société a 300 M€ d'actif courant (stocks, créances, trésorerie) et 120 M€ de dettes totales, pour 10 millions d'actions. Son actif courant net est de 180 M€, soit <strong>18 € par action</strong>. La règle des deux tiers donne un prix d'achat maximal de <strong>12 €</strong>. Ce type d'action existe surtout dans les petites entreprises délaissées : elle est risquée, difficile à acheter et à revendre, et la plupart des grandes Bourses en comptent très peu aujourd'hui.</p>
+
+<h3>Ce que Graham ne dit pas (ou plus)</h3>
+<ul class="liste">
+<li><strong>Peu d'entreprises passent la grille aujourd'hui.</strong> Beaucoup de grandes entreprises actuelles reposent sur des actifs immatériels (logiciels, marques, données) qui n'apparaissent pas dans la valeur comptable, ou rachètent leurs actions, ce qui réduit leurs capitaux propres. Un price-to-book « élevé » n'a donc plus la même signification qu'en 1949.</li>
+<li><strong>Les seuils sont d'époque.</strong> Les 100 M$ de ventes de 1973 valent bien davantage aujourd'hui, et un PER de 15 dépend du niveau des taux.</li>
+<li><strong>Il ne faut pas appliquer la grille mécaniquement.</strong> Elle est un point de départ pour analyser, pas un substitut à la réflexion.</li>
+</ul>
+
+<h2 id="moat">La qualité et le « moat » : acheter des entreprises à douves</h2>
+<p class="accroche">« Pourquoi certaines entreprises restent-elles très rentables pendant des décennies ? »</p>
+<p>Warren Buffett utilise l'image d'un château entouré de douves : le <strong>« moat »</strong> (douve) est l'avantage concurrentiel durable qui protège les profits d'une entreprise contre ses concurrents. Une entreprise sans moat voit ses profits rognés par la concurrence ; avec un moat, elle peut garder des marges élevées longtemps. C'est le cœur du <strong>quality investing</strong>. On distingue en général cinq sources de moat :</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Source de moat</th><th>Ce que c'est</th><th>Exemples (à titre d'illustration)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Actifs immatériels</th><td>Marques, brevets, licences qui permettent des prix plus élevés ou interdisent la copie</td><td>Hermès, Coca-Cola, laboratoires pharmaceutiques</td></tr>
+<tr><th scope="row">Coûts de changement</th><td>Quitter l'entreprise coûte cher au client (temps, argent, risques)</td><td>Logiciels de gestion d'entreprise, services bancaires</td></tr>
+<tr><th scope="row">Effet de réseau</th><td>Le produit vaut plus quand plus de gens l'utilisent</td><td>Visa, Mastercard, plateformes de réseaux sociaux</td></tr>
+<tr><th scope="row">Avantage de coûts</th><td>Produire ou distribuer moins cher que les autres, durablement</td><td>Distributeurs à très grande échelle, compagnies low cost</td></tr>
+<tr><th scope="row">Échelle efficace</th><td>Un marché trop petit pour accueillir de nouveaux entrants rentables</td><td>Gestionnaires d'infrastructures (aéroports, réseaux)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alerte"><strong>Un moat n'est pas éternel.</strong> Kodak (photographie argentique) ou Nokia (téléphones portables) semblaient inattaquables avant d'être bousculés par une technologie nouvelle. Les douves peuvent s'assécher : une analyse de qualité doit être régulièrement remise en question.</div>
+
+<h3>Comment repérer une entreprise de qualité ?</h3>
+<ul class="liste">
+<li><strong>Un ROIC élevé et durable</strong> : le rendement du capital investi, c'est le bénéfice d'exploitation après impôt rapporté à tout l'argent investi dans l'activité (capitaux propres et dette). Il doit durablement dépasser le coût du capital (le rendement qu'exigent ceux qui financent l'entreprise).</li>
+<li><strong>Des marges stables ou en hausse</strong> sur plusieurs années.</li>
+<li><strong>Une dette maîtrisée</strong> et une forte génération de trésorerie.</li>
+<li><strong>Une croissance régulière</strong>, sans besoin d'investir énormément pour avancer.</li>
+<li><strong>Une direction qui alloue bien le capital</strong> : investissements rentables, rachats d'actions au bon prix, dividendes raisonnables.</li>
+</ul>
+<p>Exemple : une entreprise réalise un résultat d'exploitation après impôt de 120 M€ avec 800 M€ de capital investi : son ROIC est de <strong>15 %</strong>. Si ses financeurs exigent 8 %, elle crée de la valeur à hauteur de (15 % - 8 %) × 800 = <strong>56 M€ par an</strong>. Une entreprise sans moat dont le ROIC converge vers 8 % ne crée plus de valeur : sa croissance n'enrichit plus ses actionnaires.</p>
+<h3>Le piège de la qualité « à n'importe quel prix »</h3>
+<p>Une belle entreprise n'est pas forcément une belle action. Si on paie 60 fois ses bénéfices, on suppose une croissance parfaite pendant des années : la moindre déception peut faire chuter le cours, même si l'entreprise reste excellente. Les investisseurs de qualité parlent de payer « un prix raisonnable pour une entreprise exceptionnelle » plutôt qu'un prix exceptionnellement bas pour une entreprise médiocre. Le prix reste donc l'autre moitié de la question.</p>
+<details>
+<summary>Pour aller plus loin : la « formule magique »</summary>
+<p>En 2005, l'investisseur Joel Greenblatt a popularisé une méthode simple qui combine <strong>value et qualité</strong> : classer les entreprises à la fois sur leur rentabilité (le ROIC) et sur leur prix (le rendement des bénéfices, l'inverse du PER), et retenir celles qui sont bien classées sur les deux. Elle illustre bien l'idée de fond : chercher des entreprises à la fois bonnes <em>et</em> pas chères.</p>
+</details>
+
+<h2 id="valeur">Valeur intrinsèque et marge de sécurité : un exemple</h2>
+<p class="accroche">« Combien vaut vraiment cette entreprise ? »</p>
+<p>La <strong>valeur intrinsèque</strong> d'une entreprise est la valeur actuelle de tout l'argent qu'elle versera à ses propriétaires dans le futur. On ne la connaît jamais avec certitude : on l'estime avec des hypothèses. Un exemple très simplifié : une entreprise dégage <strong>100 M€</strong> de trésorerie disponible cette année. On suppose qu'elle croît de façon durable d'un taux <em>g</em>, et on actualise à un taux <em>r</em> (le rendement exigé). La formule simple est : valeur = 100 × (1 + g) ÷ (r − g).</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Hypothèses</th><th>Valeur estimée</th></tr></thead>
+<tbody>
+<tr><td>r = 8 %, g = 3 %</td><td>≈ 2 060 M€</td></tr>
+<tr><td>r = 9 %, g = 3 %</td><td>≈ 1 717 M€</td></tr>
+<tr><td>r = 8 %, g = 2 %</td><td>≈ 1 700 M€</td></tr>
+<tr><td>r = 9 %, g = 2 %</td><td>≈ 1 457 M€</td></tr>
+</tbody>
+</table>
+</div>
+<p>Avec des hypothèses qui ne diffèrent que d'un point, on passe de 1 457 à 2 060 M€, soit un écart de plus de 40 %. C'est <strong>pourquoi Graham insiste sur la marge de sécurité</strong> : si on retient l'estimation prudente (1 457 M€) et qu'on exige un tiers de décote, on n'achète qu'en dessous d'environ <strong>976 M€</strong>. Si on se trompe un peu, on est quand même protégé ; si on a raison, on gagne. La précision n'est pas le but : la prudence l'est.</p>
+
+<h2 id="dividendes">Les dividendes : atouts et pièges</h2>
+<p>Le dividende est un revenu régulier, qui peut représenter une part importante du rendement total sur longue période, surtout s'il est réinvesti. Mais un rendement élevé n'est pas toujours une bonne nouvelle :</p>
+<ul class="liste">
+<li><strong>Le piège du rendement.</strong> Une action à 100 € qui verse 5 € de dividende rapporte 5 %. Si le cours tombe à 50 € parce que l'entreprise va mal, le rendement affiché passe à 10 %, mais il risque d'être supprimé. Un rendement anormalement élevé est souvent un signal d'alerte.</li>
+<li><strong>Le taux de distribution.</strong> Si une entreprise verse 5 € de dividende alors qu'elle ne gagne que 3 € par action, elle distribue 167 % de ses bénéfices : c'est intenable à terme, elle puise dans ses réserves ou s'endette.</li>
+<li><strong>Dividende ou rachat d'actions ?</strong> Une entreprise peut aussi rendre de l'argent à ses actionnaires en rachetant ses propres actions, ce qui augmente la part de chaque actionnaire restant. Les deux se complètent.</li>
+<li><strong>Le dividende n'est pas gratuit.</strong> Le jour où il est versé, le cours baisse en principe du même montant : l'argent sort de l'entreprise pour arriver dans ta poche.</li>
+</ul>
+
+<h2 id="pratique">En pratique : combien d'actions, et où les loger ?</h2>
+<h3>Pourquoi diversifier : le résultat qui surprend</h3>
+<p>Une étude célèbre de l'universitaire Hendrik Bessembinder, portant sur les actions américaines de 1926 à 2016, a montré qu'<strong>environ 4 % seulement des entreprises</strong> ont créé l'essentiel de la richesse nette du marché, et que l'action médiane a fait moins bien que les bons du Trésor à court terme. Autrement dit, la plupart des actions sont décevantes, et quelques gagnantes font toute la performance. Si on choisit quelques actions seulement, on risque de passer à côté des gagnantes. C'est l'argument principal en faveur de la <strong>diversification</strong>, et l'une des raisons pour lesquelles beaucoup préfèrent les ETF (voir la page <a href="etf.html">ETF</a>).</p>
+<p>Graham lui-même recommandait à l'investisseur défensif de détenir <strong>entre 10 et 30 titres</strong> bien choisis. Chaque action devrait en outre représenter une part limitée du portefeuille, pour qu'une erreur ne soit pas fatale.</p>
+<h3>Où les loger</h3>
+<ul class="liste">
+<li><strong>Le PEA</strong> : adapté aux actions européennes, avec un avantage fiscal après 5 ans.</li>
+<li><strong>Le compte-titres</strong> : tous marchés, mais gains et dividendes taxés à 31,4 % en 2026.</li>
+<li><strong>L'assurance-vie</strong> : accès à des actions via des unités de compte.</li>
+</ul>
+<p>Le détail est dans la page <a href="fiscalite.html">Fiscalité &amp; Enveloppes</a>. Pense aussi aux <strong>frais de courtage</strong> (chaque achat et chaque vente a un coût) et utilise de préférence des <strong>ordres à cours limité</strong>, qui fixent le prix maximum que tu acceptes de payer.</p>
+
+<h3>Les pièges à éviter</h3>
+<ul class="liste">
+<li><strong>Acheter une action parce qu'elle a beaucoup monté</strong> ou parce que « tout le monde en parle ».</li>
+<li><strong>Se concentrer sur un seul titre</strong> ou un seul secteur, par exemple celui de son employeur.</li>
+<li><strong>Confondre « bon marché » et « bonne affaire »</strong> : un PER bas peut être le signe d'un déclin.</li>
+<li><strong>Confondre « excellente entreprise » et « bonne action »</strong> : le prix payé compte.</li>
+<li><strong>Vendre dans la panique</strong> lors d'une baisse de marché, ou chercher à « se refaire » en prenant plus de risques.</li>
+<li><strong>Ignorer les frais et les impôts</strong>, qui rognent le rendement.</li>
+</ul>
+
+<div class="duo">
+<div class="pour"><h3>Avantages</h3><ul><li>Participation à la croissance des entreprises sur le long terme</li><li>Rendement espéré supérieur à celui des placements sans risque</li><li>Liquidité : revente possible à tout moment</li></ul></div>
+<div class="contre"><h3>Inconvénients</h3><ul><li>Forte volatilité, risque de perte en capital</li><li>Résultats très variables d'une action à l'autre</li><li>Demande de la patience et de la discipline</li></ul></div>
+</div>
+
     <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les performances passées ne préjugent pas des performances futures, et le capital investi peut être perdu.</div>
 
     <details id="comparer">
@@ -112,6 +340,14 @@
       <dt>Dividende</dt><dd>La part des bénéfices qu'une entreprise verse à ses actionnaires.</dd>
       <dt>Plus-value</dt><dd>Le gain réalisé quand on revend plus cher qu'on a acheté.</dd>
       <dt>Volatilité</dt><dd>L'ampleur des variations de prix d'un actif.</dd>
+      <dt>PER</dt><dd>Le cours divisé par le bénéfice par action : combien d'années de bénéfices on paie.</dd>
+      <dt>Value investing</dt><dd>Acheter des entreprises nettement en dessous de leur valeur estimée.</dd>
+      <dt>Moat (douve)</dt><dd>Un avantage concurrentiel durable qui protège les profits d'une entreprise.</dd>
+      <dt>ROIC</dt><dd>La rentabilité du capital investi : le bénéfice d'exploitation après impôt divisé par le capital investi.</dd>
+      <dt>Marge de sécurité</dt><dd>La décote exigée entre le prix d'achat et la valeur estimée, pour se protéger contre les erreurs.</dd>
+      <dt>Valeur intrinsèque</dt><dd>La valeur d'une entreprise estimée à partir de l'argent qu'elle devrait générer à l'avenir.</dd>
+      <dt>Net-net</dt><dd>Une action dont le cours est inférieur aux deux tiers de son actif courant net (actifs à court terme moins toutes les dettes).</dd>
+      <dt>Monsieur Marché</dt><dd>Une image de Graham : le marché est un associé lunatique, dont les prix fluctuent selon ses humeurs.</dd>
     </dl>
 
     <h3 id="quiz">Teste-toi</h3>
@@ -134,6 +370,55 @@
       <button>Le montant du dividende</button>
       <button>La durée de détention conseillée</button>
       <button>L'ampleur, parfois forte et rapide, des variations du cours</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>4. Une action est à 80 € et le bénéfice par action est de 5 €. Quel est son PER ?</p>
+      <button>6,25</button>
+      <button>16</button>
+      <button>400</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>5. En cas de faillite, les actionnaires sont…</p>
+      <button>Remboursés en premier</button>
+      <button>Remboursés en même temps que les banques</button>
+      <button>Servis après les créanciers, souvent avec peu ou rien</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>6. Que veut dire « marge de sécurité » pour Benjamin Graham ?</p>
+      <button>Acheter nettement en dessous de la valeur estimée, pour se protéger des erreurs</button>
+      <button>Placer 10 % du capital en liquidités</button>
+      <button>Ne jamais vendre une action</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>7. Parmi ces critères, lequel fait partie de la grille de l'investisseur défensif de Graham ?</p>
+      <button>Une croissance annuelle du chiffre d'affaires d'au moins 30 %</button>
+      <button>Un PER inférieur à 15 sur les bénéfices moyens de trois ans</button>
+      <button>Une absence totale de dettes</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>8. Qu'est-ce qu'un « moat » ?</p>
+      <button>Un type d'ordre de Bourse</button>
+      <button>Un indicateur de volatilité</button>
+      <button>Un avantage concurrentiel durable qui protège les profits d'une entreprise</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>9. Une action à 100 € verse 5 € de dividende. Le cours chute à 50 € et le rendement affiché passe à 10 %. Que faut-il en penser ?</p>
+      <button>Méfiance : un rendement très élevé peut annoncer une baisse du dividende</button>
+      <button>C'est forcément une bonne affaire</button>
+      <button>Le dividende est garanti</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>10. Pourquoi l'étude de Bessembinder plaide-t-elle pour la diversification ?</p>
+      <button>Parce que toutes les actions montent en moyenne</button>
+      <button>Parce que quelques actions seulement créent l'essentiel de la richesse, et qu'il est difficile de les choisir à l'avance</button>
+      <button>Parce que les actions ne baissent jamais</button>
       <div class="fb" aria-live="polite"></div>
     </div>
 
