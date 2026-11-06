@@ -15,7 +15,7 @@
           { title: "L'histoire de la monnaie", file: 'monnaie.html',
             desc: "Du troc aux monnaies d'aujourd'hui : étalon-or, Bretton Woods, économie de la dette, QE et QT." },
           { title: "L'économie et les cycles", file: 'economie-cycles.html',
-            desc: 'Un parcours en quatre chapitres de 5 minutes, du quotidien aux grands mécanismes.' },
+            desc: 'Un parcours en quatre étapes de 5 minutes, du quotidien aux grands mécanismes.' },
           { title: 'Géopolitique & rapports de force', file: 'geopolitique.html',
             desc: 'Commerce, énergie, monnaies, technologie : comment les tensions entre pays touchent les prix.' },
           { title: 'La macroéconomie', file: 'macro.html',
