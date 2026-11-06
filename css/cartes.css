@@ -1,0 +1,116 @@
+/* =========================================================
+   EIKO FINANCE - BLOCS DES PAGES DE LEÇON
+   Même traitement que les blocs de l'accueil (css/tree.css) :
+   dégradé gris glossy, léger grossissement au survol, reflet qui passe.
+
+   S'applique à : cartes du sommaire, « 3 idées à retenir », encadrés « À savoir »,
+   avantages / inconvénients, questions du quiz, blocs « Pour aller plus loin ».
+
+   À utiliser en ajoutant, après scene.css, dans le <head> de la page :
+   <link rel="stylesheet" href="css/cartes.css">
+   ========================================================= */
+
+/* ---------- Base commune ---------- */
+.card-grid a.card,
+.chapitre .retenir,
+.chapitre .alerte,
+.chapitre .duo > div,
+.chapitre .q,
+.chapitre details {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ---------- Fond glossy gris (cartes, retenir, avantages/inconvénients, quiz, détails) ---------- */
+.card-grid a.card,
+.chapitre .retenir,
+.chapitre .duo > div,
+.chapitre .q,
+.chapitre details {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.28) 48%, rgba(255, 255, 255, 0) 52%),
+        linear-gradient(165deg, #F4F6F9 0%, #E8ECF1 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* L'encadré « À savoir » garde sa teinte chaude, avec le même reflet par-dessus. */
+.chapitre .alerte {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.18) 48%, rgba(255, 255, 255, 0) 52%),
+        #fff8e6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Les cartes du sommaire : même bordure que les blocs de l'accueil. */
+.card-grid a.card {
+    border: 1px solid #E1E6ED;
+    border-top: 3px solid var(--gold-accent);
+}
+
+/* ---------- Survol : léger grossissement + ombre plus marquée ---------- */
+.card-grid a.card:hover,
+.card-grid a.card:focus-visible {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(16, 42, 86, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+.card-grid a.card:hover h3,
+.card-grid a.card:focus-visible h3 { color: var(--gold-accent); }
+
+/* Les grands blocs de lecture grossissent moins (1 %), pour ne pas déborder de la colonne de texte. */
+.chapitre .retenir:hover,
+.chapitre .alerte:hover,
+.chapitre .duo > div:hover,
+.chapitre .q:hover,
+.chapitre details:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 10px 22px rgba(16, 42, 86, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* ---------- Reflet : un voile blanc incliné et flou passe une fois de gauche à droite, derrière le texte ---------- */
+.card-grid a.card::before,
+.chapitre .retenir::before,
+.chapitre .alerte::before,
+.chapitre .duo > div::before,
+.chapitre .q::before,
+.chapitre details::before {
+    content: "";
+    position: absolute;
+    top: -25%;
+    bottom: -25%;
+    left: 0;
+    width: 55%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.70) 50%, rgba(255, 255, 255, 0) 100%);
+    filter: blur(6px);
+    transform: translateX(-140%) skewX(-18deg);
+}
+.card-grid a.card:hover::before,
+.card-grid a.card:focus-visible::before,
+.chapitre .retenir:hover::before,
+.chapitre .alerte:hover::before,
+.chapitre .duo > div:hover::before,
+.chapitre .q:hover::before,
+.chapitre details:hover::before {
+    opacity: 1;
+    animation: eiko-reflet-carte 1s ease-out;
+}
+@keyframes eiko-reflet-carte {
+    from { transform: translateX(-140%) skewX(-18deg); }
+    to   { transform: translateX(270%)  skewX(-18deg); }
+}
+
+/* ---------- Respect du réglage « réduire les animations » ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .card-grid a.card,
+    .chapitre .retenir, .chapitre .alerte, .chapitre .duo > div, .chapitre .q, .chapitre details { transition: none; }
+    .card-grid a.card:hover, .card-grid a.card:focus-visible,
+    .chapitre .retenir:hover, .chapitre .alerte:hover, .chapitre .duo > div:hover,
+    .chapitre .q:hover, .chapitre details:hover { transform: none; }
+    .card-grid a.card::before,
+    .chapitre .retenir::before, .chapitre .alerte::before, .chapitre .duo > div::before,
+    .chapitre .q::before, .chapitre details::before { display: none; }
+}
