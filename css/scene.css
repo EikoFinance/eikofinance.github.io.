@@ -39,6 +39,7 @@
 .img-montecarlo { --img: url(../images/scene-montecarlo.webp); }
 .img-interets   { --img: url(../images/scene-interets.webp); }
 .img-matieres   { --img: url(../images/scene-matieres.webp); }
+.img-cycliques  { --img: url(../images/scene-cycliques.webp); }
 /* Fond sobre (dégradé marine) en attendant une image dédiée : à remplacer par url(../images/scene-xxx.webp) */
 .img-sobre     { --img: linear-gradient(135deg, #0A1C3B 0%, #17335f 100%); }
 
@@ -187,7 +188,8 @@
 .scene-hero.img-etudes::after,
 .scene-hero.img-montecarlo::after,
 .scene-hero.img-interets::after,
-.scene-hero.img-matieres::after {
+.scene-hero.img-matieres::after,
+.scene-hero.img-cycliques::after {
     background: linear-gradient(180deg, rgba(10, 28, 59, 0.70) 0%, rgba(10, 28, 59, 0.86) 100%);
 }
 
