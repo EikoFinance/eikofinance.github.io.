@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liquidité et marchés - EikoFinance</title>
+<meta name="description" content="M1, M2, M3, quête de rendement, corrélations qui se brisent, appels de marge et flux forcés : pourquoi même les valeurs refuges peuvent baisser ensemble.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<link rel="stylesheet" href="css/cartes.css">
+<script src="js/site.js" defer></script>
+<style>
+.graph{margin:1.1rem 0 1.6rem;text-align:center}
+.graph svg{width:100%;max-width:560px;height:auto;background:#fff;border:1px solid #D9DEE5;border-radius:8px}
+.graph figcaption{font-size:.86rem;color:#4a5568;margin-top:.45rem;line-height:1.5}
+.fig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.1rem 0 1.6rem}
+.fig-grid .graph{margin:0}
+.fig-grid h4{margin:.5rem 0 .1rem;font-size:.95rem}
+.partie{margin:2.4rem 0 .6rem;padding:.55rem 1rem;background:#0A1C3B;color:#fff;border-left:5px solid #C5A059;border-radius:4px;font-family:Cinzel,serif;font-size:1.15rem;letter-spacing:.03em}
+.chapitre ol.etapes{margin:0 0 1rem 1.3rem;line-height:1.7}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.4rem}
+.tablewrap table{border-collapse:collapse;width:100%;min-width:420px}
+.tablewrap th,.tablewrap td{border:1px solid #D9DEE5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+.tablewrap th{background:#0A1C3B;color:#fff}
+.tablewrap tr:nth-child(even) td{background:#F7F9FC}
+.frise{list-style:none;margin:1.2rem 0 1.6rem;padding:0 0 0 1.1rem;border-left:3px solid #C5A059}
+.frise li{position:relative;margin:0 0 1.15rem;line-height:1.7}
+.frise li::before{content:"";position:absolute;left:calc(-1.1rem - 7px);top:.55rem;width:11px;height:11px;border-radius:50%;background:#0A1C3B;border:2px solid #C5A059}
+.frise .date{display:block;font-weight:700;color:#0A1C3B;font-size:1.02rem}
+.frise p{margin:.25rem 0 0}
+.note-hist{font-size:.9rem;color:#4a5568;margin-top:.4rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#comprendre">Comprendre</a> › Liquidité et marchés</p>
+
+  <section class="scene scene-hero img-sobre img-liquidite">
+    <h1>La liquidité : où va l'argent, et pourquoi tout peut baisser ensemble</h1>
+    <p>Agrégats monétaires, quête de rendement, appels de marge, fonds « mécaniques » : les mécanismes qui expliquent les journées où même les valeurs refuges reculent.</p>
+    <a href="#mesurer" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#mesurer"><h3>Mesurer la monnaie</h3><p>M1, M2, M3 : les agrégats monétaires.</p></a>
+    <a class="card" href="#rendement"><h3>En quête de rendement</h3><p>Où va l'argent, et pourquoi.</p></a>
+    <a class="card" href="#correlations"><h3>Quand les corrélations se brisent</h3><p>2008, 2020, 2026 : tout baisse ensemble.</p></a>
+    <a class="card" href="#marge"><h3>Levier et appels de marge</h3><p>Comment une baisse devient une cascade.</p></a>
+    <a class="card" href="#flux"><h3>Des flux forcés</h3><p>CTA, volatilité cible, short squeeze.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Huit questions pour vérifier.</p></a>
+  </section>
+
+  <article class="chapitre" id="liquidite">
+    <p class="accroche">« Il y a plus d'argent que jamais », « la liquidité se retire »… On entend ces phrases partout. Cette leçon explique ce qu'elles veulent dire, et pourquoi, certains jours, même les actifs censés se protéger mutuellement baissent ensemble.</p>
+
+    <h2 id="mesurer">Mesurer la monnaie : M1, M2, M3</h2>
+    <p class="accroche">Combien y a-t-il de monnaie ? Tout dépend de ce qu'on appelle « monnaie ».</p>
+    <p>Les banques centrales ne comptent pas seulement les billets. Elles classent la monnaie par degré de <strong>liquidité</strong>, c'est-à-dire par la facilité avec laquelle on peut la dépenser tout de suite. Ces catégories s'emboîtent comme des poupées russes : ce sont les <strong>agrégats monétaires</strong>.</p>
+    <ul class="liste">
+      <li><strong>M0, la base monétaire</strong> : les billets et pièces, plus les réserves que les banques détiennent auprès de la banque centrale.</li>
+      <li><strong>M1</strong> : les billets et pièces en circulation, plus les dépôts à vue (l'argent de ton compte courant). C'est la monnaie utilisable immédiatement.</li>
+      <li><strong>M2</strong> : M1, plus les dépôts à terme jusqu'à 2 ans et les dépôts avec préavis jusqu'à 3 mois (les livrets d'épargne, par exemple).</li>
+      <li><strong>M3</strong> : M2, plus des instruments négociables à court terme : parts de fonds monétaires, pensions livrées et titres de créance de moins de 2 ans.</li>
+    </ul>
+    <figure class="graph">
+      <svg viewBox="0 0 420 252" role="img" aria-label="Les agrégats monétaires M1, M2 et M3 de la zone euro, emboîtés" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><text x="210" y="16" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">Zone euro, décembre 2025 (milliards d'euros)</text><text x="10" y="49" text-anchor="start" font-size="13" fill="#0A1C3B" font-weight="700">M1</text><rect x="50.0" y="30.0" width="186.6" height="30.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="244.6125007254367" y="50" text-anchor="start" font-size="12" fill="#0A1C3B" font-weight="700">11 088</text><text x="10" y="99" text-anchor="start" font-size="13" fill="#0A1C3B" font-weight="700">M2</text><rect x="50.0" y="80.0" width="186.6" height="30.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="236.6" y="80.0" width="83.9" height="30.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="328.52753757762173" y="100" text-anchor="start" font-size="12" fill="#0A1C3B" font-weight="700">16 074</text><text x="10" y="149" text-anchor="start" font-size="13" fill="#0A1C3B" font-weight="700">M3</text><rect x="50.0" y="130.0" width="186.6" height="30.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="236.6" y="130.0" width="83.9" height="30.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><rect x="320.5" y="130.0" width="19.5" height="30.0" rx="0" fill="#7C8DA8" stroke="none" stroke-width="1"/><text x="348.0" y="150" text-anchor="start" font-size="12" fill="#0A1C3B" font-weight="700">17 231</text><text x="278.5700191515292" y="100" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">+4 986</text><text x="278.5700191515292" y="150" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">+4 986</text><text x="330.26376878881086" y="175" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">+1 157</text><rect x="10.0" y="198.0" width="12.0" height="12.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="26" y="208" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Billets, pièces, dépôts à vue</text><rect x="10.0" y="216.0" width="12.0" height="12.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="26" y="226" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Livrets et dépôts à terme (jusqu'à 2 ans)</text><rect x="10.0" y="234.0" width="12.0" height="12.0" rx="0" fill="#7C8DA8" stroke="none" stroke-width="1"/><text x="26" y="244" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Fonds monétaires, pensions, titres courts</text></svg>
+      <figcaption>Les agrégats s'emboîtent : M1 est inclus dans M2, qui est inclus dans M3. Source : Banque de France / BCE, zone euro, décembre 2025.</figcaption>
+    </figure>
+    <h3>Deux pièges à connaître</h3>
+    <ul class="liste">
+      <li><strong>Les définitions changent selon les pays.</strong> La Réserve fédérale américaine ne publie que M1 et M2 : elle a cessé de publier M3 en 2006, jugeant qu'il n'apportait pas d'information utile en plus de M2. La BCE continue de suivre M3. En mai 2020, la Fed a aussi élargi M1 en y intégrant les comptes d'épargne, ce qui rend les comparaisons avant et après 2020 délicates.</li>
+      <li><strong>« Liquidité » a trois sens.</strong> La <em>liquidité monétaire</em> (les agrégats ci-dessus), la <em>liquidité de marché</em> (pouvoir acheter ou vendre vite sans faire bouger le prix) et la <em>liquidité de financement</em> (pouvoir emprunter pour tenir ses positions). Dans un krach, c'est surtout des deux dernières que l'on manque.</li>
+    </ul>
+    <p><strong>À quoi servent ces chiffres ?</strong> Quand la masse monétaire augmente nettement plus vite que l'économie, il y a plus de monnaie pour acheter à peu près les mêmes biens et les mêmes actifs : cela peut alimenter l'inflation ou la hausse du prix des actifs. C'est une piste de lecture, pas un signal infaillible : le lien entre ces agrégats et les marchés est indirect, et il varie selon les périodes.</p>
+    <h3>L'argent n'« entre » pas en Bourse</h3>
+    <p>On entend souvent que « des milliards entrent sur le marché ». Pris au pied de la lettre, c'est inexact : quand tu achètes une action, ton argent ne disparaît pas, il passe sur le compte du vendeur. La masse monétaire ne change pas (sauf si l'achat est financé par un crédit, qui crée de la monnaie). Ce qui change, c'est le <strong>prix</strong> : si beaucoup d'acheteurs veulent le même titre, le prix monte jusqu'à ce que des vendeurs acceptent. L'argent reste dans le système et cherche ensuite un nouveau placement.</p>
+
+    <h2 id="rendement">La monnaie circule en quête de rendement</h2>
+    <p class="accroche">L'argent ne dort jamais longtemps : il va là où on lui promet le meilleur rapport entre gain espéré et risque pris.</p>
+    <p>Chaque détenteur d'argent compare en permanence ses options : le laisser sur un compte, prêter à un État, acheter des actions, de l'immobilier, de l'or… C'est l'<strong>arbitrage rendement / risque</strong>. Quand les taux sont bas, les dépôts rapportent peu : une partie de la monnaie se déplace vers des actifs plus risqués pour trouver du rendement. C'est la <strong>quête de rendement</strong>. Quand les taux montent, l'équation s'inverse : les placements sûrs redeviennent attractifs et une partie de l'argent quitte les actifs risqués.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Option (exemple fictif)</th><th>Rendement espéré</th><th>Ce qu'on risque</th></tr></thead>
+        <tbody>
+          <tr><td>Compte rémunéré</td><td>2 % par an</td><td>Presque rien, mais l'inflation peut grignoter le gain</td></tr>
+          <tr><td>Obligations d'État</td><td>3,5 % par an</td><td>Variations de prix si les taux bougent</td></tr>
+          <tr><td>Actions</td><td>7 % par an en moyenne attendue</td><td>Fortes baisses possibles, parfois sur plusieurs années</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Si le compte rémunéré passe de 2 % à 4 %, l'écart avec les actions se réduit : beaucoup d'épargnants se demandent alors si le risque supplémentaire en vaut encore la peine, et une partie de l'argent change de place. Ce mouvement se voit dans les agrégats : M3 contient les parts de fonds monétaires, où l'argent vient se mettre à l'abri quand les taux sont attractifs et que le risque paraît trop élevé.</p>
+    <p class="note-hist">Quand on lit « où va la liquidité ? » dans la presse financière, il s'agit presque toujours de cette question : vers quels actifs l'argent se dirige-t-il, à la recherche du meilleur couple rendement / risque ?</p>
+
+    <h2 id="correlations">Quand les corrélations se brisent</h2>
+    <p class="accroche">Deux actifs censés se protéger l'un l'autre peuvent baisser ensemble, le même jour.</p>
+    <p>La <strong>corrélation</strong> mesure à quel point deux actifs évoluent ensemble, de −1 (sens opposés) à +1 (même sens). <strong>Diversifier</strong>, c'est mélanger des actifs peu corrélés, ou corrélés négativement, pour que les pertes de l'un soient compensées par les gains de l'autre. L'or, par exemple, monte souvent quand les actions baissent.</p>
+    <p>Mais une corrélation est une <strong>moyenne observée dans le passé</strong>, pas une loi. En période de stress, elle peut se rapprocher de +1 : tout baisse en même temps.</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 208" role="img" aria-label="Deux actifs qui évoluent en sens opposés en temps calme, puis baissent ensemble en pleine panique" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><rect x="5.0" y="28.0" width="200.0" height="118.0" rx="6" fill="#fff" stroke="#D9DEE5" stroke-width="1"/><polyline points="10.0,95.0 40.0,70.0 70.0,85.0 100.0,55.0 130.0,70.0 160.0,40.0 190.0,52.0" fill="none" stroke="#0A1C3B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="10.0,40.0 40.0,66.0 70.0,50.0 100.0,82.0 130.0,68.0 160.0,98.0 190.0,84.0" fill="none" stroke="#C5A059" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><text x="105" y="16" text-anchor="middle" font-size="12" fill="#2e7d4f" font-weight="700">Temps calme</text><text x="105" y="162" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">l'un monte quand l'autre baisse</text><rect x="215.0" y="28.0" width="200.0" height="118.0" rx="6" fill="#fff" stroke="#D9DEE5" stroke-width="1"/><polyline points="225.0,50.0 255.0,44.0 285.0,60.0 310.0,100.0 335.0,125.0 365.0,110.0 405.0,80.0" fill="none" stroke="#0A1C3B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="225.0,70.0 255.0,60.0 285.0,64.0 310.0,96.0 335.0,118.0 365.0,104.0 405.0,76.0" fill="none" stroke="#C5A059" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><text x="320" y="16" text-anchor="middle" font-size="12" fill="#b3402e" font-weight="700">Ruée vers le cash</text><text x="320" y="162" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">ils baissent ensemble</text><rect x="10.0" y="176.0" width="12.0" height="4.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="28" y="182" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Actions</text><rect x="100.0" y="176.0" width="12.0" height="4.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="118" y="182" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Or (valeur refuge)</text><text x="10" y="200" text-anchor="start" font-size="9.5" fill="#8a97ad" font-weight="400">Courbes fictives, pour illustrer le principe.</text></svg>
+      <figcaption>Schéma illustratif sur des courbes fictives.</figcaption>
+    </figure>
+    <h3>Pourquoi ?</h3>
+    <p>Parce qu'un investisseur en difficulté ne vend pas ce qu'il veut, il vend <strong>ce qu'il peut</strong> : ce qui est liquide, ce qui a bien monté, ce qui se vend vite. Si ses actions s'effondrent et qu'il doit trouver du cash, il vendra aussi son or ou ses obligations d'État. Ces ventes ne disent rien de la valeur de ces actifs : elles disent seulement que leur propriétaire a besoin d'argent.</p>
+    <ol class="frise" style="list-style:none">
+      <li><span class="date">2008</span><p>Pendant la crise financière, l'or recule d'environ 29 % entre mars et novembre 2008, en partie à cause de ventes forcées et de besoins de liquidités, avant de remonter fortement les années suivantes.</p></li>
+      <li><span class="date">9 – 19 mars 2020</span><p>La Banque d'Angleterre décrit une « ruée vers le cash » : les investisseurs vendent leurs actifs les plus liquides, y compris des actifs réputés sûrs. L'or, qui était en hausse sur l'année, perd environ 12 % en dix jours, avant de rebondir.</p></li>
+      <li><span class="date">Fin janvier – début février 2026</span><p>L'or, et surtout l'argent-métal, chutent brutalement après une forte hausse : l'argent perd environ 30 % en une seule journée, selon la BRI. Son analyse met en cause des particuliers très exposés, notamment via des ETF à effet de levier, des appels de marge, et des hausses d'exigences de marge dans les bourses de contrats à terme. Aucun changement fondamental d'une telle ampleur ne l'expliquait.</p></li>
+    </ol>
+    <p class="note-hist">Ces ruptures de corrélation sont en général temporaires : une fois les ventes forcées terminées, les valeurs refuges retrouvent souvent leur comportement habituel. Mais le temps de la panique, la diversification protège moins que prévu.</p>
+
+    <h2 id="marge">L'effet de levier et les appels de marge</h2>
+    <p class="accroche">Emprunter pour investir amplifie les gains, et les pertes. Et le prêteur n'attend pas.</p>
+    <p>Avec l'<strong>effet de levier</strong>, on contrôle une position bien plus grosse que son capital, en empruntant ou en ne déposant qu'une fraction du montant (la <strong>marge</strong>). Exemple : avec 10 000 € de capital et un levier ×5, on prend une position de 50 000 €.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Variation de l'actif</th><th>Gain ou perte sur 50 000 €</th><th>Effet sur le capital de 10 000 €</th></tr></thead>
+        <tbody>
+          <tr><td>+10 %</td><td>+5 000 €</td><td>+50 %</td></tr>
+          <tr><td>−10 %</td><td>−5 000 €</td><td>−50 %</td></tr>
+          <tr><td>−20 %</td><td>−10 000 €</td><td>−100 % : le capital est effacé</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Le courtier exige que le capital reste au-dessus d'un minimum, la <strong>marge de maintenance</strong>. Quand les pertes le font passer en dessous, il lance un <strong>appel de marge</strong> : il demande de déposer du cash ou de réduire la position. Si ce n'est pas fait à temps, il la ferme lui-même : c'est la <strong>liquidation forcée</strong>. Le prix lui est indifférent : il vend, même au pire moment.</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 238" role="img" aria-label="Cercle vicieux : baisse des prix, appels de marge, ventes forcées, nouvelle baisse" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C5A059"/></marker></defs><rect x="20.0" y="20.0" width="170.0" height="62.0" rx="8" fill="#F4F6F9" stroke="#D9DEE5" stroke-width="1"/><text x="105" y="47" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">1. Le prix</text><text x="105" y="63" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">baisse</text><rect x="230.0" y="20.0" width="170.0" height="62.0" rx="8" fill="#F4F6F9" stroke="#D9DEE5" stroke-width="1"/><text x="315" y="47" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">2. Les pertes</text><text x="315" y="63" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">dépassent la marge</text><rect x="230.0" y="140.0" width="170.0" height="62.0" rx="8" fill="#F4F6F9" stroke="#D9DEE5" stroke-width="1"/><text x="315" y="167" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">3. Appel de marge : il</text><text x="315" y="183" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">faut du cash</text><rect x="20.0" y="140.0" width="170.0" height="62.0" rx="8" fill="#F4F6F9" stroke="#D9DEE5" stroke-width="1"/><text x="105" y="167" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">4. Ventes forcées : on</text><text x="105" y="183" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">vend ce qu'on peut</text><line x1="190" y1="51" x2="226" y2="51" stroke="#C5A059" stroke-width="2.5" marker-end="url(#ah)"/><line x1="315" y1="84" x2="315" y2="136" stroke="#C5A059" stroke-width="2.5" marker-end="url(#ah)"/><line x1="226" y1="171" x2="194" y2="171" stroke="#C5A059" stroke-width="2.5" marker-end="url(#ah)"/><line x1="105" y1="136" x2="105" y2="88" stroke="#C5A059" stroke-width="2.5" marker-end="url(#ah)"/><text x="210" y="228" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">Chaque tour fait baisser le prix et déclenche les appels de marge suivants.</text></svg>
+      <figcaption>Schéma illustratif : le cercle vicieux des ventes forcées.</figcaption>
+    </figure>
+    <h3>Pourquoi la baisse se propage</h3>
+    <ul class="liste">
+      <li><strong>Les ventes forcées font baisser le prix</strong>, ce qui déclenche les appels de marge d'autres investisseurs.</li>
+      <li><strong>Les exigences de marge peuvent être relevées</strong> par les bourses de dérivés quand la volatilité monte : il faut alors mobiliser plus de cash, au pire moment. C'est ce qui s'est produit sur l'argent début 2026.</li>
+      <li><strong>Certains ETF à effet de levier rééquilibrent chaque jour</strong> : ils achètent quand le prix monte et vendent quand il baisse, ce qui amplifie le mouvement, selon la BRI.</li>
+      <li><strong>On vend d'abord ce qui est liquide et ce qui a gagné</strong> : c'est ce qui relie la chute d'un actif à celle d'un autre, même sans lien économique entre eux.</li>
+    </ul>
+    <p>Le levier est aussi l'un des risques centraux du trading, avec les chiffres qui vont avec : voir la page <a href="trading.html">Le trading</a>.</p>
+
+    <h2 id="flux">Des flux qui n'ont pas le choix</h2>
+    <p class="accroche">Sur un marché, tout le monde n'achète pas ou ne vend pas par conviction. Certains doivent le faire, par règle ou par modèle.</p>
+    <p>Une partie des ordres ne dépend ni de la valeur d'une entreprise ni de l'actualité : elle vient d'une règle de gestion ou d'un modèle automatique. Ces flux accélèrent un mouvement, dans un sens comme dans l'autre, puis s'épuisent.</p>
+    <ul class="liste">
+      <li><strong>Les fonds indiciels</strong> : quand de l'argent arrive, ils achètent l'indice, cher ou non. Ils doivent suivre l'indice, pas juger son prix.</li>
+      <li><strong>Les fonds suiveurs de tendance (CTA)</strong> : leurs modèles achètent quand les prix montent et vendent quand ils baissent. Plus le mouvement dure, plus ils le suivent, ce qui peut l'amplifier.</li>
+      <li><strong>Les fonds à volatilité cible</strong> : ils réduisent automatiquement leur exposition quand la volatilité monte, même si rien n'a changé dans les fondamentaux, et la relèvent quand elle redescend. Selon Nomura, ces stratégies et les CTA, qui gèrent environ 1 000 milliards de dollars, ont vendu de l'ordre de 108 milliards de dollars d'actions américaines entre début mars et début avril 2026, au rythme de la volatilité.</li>
+      <li><strong>Les vendeurs à découvert pris à contre-pied</strong> : un fonds qui a parié à la baisse doit racheter le titre quand il monte trop, pour limiter ses pertes ou répondre à un appel de marge. Ces achats forcés font monter le prix davantage : c'est le <em>short squeeze</em>, comme avec GameStop en janvier 2021.</li>
+      <li><strong>Les gérants sous-investis face à leur indice</strong> : un fonds qui a gardé du cash pendant une hausse risque de décrocher de son indice de référence. Il peut être tenté, ou contraint par son mandat, de racheter même à un prix élevé.</li>
+    </ul>
+    <p>Dans tous ces cas, le prix bouge parce qu'il faut acheter ou vendre, <strong>pas parce que la valeur a changé</strong>. Il est donc utile de distinguer un mouvement de fond (une nouvelle information) d'un mouvement mécanique (des flux forcés) : ce dernier a tendance à s'épuiser une fois les positions ajustées, parfois avec un rebond violent.</p>
+
+    <div class="retenir" id="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>La monnaie se mesure par degrés de liquidité (M1, M2, M3), et l'argent qui achète un actif ne disparaît pas : il passe chez le vendeur et cherche un nouveau placement.</li>
+        <li>Une corrélation négative est une habitude, pas une garantie : en pleine panique, on vend ce qui est liquide, et tout peut baisser en même temps.</li>
+        <li>Le levier, les appels de marge et les fonds « mécaniques » transforment une baisse en cascade : le prix bouge parce qu'il faut vendre, pas parce que la valeur change.</li>
+      </ul>
+    </div>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les épisodes récents sont décrits d'après des analyses publiques (BRI, Banque d'Angleterre, Nomura, presse financière) et peuvent être réévalués.</div>
+
+    <p class="note-hist"><strong>Sources :</strong> agrégats de la zone euro, Banque de France et BCE (décembre 2025) ; définitions américaines, Réserve fédérale (FEDS Notes, 2024) ; mars 2020, Banque d'Angleterre (discours de J. Cunliffe, 2022) ; début 2026, BRI (<em>Quarterly Review</em>, mars 2026) ; flux systématiques, Nomura (avril 2026), d'après la presse financière.</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Agrégat monétaire</dt><dd>Une mesure de la quantité de monnaie, par degré de liquidité (M1, M2, M3).</dd>
+      <dt>Base monétaire (M0)</dt><dd>Les billets et pièces, plus les réserves des banques auprès de la banque centrale.</dd>
+      <dt>Liquidité de marché</dt><dd>La facilité à acheter ou vendre vite sans faire bouger le prix.</dd>
+      <dt>Corrélation</dt><dd>Le degré auquel deux actifs évoluent dans le même sens (de −1 à +1).</dd>
+      <dt>Effet de levier</dt><dd>Prendre une position plus grosse que son capital, en empruntant.</dd>
+      <dt>Appel de marge</dt><dd>La demande du courtier de déposer du cash ou de réduire une position quand le capital ne suffit plus.</dd>
+      <dt>Liquidation forcée</dt><dd>La fermeture d'une position par le courtier, faute de marge suffisante.</dd>
+      <dt>CTA (suiveur de tendance)</dt><dd>Un fonds dont les modèles achètent ce qui monte et vendent ce qui baisse.</dd>
+      <dt>Volatilité cible</dt><dd>Une stratégie qui réduit son exposition quand la volatilité monte, et la relève quand elle baisse.</dd>
+      <dt>Short squeeze</dt><dd>Une hausse accélérée par le rachat forcé de titres vendus à découvert.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="0">
+      <p>1. M1 comprend…</p>
+      <button>Les billets, les pièces et les dépôts à vue</button>
+      <button>Uniquement les billets</button>
+      <button>Les actions et les obligations</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>2. Quel agrégat est le plus large ?</p>
+      <button>M0</button>
+      <button>M1</button>
+      <button>M3</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Que s'est-il passé pour M3 aux États-Unis en 2006 ?</p>
+      <button>Il est devenu l'agrégat principal</button>
+      <button>La Fed a cessé de le publier</button>
+      <button>Il a été fusionné avec M1</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>4. Quand tu achètes une action avec ton épargne, ton argent…</p>
+      <button>Est détruit</button>
+      <button>Entre dans la Bourse et y reste</button>
+      <button>Passe sur le compte du vendeur</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>5. En mars 2020, pourquoi l'or a-t-il baissé en même temps que les actions ?</p>
+      <button>Parce que des investisseurs ont vendu des actifs liquides pour obtenir du cash</button>
+      <button>Parce que l'or était sans valeur</button>
+      <button>Parce que les banques centrales ont interdit d'en vendre</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>6. Un appel de marge, c'est…</p>
+      <button>Un cadeau du courtier</button>
+      <button>Une hausse du prix de l'action</button>
+      <button>Une demande de déposer du cash ou de réduire sa position</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>7. Pourquoi les fonds suiveurs de tendance peuvent-ils amplifier une baisse ?</p>
+      <button>Parce qu'ils achètent toujours quand ça baisse</button>
+      <button>Parce que leurs modèles les poussent à vendre quand les prix baissent</button>
+      <button>Parce qu'ils sont interdits de vente</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>8. Un short squeeze, c'est…</p>
+      <button>Une baisse volontaire du prix</button>
+      <button>Un impôt sur les ventes</button>
+      <button>Un rachat forcé de titres vendus à découvert, qui fait monter le prix</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="monnaie.html">← L'histoire de la monnaie</a><a class="next" href="economie-cycles.html">L'économie et les cycles →</a></div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>
