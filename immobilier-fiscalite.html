@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Immobilier : impôts et transmission - EikoFinance</title>
+<meta name="description" content="Revenus locatifs, déficit foncier, LMNP, plus-value, démembrement, SCI et cas chiffré de transmission d'un bien locatif.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<link rel="stylesheet" href="css/cartes.css">
+<script src="js/site.js" defer></script>
+<style>
+.graph{margin:1.1rem 0 1.6rem;text-align:center}
+.graph svg{width:100%;max-width:560px;height:auto;background:#fff;border:1px solid #D9DEE5;border-radius:8px}
+.graph figcaption{font-size:.86rem;color:#4a5568;margin-top:.45rem;line-height:1.5}
+.fig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.1rem 0 1.6rem}
+.fig-grid .graph{margin:0}
+.fig-grid h4{margin:.5rem 0 .1rem;font-size:.95rem}
+.partie{margin:2.4rem 0 .6rem;padding:.55rem 1rem;background:#0A1C3B;color:#fff;border-left:5px solid #C5A059;border-radius:4px;font-family:Cinzel,serif;font-size:1.15rem;letter-spacing:.03em}
+.chapitre ol.etapes{margin:0 0 1rem 1.3rem;line-height:1.7}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.4rem}
+.tablewrap table{border-collapse:collapse;width:100%;min-width:420px}
+.tablewrap th,.tablewrap td{border:1px solid #D9DEE5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+.tablewrap th{background:#0A1C3B;color:#fff}
+.tablewrap tr:nth-child(even) td{background:#F7F9FC}
+.frise{list-style:none;margin:1.2rem 0 1.6rem;padding:0 0 0 1.1rem;border-left:3px solid #C5A059}
+.frise li{position:relative;margin:0 0 1.15rem;line-height:1.7}
+.frise li::before{content:"";position:absolute;left:calc(-1.1rem - 7px);top:.55rem;width:11px;height:11px;border-radius:50%;background:#0A1C3B;border:2px solid #C5A059}
+.frise .date{display:block;font-weight:700;color:#0A1C3B;font-size:1.02rem}
+.frise p{margin:.25rem 0 0}
+.note-hist{font-size:.9rem;color:#4a5568;margin-top:.4rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#optimiser">Optimiser</a> › Immobilier : impôts et transmission</p>
+
+  <section class="scene scene-hero img-sobre img-immobilier-fiscal">
+    <h1>Immobilier : payer moins d'impôts et transmettre mieux</h1>
+    <p>Revenus locatifs, plus-value, démembrement, SCI : les leviers pour limiter l'impôt et préparer la transmission, avec un cas complet chiffré.</p>
+    <a href="#revenus" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#revenus"><h3>Les revenus locatifs</h3><p>Micro-foncier, réel, meublé.</p></a>
+    <a class="card" href="#leviers"><h3>Limiter l'impôt</h3><p>Déficit foncier, LMNP, dispositifs.</p></a>
+    <a class="card" href="#plusvalue"><h3>La plus-value</h3><p>Abattements : 22 et 30 ans.</p></a>
+    <a class="card" href="#demembrement"><h3>Le démembrement</h3><p>Usufruit, nue-propriété, barème.</p></a>
+    <a class="card" href="#sci"><h3>La SCI familiale</h3><p>Transmettre progressivement.</p></a>
+    <a class="card" href="#cas"><h3>Un cas complet</h3><p>Hélène : 48 000 € d'économie.</p></a>
+    <a class="card" href="#ifi"><h3>L'IFI</h3><p>Le seuil de 1,3 million d'euros.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Dix questions pour vérifier.</p></a>
+  </section>
+
+  <article class="chapitre" id="lecon">
+    <p class="accroche">En immobilier, l'impôt pèse à trois moments : quand on perçoit les loyers, quand on revend, et quand on transmet. Cette leçon passe en revue les leviers de chacun, puis les rassemble dans un cas chiffré.</p>
+
+    <h2 id="revenus">Les revenus locatifs : quel régime ?</h2>
+    <p class="accroche">Le même loyer peut être imposé très différemment selon le régime choisi.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Régime</th><th>Principe</th><th>Atout</th><th>Limite</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Location nue :</strong> micro-foncier</td><td>Abattement forfaitaire de 30 % sur les loyers, si ceux-ci ne dépassent pas 15 000 € par an.</td><td>Très simple.</td><td>Aucune charge réelle déductible, pas de déficit.</td></tr>
+          <tr><td><strong>Location nue :</strong> régime réel</td><td>On déduit les charges réelles : travaux d'entretien, intérêts d'emprunt, taxe foncière, assurance, gestion.</td><td>Permet le déficit foncier ; obligatoire au-delà de 15 000 €.</td><td>Comptabilité plus lourde ; l'option engage pour 3 ans.</td></tr>
+          <tr><td><strong>Location meublée :</strong> micro-BIC</td><td>Abattement de 50 % (30 % pour un meublé de tourisme non classé, dans la limite de 15 000 €).</td><td>Simple.</td><td>Les plafonds de recettes sont revus ; à vérifier chaque année.</td></tr>
+          <tr><td><strong>Location meublée :</strong> régime réel (LMNP)</td><td>Amortissement du bien et du mobilier, plus les charges.</td><td>Le résultat fiscal peut être nul pendant des années.</td><td>Depuis le 15 février 2025, les amortissements sont réintégrés dans la plus-value à la revente.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Prélèvements sociaux en 2026 :</strong> les revenus fonciers (location nue) et les plus-values immobilières restent à <strong>17,2 %</strong>. La loi de financement de la Sécurité sociale pour 2026 a relevé la CSG de 9,2 à 10,6 % sur de nombreux revenus du capital, dont les loyers de la location meublée (BIC) : <strong>18,6 %</strong>.</p>
+    <p><strong>Exemple :</strong> 12 000 € de loyers en location nue, au micro-foncier, avec une tranche marginale d'imposition de 30 %. Base imposable : 8 400 € (après l'abattement de 30 %). Impôt sur le revenu : 2 520 €. Prélèvements sociaux : 1 445 €. Soit environ <strong>3 965 €</strong> d'impôts et de prélèvements.</p>
+    <p class="note-hist">Au-delà de 23 000 € de recettes en meublé, et si ces recettes dépassent les autres revenus d'activité du foyer, le loueur devient « professionnel » (LMP), avec des règles différentes. À vérifier avec un expert-comptable.</p>
+
+    <h2 id="leviers">Les leviers pour limiter l'impôt</h2>
+    <p class="accroche">Ils existent, mais un avantage fiscal ne rend pas bon un mauvais achat.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Levier</th><th>Principe</th><th>Attention</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Déficit foncier</strong></td><td>Les travaux déductibles creusent un déficit imputable sur le revenu global, jusqu'à <strong>10 700 € par an</strong> (hors intérêts d'emprunt). Plafond de <strong>21 400 €</strong> pour une rénovation énergétique faisant passer un logement de E, F ou G à A, B, C ou D, pour les dépenses payées jusqu'au 31 décembre 2027.</td><td>L'excédent se reporte 10 ans sur les revenus fonciers. Il faut garder le bien loué jusqu'au 31 décembre de la 3e année suivante.</td></tr>
+          <tr><td><strong>LMNP au réel</strong></td><td>Amortir le bien et le mobilier pour réduire (voire annuler) le résultat imposable.</td><td>Amortissements réintégrés dans la plus-value (depuis le 15 février 2025) ; prélèvements sociaux à 18,6 %.</td></tr>
+          <tr><td><strong>Statut du bailleur privé</strong> (dispositif Jeanbrun)</td><td>Créé par la loi de finances 2026 : un amortissement du logement en location nue, pour certains logements, sous conditions de loyers et d'engagement de location.</td><td>Dispositif récent dont le détail peut évoluer ; amortissements réintégrés dans la plus-value.</td></tr>
+          <tr><td><strong>Loc'Avantages</strong></td><td>Réduction d'impôt en échange de loyers modérés. Prorogé jusqu'au 31 décembre 2027.</td><td>Plafonds de loyers et de ressources du locataire.</td></tr>
+          <tr><td><strong>Dispositifs de rénovation</strong> (Malraux, monuments historiques, Denormandie)</td><td>Réductions d'impôt ou déductions liées à la rénovation de bâtiments anciens.</td><td>Conditions strictes, coûts élevés. Le dispositif Pinel, lui, a pris fin au 31 décembre 2024.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Exemple de déficit foncier :</strong> 10 000 € de loyers, 2 000 € de charges et 20 000 € de travaux déductibles : le déficit est de 12 000 €. Il s'impute sur le revenu global à hauteur de 10 700 € : avec une tranche marginale à 30 %, l'économie d'impôt est d'environ <strong>3 210 €</strong>. Les 1 300 € restants se reportent sur les revenus fonciers des 10 années suivantes.</p>
+
+    <h2 id="plusvalue">Revendre : la plus-value immobilière</h2>
+    <p class="accroche">La durée de détention est le premier levier : au bout de 22 ans, plus d'impôt sur le revenu.</p>
+    <p>La plus-value d'un particulier (hors résidence principale, qui est exonérée) est taxée à <strong>19 % d'impôt sur le revenu</strong>, plus <strong>17,2 % de prélèvements sociaux</strong>, soit 36,2 % avant abattements. Les abattements pour durée de détention sont différents pour les deux composantes :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Durée de détention</th><th>Abattement impôt sur le revenu</th><th>Abattement prélèvements sociaux</th></tr></thead>
+        <tbody>
+          <tr><td>5 ans</td><td>0 %</td><td>0 %</td></tr>
+          <tr><td>10 ans</td><td>30 %</td><td>8,25 %</td></tr>
+          <tr><td>15 ans</td><td>60 %</td><td>16,5 %</td></tr>
+          <tr><td>20 ans</td><td>90 %</td><td>24,75 %</td></tr>
+          <tr><td>22 ans</td><td>100 % : exonération</td><td>28 %</td></tr>
+          <tr><td>30 ans</td><td>100 %</td><td>100 % : exonération</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figure class="graph">
+      <svg viewBox="0 0 420 236" role="img" aria-label="Abattements pour durée de détention sur la plus-value immobilière" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><line x1="44" y1="196.0" x2="400" y2="196.0" stroke="#EEF1F6" stroke-width="1"/><text x="38" y="200.0" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">0 %</text><line x1="44" y1="153.0" x2="400" y2="153.0" stroke="#EEF1F6" stroke-width="1"/><text x="38" y="157.0" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">25 %</text><line x1="44" y1="110.0" x2="400" y2="110.0" stroke="#EEF1F6" stroke-width="1"/><text x="38" y="114.0" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">50 %</text><line x1="44" y1="67.0" x2="400" y2="67.0" stroke="#EEF1F6" stroke-width="1"/><text x="38" y="71.0" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">75 %</text><line x1="44" y1="24.0" x2="400" y2="24.0" stroke="#EEF1F6" stroke-width="1"/><text x="38" y="28.0" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">100 %</text><text x="44.0" y="210" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">0</text><text x="103.33333333333334" y="210" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">5</text><text x="162.66666666666669" y="210" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">10</text><text x="222.0" y="210" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">15</text><text x="281.33333333333337" y="210" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">20</text><text x="305.06666666666666" y="210" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">22</text><text x="340.6666666666667" y="210" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">25</text><text x="400.0" y="210" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">30</text><text x="222.0" y="226" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">Années de détention</text><polyline points="44.0,196.0 55.9,196.0 67.7,196.0 79.6,196.0 91.5,196.0 103.3,196.0 115.2,185.7 127.1,175.4 138.9,165.0 150.8,154.7 162.7,144.4 174.5,134.1 186.4,123.8 198.3,113.4 210.1,103.1 222.0,92.8 233.9,82.5 245.7,72.2 257.6,61.8 269.5,51.5 281.3,41.2 293.2,30.9 305.1,24.0 316.9,24.0 328.8,24.0 340.7,24.0 352.5,24.0 364.4,24.0 376.3,24.0 388.1,24.0 400.0,24.0" fill="none" stroke="#0A1C3B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="44.0,196.0 55.9,196.0 67.7,196.0 79.6,196.0 91.5,196.0 103.3,196.0 115.2,193.2 127.1,190.3 138.9,187.5 150.8,184.6 162.7,181.8 174.5,179.0 186.4,176.1 198.3,173.3 210.1,170.5 222.0,167.6 233.9,164.8 245.7,161.9 257.6,159.1 269.5,156.3 281.3,153.4 293.2,150.6 305.1,147.8 316.9,132.4 328.8,116.9 340.7,101.4 352.5,85.9 364.4,70.4 376.3,55.0 388.1,39.5 400.0,24.0" fill="none" stroke="#C5A059" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="305.1" cy="24.0" r="4.5" fill="#0A1C3B"/><circle cx="400.0" cy="24.0" r="4.5" fill="#C5A059"/><text x="52" y="41.19999999999999" text-anchor="start" font-size="9.5" fill="#0A1C3B" font-weight="700">Impôt sur le revenu : exonéré à 22 ans</text><text x="396" y="180.52" text-anchor="end" font-size="9.5" fill="#8a6d2b" font-weight="700">Prélèvements sociaux : exonérés à 30 ans</text><text x="44" y="14" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">Abattement cumulé sur la plus-value</text></svg>
+      <figcaption>Chaque courbe atteint 100 % : l'impôt sur le revenu s'éteint à 22 ans, les prélèvements sociaux à 30 ans.</figcaption>
+    </figure>
+    <ul class="liste">
+      <li><strong>Prix d'achat corrigé</strong> : on peut y ajouter un forfait de 7,5 % pour les frais d'acquisition, et un forfait de 15 % pour les travaux si le bien est détenu depuis plus de 5 ans (ou les travaux réels, justifiés).</li>
+      <li><strong>Surtaxe</strong> : de 2 à 6 % supplémentaires quand la plus-value nette imposable dépasse 50 000 €.</li>
+      <li><strong>Exonérations</strong> : résidence principale, et plus-values des biens détenus depuis plus de 22 ans (impôt) et 30 ans (prélèvements sociaux).</li>
+    </ul>
+    <p><strong>Exemple :</strong> un appartement acheté 200 000 € et revendu 320 000 € après 12 ans. Prix d'achat corrigé : 200 000 + 15 000 + 30 000 = 245 000 €. Plus-value brute : 75 000 €. Abattements : 42 % pour l'impôt, 11,55 % pour les prélèvements sociaux. Impôt sur le revenu : 19 % × 43 500 € = 8 265 €. Prélèvements sociaux : 17,2 % × 66 338 € ≈ 11 410 €. Total : <strong>environ 19 675 €</strong>, soit 26 % de la plus-value.</p>
+
+    <h2 id="demembrement">Le démembrement de propriété</h2>
+    <p class="accroche">Séparer l'usage et la valeur d'un bien : l'outil central de la transmission immobilière.</p>
+    <p>La pleine propriété se compose de deux droits : l'<strong>usufruit</strong> (habiter le bien ou percevoir les loyers) et la <strong>nue-propriété</strong> (la propriété « en réserve », qui devient pleine propriété quand l'usufruit s'éteint). Les bases et l'exemple de la maison de Camille se trouvent dans <a href="transmission.html#demembrement">Transmission et dons</a> ; ici, on regarde le cas d'un bien locatif.</p>
+    <p>Le démembrement naît le plus souvent d'une <strong>donation de la nue-propriété avec réserve d'usufruit</strong> : le parent donne à ses enfants, mais garde les loyers. Les droits ne sont calculés que sur la valeur de la nue-propriété, fixée par un barème fiscal selon l'âge de l'usufruitier (article 669 du CGI).</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 250" role="img" aria-label="Barème fiscal de l'usufruit et de la nue-propriété selon l'âge de l'usufruitier" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><text x="210" y="14" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">Âge de l'usufruitier le jour de la donation</text><text x="88" y="40" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Moins de 21 ans</text><rect x="96.0" y="26.0" width="279.0" height="18.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="375.0" y="26.0" width="31.0" height="18.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="235.5" y="39" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">90 %</text><text x="390.5" y="39" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">10 %</text><text x="88" y="62" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">21 à 30 ans</text><rect x="96.0" y="48.0" width="248.0" height="18.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="344.0" y="48.0" width="62.0" height="18.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="220.0" y="61" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">80 %</text><text x="375.0" y="61" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">20 %</text><text x="88" y="84" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">31 à 40 ans</text><rect x="96.0" y="70.0" width="217.0" height="18.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="313.0" y="70.0" width="93.0" height="18.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="204.5" y="83" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">70 %</text><text x="359.5" y="83" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">30 %</text><text x="88" y="106" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">41 à 50 ans</text><rect x="96.0" y="92.0" width="186.0" height="18.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="282.0" y="92.0" width="124.0" height="18.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="189.0" y="105" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">60 %</text><text x="344.0" y="105" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">40 %</text><text x="88" y="128" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">51 à 60 ans</text><rect x="96.0" y="114.0" width="155.0" height="18.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="251.0" y="114.0" width="155.0" height="18.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="173.5" y="127" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">50 %</text><text x="328.5" y="127" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">50 %</text><text x="88" y="150" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">61 à 70 ans</text><rect x="96.0" y="136.0" width="124.0" height="18.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="220.0" y="136.0" width="186.0" height="18.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="158.0" y="149" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">40 %</text><text x="313.0" y="149" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">60 %</text><text x="88" y="172" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">71 à 80 ans</text><rect x="96.0" y="158.0" width="93.0" height="18.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="189.0" y="158.0" width="217.0" height="18.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="142.5" y="171" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">30 %</text><text x="297.5" y="171" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">70 %</text><text x="88" y="194" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">81 à 90 ans</text><rect x="96.0" y="180.0" width="62.0" height="18.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="158.0" y="180.0" width="248.0" height="18.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="127.0" y="193" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">20 %</text><text x="282.0" y="193" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">80 %</text><text x="88" y="216" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">91 ans et plus</text><rect x="96.0" y="202.0" width="31.0" height="18.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="127.0" y="202.0" width="279.0" height="18.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="111.5" y="215" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">10 %</text><text x="266.5" y="215" text-anchor="middle" font-size="10" fill="#0A1C3B" font-weight="700">90 %</text><rect x="96.0" y="232.0" width="12.0" height="10.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="112" y="241" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Usufruit</text><rect x="190.0" y="232.0" width="12.0" height="10.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="206" y="241" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Nue-propriété</text></svg>
+      <figcaption>Barème de l'article 669 du CGI, inchangé depuis 2004 : plus l'usufruitier est âgé, plus la nue-propriété vaut cher.</figcaption>
+    </figure>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Qui paie, qui décide ?</th><th>Usufruitier</th><th>Nu-propriétaire</th></tr></thead>
+        <tbody>
+          <tr><td>Loyers et impôt sur ces loyers</td><td>Il les perçoit et les déclare</td><td>Non</td></tr>
+          <tr><td>Taxe foncière et charges courantes, entretien</td><td>Oui, en général</td><td>Non</td></tr>
+          <tr><td>Grosses réparations (gros murs, toiture entière…)</td><td>Non</td><td>Oui (article 606 du Code civil)</td></tr>
+          <tr><td>IFI (impôt sur la fortune immobilière)</td><td>Imposé, en général, sur la valeur de la pleine propriété</td><td>Non, en général</td></tr>
+          <tr><td>Vente du bien</td><td>Accord des deux parties nécessaire</td><td>Accord des deux parties nécessaire</td></tr>
+          <tr><td>Au décès de l'usufruitier</td><td>L'usufruit s'éteint</td><td>Il devient plein propriétaire, sans nouveaux droits sur ce bien</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Acheter en nue-propriété</h3>
+    <p>Des investisseurs achètent la <strong>nue-propriété</strong> d'un logement avec une décote de l'ordre de 30 à 40 % selon la durée du démembrement (indicatif), pendant que l'usufruit est acquis par un bailleur institutionnel pour 15 à 20 ans. L'investisseur ne perçoit aucun loyer, n'a ni travaux ni gestion, et en général ne supporte pas l'IFI sur ce bien. À l'échéance, il retrouve la pleine propriété sans payer d'impôt supplémentaire sur cette réunion. Contrepartie : l'argent est immobilisé 15 à 20 ans, et le bien est illiquide.</p>
+
+    <h2 id="sci">La SCI familiale : transmettre progressivement</h2>
+    <p class="accroche">Transmettre un immeuble par petits morceaux, tout en gardant la main.</p>
+    <p>Une <strong>société civile immobilière (SCI)</strong> détient le bien, et ses associés détiennent des <strong>parts</strong>. Au lieu de donner l'immeuble, un parent peut donner des parts, au fil du temps, en utilisant l'abattement de 100 000 € de chaque enfant tous les 15 ans. Il peut rester <strong>gérant</strong> de la société, donc garder le pouvoir de décision, et même démembrer les parts : donner la nue-propriété des parts et conserver l'usufruit.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>SCI à l'impôt sur le revenu (IR)</th><th>SCI à l'impôt sur les sociétés (IS)</th></tr></thead>
+        <tbody>
+          <tr><td>Impôt sur les loyers</td><td>Chaque associé, selon sa tranche (revenus fonciers)</td><td>La société, au taux de l'impôt sur les sociétés</td></tr>
+          <tr><td>Amortissement du bien</td><td>Non</td><td>Oui</td></tr>
+          <tr><td>Plus-value à la revente</td><td>Régime des particuliers (abattements pour durée de détention)</td><td>Plus-value calculée sur la valeur nette comptable, sans abattement pour durée</td></tr>
+          <tr><td>Usage principal</td><td>Gestion et transmission familiales</td><td>Gestion patrimoniale avec réinvestissement</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-hist"><strong>Précautions :</strong> la SCI a un coût (statuts, comptabilité, assemblées), ses associés répondent des dettes de la société, et une SCI créée dans le seul but d'éviter l'impôt peut être contestée par l'administration. Une décote peut parfois s'appliquer à la valeur des parts (minorité, difficulté de revente), mais elle doit être justifiée. À mettre en place avec un notaire.</p>
+
+    <h2 id="cas">Un cas complet : Hélène transmet son appartement locatif</h2>
+    <p class="accroche">Garder les loyers, transmettre à ses enfants, payer le moins de droits possible.</p>
+    <p><strong>La situation :</strong> Hélène a 67 ans, elle est veuve, et elle a deux enfants majeurs, Léa et Hugo. Elle possède un appartement locatif valant <strong>600 000 €</strong>. Elle veut le transmettre à ses enfants à parts égales, mais garder les loyers qui complètent sa retraite. Hypothèses : aucune donation faite dans les 15 dernières années, abattement de 100 000 € par enfant, barème 2026 en ligne directe, hors frais de notaire.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Scénario</th><th>Base taxable, par enfant</th><th>Droits, par enfant</th><th>Droits, total</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A.</strong> Ne rien faire : succession en pleine propriété</td><td>300 000 € − 100 000 € = 200 000 €</td><td>38 194 €</td><td><strong>76 389 €</strong></td></tr>
+          <tr><td><strong>B.</strong> Donation en pleine propriété aujourd'hui</td><td>200 000 €</td><td>38 194 €</td><td><strong>76 389 €</strong></td></tr>
+          <tr><td><strong>C.</strong> Donation de la nue-propriété, usufruit réservé</td><td>À 67 ans, la nue-propriété vaut 60 % : 360 000 €, soit 180 000 € par enfant, moins 100 000 € = 80 000 €</td><td>14 194 €</td><td><strong>28 389 €</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="liste">
+      <li><strong>Scénario B</strong> : mêmes droits que A, mais payés maintenant, et Hélène perd ses loyers. Son seul intérêt est de figer la valeur : la hausse future du bien ne sera pas taxée.</li>
+      <li><strong>Scénario C</strong> : <strong>48 000 € d'économie</strong> par rapport à A. Hélène garde les loyers. À son décès, l'usufruit s'éteint et Léa et Hugo deviennent pleins propriétaires, sans droits supplémentaires sur cet appartement.</li>
+    </ul>
+    <figure class="graph">
+      <svg viewBox="0 0 420 208" role="img" aria-label="Droits de donation selon le mode de transmission et l'âge du donateur" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><text x="210" y="14" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">Droits à payer pour deux enfants, bien de 600 000 €</text><text x="162" y="43" text-anchor="end" font-size="10" fill="#0A1C3B" font-weight="400">Pleine propriété (A et B)</text><rect x="170.0" y="28.0" width="190.0" height="22.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="366.0" y="43" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">76 389 €</text><text x="162" y="73" text-anchor="end" font-size="10" fill="#0A1C3B" font-weight="400">Nue-propriété donnée à 55 ans</text><rect x="170.0" y="58.0" width="40.8" height="22.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="216.76326734189743" y="73" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">16 389 €</text><text x="162" y="103" text-anchor="end" font-size="10" fill="#0A1C3B" font-weight="400">… donnée à 67 ans</text><rect x="170.0" y="88.0" width="70.6" height="22.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="246.61061387351793" y="103" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">28 389 €</text><text x="162" y="133" text-anchor="end" font-size="10" fill="#0A1C3B" font-weight="400">… donnée à 77 ans</text><rect x="170.0" y="118.0" width="100.5" height="22.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="276.45796040513846" y="133" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">40 389 €</text><text x="162" y="163" text-anchor="end" font-size="10" fill="#0A1C3B" font-weight="400">… donnée à 85 ans</text><rect x="170.0" y="148.0" width="130.3" height="22.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="306.305306936759" y="163" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">52 389 €</text><text x="210" y="198" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">Calculs : barème 2026 en ligne directe, abattement de 100 000 € par enfant.</text></svg>
+      <figcaption>Plus on donne tôt, plus la nue-propriété est basse, et plus l'économie est grande.</figcaption>
+    </figure>
+    <h3>Ce que le calcul ne montre pas</h3>
+    <ul class="liste">
+      <li><strong>Une donation est irrévocable.</strong> Hélène ne pourra pas reprendre le bien si elle change d'avis.</li>
+      <li><strong>Pour vendre, il faut l'accord des deux parties.</strong> Hélène et ses enfants devront s'entendre.</li>
+      <li><strong>Le « rappel fiscal » de 15 ans</strong> : si Hélène fait d'autres donations dans les 15 ans, l'abattement déjà utilisé ne se renouvelle pas (voir <a href="transmission.html">Transmission et dons</a>).</li>
+      <li><strong>Les frais de notaire</strong> de la donation, de l'ordre de 1 à 2 % de la valeur, ne sont pas inclus.</li>
+      <li><strong>Les loyers restent imposables chez Hélène</strong>, comme avant la donation.</li>
+      <li><strong>L'égalité entre les enfants</strong> et la protection des héritiers : un notaire doit valider l'ensemble.</li>
+    </ul>
+    <p>Variantes à étudier avec un notaire : apporter le bien à une SCI puis donner les parts, ou échelonner les donations tous les 15 ans pour utiliser les abattements plusieurs fois.</p>
+
+    <h2 id="ifi">L'IFI en bref</h2>
+    <p>L'<strong>impôt sur la fortune immobilière (IFI)</strong> concerne les foyers dont le patrimoine immobilier net taxable dépasse <strong>1,3 million d'euros</strong> au 1er janvier. Le barème est progressif à partir de 800 000 €, de 0,5 % à 1,5 %. La résidence principale bénéficie d'un abattement de 30 %, et certaines dettes sont déductibles. Pour un bien démembré, c'est en général l'usufruitier qui est imposé, sur la pleine propriété.</p>
+
+    <div class="retenir" id="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Les loyers, la revente et la transmission ont chacun leurs règles : choisir son régime avant d'acheter évite de mauvaises surprises.</li>
+        <li>La durée de détention efface l'impôt sur la plus-value : 22 ans pour l'impôt sur le revenu, 30 ans pour les prélèvements sociaux.</li>
+        <li>Donner la nue-propriété en gardant l'usufruit réduit les droits : dans le cas d'Hélène, 48 000 € d'économie, pour un bien de 600 000 €.</li>
+      </ul>
+    </div>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil fiscal ni en investissement. Les règles sont celles connues en novembre 2026 (lois de finances et de financement de la Sécurité sociale pour 2026) et évoluent chaque année : un projet de budget pour 2027 est en discussion. Fais valider toute opération par un notaire ou un conseil en gestion de patrimoine.</div>
+    <p class="note-hist"><strong>Sources :</strong> brochure « Nouveautés » de l'impôt sur le revenu 2026 (impots.gouv.fr) ; loi de finances pour 2026 (loi du 19 février 2026) ; loi de financement de la Sécurité sociale pour 2026 ; articles 669, 777, 779 et 784 du CGI ; barème et abattements des plus-values immobilières (article 150 VC du CGI) ; loi Le Meur de 2024.</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Usufruit</dt><dd>Le droit d'utiliser un bien et d'en percevoir les revenus.</dd>
+      <dt>Nue-propriété</dt><dd>Le droit de propriété « en réserve », qui devient pleine propriété à la fin de l'usufruit.</dd>
+      <dt>Démembrement</dt><dd>La séparation de l'usufruit et de la nue-propriété.</dd>
+      <dt>Déficit foncier</dt><dd>Quand les charges et travaux déductibles dépassent les loyers de la location nue.</dd>
+      <dt>LMNP / LMP</dt><dd>Loueur en meublé non professionnel / professionnel.</dd>
+      <dt>Amortissement</dt><dd>Une charge comptable qui répartit le coût d'un bien sur sa durée d'usage.</dd>
+      <dt>SCI</dt><dd>Société civile immobilière, qui détient un ou plusieurs biens.</dd>
+      <dt>IFI</dt><dd>Impôt sur la fortune immobilière, à partir de 1,3 million d'euros de patrimoine immobilier net.</dd>
+      <dt>Rappel fiscal</dt><dd>La prise en compte des donations des 15 dernières années pour calculer les droits.</dd>
+      <dt>Prix d'acquisition corrigé</dt><dd>Le prix d'achat, majoré des frais et des travaux, utilisé pour calculer la plus-value.</dd>
+      <dt>Tranche marginale d'imposition (TMI)</dt><dd>Le taux d'impôt sur le revenu appliqué à la dernière tranche de revenus.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="0">
+      <p>1. En location nue, le micro-foncier s'applique avec un abattement de…</p>
+      <button>30 %, si les loyers ne dépassent pas 15 000 € par an</button>
+      <button>50 %, sans plafond</button>
+      <button>10 %, si les loyers dépassent 15 000 €</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Quel plafond de déficit foncier est imputable chaque année sur le revenu global (hors intérêts d'emprunt) ?</p>
+      <button>10 700 €</button>
+      <button>2 000 €</button>
+      <button>50 000 €</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. En 2026, quel est le taux des prélèvements sociaux sur les revenus fonciers (location nue) ?</p>
+      <button>9,2 %</button>
+      <button>17,2 %</button>
+      <button>18,6 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>4. Au bout de combien d'années de détention la plus-value immobilière est-elle exonérée d'impôt sur le revenu ?</p>
+      <button>5 ans</button>
+      <button>22 ans</button>
+      <button>30 ans</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>5. Quel est le taux de base de la plus-value immobilière (impôt + prélèvements sociaux) ?</p>
+      <button>19 % seulement</button>
+      <button>36,2 %</button>
+      <button>42,2 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>6. Dans un démembrement, qui perçoit les loyers ?</p>
+      <button>Le nu-propriétaire</button>
+      <button>L'usufruitier</button>
+      <button>L'État</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>7. Pour un usufruitier de 61 à 70 ans, la nue-propriété représente…</p>
+      <button>40 %</button>
+      <button>60 %</button>
+      <button>90 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>8. Dans le cas d'Hélène (67 ans, bien de 600 000 €), quelle est l'économie de droits avec la donation de la nue-propriété ?</p>
+      <button>Environ 48 000 €</button>
+      <button>Aucune</button>
+      <button>Environ 76 000 €</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>9. Qui supporte les grosses réparations d'un bien démembré ?</p>
+      <button>L'usufruitier</button>
+      <button>Le nu-propriétaire</button>
+      <button>Le locataire</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>10. À partir de quel patrimoine immobilier net l'IFI s'applique-t-il ?</p>
+      <button>500 000 €</button>
+      <button>1,3 million d'euros</button>
+      <button>5 millions d'euros</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="transmission.html">← Transmission et dons</a><a class="next" href="etudes.html">Études de cas →</a></div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>

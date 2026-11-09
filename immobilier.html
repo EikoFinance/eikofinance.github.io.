@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'immobilier - EikoFinance</title>
+<meta name="description" content="Résidence principale, investissement locatif, crédit, rentabilité nette, DPE et risques : comprendre l'immobilier en investisseur, avec des chiffres.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<link rel="stylesheet" href="css/cartes.css">
+<script src="js/site.js" defer></script>
+<style>
+.graph{margin:1.1rem 0 1.6rem;text-align:center}
+.graph svg{width:100%;max-width:560px;height:auto;background:#fff;border:1px solid #D9DEE5;border-radius:8px}
+.graph figcaption{font-size:.86rem;color:#4a5568;margin-top:.45rem;line-height:1.5}
+.fig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.1rem 0 1.6rem}
+.fig-grid .graph{margin:0}
+.fig-grid h4{margin:.5rem 0 .1rem;font-size:.95rem}
+.partie{margin:2.4rem 0 .6rem;padding:.55rem 1rem;background:#0A1C3B;color:#fff;border-left:5px solid #C5A059;border-radius:4px;font-family:Cinzel,serif;font-size:1.15rem;letter-spacing:.03em}
+.chapitre ol.etapes{margin:0 0 1rem 1.3rem;line-height:1.7}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.4rem}
+.tablewrap table{border-collapse:collapse;width:100%;min-width:420px}
+.tablewrap th,.tablewrap td{border:1px solid #D9DEE5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+.tablewrap th{background:#0A1C3B;color:#fff}
+.tablewrap tr:nth-child(even) td{background:#F7F9FC}
+.frise{list-style:none;margin:1.2rem 0 1.6rem;padding:0 0 0 1.1rem;border-left:3px solid #C5A059}
+.frise li{position:relative;margin:0 0 1.15rem;line-height:1.7}
+.frise li::before{content:"";position:absolute;left:calc(-1.1rem - 7px);top:.55rem;width:11px;height:11px;border-radius:50%;background:#0A1C3B;border:2px solid #C5A059}
+.frise .date{display:block;font-weight:700;color:#0A1C3B;font-size:1.02rem}
+.frise p{margin:.25rem 0 0}
+.note-hist{font-size:.9rem;color:#4a5568;margin-top:.4rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#investir">Investir</a> › L'immobilier</p>
+
+  <section class="scene scene-hero img-sobre img-immobilier">
+    <h1>L'immobilier : acheter, louer, financer, et savoir ce que ça rapporte vraiment</h1>
+    <p>Résidence principale, logement locatif, crédit, risques : comment raisonner en investisseur, avec des chiffres, avant de parler impôts et transmission.</p>
+    <a href="#actif" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#actif"><h3>Un actif à part</h3><p>Levier, loyers, frais, risques.</p></a>
+    <a class="card" href="#rp"><h3>Résidence principale</h3><p>Acheter ou louer ?</p></a>
+    <a class="card" href="#rentabilite"><h3>La vraie rentabilité</h3><p>Brute, nette, un exemple chiffré.</p></a>
+    <a class="card" href="#credit"><h3>Le crédit et le levier</h3><p>HCSF, mensualités, effet de levier.</p></a>
+    <a class="card" href="#risques"><h3>Les risques</h3><p>Vacance, DPE, charges, fiscalité.</p></a>
+    <a class="card" href="#voies"><h3>Les façons d'investir</h3><p>Nue, meublée, SCPI, nue-propriété.</p></a>
+    <a class="card" href="#checklist"><h3>Avant d'acheter</h3><p>Huit questions à se poser.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Huit questions pour vérifier.</p></a>
+  </section>
+
+  <article class="chapitre" id="lecon">
+    <p class="accroche">Un logement se vit, se loue, se revend et se transmet. Aucun autre placement n'est à la fois aussi concret, aussi financé par la dette, et aussi chargé de frais, de règles et de risques. Cette leçon apprend à le regarder en investisseur, chiffres à l'appui.</p>
+
+    <h2 id="actif">L'immobilier, un actif à part</h2>
+    <p class="accroche">Sa force et sa faiblesse tiennent au même fait : c'est un bien unique, concret, et qui coûte cher.</p>
+    <p>Contrairement à une action ou à un ETF, on ne l'achète pas en quelques clics. Il faut un bien précis, dans un lieu précis, avec un locataire précis. Il en découle des atouts, comme le <strong>levier du crédit</strong> (la banque finance l'essentiel de l'achat) et les <strong>loyers</strong> réguliers, et des contraintes : <strong>frais élevés</strong>, vente lente et <strong>concentration</strong> du risque sur un seul bien.</p>
+    <div class="duo">
+      <div class="pour"><h3>Avantages</h3><ul><li>Le crédit permet d'acheter plus gros que son épargne (effet de levier).</li><li>Les loyers apportent un revenu régulier, qui peut rembourser le crédit.</li><li>Le bien peut aussi être habité, rénové, transmis.</li><li>Une valeur tangible, que beaucoup d'épargnants comprennent.</li></ul></div>
+      <div class="contre"><h3>Inconvénients</h3><ul><li>Frais d'achat élevés : 7 à 8,5 % dans l'ancien.</li><li>Illiquide : une vente prend des semaines ou des mois.</li><li>Concentré : tout dépend d'un bien, d'une ville, d'un locataire.</li><li>Gestion, travaux et règles qui changent (DPE, fiscalité).</li></ul></div>
+    </div>
+    <p>Cette leçon traite de la pierre « en direct ». Pour la détenir indirectement, voir <a href="scpi.html">les SCPI</a> (pierre-papier) ou les foncières cotées via <a href="etf.html">les ETF</a>.</p>
+
+    <h2 id="rp">Acheter sa résidence principale : un achat de vie plus qu'un placement</h2>
+    <p class="accroche">Elle ne rapporte pas de loyers, mais elle évite d'en payer. La vraie question : à partir de quand ?</p>
+    <p>Acheter sa résidence principale répond d'abord à un besoin de vie : stabilité, liberté d'aménager, patrimoine à terme. Financièrement, il faut comparer le coût total de l'achat à celui d'un loyer, en n'oubliant rien :</p>
+    <ul class="liste">
+      <li><strong>Les frais d'acquisition</strong> : environ 7 à 8,5 % du prix dans l'ancien (selon le département, car la part départementale des droits de mutation peut monter à 5 % jusqu'en mars 2028), et 2 à 3 % dans le neuf. Sur 250 000 €, cela fait de l'ordre de 17 500 à 21 000 € dans l'ancien.</li>
+      <li><strong>Les intérêts du crédit et l'assurance emprunteur</strong>, qui ne construisent aucun patrimoine.</li>
+      <li><strong>Les coûts du propriétaire</strong> : taxe foncière, charges de copropriété, entretien et travaux.</li>
+      <li><strong>Le coût d'opportunité</strong> : l'apport immobilisé dans le logement ne peut plus être placé ailleurs.</li>
+    </ul>
+    <p>Comme ces frais d'entrée sont payés d'un coup, l'achat n'est en général avantageux qu'au bout de <strong>plusieurs années</strong> : plus longtemps quand les taux et les frais sont élevés, ou si l'on déménage tôt. À la revente, la plus-value sur la résidence principale est en revanche <strong>exonérée d'impôt</strong>.</p>
+    <div class="alerte"><strong>Un coup de pouce :</strong> le prêt à taux zéro (PTZ), réservé aux primo-accédants sous conditions de ressources, est prolongé jusqu'à fin 2027. Depuis avril 2025, il couvre le neuf sur tout le territoire (collectif et individuel), et l'ancien avec de gros travaux dans certaines zones.</div>
+
+    <h2 id="rentabilite">Calculer la vraie rentabilité d'un logement locatif</h2>
+    <p class="accroche">Une annonce affiche « 5,4 % ». Le chiffre qui compte est souvent presque deux fois plus bas.</p>
+    <p>Trois mesures à distinguer :</p>
+    <ul class="liste">
+      <li><strong>Rentabilité brute</strong> = loyers annuels ÷ prix d'achat. C'est le chiffre des annonces.</li>
+      <li><strong>Rentabilité nette</strong> = (loyers − charges) ÷ coût total (prix + frais de notaire + travaux).</li>
+      <li><strong>Rentabilité nette-nette</strong> = la même, après impôts.</li>
+    </ul>
+    <p><strong>Un exemple fictif :</strong> un appartement à 200 000 €, 15 000 € de frais de notaire et 10 000 € de travaux, soit <strong>225 000 €</strong> de coût total, loué 900 € par mois (10 800 € par an).</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Ligne</th><th>Montant par an</th><th>Remarque</th></tr></thead>
+        <tbody>
+          <tr><td>Loyers bruts</td><td>10 800 €</td><td>Rentabilité brute : 5,4 % du prix, 4,8 % du coût total</td></tr>
+          <tr><td>Taxe foncière</td><td>1 000 €</td><td></td></tr>
+          <tr><td>Charges de copropriété non récupérables</td><td>800 €</td><td>Part qui ne se refacture pas au locataire</td></tr>
+          <tr><td>Assurance propriétaire non occupant (PNO)</td><td>150 €</td><td></td></tr>
+          <tr><td>Gestion locative</td><td>756 €</td><td>7 % des loyers, si on la confie à une agence</td></tr>
+          <tr><td>Vacance locative</td><td>900 €</td><td>Un mois sans locataire</td></tr>
+          <tr><td>Entretien et petites réparations</td><td>500 €</td><td></td></tr>
+          <tr><td><strong>Loyers nets</strong></td><td><strong>6 694 €</strong></td><td><strong>Rentabilité nette : 3,0 %</strong>, avant crédit et impôts</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figure class="graph">
+      <svg viewBox="0 0 420 242" role="img" aria-label="Cascade des loyers bruts vers les loyers nets d'un appartement loué" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><line x1="10" y1="190" x2="410" y2="190" stroke="#8a97ad" stroke-width="1"/><rect x="18.0" y="50.0" width="32.0" height="140.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="34.0" y="45.0" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="700">+10 800</text><text x="34.0" y="203" text-anchor="middle" font-size="9.5" fill="#0A1C3B">Loyers</text><rect x="66.0" y="50.0" width="32.0" height="13.0" rx="0" fill="#b3402e" stroke="none" stroke-width="1"/><text x="82.0" y="45.0" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="700">−1 000</text><text x="82.0" y="203" text-anchor="middle" font-size="9.5" fill="#0A1C3B">Taxe<tspan x="82.0" dy="11">foncière</tspan></text><rect x="114.0" y="63.0" width="32.0" height="10.4" rx="0" fill="#b3402e" stroke="none" stroke-width="1"/><text x="130.0" y="57.96296296296296" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="700">−800</text><text x="130.0" y="203" text-anchor="middle" font-size="9.5" fill="#0A1C3B">Charges<tspan x="130.0" dy="11">copro</tspan></text><rect x="162.0" y="73.3" width="32.0" height="1.9" rx="0" fill="#b3402e" stroke="none" stroke-width="1"/><text x="178.0" y="68.33333333333334" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="700">−150</text><text x="178.0" y="203" text-anchor="middle" font-size="9.5" fill="#0A1C3B">Assur.<tspan x="178.0" dy="11">PNO</tspan></text><rect x="210.0" y="75.3" width="32.0" height="9.8" rx="0" fill="#b3402e" stroke="none" stroke-width="1"/><text x="226.0" y="70.27777777777779" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="700">−756</text><text x="226.0" y="203" text-anchor="middle" font-size="9.5" fill="#0A1C3B">Gestion</text><rect x="258.0" y="85.1" width="32.0" height="11.7" rx="0" fill="#b3402e" stroke="none" stroke-width="1"/><text x="274.0" y="80.07777777777778" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="700">−900</text><text x="274.0" y="203" text-anchor="middle" font-size="9.5" fill="#0A1C3B">Vacance</text><rect x="306.0" y="96.7" width="32.0" height="6.5" rx="0" fill="#b3402e" stroke="none" stroke-width="1"/><text x="322.0" y="91.74444444444444" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="700">−500</text><text x="322.0" y="203" text-anchor="middle" font-size="9.5" fill="#0A1C3B">Entretien</text><rect x="354.0" y="103.2" width="32.0" height="86.8" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="370.0" y="98.22592592592594" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="700">6 694</text><text x="370.0" y="203" text-anchor="middle" font-size="9.5" fill="#0A1C3B">Loyers<tspan x="370.0" dy="11">nets</tspan></text><text x="210" y="232" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">Exemple fictif, en euros par an : loyers bruts, charges, loyers nets (avant crédit et impôts).</text></svg>
+      <figcaption>De 10 800 € de loyers bruts, il reste 6 694 € de loyers nets : 3,0 % du coût total.</figcaption>
+    </figure>
+    <p>À comparer avec ce que rapportent des placements plus simples, plus liquides et sans gestion : une rentabilité nette de 3 % doit rémunérer le risque, le temps passé et l'immobilisation du capital. Elle ne tient pas compte d'une éventuelle hausse du prix du bien, ni des impôts (voir <a href="immobilier-fiscalite.html">Immobilier : impôts et transmission</a>).</p>
+
+    <h2 id="credit">Le crédit et l'effet de levier</h2>
+    <p class="accroche">Le crédit permet d'acheter avec l'argent de la banque. Il amplifie les gains, et les pertes.</p>
+    <p>Les règles du Haut Conseil de stabilité financière (HCSF) encadrent le crédit immobilier : <strong>35 % maximum</strong> d'endettement (assurance emprunteur comprise), sur <strong>25 ans</strong> maximum (27 ans pour certains achats neufs avec différé). Chaque banque peut déroger à ces limites pour 20 % de sa production trimestrielle. À l'été 2026, un courtier relevait des taux moyens autour de 3,3 à 3,5 % selon la durée.</p>
+    <p><strong>Suite de l'exemple :</strong> les 225 000 € sont entièrement empruntés sur 20 ans à 3,5 %.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Ligne</th><th>Par mois</th><th>Remarque</th></tr></thead>
+        <tbody>
+          <tr><td>Mensualité du crédit</td><td>1 305 €</td><td>Hors assurance</td></tr>
+          <tr><td>Assurance emprunteur (environ 0,30 % par an)</td><td>56 €</td><td></td></tr>
+          <tr><td>Loyers nets (6 694 € ÷ 12)</td><td>− 558 €</td><td>Après charges, avant impôts</td></tr>
+          <tr><td><strong>Effort d'épargne mensuel</strong></td><td><strong>≈ 803 €</strong></td><td>Sorti de la poche de l'investisseur, avant impôts</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Au bout de 10 ans, l'investisseur a remboursé environ <strong>93 000 € de capital</strong> (il reste 131 961 € à rembourser), payé environ 63 500 € d'intérêts et mis environ 96 000 € de sa poche. Ce que vaut l'opération dépend alors du <strong>prix de revente</strong> :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Prix du bien après 10 ans</th><th>Valeur nette après remboursement du crédit</th><th>Résultat par rapport aux 96 360 € mis de sa poche</th></tr></thead>
+        <tbody>
+          <tr><td>−10 % (202 500 €)</td><td>70 539 €</td><td>− 25 821 €</td></tr>
+          <tr><td>Stable (225 000 €)</td><td>93 039 €</td><td>− 3 321 €</td></tr>
+          <tr><td>+20 % (270 000 €)</td><td>138 039 €</td><td>+ 41 679 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-hist">Calcul simplifié : sans revalorisation des loyers, sans impôts, sans frais de revente. Le levier joue dans les deux sens : une baisse de prix de 10 % fait perdre davantage que 10 % de l'argent réellement investi.</p>
+
+    <h2 id="risques">Les risques à connaître</h2>
+    <p class="accroche">Ce qui rend un logement moins rentable que prévu tient rarement au prix d'achat.</p>
+    <ul class="liste">
+      <li><strong>Vacance et impayés</strong> : un logement vide ne rapporte rien, un locataire qui ne paie pas non plus.</li>
+      <li><strong>Travaux et charges de copropriété</strong> : un ravalement ou une toiture peuvent coûter plusieurs mois de loyers. Demande les procès-verbaux d'assemblée générale avant d'acheter.</li>
+      <li><strong>La performance énergétique (DPE)</strong> : elle conditionne le droit de louer.</li>
+      <li><strong>L'encadrement des loyers</strong> dans certaines villes, qui limite le loyer qu'on peut fixer.</li>
+      <li><strong>La fiscalité qui change</strong> : en 2025 et 2026, la location meublée a vu ses règles évoluer (voir la leçon sur la fiscalité).</li>
+      <li><strong>Le marché</strong> : les prix et les taux évoluent, et un bien se vend lentement.</li>
+      <li><strong>La concentration</strong> : mettre l'essentiel de son épargne dans un seul bien rend toute difficulté beaucoup plus lourde.</li>
+    </ul>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Classe énergétique (DPE)</th><th>Location interdite (métropole)</th></tr></thead>
+        <tbody>
+          <tr><td>G</td><td>Depuis le 1er janvier 2025</td></tr>
+          <tr><td>F</td><td>À partir du 1er janvier 2028</td></tr>
+          <tr><td>E</td><td>À partir du 1er janvier 2034</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Depuis août 2022, les loyers des logements classés F et G sont en outre <strong>gelés</strong> (pas d'augmentation à la relocation ni à la révision annuelle). La réforme du DPE entrée en vigueur au 1er janvier 2026 a fait passer environ 850 000 logements chauffés à l'électricité de la classe F ou G à la classe E, sans travaux, mais la loi Climat s'applique toujours.</p>
+
+    <h2 id="voies">Les façons d'investir</h2>
+    <p class="accroche">Même mot, des réalités très différentes.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Voie</th><th>Principe</th><th>À surveiller</th></tr></thead>
+        <tbody>
+          <tr><td>Location nue (vide)</td><td>Loyers imposés en revenus fonciers.</td><td>DPE, travaux, vacance.</td></tr>
+          <tr><td>Location meublée (LMNP)</td><td>Loyers imposés en BIC : micro-BIC ou réel avec amortissement.</td><td>Fiscalité modifiée en 2025-2026, prélèvements sociaux à 18,6 %.</td></tr>
+          <tr><td>Résidences gérées (étudiants, seniors)</td><td>Un gestionnaire loue le bien et verse un loyer.</td><td>Risque sur le gestionnaire, loyer renégociable.</td></tr>
+          <tr><td>Meublé de tourisme</td><td>Location de courte durée.</td><td>Règles locales strictes, loi Le Meur de 2024, abattement du micro-BIC réduit à 30 % pour un meublé non classé.</td></tr>
+          <tr><td>Parking ou box</td><td>Ticket d'entrée bas, peu d'entretien.</td><td>Demande très locale, valeur de revente variable.</td></tr>
+          <tr><td>SCPI / OPCI</td><td>Pierre-papier : on détient des parts, la gestion est déléguée.</td><td>Liquidité limitée, frais : voir <a href="scpi.html">SCPI</a>.</td></tr>
+          <tr><td>Foncières cotées</td><td>Actions de sociétés immobilières, via la Bourse ou un ETF.</td><td>Cours qui varient comme des actions : voir <a href="etf.html">ETF</a>.</td></tr>
+          <tr><td>Nue-propriété</td><td>Acheter la nue-propriété avec une décote, sans percevoir de loyers.</td><td>Immobilisé 15 à 20 ans : voir <a href="immobilier-fiscalite.html#demembrement">le démembrement</a>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="checklist">Avant d'acheter : huit questions</h2>
+    <ol class="etapes">
+      <li><strong>Où ?</strong> Population, emploi, transports, vacance locative locale : la demande de locataires est-elle solide ?</li>
+      <li><strong>Quelle classe de DPE ?</strong> Quels travaux, chiffrés par un professionnel ?</li>
+      <li><strong>Quelle rentabilité nette</strong>, et pas seulement brute ?</li>
+      <li><strong>Quelles charges ?</strong> Taxe foncière, copropriété, procès-verbaux d'assemblée générale.</li>
+      <li><strong>Quel financement ?</strong> Effort d'épargne mensuel, taux d'endettement sous 35 %, réserve de trésorerie pour les imprévus.</li>
+      <li><strong>Quel régime fiscal ?</strong> À choisir avant d'acheter, pas après.</li>
+      <li><strong>Quelle sortie ?</strong> Revendre, transmettre : l'horizon doit dépasser le temps nécessaire pour amortir les frais.</li>
+      <li><strong>Quelle part de mon épargne ?</strong> Ne pas tout mettre dans un seul bien.</li>
+    </ol>
+
+    <div class="retenir" id="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>L'immobilier est un actif à part : levier et loyers, mais frais élevés, illiquidité et concentration.</li>
+        <li>On raisonne en rentabilité nette et en effort d'épargne, jamais sur la rentabilité brute d'une annonce.</li>
+        <li>Le crédit amplifie les gains comme les pertes, et le DPE, les charges et la fiscalité peuvent changer la donne.</li>
+      </ul>
+    </div>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les chiffres de l'exemple sont fictifs, et les règles (frais, fiscalité, crédit, DPE) sont celles connues en novembre 2026 : elles évoluent régulièrement. Pour les impôts, la plus-value et la transmission, voir <a href="immobilier-fiscalite.html">Immobilier : impôts et transmission</a>.</div>
+    <p class="note-hist"><strong>Sources :</strong> frais d'acquisition, loi de finances pour 2025 ; règles du crédit, HCSF ; taux moyens, courtier Pretto (août 2026) ; calendrier du DPE, loi Climat et Résilience et réforme du DPE de 2026 ; PTZ, loi de finances pour 2025.</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Rentabilité brute</dt><dd>Loyers annuels ÷ prix d'achat.</dd>
+      <dt>Rentabilité nette</dt><dd>Loyers moins charges, rapportés au coût total de l'opération.</dd>
+      <dt>Vacance locative</dt><dd>La période pendant laquelle le logement n'est pas loué.</dd>
+      <dt>Effet de levier</dt><dd>Investir avec de l'argent emprunté : les gains et les pertes sont amplifiés.</dd>
+      <dt>Taux d'endettement</dt><dd>Les charges de crédit rapportées aux revenus (35 % maximum, assurance comprise).</dd>
+      <dt>DPE</dt><dd>Diagnostic de performance énergétique, noté de A à G.</dd>
+      <dt>PNO</dt><dd>Assurance du propriétaire non occupant.</dd>
+      <dt>Frais de notaire</dt><dd>Surtout des droits de mutation reversés à l'État et aux départements : 7 à 8,5 % dans l'ancien.</dd>
+      <dt>Copropriété</dt><dd>Un immeuble dont les logements appartiennent à plusieurs propriétaires, qui en partagent les charges.</dd>
+      <dt>Effort d'épargne</dt><dd>La somme qu'il faut ajouter chaque mois pour que le crédit soit couvert.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="0">
+      <p>1. Comment se calcule la rentabilité nette ?</p>
+      <button>(Loyers − charges) ÷ coût total de l'opération</button>
+      <button>Loyers ÷ prix d'achat</button>
+      <button>Loyers − crédit</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>2. Combien représentent environ les frais de notaire dans l'ancien ?</p>
+      <button>0,5 %</button>
+      <button>2 à 3 %</button>
+      <button>7 à 8,5 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Quel est le plafond d'endettement fixé par le HCSF ?</p>
+      <button>20 %</button>
+      <button>35 %, assurance emprunteur comprise</button>
+      <button>50 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>4. Depuis quand la location des logements classés G est-elle interdite ?</p>
+      <button>Depuis le 1er janvier 2025</button>
+      <button>À partir de 2034</button>
+      <button>Elle n'est pas interdite</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>5. Si le prix du bien baisse alors qu'on a emprunté, la perte sur l'argent investi est…</p>
+      <button>Plus faible que la baisse du prix</button>
+      <button>Amplifiée par le levier</button>
+      <button>Nulle</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>6. Que devient la plus-value à la revente d'une résidence principale ?</p>
+      <button>Taxée à 36,2 %</button>
+      <button>Exonérée d'impôt</button>
+      <button>Taxée seulement après 5 ans</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>7. Qu'est-ce que la vacance locative ?</p>
+      <button>Un loyer impayé</button>
+      <button>Une période sans locataire</button>
+      <button>Un congé du propriétaire</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>8. Pourquoi les frais d'achat comptent-ils dans le calcul d'une résidence principale ?</p>
+      <button>Parce qu'ils sont payés d'un coup et allongent le temps pour rentabiliser l'achat</button>
+      <button>Parce qu'ils sont remboursés par l'État</button>
+      <button>Parce qu'ils sont déductibles des loyers</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="crypto.html">← Cryptomonnaies</a><a class="next" href="scpi.html">SCPI →</a></div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>
