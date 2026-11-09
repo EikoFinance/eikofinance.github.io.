@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construire son portefeuille - EikoFinance</title>
+<meta name="description" content="Diversification, allocation d'actifs, rééquilibrage, horizon, investir en une fois ou progressivement, gestion passive ou active : les bases d'une méthode.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<link rel="stylesheet" href="css/cartes.css">
+<script src="js/site.js" defer></script>
+<style>
+.graph{margin:1.1rem 0 1.6rem;text-align:center}
+.graph svg{width:100%;max-width:560px;height:auto;background:#fff;border:1px solid #D9DEE5;border-radius:8px}
+.graph figcaption{font-size:.86rem;color:#4a5568;margin-top:.45rem;line-height:1.5}
+.fig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.1rem 0 1.6rem}
+.fig-grid .graph{margin:0}
+.fig-grid h4{margin:.5rem 0 .1rem;font-size:.95rem}
+.partie{margin:2.4rem 0 .6rem;padding:.55rem 1rem;background:#0A1C3B;color:#fff;border-left:5px solid #C5A059;border-radius:4px;font-family:Cinzel,serif;font-size:1.15rem;letter-spacing:.03em}
+.chapitre ol.etapes{margin:0 0 1rem 1.3rem;line-height:1.7}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.4rem}
+.tablewrap table{border-collapse:collapse;width:100%;min-width:420px}
+.tablewrap th,.tablewrap td{border:1px solid #D9DEE5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+.tablewrap th{background:#0A1C3B;color:#fff}
+.tablewrap tr:nth-child(even) td{background:#F7F9FC}
+.frise{list-style:none;margin:1.2rem 0 1.6rem;padding:0 0 0 1.1rem;border-left:3px solid #C5A059}
+.frise li{position:relative;margin:0 0 1.15rem;line-height:1.7}
+.frise li::before{content:"";position:absolute;left:calc(-1.1rem - 7px);top:.55rem;width:11px;height:11px;border-radius:50%;background:#0A1C3B;border:2px solid #C5A059}
+.frise .date{display:block;font-weight:700;color:#0A1C3B;font-size:1.02rem}
+.frise p{margin:.25rem 0 0}
+.note-hist{font-size:.9rem;color:#4a5568;margin-top:.4rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#comprendre">Comprendre</a> › Construire son portefeuille</p>
+
+  <section class="scene scene-hero img-sobre img-portefeuille">
+    <h1>Construire son portefeuille : diversifier, répartir, tenir dans la durée</h1>
+    <p>Allocation d'actifs, diversification, rééquilibrage, horizon, investir en une fois ou progressivement, gestion passive ou active : les bases d'une méthode.</p>
+    <a href="#diversification" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#diversification"><h3>La diversification</h3><p>Deux risques, des pièges.</p></a>
+    <a class="card" href="#allocation"><h3>L'allocation d'actifs</h3><p>La décision qui compte le plus.</p></a>
+    <a class="card" href="#reequilibrage"><h3>Le rééquilibrage</h3><p>Garder son niveau de risque.</p></a>
+    <a class="card" href="#horizon"><h3>L'horizon de placement</h3><p>Le temps, allié mais pas garantie.</p></a>
+    <a class="card" href="#dca"><h3>En une fois ou progressivement ?</h3><p>Ce que dit l'étude de Vanguard.</p></a>
+    <a class="card" href="#passif"><h3>Passif ou actif ?</h3><p>Les frais, les statistiques SPIVA.</p></a>
+    <a class="card" href="#pratique"><h3>L'exemple de Camille</h3><p>Sept étapes pour tout assembler.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Neuf questions pour vérifier.</p></a>
+  </section>
+
+  <article class="chapitre" id="lecon">
+    <p class="accroche">Choisir « la bonne action » fait rêver. Mais ce qui décide, sur des années, de ce qu'on obtient, c'est la manière dont on construit et dont on tient son portefeuille : ce qu'on y met, dans quelles proportions, à quel coût, et avec quelle discipline.</p>
+    <p>Un <strong>portefeuille</strong> est l'ensemble de tes placements, regardés comme un tout : compte courant, livrets, assurance-vie, actions, immobilier. Cette leçon explique les grandes règles de construction. Elle ne dit pas quoi acheter : elle donne une méthode.</p>
+
+    <h2 id="diversification">La diversification</h2>
+    <p class="accroche">Le seul « repas gratuit » de la finance : réduire un risque sans réduire le rendement attendu.</p>
+    <p>L'idée remonte à Harry Markowitz (1952) : ne pas mettre tous ses œufs dans le même panier. Elle repose sur la distinction entre deux risques :</p>
+    <ul class="liste">
+      <li><strong>Le risque propre à un titre</strong> (une faillite, un scandale, un mauvais produit). La diversification l'élimine presque entièrement, avec quelques dizaines de titres.</li>
+      <li><strong>Le risque de marché</strong> (un krach, une récession, une hausse brutale des taux). Il touche tout le monde, et aucune diversification entre actions ne le supprime.</li>
+    </ul>
+    <figure class="graph">
+      <svg viewBox="0 0 420 236" role="img" aria-label="Risque d'un portefeuille selon le nombre de titres détenus" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><line x1="48" y1="190.0" x2="400" y2="190.0" stroke="#EEF1F6" stroke-width="1"/><text x="42" y="194.0" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">10 %</text><line x1="48" y1="152.72727272727272" x2="400" y2="152.72727272727272" stroke="#EEF1F6" stroke-width="1"/><text x="42" y="156.72727272727272" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">15 %</text><line x1="48" y1="115.45454545454545" x2="400" y2="115.45454545454545" stroke="#EEF1F6" stroke-width="1"/><text x="42" y="119.45454545454545" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">20 %</text><line x1="48" y1="78.18181818181819" x2="400" y2="78.18181818181819" stroke="#EEF1F6" stroke-width="1"/><text x="42" y="82.18181818181819" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">25 %</text><line x1="48" y1="40.90909090909091" x2="400" y2="40.90909090909091" stroke="#EEF1F6" stroke-width="1"/><text x="42" y="44.90909090909091" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">30 %</text><text x="48.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">1</text><text x="84.1025641025641" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">5</text><text x="129.23076923076923" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">10</text><text x="219.48717948717947" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">20</text><text x="309.7435897435897" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">30</text><text x="400.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">40</text><text x="224.0" y="220" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">Nombre de titres dans le portefeuille</text><polyline points="48.0,40.9 57.0,84.2 66.1,101.2 75.1,110.4 84.1,116.2 93.1,120.2 102.2,123.1 111.2,125.3 120.2,127.1 129.2,128.5 138.3,129.7 147.3,130.7 156.3,131.5 165.3,132.2 174.4,132.9 183.4,133.4 192.4,133.9 201.4,134.4 210.5,134.8 219.5,135.1 228.5,135.4 237.5,135.7 246.6,136.0 255.6,136.2 264.6,136.5 273.6,136.7 282.7,136.9 291.7,137.1 300.7,137.2 309.7,137.4 318.8,137.5 327.8,137.7 336.8,137.8 345.8,137.9 354.9,138.0 363.9,138.1 372.9,138.3 381.9,138.4 391.0,138.4 400.0,138.5" fill="none" stroke="#0A1C3B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><line x1="48" y1="142.05477350339012" x2="400" y2="142.05477350339012" stroke="#b3402e" stroke-width="1.3" stroke-dasharray="5 4"/><text x="400" y="158.05477350339012" text-anchor="end" font-size="10" fill="#b3402e" font-weight="700">Risque de marché : environ 16 %</text><text x="56.0" y="44.90909090909091" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="700">1 titre : 30 %</text><text x="147.28205128205127" y="118.67460275658419" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="700">Le risque propre à chaque titre disparaît vite</text><text x="48" y="14" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">Risque (volatilité annuelle) selon le nombre de titres</text></svg>
+      <figcaption>Schéma illustratif : volatilité de 30 % par titre et corrélation moyenne de 30 % entre titres. Le risque baisse vite, puis plafonne.</figcaption>
+    </figure>
+    <h3>Les axes de diversification</h3>
+    <ul class="liste">
+      <li><strong>Entre classes d'actifs</strong> : actions, obligations, immobilier, liquidités, or…</li>
+      <li><strong>Entre zones géographiques et entre secteurs</strong> : un ETF « monde » regroupe plusieurs centaines à plusieurs milliers d'entreprises (voir <a href="etf.html">les ETF</a>).</li>
+      <li><strong>Dans le temps</strong> : investir progressivement (voir plus bas).</li>
+    </ul>
+    <h3>Les pièges</h3>
+    <ul class="liste">
+      <li><strong>La fausse diversification</strong> : dix fonds qui détiennent presque les mêmes titres ne font pas dix paniers.</li>
+      <li><strong>Le biais domestique</strong> : trop investir dans son propre pays. Le Nikkei japonais a mis <strong>34 ans</strong> (de décembre 1989 à février 2024) à retrouver son sommet : un portefeuille entièrement japonais aurait attendu très longtemps, alors qu'un portefeuille mondial s'en serait mieux sorti. (Indice de cours, hors dividendes.)</li>
+      <li><strong>La diversification n'est pas une assurance</strong> : en pleine panique, les corrélations montent, et des actifs « opposés » peuvent baisser ensemble (voir <a href="liquidite-marches.html#correlations">Liquidité et marchés</a>).</li>
+      <li><strong>Trop diversifier</strong> : au-delà d'un certain point, on dilue ses convictions et on multiplie les frais, sans gagner en sécurité.</li>
+    </ul>
+
+    <h2 id="allocation">L'allocation d'actifs</h2>
+    <p class="accroche">Décider la part de chaque grande famille de placements : c'est la décision qui compte le plus.</p>
+    <p>L'<strong>allocation d'actifs</strong> est la répartition de ton portefeuille entre grandes classes d'actifs. Selon l'étude classique de Brinson, Hood et Beebower (1986), elle explique l'essentiel (de l'ordre de 90 %) de la variation des rendements d'un portefeuille diversifié dans le temps, bien plus que le choix des titres ou le moment des achats. L'interprétation de ce chiffre est débattue, mais l'idée directrice est solide.</p>
+    <p>Trois questions guident le choix :</p>
+    <ul class="liste">
+      <li><strong>Quel est mon objectif et mon horizon ?</strong> Dans combien de temps ai-je besoin de cet argent ?</li>
+      <li><strong>Quelle est ma capacité à subir des pertes</strong> sans mettre en danger ma situation (ma capacité financière) ?</li>
+      <li><strong>Quelle est ma tolérance au risque</strong> : saurais-je ne pas vendre après une baisse de 30 % (ma capacité émotionnelle) ? Voir <a href="biais-investisseur.html">Les biais de l'investisseur</a>.</li>
+    </ul>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Profil (exemples pédagogiques)</th><th>Actions</th><th>Obligations et fonds en euros</th><th>Liquidités</th><th>Ce qu'il faut accepter</th></tr></thead>
+        <tbody>
+          <tr><td>Prudent</td><td>20 %</td><td>60 %</td><td>20 %</td><td>Un rendement attendu plus faible, des baisses limitées.</td></tr>
+          <tr><td>Équilibré</td><td>50 %</td><td>40 %</td><td>10 %</td><td>Des baisses d'une dizaine à une vingtaine de points possibles.</td></tr>
+          <tr><td>Dynamique</td><td>80 %</td><td>15 %</td><td>5 %</td><td>Des baisses importantes et durables possibles : lors de la crise de 2008, les actions américaines ont perdu plus de la moitié de leur valeur.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-hist">Un repère souvent cité : « 100 moins l'âge » en actions. Il est très simplifié et contesté : l'horizon et la situation personnelle comptent davantage que l'âge. Ces exemples ne sont pas des recommandations.</p>
+
+    <h2 id="reequilibrage">Le rééquilibrage</h2>
+    <p class="accroche">Garder son niveau de risque, même quand le marché le déforme.</p>
+    <p>Avec le temps, les placements qui montent le plus prennent plus de place : l'allocation <strong>dérive</strong>, et le risque réel dépasse celui qu'on avait choisi. <strong>Rééquilibrer</strong>, c'est revenir à l'allocation de départ.</p>
+    <p><strong>Exemple fictif :</strong> 10 000 € répartis 60 % en actions et 40 % en obligations. L'année 1, les actions gagnent 30 % et les obligations 2 %. L'année 2, elles gagnent 20 % et 1 %.</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 214" role="img" aria-label="Dérive d'une allocation 60/40 puis retour à 60/40 après rééquilibrage" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><text x="210" y="14" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">Part des actions et des obligations (exemple fictif)</text><text x="110" y="48" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Départ</text><rect x="118.0" y="28.0" width="135.6" height="28.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="253.6" y="28.0" width="90.4" height="28.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="185.8" y="47" text-anchor="middle" font-size="10.5" fill="#fff" font-weight="700">60,0 %</text><text x="298.8" y="47" text-anchor="middle" font-size="10.5" fill="#0A1C3B" font-weight="700">40,0 %</text><text x="350" y="47" text-anchor="start" font-size="9.5" fill="#8a97ad" font-weight="400">10 000 €</text><text x="110" y="88" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Après l'année 1</text><rect x="118.0" y="68.0" width="148.4" height="28.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="266.4" y="68.0" width="77.6" height="28.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="192.1919191919192" y="87" text-anchor="middle" font-size="10.5" fill="#fff" font-weight="700">65,7 %</text><text x="305.19191919191917" y="87" text-anchor="middle" font-size="10.5" fill="#0A1C3B" font-weight="700">34,3 %</text><text x="350" y="87" text-anchor="start" font-size="9.5" fill="#8a97ad" font-weight="400">11 880 €</text><text x="110" y="128" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Après l'année 2</text><rect x="118.0" y="108.0" width="156.9" height="28.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="274.9" y="108.0" width="69.1" height="28.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="196.45825173580204" y="127" text-anchor="middle" font-size="10.5" fill="#fff" font-weight="700">69,4 %</text><text x="309.45825173580204" y="127" text-anchor="middle" font-size="10.5" fill="#0A1C3B" font-weight="700">30,6 %</text><text x="350" y="127" text-anchor="start" font-size="9.5" fill="#8a97ad" font-weight="400">13 481 €</text><text x="110" y="168" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Après rééquilibrage</text><rect x="118.0" y="148.0" width="135.6" height="28.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><rect x="253.6" y="148.0" width="90.4" height="28.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="185.8" y="167" text-anchor="middle" font-size="10.5" fill="#fff" font-weight="700">60,0 %</text><text x="298.8" y="167" text-anchor="middle" font-size="10.5" fill="#0A1C3B" font-weight="700">40,0 %</text><text x="350" y="167" text-anchor="start" font-size="9.5" fill="#8a97ad" font-weight="400">13 481 €</text><rect x="118.0" y="194.0" width="12.0" height="10.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="134" y="203" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Actions</text><rect x="198.0" y="194.0" width="12.0" height="10.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="214" y="203" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Obligations</text></svg>
+      <figcaption>Après deux ans, le portefeuille vaut 13 481 €, mais les actions pèsent 69,4 % au lieu de 60 %. Il faut vendre environ 1 272 € d'actions pour acheter des obligations.</figcaption>
+    </figure>
+    <ul class="liste">
+      <li><strong>Au calendrier</strong> : une fois par an, par exemple. Simple et régulier.</li>
+      <li><strong>Par seuil</strong> : quand une classe s'écarte de sa cible de plus de 5 points, par exemple.</li>
+      <li><strong>Avec les nouveaux versements</strong> : on investit la somme du mois dans la classe sous-pondérée. C'est la méthode la plus simple, sans frais de vente ni impôt.</li>
+    </ul>
+    <p><strong>Les coûts :</strong> des frais de transaction, et, sur un compte-titres, une vente peut déclencher une plus-value imposable. Dans un PEA ou une assurance-vie, les arbitrages à l'intérieur de l'enveloppe ne sont pas imposés sur le moment (voir <a href="fiscalite.html">Fiscalité et enveloppes</a>). Le rééquilibrage demande aussi de la discipline : il faut <strong>vendre ce qui a monté et acheter ce qui a baissé</strong>, ce qui heurte plusieurs réflexes psychologiques.</p>
+
+    <h2 id="horizon">L'horizon de placement</h2>
+    <p class="accroche">Le temps est un allié des actions, mais pas une garantie.</p>
+    <p>L'<strong>horizon</strong> est le temps qui te sépare du moment où tu auras besoin de cet argent. Plus il est long, plus tu peux supporter les baisses temporaires en attendant le rebond. Plus il est court, plus un mauvais moment peut te faire vendre à perte.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Horizon</th><th>Logique couramment retenue (indicative)</th></tr></thead>
+        <tbody>
+          <tr><td>Moins de 2 ans</td><td>Liquidités : livrets, comptes à terme. Pas de risque sur le capital.</td></tr>
+          <tr><td>2 à 5 ans</td><td>Prudent : obligations, fonds en euros, peu d'actions.</td></tr>
+          <tr><td>5 à 10 ans</td><td>Allocation mixte, selon la tolérance au risque.</td></tr>
+          <tr><td>Plus de 10 ans</td><td>Les actions peuvent représenter l'essentiel, à condition de ne pas vendre en cas de baisse.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="liste">
+      <li><strong>Le temps ne garantit rien</strong> : le Nikkei japonais a perdu 82 % entre 1989 et 2008, et n'a retrouvé son niveau de 1989 qu'en 2024.</li>
+      <li><strong>Le risque de séquence</strong> : une grosse baisse juste avant d'avoir besoin de l'argent fait bien plus de dégâts qu'une baisse au début. D'où l'idée de réduire progressivement le risque à l'approche de l'échéance (allocation « glissante »).</li>
+    </ul>
+    <p>Pour tester l'effet de la durée, des versements et du rendement, essaie le simulateur <a href="monte-carlo.html">Monte Carlo</a> et celui des <a href="interets-composes.html">intérêts composés</a>.</p>
+
+    <h2 id="dca">En une fois ou progressivement ?</h2>
+    <p class="accroche">Investir 12 000 € d'un coup, ou 1 000 € par mois pendant un an ?</p>
+    <p>Le <strong>lissage</strong> (<em>dollar-cost averaging</em>, DCA en anglais) consiste à investir une somme par tranches régulières. L'investissement <strong>en une fois</strong> (<em>lump sum</em>) place tout immédiatement. Une étude de Vanguard, menée aux États-Unis, au Royaume-Uni et en Australie, a comparé les deux sur des périodes glissantes :</p>
+    <ul class="liste">
+      <li><strong>En une fois a fait mieux environ deux fois sur trois</strong> qu'un investissement étalé sur 12 mois, avec un portefeuille de 60 % d'actions et 40 % d'obligations. La raison : les marchés montent plus souvent qu'ils ne baissent, et l'argent qui attend ne rapporte presque rien.</li>
+      <li><strong>L'écart est modeste</strong> : de l'ordre de 2,3 % de patrimoine final en plus, sur 10 ans, pour un portefeuille 60/40 américain.</li>
+      <li><strong>Le lissage limite les mauvaises surprises</strong> : l'investissement en une fois a perdu de la valeur dans environ 22 % des périodes de 12 mois, contre environ 18 % pour le lissage.</li>
+    </ul>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>En une fois</th><th>Progressivement</th></tr></thead>
+        <tbody>
+          <tr><td>Rendement moyen historique</td><td>Plus élevé, le plus souvent</td><td>Un peu plus faible</td></tr>
+          <tr><td>Risque de mauvais timing</td><td>Plus élevé : on peut investir juste avant une baisse</td><td>Plus faible</td></tr>
+          <tr><td>Regret psychologique</td><td>Fort si le marché baisse juste après</td><td>Plus faible</td></tr>
+          <tr><td>Quand l'utiliser</td><td>On dispose déjà d'une somme et on supporte les variations</td><td>On a peur, ou on épargne chaque mois : c'est alors la seule option</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Conclusion pratique :</strong> si tu as déjà la somme, la logique statistique plaide pour investir tôt. Mais un lissage sur quelques mois est une prime d'assurance contre le regret, et il vaut mieux lisser que ne jamais investir par peur. Et si tu épargnes chaque mois, les versements programmés sont déjà du lissage.</p>
+
+    <h2 id="passif">Gestion passive ou active ?</h2>
+    <p class="accroche">Suivre le marché à moindre coût, ou essayer de le battre ?</p>
+    <ul class="liste">
+      <li><strong>La gestion passive</strong> reproduit un indice, en général avec un ETF, et facture des frais très faibles (de l'ordre de 0,1 à 0,3 % par an pour un grand indice).</li>
+      <li><strong>La gestion active</strong> confie à un gérant le choix des titres pour essayer de battre l'indice. Elle coûte plus cher (souvent autour de 1,5 % ou plus par an).</li>
+    </ul>
+    <p>Les statistiques de S&amp;P Dow Jones Indices (« SPIVA ») comparent chaque année les fonds actifs à leur indice de référence. Pour l'Europe, fin 2025, <strong>81,8 %</strong> des fonds actions actifs avaient fait moins bien que leur indice sur un an, et <strong>97,0 %</strong> sur dix ans. Aux États-Unis, après 15 ans, aucune catégorie n'était battue par une majorité de fonds actifs. Deux raisons principales : les frais, et la difficulté de battre un marché où des milliers de professionnels cherchent la même chose.</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 236" role="img" aria-label="Effet des frais sur 30 ans : 0,2 % contre 1,8 % par an" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><line x1="56" y1="190.0" x2="400" y2="190.0" stroke="#EEF1F6" stroke-width="1"/><text x="50" y="194.0" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">0</text><line x1="56" y1="132.44083121149347" x2="400" y2="132.44083121149347" stroke="#EEF1F6" stroke-width="1"/><text x="50" y="136.44083121149347" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">20 000</text><line x1="56" y1="74.88166242298695" x2="400" y2="74.88166242298695" stroke="#EEF1F6" stroke-width="1"/><text x="50" y="78.88166242298695" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">40 000</text><line x1="56" y1="17.322493634480423" x2="400" y2="17.322493634480423" stroke="#EEF1F6" stroke-width="1"/><text x="50" y="21.322493634480423" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">60 000</text><text x="56.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">0</text><text x="170.66666666666669" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">10</text><text x="285.33333333333337" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">20</text><text x="400.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">30</text><text x="228.0" y="220" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">Années</text><polyline points="56.0,161.2 67.5,159.6 78.9,157.8 90.4,155.9 101.9,153.9 113.3,151.8 124.8,149.6 136.3,147.3 147.7,144.8 159.2,142.2 170.7,139.4 182.1,136.5 193.6,133.4 205.1,130.1 216.5,126.6 228.0,123.0 239.5,119.1 250.9,115.0 262.4,110.6 273.9,106.0 285.3,101.1 296.8,96.0 308.3,90.5 319.7,84.7 331.2,78.6 342.7,72.2 354.1,65.3 365.6,58.1 377.1,50.5 388.5,42.4 400.0,33.8" fill="none" stroke="#0A1C3B" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="56.0,161.2 67.5,160.0 78.9,158.8 90.4,157.4 101.9,156.1 113.3,154.6 124.8,153.2 136.3,151.6 147.7,150.0 159.2,148.3 170.7,146.6 182.1,144.7 193.6,142.8 205.1,140.9 216.5,138.8 228.0,136.7 239.5,134.4 250.9,132.1 262.4,129.6 273.9,127.1 285.3,124.5 296.8,121.7 308.3,118.9 319.7,115.9 331.2,112.7 342.7,109.5 354.1,106.1 365.6,102.6 377.1,98.9 388.5,95.1 400.0,91.1" fill="none" stroke="#b3402e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><line x1="66" y1="52" x2="90" y2="52" stroke="#0A1C3B" stroke-width="3"/><text x="96" y="56" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="700">Frais de 0,2 % par an : 54 271 €</text><line x1="66" y1="70" x2="90" y2="70" stroke="#b3402e" stroke-width="3"/><text x="96" y="74" text-anchor="start" font-size="10" fill="#b3402e" font-weight="700">Frais de 1,8 % par an : 34 358 €</text><text x="56" y="14" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">10 000 € sur 30 ans, rendement brut de 6 % par an</text></svg>
+      <figcaption>Schéma illustratif. Avec des frais de 1,8 % par an au lieu de 0,2 %, 10 000 € deviennent 34 358 € au lieu de 54 271 € au bout de 30 ans : 1,6 point d'écart annuel font perdre plus d'un tiers du résultat.</figcaption>
+    </figure>
+    <p><strong>Une approche courante : cœur et satellites.</strong> Un <strong>cœur</strong> de portefeuille (la grande majorité) en ETF diversifiés à bas coût, et quelques <strong>satellites</strong> (une petite part) pour des convictions, des thèmes ou des fonds actifs. Pour juger un fonds actif : ses frais, sa durée de résultats, et sa comparaison avec l'indice, après frais.</p>
+
+    <h2 id="pratique">Mettre tout cela en pratique : l'exemple de Camille</h2>
+    <p class="accroche">Une démarche en étapes, pas une recommandation.</p>
+    <p>Camille a 35 ans. Elle peut épargner 400 € par mois, elle a 10 000 € disponibles, et un horizon d'une trentaine d'années pour sa retraite.</p>
+    <ol class="etapes">
+      <li><strong>D'abord, une épargne de précaution</strong> (en général trois à six mois de dépenses) sur des supports sans risque. C'est ce qui évite de devoir vendre au mauvais moment.</li>
+      <li><strong>Définir l'objectif et l'horizon</strong>, par écrit.</li>
+      <li><strong>Choisir une allocation cible</strong> adaptée à sa tolérance au risque, par exemple en grande majorité en actions mondiales diversifiées, avec une part d'obligations ou de fonds en euros.</li>
+      <li><strong>Choisir les enveloppes</strong> (PEA, assurance-vie, PER) selon la fiscalité : voir <a href="fiscalite.html">Fiscalité et enveloppes</a>.</li>
+      <li><strong>Investir</strong> : versements programmés chaque mois, et les 10 000 € en une fois ou sur quelques mois, selon son confort.</li>
+      <li><strong>Fixer une règle de rééquilibrage</strong> : une fois par an, ou avec les nouveaux versements.</li>
+      <li><strong>Ne pas regarder tous les jours</strong> : une revue par an suffit, sauf changement de situation.</li>
+    </ol>
+    <p>Mettre ces choix par écrit, dans un document d'une page (parfois appelé « politique d'investissement »), aide à tenir en période de panique.</p>
+
+    <div class="retenir" id="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>La diversification réduit le risque propre à chaque titre, mais pas le risque de marché : il faut aussi choisir son allocation, son niveau de risque et son horizon.</li>
+        <li>Les décisions qui comptent sont l'allocation, les frais et la discipline (rééquilibrer, ne pas vendre dans la panique), plus que le choix d'un titre ou le moment parfait.</li>
+        <li>Investir tôt et régulièrement l'emporte le plus souvent sur l'attente. La bonne méthode est celle qu'on est capable de tenir.</li>
+      </ul>
+    </div>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les allocations sont des exemples, les performances passées ne préjugent pas des performances futures, et le capital investi peut être perdu.</div>
+    <p class="note-hist"><strong>Sources :</strong> H. Markowitz, <em>Portfolio Selection</em> (1952) ; Brinson, Hood et Beebower (1986) ; Vanguard, <em>Dollar-cost averaging just means taking risk later</em> (Shtekhman, Tasopoulos, Wimmer) ; S&amp;P Dow Jones Indices, SPIVA Europe et SPIVA U.S., année 2025 ; Nikkei 225, AP et Reuters (février 2024).</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Portefeuille</dt><dd>L'ensemble de ses placements, regardés comme un tout.</dd>
+      <dt>Diversification</dt><dd>Répartir son argent entre plusieurs actifs pour réduire le risque propre à chacun.</dd>
+      <dt>Allocation d'actifs</dt><dd>La répartition d'un portefeuille entre grandes classes d'actifs.</dd>
+      <dt>Rééquilibrage</dt><dd>Revenir à l'allocation cible en vendant ce qui a trop monté et en achetant ce qui est sous-pondéré.</dd>
+      <dt>Horizon de placement</dt><dd>Le temps avant d'avoir besoin de l'argent.</dd>
+      <dt>DCA (lissage)</dt><dd>Investir une somme par tranches régulières.</dd>
+      <dt>Gestion passive</dt><dd>Reproduire un indice, à bas coût.</dd>
+      <dt>Gestion active</dt><dd>Choisir des titres pour essayer de battre l'indice.</dd>
+      <dt>Frais courants</dt><dd>Les frais annuels d'un fonds, déjà déduits de sa performance.</dd>
+      <dt>Risque de séquence</dt><dd>Le danger d'une forte baisse juste avant d'avoir besoin de l'argent.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Qu'est-ce que la diversification réduit surtout ?</p>
+      <button>Le risque de marché</button>
+      <button>Le risque propre à chaque titre</button>
+      <button>Les frais</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Selon l'étude de Brinson, Hood et Beebower, quelle décision explique l'essentiel de la variation des rendements ?</p>
+      <button>L'allocation d'actifs</button>
+      <button>Le choix de l'action</button>
+      <button>Le jour d'achat</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Pourquoi rééquilibre-t-on un portefeuille ?</p>
+      <button>Pour augmenter les frais</button>
+      <button>Pour garder son niveau de risque, malgré la dérive</button>
+      <button>Pour acheter uniquement ce qui monte</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>4. Selon Vanguard, que donne l'investissement en une fois face au lissage sur 12 mois ?</p>
+      <button>Il fait mieux environ deux fois sur trois</button>
+      <button>Il perd presque toujours</button>
+      <button>Il fait toujours mieux</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>5. Quel est l'avantage du lissage ?</p>
+      <button>Il rapporte toujours davantage</button>
+      <button>Il limite le regret et les mauvaises surprises</button>
+      <button>Il supprime le risque</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>6. Dans l'exemple, que devient l'allocation 60/40 après deux années de hausse des actions ?</p>
+      <button>Elle reste à 60/40</button>
+      <button>Les actions pèsent plus de 60 %</button>
+      <button>Les obligations pèsent 60 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>7. Selon SPIVA Europe fin 2025, quelle part des fonds actions actifs a fait moins bien que son indice sur dix ans ?</p>
+      <button>Environ 30 %</button>
+      <button>Environ 60 %</button>
+      <button>97,0 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>8. Qu'a montré l'exemple du Nikkei ?</p>
+      <button>Le temps garantit toujours la hausse</button>
+      <button>Il a fallu 34 ans pour retrouver le sommet de 1989</button>
+      <button>Les indices japonais ne baissent jamais</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>9. Pourquoi constituer d'abord une épargne de précaution ?</p>
+      <button>Pour éviter de devoir vendre ses placements au mauvais moment</button>
+      <button>Pour payer moins d'impôts</button>
+      <button>Pour battre l'indice</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="courants.html">← Les courants de pensée économique</a><a class="next" href="biais-investisseur.html">Les biais de l'investisseur →</a></div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>

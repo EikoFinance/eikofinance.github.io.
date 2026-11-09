@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les biais de l'investisseur - EikoFinance</title>
+<meta name="description" content="Aversion à la perte, excès de confiance, effet de troupeau, ancrage : les biais comportementaux qui coûtent cher en Bourse, et comment s'en protéger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<link rel="stylesheet" href="css/cartes.css">
+<script src="js/site.js" defer></script>
+<style>
+.graph{margin:1.1rem 0 1.6rem;text-align:center}
+.graph svg{width:100%;max-width:560px;height:auto;background:#fff;border:1px solid #D9DEE5;border-radius:8px}
+.graph figcaption{font-size:.86rem;color:#4a5568;margin-top:.45rem;line-height:1.5}
+.fig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.1rem 0 1.6rem}
+.fig-grid .graph{margin:0}
+.fig-grid h4{margin:.5rem 0 .1rem;font-size:.95rem}
+.partie{margin:2.4rem 0 .6rem;padding:.55rem 1rem;background:#0A1C3B;color:#fff;border-left:5px solid #C5A059;border-radius:4px;font-family:Cinzel,serif;font-size:1.15rem;letter-spacing:.03em}
+.chapitre ol.etapes{margin:0 0 1rem 1.3rem;line-height:1.7}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.4rem}
+.tablewrap table{border-collapse:collapse;width:100%;min-width:420px}
+.tablewrap th,.tablewrap td{border:1px solid #D9DEE5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+.tablewrap th{background:#0A1C3B;color:#fff}
+.tablewrap tr:nth-child(even) td{background:#F7F9FC}
+.frise{list-style:none;margin:1.2rem 0 1.6rem;padding:0 0 0 1.1rem;border-left:3px solid #C5A059}
+.frise li{position:relative;margin:0 0 1.15rem;line-height:1.7}
+.frise li::before{content:"";position:absolute;left:calc(-1.1rem - 7px);top:.55rem;width:11px;height:11px;border-radius:50%;background:#0A1C3B;border:2px solid #C5A059}
+.frise .date{display:block;font-weight:700;color:#0A1C3B;font-size:1.02rem}
+.frise p{margin:.25rem 0 0}
+.note-hist{font-size:.9rem;color:#4a5568;margin-top:.4rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#comprendre">Comprendre</a> › Les biais de l'investisseur</p>
+
+  <section class="scene scene-hero img-sobre img-biais">
+    <h1>Les biais de l'investisseur : pourquoi on se trompe, et comment s'en protéger</h1>
+    <p>Aversion à la perte, excès de confiance, effet de troupeau : les réflexes qui nous font acheter haut et vendre bas, et les habitudes qui permettent de les contourner.</p>
+    <a href="#pourquoi" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#pourquoi"><h3>Pourquoi on se trompe</h3><p>Kahneman, Tversky et ce que coûtent les réflexes.</p></a>
+    <a class="card" href="#pertes"><h3>Aversion à la perte</h3><p>Effet de disposition, coût irrécupérable.</p></a>
+    <a class="card" href="#confiance"><h3>L'excès de confiance</h3><p>Trop échanger, confondre chance et talent.</p></a>
+    <a class="card" href="#troupeau"><h3>Le troupeau et la FOMO</h3><p>Bulles, récence, disponibilité.</p></a>
+    <a class="card" href="#ancrage"><h3>Ancrage, confirmation…</h3><p>Six biais et leur parade.</p></a>
+    <a class="card" href="#cycle"><h3>Le cycle des émotions</h3><p>Acheter haut, vendre bas.</p></a>
+    <a class="card" href="#remedes"><h3>Se protéger de soi-même</h3><p>Huit habitudes concrètes.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Neuf mises en situation.</p></a>
+  </section>
+
+  <article class="chapitre" id="lecon">
+    <p class="accroche">Face à un marché, la difficulté n'est pas toujours de comprendre : c'est de se comporter correctement. Nos réflexes, utiles dans la vie courante, deviennent coûteux dès qu'il s'agit d'argent et d'incertitude.</p>
+
+    <h2 id="pourquoi">Pourquoi on se trompe : l'économie comportementale</h2>
+    <p class="accroche">Notre cerveau fait des raccourcis. En Bourse, ils coûtent cher.</p>
+    <p>Dans les années 1970, les psychologues Daniel Kahneman et Amos Tversky ont montré que nos décisions face au risque s'écartent systématiquement de la logique froide : c'est la <strong>théorie des perspectives</strong> (1979). Kahneman a reçu le prix Nobel d'économie en 2002, et Richard Thaler en 2017, pour leurs travaux sur ces <strong>biais</strong>.</p>
+    <p>Le coût est mesurable. Une étude célèbre de Brad Barber et Terrance Odean (2000) a suivi des dizaines de milliers de ménages américains détenant des actions entre 1991 et 1996. Le marché rapportait <strong>17,9 % par an</strong>. Le ménage moyen a obtenu <strong>16,4 %</strong> après frais, et ceux qui échangeaient le plus <strong>11,4 %</strong>, contre <strong>18,5 %</strong> pour ceux qui échangeaient le moins. Leur conclusion : le coût des transactions et leur fréquence, bien plus que le choix des titres, expliquent ce retard.</p>
+
+    <h2 id="pertes">L'aversion à la perte et l'effet de disposition</h2>
+    <p class="accroche">Perdre 100 € fait plus mal que gagner 100 € ne fait plaisir.</p>
+    <p>Selon les estimations de Tversky et Kahneman, une perte pèse environ <strong>deux fois plus</strong> qu'un gain de même montant : c'est l'<strong>aversion à la perte</strong>.</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 236" role="img" aria-label="Courbe de valeur de la théorie des perspectives : les pertes pèsent plus que les gains" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><line x1="30" y1="104" x2="390" y2="104" stroke="#8a97ad" stroke-width="1"/><line x1="210" y1="22" x2="210" y2="208" stroke="#8a97ad" stroke-width="1"/><polyline points="60.0,179.1 66.0,176.4 72.0,173.8 78.0,171.1 84.0,168.4 90.0,165.7 96.0,163.0 102.0,160.2 108.0,157.5 114.0,154.7 120.0,151.9 126.0,149.1 132.0,146.2 138.0,143.4 144.0,140.5 150.0,137.5 156.0,134.6 162.0,131.6 168.0,128.5 174.0,125.4 180.0,122.2 186.0,119.0 192.0,115.6 198.0,112.1 204.0,108.4 210.0,104.0 216.0,102.0 222.0,100.4 228.0,98.8 234.0,97.3 240.0,95.9 246.0,94.5 252.0,93.1 258.0,91.8 264.0,90.4 270.0,89.1 276.0,87.8 282.0,86.5 288.0,85.2 294.0,84.0 300.0,82.7 306.0,81.5 312.0,80.2 318.0,79.0 324.0,77.8 330.0,76.6 336.0,75.4 342.0,74.2 348.0,73.0 354.0,71.8 360.0,70.6" fill="none" stroke="#0A1C3B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><text x="388" y="98" text-anchor="end" font-size="10" fill="#2e7d4f" font-weight="700">Gains</text><text x="34" y="98" text-anchor="start" font-size="10" fill="#b3402e" font-weight="700">Pertes</text><text x="216" y="32" text-anchor="start" font-size="10" fill="#8a97ad" font-weight="400">Satisfaction</text><text x="216" y="204" text-anchor="start" font-size="10" fill="#8a97ad" font-weight="400">Douleur</text><line x1="300.0" y1="104" x2="300.0" y2="82.70875321239957" stroke="#2e7d4f" stroke-width="1.4" stroke-dasharray="3 3"/><line x1="120.0" y1="104" x2="120.0" y2="151.90530527210097" stroke="#b3402e" stroke-width="1.4" stroke-dasharray="3 3"/><circle cx="300.0" cy="82.7" r="4" fill="#2e7d4f"/><circle cx="120.0" cy="151.9" r="4" fill="#b3402e"/><text x="300.0" y="120" text-anchor="middle" font-size="10" fill="#2e7d4f" font-weight="700">gain de 60 €</text><text x="120.0" y="96" text-anchor="middle" font-size="10" fill="#b3402e" font-weight="700">perte de 60 €</text><text x="210" y="226" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">Une perte fait plus mal qu'un gain équivalent ne fait plaisir (environ deux fois plus).</text></svg>
+      <figcaption>Schéma illustratif de la courbe de la théorie des perspectives : elle est plus raide du côté des pertes.</figcaption>
+    </figure>
+    <ul class="liste">
+      <li><strong>L'effet de disposition</strong> : on a tendance à vendre trop vite les placements qui ont gagné (pour « sécuriser ») et à garder trop longtemps ceux qui perdent (pour « ne pas perdre pour de bon »). Odean l'a mesuré en 1998 sur environ 10 000 comptes d'un courtier américain.</li>
+      <li><strong>Le coût irrécupérable</strong> : « je vendrai quand je serai revenu à mon prix d'achat ». Le marché ne connaît pas ton prix d'achat : la seule question utile est de savoir si tu achèterais ce titre aujourd'hui.</li>
+      <li><strong>L'aversion à la perte « myope »</strong> : plus on consulte souvent son portefeuille, plus on voit de pertes, et plus on devient frileux. Regarder moins souvent aide à tenir.</li>
+    </ul>
+
+    <h2 id="confiance">L'excès de confiance et l'illusion de contrôle</h2>
+    <p class="accroche">« Je sais ce que je fais » : l'une des phrases les plus coûteuses.</p>
+    <p>La plupart des gens se jugent meilleurs que la moyenne, y compris les investisseurs. Conséquence : ils échangent trop. C'est précisément l'explication que donnent Barber et Odean au retard des ménages les plus actifs. Deux pièges proches :</p>
+    <ul class="liste">
+      <li><strong>Confondre chance et talent</strong> : deux ou trois bons paris de suite ne prouvent rien, surtout dans un marché qui monte. On augmente alors ses mises au pire moment.</li>
+      <li><strong>L'illusion de contrôle</strong> : croire qu'en agissant plus (suivre les cours, multiplier les ordres), on maîtrise davantage un résultat qui dépend surtout du marché.</li>
+    </ul>
+
+    <h2 id="troupeau">L'effet de troupeau et la peur de rater</h2>
+    <p class="accroche">Quand tout le monde achète, il est dur de ne pas suivre. Quand tout le monde vend, il est dur de rester.</p>
+    <p>Suivre la foule rassure : si tout le monde se trompe, on se trompe à plusieurs. Cela alimente les bulles, comme la tulipomanie de 1637 ou la bulle des télécoms de 2000 (voir <a href="histoire-marches.html">L'histoire des marchés</a>), et les paniques (voir <a href="liquidite-marches.html">Liquidité et marchés</a>). S'y ajoutent :</p>
+    <ul class="liste">
+      <li><strong>La peur de rater (FOMO)</strong> : acheter parce que « ça monte » et que les autres gagnent de l'argent, souvent après une longue hausse. Les réseaux sociaux et les « finfluenceurs » l'amplifient.</li>
+      <li><strong>Le biais de récence</strong> : croire que les derniers mois ressemblent à l'avenir. Après une hausse, on voit des gains sans fin ; après une baisse, des pertes sans fin.</li>
+      <li><strong>Le biais de disponibilité</strong> : donner plus de poids à ce que les médias montrent, comme un krach spectaculaire, qu'à ce qui est statistiquement fréquent.</li>
+    </ul>
+
+    <h2 id="ancrage">Ancrage, confirmation, comptabilité mentale et inertie</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Biais</th><th>Comment il se manifeste</th><th>Une parade</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Ancrage</strong></td><td>S'accrocher à un chiffre de référence : son prix d'achat, un plus haut passé, « c'est bon marché, il a baissé de 40 % ».</td><td>Évaluer un placement sur sa valeur et ses perspectives, pas sur un prix passé.</td></tr>
+          <tr><td><strong>Confirmation</strong></td><td>Ne lire que ce qui va dans le sens de sa conviction.</td><td>Chercher activement les arguments contraires avant d'acheter.</td></tr>
+          <tr><td><strong>Comptabilité mentale</strong></td><td>Traiter différemment l'argent gagné en Bourse (« l'argent du casino ») et son salaire.</td><td>Raisonner sur l'ensemble de son patrimoine.</td></tr>
+          <tr><td><strong>Inertie (statu quo)</strong></td><td>Ne jamais rééquilibrer ni revoir son portefeuille.</td><td>Fixer une revue annuelle, avec une règle écrite.</td></tr>
+          <tr><td><strong>Biais domestique</strong></td><td>Surpondérer son propre pays ou son employeur.</td><td>Diversifier entre zones : voir <a href="portefeuille.html">Construire son portefeuille</a>.</td></tr>
+          <tr><td><strong>Biais du survivant</strong></td><td>Ne voir que les fonds ou les stratégies qui ont survécu, pas ceux qui ont disparu.</td><td>Se méfier des palmarès et regarder les statistiques complètes.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="cycle">Le cycle des émotions</h2>
+    <p class="accroche">On achète en euphorie et on vend en panique : c'est exactement l'inverse de ce qu'il faudrait faire.</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 232" role="img" aria-label="Cycle des émotions d'un investisseur au fil d'un cycle de marché" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><polyline points="20.0,170.0 70.0,138.0 120.0,100.0 175.0,44.0 215.0,66.0 255.0,112.0 300.0,176.0 340.0,150.0 385.0,112.0" fill="none" stroke="#0A1C3B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="70" cy="138" r="4.5" fill="#2e7d4f"/><text x="70" y="126" text-anchor="middle" font-size="10" fill="#2e7d4f" font-weight="700">Optimisme</text><circle cx="120" cy="100" r="4.5" fill="#2e7d4f"/><text x="120" y="88" text-anchor="middle" font-size="10" fill="#2e7d4f" font-weight="700">Enthousiasme</text><circle cx="175" cy="44" r="4.5" fill="#2e7d4f"/><text x="175" y="32" text-anchor="middle" font-size="10" fill="#2e7d4f" font-weight="700">Euphorie</text><circle cx="215" cy="66" r="4.5" fill="#b3402e"/><text x="221" y="54" text-anchor="start" font-size="10" fill="#b3402e" font-weight="700">Anxiété</text><circle cx="255" cy="112" r="4.5" fill="#b3402e"/><text x="261" y="102" text-anchor="start" font-size="10" fill="#b3402e" font-weight="700">Peur</text><circle cx="300" cy="176" r="4.5" fill="#b3402e"/><text x="300" y="194" text-anchor="middle" font-size="10" fill="#b3402e" font-weight="700">Capitulation</text><circle cx="340" cy="150" r="4.5" fill="#2e7d4f"/><text x="340" y="170" text-anchor="middle" font-size="10" fill="#2e7d4f" font-weight="700">Espoir</text><circle cx="385" cy="112" r="4.5" fill="#2e7d4f"/><text x="379" y="100" text-anchor="end" font-size="10" fill="#2e7d4f" font-weight="700">Soulagement</text><text x="210" y="224" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">Schéma pédagogique : les cycles réels ne suivent jamais exactement ce modèle.</text></svg>
+      <figcaption>Les émotions suivent souvent le prix : l'optimisme atteint son maximum près du sommet, la peur près du creux.</figcaption>
+    </figure>
+    <p>Le résultat typique : <strong>acheter haut, vendre bas</strong>. L'investisseur qui se laisse porter par ses émotions rentre tard dans la hausse, et sort au pire de la baisse, juste avant le rebond.</p>
+
+    <h2 id="remedes">Se protéger de soi-même</h2>
+    <p class="accroche">On ne supprime pas ses biais. On construit un cadre qui les empêche de décider à notre place.</p>
+    <ol class="etapes">
+      <li><strong>Écrire un plan avant d'investir</strong> : objectif, horizon, allocation, règle de rééquilibrage, et ce qu'on fera si le portefeuille perd 20 ou 30 %. Décider à froid, c'est un « pré-engagement ».</li>
+      <li><strong>Automatiser</strong> : versements programmés, rééquilibrage à date fixe : voir <a href="portefeuille.html#dca">Construire son portefeuille</a>.</li>
+      <li><strong>Diversifier</strong> pour que chaque variation fasse moins peur.</li>
+      <li><strong>Regarder moins souvent</strong> : une revue mensuelle ou trimestrielle plutôt que quotidienne.</li>
+      <li><strong>Se poser trois questions avant de vendre ou d'acheter</strong> : pourquoi ? qu'est-ce qui a changé depuis que j'ai décidé de ce plan ? l'achèterais-je aujourd'hui ?</li>
+      <li><strong>Tenir un journal de décisions</strong> : noter la raison de chaque achat et vente, et relire après quelques mois.</li>
+      <li><strong>Se méfier des promesses</strong> : un rendement garanti, une urgence, un conseil non sollicité sont des signaux d'alerte.</li>
+      <li><strong>Tester sa tolérance au risque</strong> : pourrais-je voir mon portefeuille perdre 30 % sans vendre ? Le simulateur <a href="monte-carlo.html">Monte Carlo</a> montre l'éventail des trajectoires possibles.</li>
+    </ol>
+
+    <div class="retenir" id="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Nos réflexes (aversion à la perte, excès de confiance, effet de troupeau) nous poussent à acheter haut et vendre bas, et cela se mesure : les ménages les plus actifs ont fait nettement moins bien.</li>
+        <li>On ne supprime pas ses biais, on les contourne : plan écrit, automatisation, diversification, revues espacées.</li>
+        <li>Les meilleures décisions se prennent à froid, avant la tempête, pas pendant.</li>
+      </ul>
+    </div>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les chiffres d'études sont ceux publiés par leurs auteurs, sur des périodes et des marchés précis : ils illustrent des tendances, pas des certitudes.</div>
+    <p class="note-hist"><strong>Sources :</strong> D. Kahneman et A. Tversky, <em>Prospect Theory</em> (1979) et estimations de 1992 ; T. Odean, <em>Are Investors Reluctant to Realize Their Losses?</em> (1998) ; B. Barber et T. Odean, <em>Trading Is Hazardous to Your Wealth</em>, Journal of Finance (2000) ; S. Benartzi et R. Thaler (1995), sur l'aversion myope à la perte.</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Biais cognitif</dt><dd>Un raccourci de pensée qui nous écarte systématiquement de la décision rationnelle.</dd>
+      <dt>Aversion à la perte</dt><dd>Le fait qu'une perte pèse environ deux fois plus qu'un gain équivalent.</dd>
+      <dt>Effet de disposition</dt><dd>Vendre trop vite les gagnants et garder trop longtemps les perdants.</dd>
+      <dt>Excès de confiance</dt><dd>Se croire meilleur que la moyenne et trop échanger.</dd>
+      <dt>FOMO</dt><dd>La peur de rater une hausse (Fear Of Missing Out).</dd>
+      <dt>Effet de troupeau</dt><dd>Suivre la foule plutôt que sa propre analyse.</dd>
+      <dt>Ancrage</dt><dd>S'accrocher à un chiffre de référence, comme son prix d'achat.</dd>
+      <dt>Biais de confirmation</dt><dd>Ne retenir que les informations qui confirment ses convictions.</dd>
+      <dt>Pré-engagement</dt><dd>Fixer à froid, par écrit, ce qu'on fera dans une situation difficile.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Tu refuses de vendre une action qui a perdu 30 % « tant qu'elle n'est pas revenue à ton prix d'achat ». De quoi s'agit-il ?</p>
+      <button>D'un excès de confiance</button>
+      <button>D'un ancrage sur le prix d'achat et d'une aversion à la perte</button>
+      <button>D'un effet de troupeau</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Tu vends vite une action qui a gagné 15 % pour « sécuriser », mais tu gardes celles qui perdent. C'est…</p>
+      <button>L'effet de disposition</button>
+      <button>Le biais domestique</button>
+      <button>La diversification</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>3. Après deux bons paris, tu es persuadé d'avoir un talent particulier et tu augmentes tes mises. C'est…</p>
+      <button>L'aversion à la perte</button>
+      <button>L'excès de confiance</button>
+      <button>L'inertie</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>4. Tu achètes une crypto parce que tout le monde en parle et que son prix monte depuis trois mois. C'est surtout…</p>
+      <button>De la FOMO et de l'effet de troupeau</button>
+      <button>De la comptabilité mentale</button>
+      <button>Du pré-engagement</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>5. Tu ne lis que les articles qui disent que ton action va monter. C'est…</p>
+      <button>Le biais de confirmation</button>
+      <button>Le biais du survivant</button>
+      <button>L'ancrage</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>6. 98 % de ton portefeuille est investi en entreprises de ton propre pays. C'est…</p>
+      <button>Une diversification réussie</button>
+      <button>Le biais domestique</button>
+      <button>Le risque de séquence</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>7. Consulter son portefeuille tous les jours tend à…</p>
+      <button>Réduire l'anxiété</button>
+      <button>Faire voir plus de pertes et rendre plus frileux</button>
+      <button>Améliorer les rendements</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>8. Quelle parade est la plus efficace contre les décisions émotionnelles ?</p>
+      <button>Un plan écrit à l'avance et l'automatisation des versements</button>
+      <button>Surveiller les cours en continu</button>
+      <button>Suivre les conseils des réseaux sociaux</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>9. Selon Barber et Odean, que gagnaient les ménages qui échangeaient le plus, par an ?</p>
+      <button>17,9 %, comme le marché</button>
+      <button>11,4 %, contre 17,9 % pour le marché</button>
+      <button>25 %, grâce à leur activité</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="portefeuille.html">← Construire son portefeuille</a><a class="next" href="histoire-marches.html">Investir : l'histoire des marchés →</a></div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>
