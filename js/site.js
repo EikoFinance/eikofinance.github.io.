@@ -23,7 +23,11 @@
           { title: 'La macroéconomie', file: 'macro.html',
             desc: "Indicateurs, taux, dette : le tableau de bord d'un pays et les leviers des banques centrales." },
           { title: 'Les courants de pensée économique', file: 'courants.html',
-            desc: 'Capitalisme, socialisme, Smith, Marx, Keynes, Friedman, Hayek, Schumpeter : pourquoi les experts divergent.' }
+            desc: 'Capitalisme, socialisme, Smith, Marx, Keynes, Friedman, Hayek, Schumpeter : pourquoi les experts divergent.' },
+          { title: 'Construire son portefeuille', file: 'portefeuille.html',
+            desc: "Diversification, allocation, rééquilibrage, horizon, passif ou actif, en une fois ou progressivement : une méthode." },
+          { title: "Les biais de l'investisseur", file: 'biais-investisseur.html',
+            desc: "Aversion à la perte, excès de confiance, effet de troupeau : pourquoi on se trompe, et comment s'en protéger." }
         ]
       },
       {
