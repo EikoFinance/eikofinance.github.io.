@@ -47,6 +47,8 @@
             desc: 'Ces entreprises qui suivent la conjoncture.' },
           { title: 'Cryptomonnaies', file: 'crypto.html',
             desc: 'Bitcoin, Ethereum, stablecoins : fonctionnement, risques et fiscalité.' },
+          { title: "L'immobilier", file: 'immobilier.html',
+            desc: "Résidence principale, logement locatif, crédit, rentabilité nette et risques : raisonner en investisseur." },
           { title: 'SCPI', file: 'scpi.html',
             desc: "L'immobilier en pierre-papier : frais, avantages et limites." },
           { title: 'Vin', file: 'vin.html',
@@ -92,6 +94,8 @@
             desc: 'PEA, compte-titres, assurance-vie, PER : où placer, et avec quelle fiscalité.' },
           { title: 'Transmission et dons', file: 'transmission.html',
             desc: 'Donations et succession : préparer et organiser la transmission.' },
+          { title: 'Immobilier : impôts et transmission', file: 'immobilier-fiscalite.html',
+            desc: "Revenus locatifs, plus-value, démembrement, SCI : limiter l'impôt et transmettre un bien locatif." },
           { title: 'Études de cas', file: 'etudes.html',
             desc: "Six profils d'épargnants comparés : livrets, ETF, stock picking, SCPI, matières premières et crypto." }
         ]
