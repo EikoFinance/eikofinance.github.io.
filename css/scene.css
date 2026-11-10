@@ -44,6 +44,7 @@
 .img-analyse    { --img: url(../images/scene-analyse.webp); }
 /* Fond sobre (dégradé marine) en attendant une image dédiée : à remplacer par url(../images/scene-xxx.webp) */
 .img-sobre     { --img: linear-gradient(135deg, #0A1C3B 0%, #17335f 100%); }
+.img-portefeuille { --img: url(../images/scene-portefeuille.webp); }
 .img-biais { --img: url(../images/scene-biais.webp); }
 .img-immobilier { --img: url(../images/scene-immobilier.webp); }
 .img-liquidite  { --img: url(../images/scene-liquidite.webp); }
@@ -206,6 +207,9 @@
 .scene-hero.img-brent::after {
     background: linear-gradient(180deg, rgba(10, 28, 59, 0.68) 0%, rgba(10, 28, 59, 0.86) 100%);
 }
+
+/* Cadrage de la banderole « Construire son portefeuille » : on descend l'image pour montrer le graphique en camembert et le stylo */
+.scene-hero.img-portefeuille::before { background-position: center 80%; }
 
 /* Respect du réglage « réduire les animations » */
 @media (prefers-reduced-motion: reduce) {
