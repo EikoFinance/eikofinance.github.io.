@@ -44,6 +44,7 @@
 .img-analyse    { --img: url(../images/scene-analyse.webp); }
 /* Fond sobre (dégradé marine) en attendant une image dédiée : à remplacer par url(../images/scene-xxx.webp) */
 .img-sobre     { --img: linear-gradient(135deg, #0A1C3B 0%, #17335f 100%); }
+.img-biais { --img: url(../images/scene-biais.webp); }
 .img-immobilier { --img: url(../images/scene-immobilier.webp); }
 .img-liquidite  { --img: url(../images/scene-liquidite.webp); }
 
