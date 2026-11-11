@@ -24,6 +24,8 @@
             desc: "Indicateurs, taux, dette : le tableau de bord d'un pays et les leviers des banques centrales." },
           { title: 'Les courants de pensée économique', file: 'courants.html',
             desc: 'Capitalisme, socialisme, Smith, Marx, Keynes, Friedman, Hayek, Schumpeter : pourquoi les experts divergent.' },
+          { title: 'Budget et épargne de précaution', file: 'budget-epargne.html',
+            desc: "Établir son budget, rembourser les dettes chères, constituer une réserve avant d'investir." },
           { title: 'Construire son portefeuille', file: 'portefeuille.html',
             desc: "Diversification, allocation, rééquilibrage, horizon, passif ou actif, en une fois ou progressivement : une méthode." },
           { title: "Les biais de l'investisseur", file: 'biais-investisseur.html',
