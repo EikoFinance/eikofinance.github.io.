@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget et épargne de précaution - EikoFinance</title>
+<meta name="description" content="Établir son budget, rembourser les dettes chères, constituer une épargne de précaution (combien, où la placer) avant d'investir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<link rel="stylesheet" href="css/cartes.css">
+<script src="js/site.js" defer></script>
+<style>
+.graph{margin:1.1rem 0 1.6rem;text-align:center}
+.graph svg{width:100%;max-width:560px;height:auto;background:#fff;border:1px solid #D9DEE5;border-radius:8px}
+.graph figcaption{font-size:.86rem;color:#4a5568;margin-top:.45rem;line-height:1.5}
+.fig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.1rem 0 1.6rem}
+.fig-grid .graph{margin:0}
+.fig-grid h4{margin:.5rem 0 .1rem;font-size:.95rem}
+.partie{margin:2.4rem 0 .6rem;padding:.55rem 1rem;background:#0A1C3B;color:#fff;border-left:5px solid #C5A059;border-radius:4px;font-family:Cinzel,serif;font-size:1.15rem;letter-spacing:.03em}
+.chapitre ol.etapes{margin:0 0 1rem 1.3rem;line-height:1.7}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.4rem}
+.tablewrap table{border-collapse:collapse;width:100%;min-width:420px}
+.tablewrap th,.tablewrap td{border:1px solid #D9DEE5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+.tablewrap th{background:#0A1C3B;color:#fff}
+.tablewrap tr:nth-child(even) td{background:#F7F9FC}
+.frise{list-style:none;margin:1.2rem 0 1.6rem;padding:0 0 0 1.1rem;border-left:3px solid #C5A059}
+.frise li{position:relative;margin:0 0 1.15rem;line-height:1.7}
+.frise li::before{content:"";position:absolute;left:calc(-1.1rem - 7px);top:.55rem;width:11px;height:11px;border-radius:50%;background:#0A1C3B;border:2px solid #C5A059}
+.frise .date{display:block;font-weight:700;color:#0A1C3B;font-size:1.02rem}
+.frise p{margin:.25rem 0 0}
+.note-hist{font-size:.9rem;color:#4a5568;margin-top:.4rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#comprendre">Comprendre</a> › Budget et épargne de précaution</p>
+
+  <section class="scene scene-hero img-sobre img-budget">
+    <h1>Budget et épargne de précaution : les bases avant d'investir</h1>
+    <p>Savoir où va son argent, rembourser les dettes chères, constituer une réserve : la méthode pour pouvoir investir sans risquer de vendre au pire moment.</p>
+    <a href="#pourquoi" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#pourquoi"><h3>Pourquoi commencer par là ?</h3><p>Investir l'argent dont on a besoin, un piège.</p></a>
+    <a class="card" href="#budget"><h3>Établir son budget</h3><p>Quatre étapes, la règle 50/30/20.</p></a>
+    <a class="card" href="#dettes"><h3>Les dettes chères</h3><p>Un rendement sans risque.</p></a>
+    <a class="card" href="#precaution"><h3>L'épargne de précaution</h3><p>Combien, et sur quel livret.</p></a>
+    <a class="card" href="#plan"><h3>Un plan en six étapes</h3><p>Constituer sa réserve.</p></a>
+    <a class="card" href="#investir"><h3>Quand investir ?</h3><p>Une logique plutôt qu'une règle.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Neuf questions pour vérifier.</p></a>
+  </section>
+
+  <article class="chapitre" id="lecon">
+    <p class="accroche">Avant de se demander dans quoi investir, il faut savoir <strong>combien</strong> on peut investir, et ce qui se passe si la vie dérape : une panne de voiture, une perte d'emploi, une facture imprévue. Cette leçon donne la méthode : d'abord un budget qui tient, ensuite une réserve qui protège.</p>
+
+    <h2 id="pourquoi">Pourquoi commencer par là ?</h2>
+    <p class="accroche">Parce qu'investir l'argent dont on a besoin à court terme est la meilleure façon de perdre.</p>
+    <p>Un portefeuille d'actions peut baisser de 30 % au moment même où l'on a besoin de l'argent. Si c'est le cas, il faut vendre à perte, ou s'endetter. L'épargne de précaution évite ce piège : elle est là pour que les placements puissent rester investis dans la durée (voir <a href="portefeuille.html">Construire son portefeuille</a>, et <a href="biais-investisseur.html">Les biais de l'investisseur</a> pour la peur de vendre au pire moment).</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 208" role="img" aria-label="Les quatre étapes avant d'investir : budget, dettes chères, réserve, investissement" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><rect x="12.0" y="126.0" width="88.0" height="50.0" rx="4" fill="#7C8DA8" stroke="none" stroke-width="1"/><text x="56.0" y="146" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">1. Budget</text><text x="56.0" y="162" text-anchor="middle" font-size="9" fill="#fff" font-weight="400">revenus − dépenses</text><rect x="110.0" y="96.0" width="88.0" height="80.0" rx="4" fill="#7C8DA8" stroke="none" stroke-width="1"/><text x="154.0" y="116" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">2. Dettes chères</text><text x="154.0" y="132" text-anchor="middle" font-size="9" fill="#fff" font-weight="400">les rembourser</text><rect x="208.0" y="66.0" width="88.0" height="110.0" rx="4" fill="#C5A059" stroke="none" stroke-width="1"/><text x="252.0" y="86" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">3. Réserve</text><text x="252.0" y="102" text-anchor="middle" font-size="9" fill="#0A1C3B" font-weight="400">2 à 6 mois</text><rect x="306.0" y="36.0" width="88.0" height="140.0" rx="4" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="350.0" y="56" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">4. Investir</text><text x="350.0" y="72" text-anchor="middle" font-size="9" fill="#fff" font-weight="400">long terme</text><text x="210" y="198" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">On monte les marches dans l'ordre : chacune protège la suivante.</text></svg>
+      <figcaption>Schéma pédagogique : l'ordre habituel des priorités.</figcaption>
+    </figure>
+
+    <h2 id="budget">Établir son budget en quatre étapes</h2>
+    <p class="accroche">Un budget n'est pas une privation : c'est savoir où va son argent, pour décider soi-même.</p>
+    <ol class="etapes">
+      <li><strong>Calculer ses revenus nets</strong> : salaire net après impôt, allocations, revenus réguliers. Si les revenus varient, prends la moyenne des derniers mois, ou le mois le plus bas pour être prudent.</li>
+      <li><strong>Lister ses dépenses</strong> sur deux ou trois mois, avec les relevés bancaires. Trois familles : les <em>charges fixes</em> (loyer, crédit, assurances, énergie, abonnements), les <em>dépenses variables essentielles</em> (courses, transports, santé) et les <em>dépenses de plaisir</em> (sorties, loisirs, voyages).</li>
+      <li><strong>Ne pas oublier les dépenses annuelles</strong> : taxe foncière, assurance annuelle, vacances, cadeaux, entretien de la voiture. On les divise par 12 et on les met de côté chaque mois : c'est le « lissage », qui évite les mauvaises surprises.</li>
+      <li><strong>Calculer sa capacité d'épargne</strong> : revenus moins dépenses. Puis se <strong>payer en premier</strong> : programmer un virement vers l'épargne le jour de la paie, avant de dépenser le reste.</li>
+    </ol>
+    <p>Un repère connu, la règle <strong>50/30/20</strong>, popularisée par l'Américaine Elizabeth Warren : 50 % du revenu net pour les besoins essentiels, 30 % pour les envies, 20 % pour l'épargne et le remboursement des dettes. C'est un guide, pas une loi : avec un loyer élevé, on adapte (par exemple 60/20/20).</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 182" role="img" aria-label="Deux façons de répartir un revenu de 2 200 euros : 50/30/20 et 60/20/20" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><text x="210" y="14" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">Revenu net de 2 200 € par mois, réparti de deux façons</text><text x="110" y="53" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Règle 50/30/20</text><rect x="118.0" y="30.0" width="142.5" height="34.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="189.25" y="45" text-anchor="middle" font-size="10.5" fill="#fff" font-weight="700">1 100 €</text><text x="189.25" y="58" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="400">50 %</text><rect x="260.5" y="30.0" width="85.5" height="34.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="303.25" y="45" text-anchor="middle" font-size="10.5" fill="#0A1C3B" font-weight="700">660 €</text><text x="303.25" y="58" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="400">30 %</text><rect x="346.0" y="30.0" width="57.0" height="34.0" rx="0" fill="#2e7d4f" stroke="none" stroke-width="1"/><text x="374.5" y="45" text-anchor="middle" font-size="10.5" fill="#fff" font-weight="700">440 €</text><text x="374.5" y="58" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="400">20 %</text><text x="110" y="115" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Loyer élevé : 60/20/20</text><rect x="118.0" y="92.0" width="171.0" height="34.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="203.5" y="107" text-anchor="middle" font-size="10.5" fill="#fff" font-weight="700">1 320 €</text><text x="203.5" y="120" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="400">60 %</text><rect x="289.0" y="92.0" width="57.0" height="34.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="317.5" y="107" text-anchor="middle" font-size="10.5" fill="#0A1C3B" font-weight="700">440 €</text><text x="317.5" y="120" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="400">20 %</text><rect x="346.0" y="92.0" width="57.0" height="34.0" rx="0" fill="#2e7d4f" stroke="none" stroke-width="1"/><text x="374.5" y="107" text-anchor="middle" font-size="10.5" fill="#fff" font-weight="700">440 €</text><text x="374.5" y="120" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="400">20 %</text><rect x="118.0" y="160.0" width="12.0" height="10.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="134" y="169" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Besoins</text><rect x="202.0" y="160.0" width="12.0" height="10.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="218" y="169" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Envies</text><rect x="278.0" y="160.0" width="12.0" height="10.0" rx="0" fill="#2e7d4f" stroke="none" stroke-width="1"/><text x="294" y="169" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="400">Épargne et dettes</text></svg>
+      <figcaption>Exemple fictif : 2 200 € de revenu net. Avec un loyer élevé, les besoins passent à 1 320 € et les envies sont ramenées à 440 €.</figcaption>
+    </figure>
+    <p class="note-hist"><strong>Deux pièges :</strong> un budget trop strict est abandonné au bout de quelques semaines (garde une marge pour les envies), et un budget sans ligne « imprévus » se brise au premier coup dur.</p>
+
+    <h2 id="dettes">Les dettes chères d'abord</h2>
+    <p class="accroche">Rembourser une dette qui coûte cher, c'est un rendement sans risque.</p>
+    <p>Un découvert ou un crédit renouvelable coûte souvent bien plus cher que ce que peut rapporter un placement raisonnable. Rembourser une dette à un taux élevé revient à « gagner » ce taux, avec certitude. Il est donc logique de rembourser les <strong>dettes chères</strong> avant d'investir, ou en même temps qu'on constitue sa réserve minimale.</p>
+    <p>Un crédit à taux bas, comme un crédit immobilier, est un cas différent : il peut avoir du sens de le garder (voir <a href="immobilier.html#credit">L'immobilier</a>).</p>
+
+    <h2 id="precaution">L'épargne de précaution : combien, et où ?</h2>
+    <p class="accroche">Une réserve qui n'a pas besoin de rapporter : elle doit être là, tout de suite, au moment voulu.</p>
+    <p>L'<strong>épargne de précaution</strong> est la somme qui te permet de faire face aux imprévus sans emprunter ni vendre tes placements : perte d'emploi, réparation, frais de santé. Ce n'est pas un investissement : son rôle est de te protéger.</p>
+    <h3>Combien ?</h3>
+    <p>On la calcule en <strong>mois de dépenses essentielles</strong>, et non en mois de salaire : si tu gagnes 3 000 € mais que tes dépenses essentielles sont de 1 500 €, ta référence est 1 500 €. Les repères varient selon les sources et la situation :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Situation</th><th>Repère courant</th></tr></thead>
+        <tbody>
+          <tr><td>Salarié avec un emploi stable, sans charge particulière</td><td>2 à 3 mois de dépenses essentielles</td></tr>
+          <tr><td>Situation standard</td><td>3 à 6 mois</td></tr>
+          <tr><td>Indépendant, revenus irréguliers, foyer avec un seul revenu, enfants, propriétaire</td><td>6 mois ou plus</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Exemple :</strong> avec 1 500 € de dépenses essentielles par mois, 3 mois font 4 500 € et 6 mois font 9 000 €.</p>
+    <h3>Où la placer ?</h3>
+    <p>Trois critères : <strong>disponible immédiatement</strong>, <strong>sans risque sur le capital</strong>, <strong>sans frais</strong>. Les livrets réglementés y répondent :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Livret</th><th>Taux depuis le 1er août 2026</th><th>Plafond de dépôt</th><th>Remarque</th></tr></thead>
+        <tbody>
+          <tr><td>Livret A</td><td>1,7 %</td><td>22 950 €</td><td>Accessible à tous</td></tr>
+          <tr><td>LDDS</td><td>1,7 %</td><td>12 000 €</td><td>Même taux que le Livret A</td></tr>
+          <tr><td>LEP</td><td>2,5 %</td><td>10 000 €</td><td>Sous conditions de revenus</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Les intérêts de ces livrets sont <strong>exonérés d'impôt et de prélèvements sociaux</strong>. Leur taux est révisé deux fois par an, au 1er février et au 1er août : vérifie le taux en vigueur. Les dépôts bancaires sont par ailleurs garantis jusqu'à 100 000 € par déposant et par établissement.</p>
+    <ul class="liste">
+      <li><strong>Pas en actions ni en crypto</strong> : leur prix peut baisser juste au moment où tu as besoin de l'argent.</li>
+      <li><strong>Pas dans un placement bloqué</strong> : l'assurance-vie, les comptes à terme ou le PEL sont moins immédiats.</li>
+      <li><strong>Le rendement n'est pas l'objectif</strong> : un livret à 1,7 % suit à peu près l'inflation. Au-delà du montant visé, l'excédent gagne à être investi (voir <a href="portefeuille.html">Construire son portefeuille</a>).</li>
+    </ul>
+
+    <h2 id="plan">Un plan en six étapes pour la constituer</h2>
+    <ol class="etapes">
+      <li><strong>Calculer ses dépenses essentielles</strong> mensuelles.</li>
+      <li><strong>Fixer l'objectif</strong> en mois (par exemple 3 ou 6).</li>
+      <li><strong>Ouvrir un livret distinct</strong> du compte courant : séparer évite d'y toucher par habitude.</li>
+      <li><strong>Programmer un virement automatique</strong> le jour de la paie.</li>
+      <li><strong>Y verser les « extras »</strong> : prime, remboursement d'impôt, cadeau.</li>
+      <li><strong>L'utiliser pour de vrais imprévus</strong>, puis la reconstituer.</li>
+    </ol>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Épargne par mois</th><th>3 mois de dépenses (4 500 €)</th><th>6 mois de dépenses (9 000 €)</th></tr></thead>
+        <tbody>
+          <tr><td>200 €</td><td>23 mois</td><td>45 mois</td></tr>
+          <tr><td>300 €</td><td>15 mois</td><td>30 mois</td></tr>
+          <tr><td>440 €</td><td>11 mois</td><td>21 mois</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-hist">Durées calculées sans les intérêts, pour un objectif basé sur 1 500 € de dépenses essentielles par mois. Elles montrent surtout qu'il est inutile d'attendre d'avoir la réserve complète pour commencer : la régularité compte plus que le montant mensuel.</p>
+
+    <h2 id="investir">Quand commencer à investir ?</h2>
+    <p class="accroche">Il n'y a pas de règle unique, mais une logique.</p>
+    <p>On peut commencer à investir quand le budget tient, les dettes chères sont remboursées, et une réserve suffisante est en place. Beaucoup de personnes commencent à investir un peu avant de l'avoir complètement constituée, une fois une première réserve en place, tout en continuant de l'alimenter. L'essentiel est de <strong>ne jamais investir l'argent dont on peut avoir besoin à court terme</strong>. Les projets à échéance proche (voyage, voiture, apport) restent sur des supports sans risque, dans des livrets dédiés.</p>
+
+    <div class="retenir" id="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Un budget, c'est des revenus moins des dépenses, y compris les dépenses annuelles lissées sur douze mois. Le plus simple est de se payer en premier, par un virement automatique.</li>
+        <li>L'épargne de précaution se calcule en mois de dépenses essentielles (de 2 à 6 mois, plus pour un indépendant), et se place sur un livret disponible et sans risque.</li>
+        <li>L'ordre habituel : budget, dettes chères, réserve, puis investissement. L'argent dont on peut avoir besoin à court terme ne s'investit pas.</li>
+      </ul>
+    </div>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil personnalisé. Les repères (nombre de mois, répartition 50/30/20) sont des guides à adapter à ta situation. Les taux des livrets sont ceux en vigueur depuis le 1er août 2026 et sont révisés chaque semestre.</div>
+    <p class="note-hist"><strong>Sources :</strong> taux et plafonds des livrets réglementés au 1er août 2026 (Banque de France, ministère de l'Économie) ; règle 50/30/20, Elizabeth Warren et Amelia Warren Tyagi, <em>All Your Worth</em> (2005) ; garantie des dépôts, Fonds de garantie des dépôts et de résolution.</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Budget</dt><dd>Le tableau de ses revenus et de ses dépenses sur une période, en général un mois.</dd>
+      <dt>Dépenses essentielles</dt><dd>Celles qu'on ne peut pas supprimer : logement, alimentation, énergie, assurances, transports, santé.</dd>
+      <dt>Charges fixes</dt><dd>Les dépenses qui reviennent chaque mois pour le même montant.</dd>
+      <dt>Lissage</dt><dd>Diviser les dépenses annuelles par 12 pour les mettre de côté chaque mois.</dd>
+      <dt>Épargne de précaution</dt><dd>Une réserve immédiatement disponible pour les imprévus.</dd>
+      <dt>Livret réglementé</dt><dd>Un livret dont le taux et le plafond sont fixés par l'État, comme le Livret A.</dd>
+      <dt>Plafond</dt><dd>Le montant maximal qu'on peut déposer sur un livret.</dd>
+      <dt>Dette chère</dt><dd>Une dette dont le taux est élevé, comme un découvert ou un crédit renouvelable.</dd>
+      <dt>Se payer en premier</dt><dd>Mettre de côté son épargne dès la paie, avant de dépenser le reste.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. L'épargne de précaution se calcule en fonction…</p>
+      <button>De son salaire net</button>
+      <button>De ses dépenses essentielles</button>
+      <button>Du rendement du livret</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>2. Quelle fourchette de mois de dépenses est le plus souvent retenue ?</p>
+      <button>3 à 6 mois</button>
+      <button>1 semaine</button>
+      <button>3 ans</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. Où placer en priorité une épargne de précaution ?</p>
+      <button>En actions</button>
+      <button>En crypto</button>
+      <button>Sur un livret disponible et sans risque</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>4. Quel est le taux du Livret A depuis le 1er août 2026 ?</p>
+      <button>0,5 %</button>
+      <button>1,7 %</button>
+      <button>3 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>5. Que prévoit la règle 50/30/20 ?</p>
+      <button>50 % de besoins, 30 % d'envies, 20 % d'épargne</button>
+      <button>50 % d'épargne, 30 % de besoins, 20 % d'envies</button>
+      <button>20 % de besoins, 30 % d'envies, 50 % d'épargne</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>6. Pourquoi rembourser une dette chère avant d'investir ?</p>
+      <button>Parce que les placements sont interdits</button>
+      <button>Parce que ça ne change rien</button>
+      <button>Parce que la rembourser équivaut à un rendement élevé et certain</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>7. Que veut dire « se payer en premier » ?</p>
+      <button>Dépenser d'abord ses envies</button>
+      <button>Virer son épargne dès la paie, avant de dépenser</button>
+      <button>Rembourser ses amis avant ses dettes</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>8. Avec 1 500 € de dépenses essentielles par mois, combien font 4 mois de précaution ?</p>
+      <button>6 000 €</button>
+      <button>4 500 €</button>
+      <button>1 500 €</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>9. Pourquoi ne pas mettre sa réserve en actions ?</p>
+      <button>Parce que c'est interdit</button>
+      <button>Parce que le prix peut baisser au moment où on a besoin de l'argent</button>
+      <button>Parce que les actions ne rapportent rien</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="courants.html">← Les courants de pensée économique</a><a class="next" href="portefeuille.html">Construire son portefeuille →</a></div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>
