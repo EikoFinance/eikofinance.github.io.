@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Préparer sa retraite - EikoFinance</title>
+<meta name="description" content="Système de retraite français, estimation de la pension, écart à combler, épargne nécessaire, PER et autres outils : préparer sa retraite comme un projet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<link rel="stylesheet" href="css/cartes.css">
+<script src="js/site.js" defer></script>
+<style>
+.graph{margin:1.1rem 0 1.6rem;text-align:center}
+.graph svg{width:100%;max-width:560px;height:auto;background:#fff;border:1px solid #D9DEE5;border-radius:8px}
+.graph figcaption{font-size:.86rem;color:#4a5568;margin-top:.45rem;line-height:1.5}
+.fig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.1rem 0 1.6rem}
+.fig-grid .graph{margin:0}
+.fig-grid h4{margin:.5rem 0 .1rem;font-size:.95rem}
+.partie{margin:2.4rem 0 .6rem;padding:.55rem 1rem;background:#0A1C3B;color:#fff;border-left:5px solid #C5A059;border-radius:4px;font-family:Cinzel,serif;font-size:1.15rem;letter-spacing:.03em}
+.chapitre ol.etapes{margin:0 0 1rem 1.3rem;line-height:1.7}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.4rem}
+.tablewrap table{border-collapse:collapse;width:100%;min-width:420px}
+.tablewrap th,.tablewrap td{border:1px solid #D9DEE5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+.tablewrap th{background:#0A1C3B;color:#fff}
+.tablewrap tr:nth-child(even) td{background:#F7F9FC}
+.frise{list-style:none;margin:1.2rem 0 1.6rem;padding:0 0 0 1.1rem;border-left:3px solid #C5A059}
+.frise li{position:relative;margin:0 0 1.15rem;line-height:1.7}
+.frise li::before{content:"";position:absolute;left:calc(-1.1rem - 7px);top:.55rem;width:11px;height:11px;border-radius:50%;background:#0A1C3B;border:2px solid #C5A059}
+.frise .date{display:block;font-weight:700;color:#0A1C3B;font-size:1.02rem}
+.frise p{margin:.25rem 0 0}
+.note-hist{font-size:.9rem;color:#4a5568;margin-top:.4rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#optimiser">Optimiser</a> › Préparer sa retraite</p>
+
+  <section class="scene scene-hero img-sobre img-retraite">
+    <h1>Préparer sa retraite : un projet, pas seulement une enveloppe</h1>
+    <p>Combien vais-je toucher, combien me faut-il, quel écart combler et avec quels outils : la retraite se prépare comme un projet, chiffres à l'appui.</p>
+    <a href="#systeme" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#systeme"><h3>Le système français</h3><p>Répartition, âge légal, trimestres.</p></a>
+    <a class="card" href="#estimer"><h3>Estimer sa pension</h3><p>Base, Agirc-Arrco et un exemple chiffré.</p></a>
+    <a class="card" href="#objectif"><h3>Fixer l'objectif</h3><p>L'écart à combler, la règle des 4 %.</p></a>
+    <a class="card" href="#epargner"><h3>Combien épargner ?</h3><p>Le temps réduit l'effort.</p></a>
+    <a class="card" href="#per"><h3>Le PER et les autres outils</h3><p>Déduction, sortie, comparatif.</p></a>
+    <a class="card" href="#strategie"><h3>Six étapes</h3><p>Une stratégie complète.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Dix questions pour vérifier.</p></a>
+  </section>
+
+  <article class="chapitre" id="lecon">
+    <p class="accroche">La retraite est souvent vue comme une enveloppe fiscale (le PER). C'est d'abord un <strong>projet</strong> : combien vais-je toucher, de combien ai-je besoin, quel écart combler, avec quels outils et sur combien de temps. L'enveloppe n'est que le dernier maillon.</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 216" role="img" aria-label="Les trois étages de la retraite : obligatoire, entreprise, individuel" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><rect x="30.0" y="10.0" width="360.0" height="54.0" rx="6" fill="#C5A059" stroke="none" stroke-width="1"/><text x="210" y="33" text-anchor="middle" font-size="12.5" fill="#0A1C3B" font-weight="700">Épargne individuelle</text><text x="210" y="51" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="400">PER, assurance-vie, PEA, immobilier : un complément, volontaire</text><rect x="30.0" y="72.0" width="360.0" height="54.0" rx="6" fill="#7C8DA8" stroke="none" stroke-width="1"/><text x="210" y="95" text-anchor="middle" font-size="12.5" fill="#fff" font-weight="700">Épargne d'entreprise</text><text x="210" y="113" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="400">Épargne salariale, PER collectif : souvent avec un abondement de l'employeur</text><rect x="30.0" y="134.0" width="360.0" height="54.0" rx="6" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="210" y="157" text-anchor="middle" font-size="12.5" fill="#fff" font-weight="700">Retraite obligatoire</text><text x="210" y="175" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="400">Régime de base + complémentaire (Agirc-Arrco) : financée par répartition</text><text x="210" y="206" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">Plus on monte, plus l'effort est personnel et le bénéfice dépend de la fiscalité et du temps.</text></svg>
+      <figcaption>Schéma pédagogique : la retraite repose sur plusieurs étages. Seule la retraite obligatoire est automatique.</figcaption>
+    </figure>
+
+    <h2 id="systeme">Comment fonctionne la retraite en France</h2>
+    <p class="accroche">Ce que tu cotises aujourd'hui finance les pensions d'aujourd'hui.</p>
+    <p>Le système français fonctionne <strong>par répartition</strong> : les cotisations des actifs paient directement les pensions des retraités du moment. Il n'y a pas de « compte personnel » où ton argent attendrait : tu acquiers des <strong>droits</strong> (des trimestres, des points), qui seront transformés en pension. Ils sont versés par deux niveaux de régimes pour un salarié du privé : le régime de base (l'Assurance retraite) et la retraite complémentaire obligatoire (l'Agirc-Arrco). D'autres statuts ont leurs propres régimes (fonctionnaires, indépendants, agriculteurs).</p>
+    <p>Pour toucher une pension <strong>à taux plein</strong> (50 % du salaire de référence), il faut avoir atteint l'<strong>âge légal</strong> et validé le nombre de <strong>trimestres</strong> requis, ou attendre 67 ans, où le taux plein est automatique. Sinon, une <strong>décote</strong> de 1,25 % par trimestre manquant s'applique (jusqu'à 25 %) ; au-delà, une <strong>surcote</strong> de 1,25 % par trimestre supplémentaire augmente la pension.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Année de naissance</th><th>Âge légal</th><th>Trimestres pour le taux plein</th></tr></thead>
+        <tbody>
+          <tr><td>1963</td><td>62 ans et 9 mois</td><td>170</td></tr>
+          <tr><td>1964</td><td>62 ans et 9 mois (suspension)</td><td>170</td></tr>
+          <tr><td>1965 (janvier à mars)</td><td>62 ans et 9 mois (suspension)</td><td>170</td></tr>
+          <tr><td>1965 (avril à décembre)</td><td>63 ans</td><td>171</td></tr>
+          <tr><td>1966</td><td>63 ans et 3 mois</td><td>172</td></tr>
+          <tr><td>1967</td><td>63 ans et 6 mois</td><td>172</td></tr>
+          <tr><td>1968</td><td>63 ans et 9 mois</td><td>172</td></tr>
+          <tr><td>1969 et après</td><td>64 ans</td><td>172</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-hist"><strong>Une réforme suspendue, pas annulée :</strong> la loi de financement de la Sécurité sociale pour 2026 a suspendu jusqu'au 1er janvier 2028 la montée de l'âge légal et du nombre de trimestres décidée en 2023. Sans nouveau texte, le calendrier reprend ensuite, avec 64 ans et 172 trimestres pour les personnes nées à partir de 1969. Les règles peuvent encore changer : elles sont un cadre, pas une certitude.</p>
+
+    <h2 id="estimer">Estimer sa pension : base et complémentaire</h2>
+    <p class="accroche">Avant de savoir combien épargner, il faut savoir ce qu'on touchera.</p>
+    <ul class="liste">
+      <li><strong>La pension de base</strong> = salaire annuel moyen (SAM) × taux (50 % au maximum) × trimestres validés ÷ trimestres requis. Le SAM est la moyenne des <strong>25 meilleures années</strong>, chacune plafonnée au plafond annuel de la Sécurité sociale (PASS : 48 060 € en 2026). Au maximum, la pension de base atteint donc 50 % du PASS, soit <strong>2 002,50 € brut par mois</strong>.</li>
+      <li><strong>La retraite complémentaire Agirc-Arrco</strong> fonctionne par <strong>points</strong>. Chaque année, une part de ta rémunération (6,20 % jusqu'au PASS, 17 % entre un et huit PASS) est divisée par un salaire de référence (20,1877 € en 2026) pour donner des points. À la retraite, chaque point vaut 1,4386 € par an (valeur de service 2026).</li>
+    </ul>
+    <p><strong>Exemple (Camille, 35 ans) :</strong> salariée du privé, 34 000 € bruts par an (environ 2 200 € nets par mois), carrière complète de 40 ans, salaire constant (calcul simplifié, en euros de 2026).</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Étape</th><th>Calcul</th><th>Résultat</th></tr></thead>
+        <tbody>
+          <tr><td>Pension de base</td><td>50 % × 34 000 €</td><td>17 000 € par an, soit 1 417 € par mois</td></tr>
+          <tr><td>Points Agirc-Arrco par an</td><td>34 000 € × 6,20 % ÷ 20,1877 €</td><td>104,4 points</td></tr>
+          <tr><td>Points sur 40 ans</td><td>104,4 × 40</td><td>4 177 points</td></tr>
+          <tr><td>Complémentaire</td><td>4 177 × 1,4386 €</td><td>6 009 € par an, soit 501 € par mois</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>1 417 € + 501 €</strong></td><td><strong>environ 1 920 € bruts par mois, soit 68 % du salaire brut</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Ce taux est plus faible pour un salaire supérieur au plafond de la Sécurité sociale, car la base n'en tient pas compte au-delà : plus on gagne, plus l'écart avec le dernier salaire est grand. Ces montants sont <strong>bruts</strong> (avant prélèvements sociaux) et simplifiés : pour une estimation personnelle, consulte ton relevé de carrière et le simulateur officiel sur <strong>info-retraite.fr</strong>.</p>
+
+    <h2 id="objectif">Fixer l'objectif et mesurer l'écart</h2>
+    <p class="accroche">Combien me faut-il, et combien manque-t-il ?</p>
+    <p>On estime souvent le besoin à la retraite entre <strong>70 et 80 %</strong> du revenu d'activité. Certaines dépenses disparaissent (crédit remboursé, transports, charges d'enfants), d'autres augmentent (santé, services à la personne). C'est un repère à adapter à ta situation.</p>
+    <p><strong>Suite de l'exemple :</strong> Camille vise <strong>2 400 € bruts par mois</strong>. Sa pension estimée est d'environ 1 920 €. L'écart est donc d'environ <strong>480 € par mois</strong>, soit environ 5 800 € par an.</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 172" role="img" aria-label="Pension estimée de Camille (base et complémentaire) et écart avec son objectif de 2 400 euros" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><text x="210" y="16" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">Camille : pension estimée et objectif, en euros bruts par mois</text><rect x="22.0" y="36.0" width="222.0" height="56.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="132.99833333333333" y="60" text-anchor="middle" font-size="11.5" fill="#fff" font-weight="700">1 417 €</text><text x="132.99833333333333" y="78" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="400">Base</text><rect x="244.0" y="36.0" width="78.5" height="56.0" rx="0" fill="#7C8DA8" stroke="none" stroke-width="1"/><text x="283.2416666666667" y="60" text-anchor="middle" font-size="11.5" fill="#fff" font-weight="700">501 €</text><text x="283.2416666666667" y="78" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="400">Agirc-Arrco</text><rect x="322.5" y="36.0" width="75.7" height="56.0" rx="0" fill="#C5A059" stroke="none" stroke-width="1"/><text x="360.32166666666666" y="60" text-anchor="middle" font-size="11.5" fill="#0A1C3B" font-weight="700">483 €</text><text x="360.32166666666666" y="78" text-anchor="middle" font-size="9.5" fill="#0A1C3B" font-weight="400">Écart</text><line x1="22" y1="100" x2="398" y2="100" stroke="#8a97ad" stroke-width="1"/><line x1="22" y1="96" x2="22" y2="104" stroke="#8a97ad" stroke-width="1"/><line x1="398" y1="96" x2="398" y2="104" stroke="#8a97ad" stroke-width="1"/><text x="210.0" y="118" text-anchor="middle" font-size="10.5" fill="#0A1C3B" font-weight="700">Objectif : 2 400 € par mois</text><text x="210" y="146" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">Écart : environ 480 € par mois, soit environ 5 800 € par an.</text><text x="210" y="162" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">Estimation simplifiée : carrière complète, salaire constant, valeurs 2026.</text></svg>
+      <figcaption>Le projet de Camille : combler un écart d'environ 480 € par mois.</figcaption>
+    </figure>
+    <p><strong>Quel capital pour combler cet écart ?</strong> Un repère couramment utilisé est la <strong>règle des 4 %</strong> : retirer chaque année 4 % du capital, puis ajuster ce montant de l'inflation, a historiquement permis de tenir une trentaine d'années sur les marchés américains (travaux de William Bengen, 1994, puis étude « Trinity », 1998). Pour 5 800 € par an, il faut donc environ <strong>145 000 €</strong> (et environ 193 000 € avec une règle plus prudente de 3 %). C'est un repère, pas une garantie : il suppose un portefeuille investi sur les marchés, avant impôt.</p>
+
+    <h2 id="epargner">Combien épargner, et à partir de quand ?</h2>
+    <p class="accroche">Le temps réduit l'effort plus que le rendement.</p>
+    <p>Voici l'épargne mensuelle nécessaire pour atteindre <strong>145 000 €</strong>, selon la durée et le rendement annuel supposé (constant, après frais, avant impôt) :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Années d'épargne</th><th>Rendement de 2 %</th><th>Rendement de 4 %</th><th>Rendement de 6 %</th></tr></thead>
+        <tbody>
+          <tr><td>35 ans</td><td>239 €</td><td>159 €</td><td>102 €</td></tr>
+          <tr><td>29 ans (Camille)</td><td>308 €</td><td>221 €</td><td>155 €</td></tr>
+          <tr><td>25 ans</td><td>373 €</td><td>282 €</td><td>209 €</td></tr>
+          <tr><td>15 ans</td><td>691 €</td><td>589 €</td><td>499 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figure class="graph">
+      <svg viewBox="0 0 420 236" role="img" aria-label="Épargne mensuelle nécessaire selon le nombre d'années avant la retraite" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><line x1="52" y1="190.0" x2="400" y2="190.0" stroke="#EEF1F6" stroke-width="1"/><text x="46" y="194.0" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">0</text><line x1="52" y1="152.72727272727272" x2="400" y2="152.72727272727272" stroke="#EEF1F6" stroke-width="1"/><text x="46" y="156.72727272727272" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">250</text><line x1="52" y1="115.45454545454545" x2="400" y2="115.45454545454545" stroke="#EEF1F6" stroke-width="1"/><text x="46" y="119.45454545454545" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">500</text><line x1="52" y1="78.18181818181819" x2="400" y2="78.18181818181819" stroke="#EEF1F6" stroke-width="1"/><text x="46" y="82.18181818181819" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">750</text><line x1="52" y1="40.90909090909091" x2="400" y2="40.90909090909091" stroke="#EEF1F6" stroke-width="1"/><text x="46" y="44.90909090909091" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">1 000</text><text x="52.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">10</text><text x="168.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">20</text><text x="284.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">30</text><text x="400.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">40</text><text x="226.0" y="220" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">Années d'épargne avant la retraite</text><polyline points="52.0,43.2 63.6,59.4 75.2,72.8 86.8,84.1 98.4,93.8 110.0,102.2 121.6,109.4 133.2,115.8 144.8,121.5 156.4,126.5 168.0,131.1 179.6,135.1 191.2,138.8 202.8,142.1 214.4,145.2 226.0,148.0 237.6,150.5 249.2,152.8 260.8,155.0 272.4,157.0 284.0,158.9 295.6,160.6 307.2,162.2 318.8,163.7 330.4,165.0 342.0,166.3 353.6,167.6 365.2,168.7 376.8,169.8 388.4,170.8 400.0,171.7" fill="none" stroke="#0A1C3B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="156.4" cy="126.5" r="4.5" fill="#C5A059" stroke="#0A1C3B"/><text x="164.4" y="114.54265229515536" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="700">19 ans : 426 €</text><circle cx="272.4" cy="157.0" r="4.5" fill="#C5A059" stroke="#0A1C3B"/><text x="280.4" y="145.00197875596513" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="700">29 ans : 221 €</text><text x="52" y="14" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">Épargne mensuelle pour atteindre 145 000 € (rendement de 4 % par an)</text></svg>
+      <figcaption>Commencer 10 ans plus tard (19 ans d'épargne au lieu de 29) presque double l'effort mensuel : 426 € au lieu de 221 €.</figcaption>
+    </figure>
+    <p>Ces rendements ne sont pas garantis : voir <a href="portefeuille.html">Construire son portefeuille</a> pour le risque, et les simulateurs <a href="monte-carlo.html">Monte Carlo</a> et <a href="interets-composes.html">intérêts composés</a> pour tester différents scénarios. Les 221 € par mois de Camille représentent environ 10 % de son revenu net : c'est la part qu'on retrouve dans le budget (voir <a href="budget-epargne.html">Budget et épargne de précaution</a>).</p>
+
+    <h2 id="per">Le PER et les autres outils</h2>
+    <p class="accroche">Le PER est un outil au service du projet, pas un objectif en soi.</p>
+    <p>Le <strong>plan d'épargne retraite (PER)</strong>, créé par la loi Pacte, est un compte bloqué jusqu'à la retraite. Il existe en version individuelle ou d'entreprise.</p>
+    <ul class="liste">
+      <li><strong>À l'entrée :</strong> les versements volontaires sont <strong>déductibles du revenu imposable</strong>, dans la limite de 10 % des revenus professionnels de l'année précédente (au moins 4 710 € et au plus 37 680 € pour les versements de 2026). Les plafonds non utilisés se reportent sur 5 ans. Depuis 2026, on ne déduit plus les versements faits à partir de 70 ans.</li>
+      <li><strong>Pendant :</strong> l'argent est bloqué, sauf cas prévus (achat de la résidence principale, accidents de la vie : invalidité, décès du conjoint, fin des droits au chômage, surendettement…).</li>
+      <li><strong>À la sortie :</strong> en <strong>capital</strong> (en une ou plusieurs fois) ou en <strong>rente viagère</strong>. Pour un versement déduit, la part « versements » est imposée au barème de l'impôt sur le revenu (sans l'abattement de 10 %), et les gains au prélèvement forfaitaire de 31,4 % (12,8 % d'impôt, 18,6 % de prélèvements sociaux depuis 2026). La rente est imposée comme une pension.</li>
+    </ul>
+    <p><strong>La déduction est un report d'impôt, pas une exonération.</strong> L'avantage dépend de l'écart entre ta tranche marginale d'imposition (TMI) aujourd'hui et celle à la retraite :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Versement de 3 000 €</th><th>TMI de 11 %</th><th>TMI de 30 %</th></tr></thead>
+        <tbody>
+          <tr><td>Économie d'impôt l'année du versement</td><td>330 €</td><td>900 €</td></tr>
+          <tr><td>Impôt sur cette part à la sortie (si la TMI à la retraite est de 11 %)</td><td>330 €</td><td>330 €</td></tr>
+          <tr><td><strong>Gain fiscal net (hors rendement)</strong></td><td><strong>0 €</strong></td><td><strong>570 €</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>À 11 %, la déduction ne rapporte rien en soi : le PER sert alors surtout de discipline d'épargne. À 30 % ou plus, il est beaucoup plus intéressant. On peut aussi renoncer à la déduction : la part versée est alors exonérée à la sortie, et seuls les gains sont taxés.</p>
+    <h3>Les autres outils de la retraite</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Outil</th><th>Disponibilité</th><th>Point fort</th><th>Limite</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Épargne salariale</strong> (PEE, PER collectif)</td><td>Bloquée plusieurs années, ou jusqu'à la retraite pour le PER</td><td>Abondement de l'employeur : un apport gratuit, à saisir en priorité</td><td>Dépend de l'entreprise</td></tr>
+          <tr><td><strong>Assurance-vie</strong></td><td>Rachats possibles à tout moment</td><td>Souplesse, fiscalité allégée après 8 ans, transmission</td><td>Aucune déduction à l'entrée</td></tr>
+          <tr><td><strong>PEA</strong></td><td>Retraits possibles, mais fiscalité plus lourde avant 5 ans</td><td>Exonération d'impôt sur le revenu après 5 ans, actions européennes</td><td>Plafond de versements, actions seulement</td></tr>
+          <tr><td><strong>Immobilier locatif</strong></td><td>Faible : vente lente</td><td>Loyers à la retraite, bien transmissible</td><td>Gestion, concentration : voir <a href="immobilier.html">L'immobilier</a></td></tr>
+          <tr><td><strong>PER individuel</strong></td><td>Bloqué jusqu'à la retraite</td><td>Déduction à l'entrée, discipline</td><td>Fiscalité à la sortie, déblocage restreint</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Les règles de ces enveloppes sont détaillées dans <a href="fiscalite.html">Fiscalité et enveloppes</a>. L'essentiel : <strong>diversifier les enveloppes</strong>, avec une part disponible (assurance-vie, PEA) et une part bloquée (PER), plutôt que de tout miser sur une seule.</p>
+
+    <h2 id="strategie">Construire sa stratégie en six étapes</h2>
+    <ol class="etapes">
+      <li><strong>Connaître sa situation</strong> : relevé de carrière, trimestres validés, estimation sur info-retraite.fr.</li>
+      <li><strong>Fixer l'objectif de revenu</strong> à la retraite (par exemple 70 à 80 % de son revenu).</li>
+      <li><strong>Calculer l'écart</strong> et le capital correspondant (repère : 25 fois l'écart annuel, avec la règle des 4 %).</li>
+      <li><strong>Choisir les outils</strong> : d'abord l'abondement de l'employeur, ensuite une assurance-vie ou un PEA pour la souplesse, et un PER surtout si la TMI est d'au moins 30 %.</li>
+      <li><strong>Adapter le risque à l'horizon</strong> : plus de marchés actions quand la retraite est lointaine, puis une allocation de plus en plus prudente à l'approche (voir <a href="portefeuille.html#horizon">l'horizon de placement</a>).</li>
+      <li><strong>Réviser tous les trois à cinq ans</strong> : les règles, les revenus et la situation familiale changent.</li>
+    </ol>
+    <p><strong>D'autres leviers que l'épargne :</strong> partir un peu plus tard (la surcote de 1,25 % par trimestre), la retraite progressive ou le cumul emploi-retraite, ou réduire les dépenses futures (rembourser le crédit avant la retraite).</p>
+
+    <div class="retenir" id="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>La retraite par répartition ne remplace qu'une partie du salaire, et bien moins au-delà du plafond de la Sécurité sociale : il faut chiffrer l'écart à combler, plutôt que se fier à une impression.</li>
+        <li>Le PER est un outil, pas un objectif : la déduction est un report d'impôt, utile surtout quand la TMI est élevée aujourd'hui et plus faible à la retraite. Il faut aussi diversifier les enveloppes.</li>
+        <li>Plus on commence tôt, moins il faut épargner : dans l'exemple, commencer 10 ans plus tard presque double l'effort mensuel.</li>
+      </ul>
+    </div>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil personnalisé. Les règles sont celles connues en novembre 2026 (loi de financement de la Sécurité sociale et loi de finances pour 2026), la réforme est suspendue jusqu'au 1er janvier 2028 et peut encore évoluer. Les exemples sont simplifiés : pour ta situation, utilise info-retraite.fr et un conseiller.</div>
+    <p class="note-hist"><strong>Sources :</strong> loi de financement de la Sécurité sociale pour 2026 (suspension de la réforme, article 45 bis) ; plafond de la Sécurité sociale 2026 et valeur du point Agirc-Arrco ; règles du PER (loi Pacte, loi de finances et de financement de la Sécurité sociale pour 2026) ; W. Bengen, <em>Determining Withdrawal Rates Using Historical Data</em> (1994) ; étude « Trinity » (Cooley, Hubbard et Walz, 1998).</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Répartition</dt><dd>Un système où les cotisations des actifs paient les pensions du moment.</dd>
+      <dt>Trimestre</dt><dd>L'unité de durée d'assurance : on en valide jusqu'à quatre par an.</dd>
+      <dt>Taux plein</dt><dd>Une pension de base calculée à 50 % du salaire de référence.</dd>
+      <dt>Décote / surcote</dt><dd>Une baisse ou une hausse de 1,25 % de la pension par trimestre manquant ou supplémentaire.</dd>
+      <dt>Salaire annuel moyen (SAM)</dt><dd>La moyenne des 25 meilleures années de salaire, plafonnées.</dd>
+      <dt>PASS</dt><dd>Le plafond annuel de la Sécurité sociale : 48 060 € en 2026.</dd>
+      <dt>Points Agirc-Arrco</dt><dd>Les droits de la retraite complémentaire des salariés du privé.</dd>
+      <dt>PER</dt><dd>Plan d'épargne retraite : un compte bloqué jusqu'à la retraite, avec déduction à l'entrée.</dd>
+      <dt>TMI</dt><dd>La tranche marginale d'imposition : le taux de la dernière tranche de revenus.</dd>
+      <dt>Rente viagère</dt><dd>Un revenu versé jusqu'au décès.</dd>
+      <dt>Règle des 4 %</dt><dd>Un repère : retirer 4 % du capital par an, ajusté de l'inflation, pour tenir environ 30 ans.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="0">
+      <p>1. Que signifie une retraite « par répartition » ?</p>
+      <button>Les cotisations des actifs financent les pensions du moment</button>
+      <button>Chacun épargne sur son propre compte</button>
+      <button>L'État verse la même somme à tous</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>2. À combien est calculée la pension de base à taux plein ?</p>
+      <button>25 % du SAM</button>
+      <button>50 % du salaire annuel moyen</button>
+      <button>100 % du dernier salaire</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>3. Pour la génération 1969 et après, que prévoit la loi actuelle ?</p>
+      <button>62 ans et 150 trimestres</button>
+      <button>65 ans et 160 trimestres</button>
+      <button>64 ans et 172 trimestres</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>4. Que fait la loi de financement de la Sécurité sociale pour 2026 ?</p>
+      <button>Elle abroge la réforme de 2023</button>
+      <button>Elle la suspend jusqu'au 1er janvier 2028</button>
+      <button>Elle fixe l'âge légal à 60 ans</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>5. Qu'est-ce que le SAM ?</p>
+      <button>La moyenne des 25 meilleures années de salaire, plafonnées au PASS</button>
+      <button>Le dernier salaire</button>
+      <button>Le salaire minimum</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>6. Comment fonctionne la retraite complémentaire Agirc-Arrco ?</p>
+      <button>Par trimestres</button>
+      <button>Par capitalisation individuelle</button>
+      <button>Par points</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>7. Quel est le plafond de déduction du PER pour les versements de 2026 ?</p>
+      <button>10 % des revenus professionnels, au maximum 37 680 €</button>
+      <button>50 % des revenus sans limite</button>
+      <button>1 000 € par an</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>8. Quand la déduction du PER est-elle surtout intéressante ?</p>
+      <button>Quand la TMI est faible aujourd'hui et élevée à la retraite</button>
+      <button>Quand la TMI est élevée aujourd'hui et plus faible à la retraite</button>
+      <button>Quand on a plus de 70 ans</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>9. Avec la règle des 4 %, quel capital faut-il pour un revenu complémentaire de 5 800 € par an ?</p>
+      <button>Environ 23 000 €</button>
+      <button>Environ 58 000 €</button>
+      <button>Environ 145 000 €</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>10. Que montre l'exemple de Camille sur le temps ?</p>
+      <button>Commencer plus tôt réduit fortement l'effort mensuel</button>
+      <button>Le moment n'a aucune importance</button>
+      <button>Il faut tout épargner la dernière année</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="immobilier-fiscalite.html">← Immobilier : impôts et transmission</a><a class="next" href="etudes.html">Études de cas →</a></div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>
