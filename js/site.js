@@ -102,6 +102,8 @@
             desc: 'Donations et succession : préparer et organiser la transmission.' },
           { title: 'Immobilier : impôts et transmission', file: 'immobilier-fiscalite.html',
             desc: "Revenus locatifs, plus-value, démembrement, SCI : limiter l'impôt et transmettre un bien locatif." },
+          { title: 'Préparer sa retraite', file: 'retraite.html',
+            desc: "Système français, estimation de la pension, écart à combler, PER et autres outils : un projet chiffré." },
           { title: 'Études de cas', file: 'etudes.html',
             desc: "Six profils d'épargnants comparés : livrets, ETF, stock picking, SCPI, matières premières et crypto." }
         ]
