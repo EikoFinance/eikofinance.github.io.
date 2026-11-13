@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les frais - EikoFinance</title>
+<meta name="description" content="Frais d'entrée, de gestion, de transaction, cachés : comprendre, repérer et réduire les frais de ses placements, avec un cas chiffré sur 29 ans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/lesson.css">
+<link rel="stylesheet" href="css/scene.css">
+<link rel="stylesheet" href="css/cartes.css">
+<script src="js/site.js" defer></script>
+<style>
+.graph{margin:1.1rem 0 1.6rem;text-align:center}
+.graph svg{width:100%;max-width:560px;height:auto;background:#fff;border:1px solid #D9DEE5;border-radius:8px}
+.graph figcaption{font-size:.86rem;color:#4a5568;margin-top:.45rem;line-height:1.5}
+.fig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.1rem 0 1.6rem}
+.fig-grid .graph{margin:0}
+.fig-grid h4{margin:.5rem 0 .1rem;font-size:.95rem}
+.partie{margin:2.4rem 0 .6rem;padding:.55rem 1rem;background:#0A1C3B;color:#fff;border-left:5px solid #C5A059;border-radius:4px;font-family:Cinzel,serif;font-size:1.15rem;letter-spacing:.03em}
+.chapitre ol.etapes{margin:0 0 1rem 1.3rem;line-height:1.7}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.4rem}
+.tablewrap table{border-collapse:collapse;width:100%;min-width:420px}
+.tablewrap th,.tablewrap td{border:1px solid #D9DEE5;padding:.55rem .7rem;text-align:left;vertical-align:top}
+.tablewrap th{background:#0A1C3B;color:#fff}
+.tablewrap tr:nth-child(even) td{background:#F7F9FC}
+.frise{list-style:none;margin:1.2rem 0 1.6rem;padding:0 0 0 1.1rem;border-left:3px solid #C5A059}
+.frise li{position:relative;margin:0 0 1.15rem;line-height:1.7}
+.frise li::before{content:"";position:absolute;left:calc(-1.1rem - 7px);top:.55rem;width:11px;height:11px;border-radius:50%;background:#0A1C3B;border:2px solid #C5A059}
+.frise .date{display:block;font-weight:700;color:#0A1C3B;font-size:1.02rem}
+.frise p{margin:.25rem 0 0}
+.note-hist{font-size:.9rem;color:#4a5568;margin-top:.4rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Logo Eiko Finance" class="logo-img">
+    <span class="logo-text">EIKO FINANCE</span>
+  </div>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <!-- Menu : généré par js/site.js (liste de secours si JavaScript est désactivé) -->
+  <nav>
+    <ul>
+      <li><a href="index.html#comprendre">Comprendre</a></li>
+      <li><a href="index.html#investir">Investir</a></li>
+      <li><a href="index.html#mesurer">Mesurer</a></li>
+      <li><a href="index.html#optimiser">Optimiser</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#comprendre">Comprendre</a> › Les frais</p>
+
+  <section class="scene scene-hero img-sobre img-frais">
+    <h1>Les frais : le coût invisible de l'investissement</h1>
+    <p>Frais d'entrée, de gestion, de transaction, frais cachés : comment les repérer, les comparer et mesurer ce qu'ils retirent à ton capital sur longue durée.</p>
+    <a href="#effet" class="btn-gold">Commencer</a>
+  </section>
+
+  <section class="card-grid" aria-label="Sommaire de la leçon">
+    <a class="card" href="#effet"><h3>Pourquoi ils comptent</h3><p>30 ans, 6 % brut : l'effet des frais.</p></a>
+    <a class="card" href="#familles"><h3>Cinq familles de frais</h3><p>Entrée, gestion, transaction, arbitrage, cachés.</p></a>
+    <a class="card" href="#produits"><h3>Combien ça coûte ?</h3><p>ETF, fonds actifs, assurance-vie, SCPI…</p></a>
+    <a class="card" href="#lire"><h3>Les repérer</h3><p>En euros par an, le DIC, les bonnes questions.</p></a>
+    <a class="card" href="#cas"><h3>Un cas chiffré</h3><p>Camille : 46 000 € d'écart.</p></a>
+    <a class="card" href="#reduire"><h3>Les réduire</h3><p>Six gestes, et les excès inverses.</p></a>
+    <a class="card" href="#quiz"><h3>Teste-toi</h3><p>Neuf questions pour vérifier.</p></a>
+  </section>
+
+  <article class="chapitre" id="lecon">
+    <p class="accroche">On parle beaucoup de rendement, rarement de ce qu'on paie pour l'obtenir. Pourtant, les frais sont <strong>certains</strong> et prélevés chaque année, alors que le rendement ne l'est pas. Cette leçon apprend à les repérer, à les comparer et à en mesurer l'effet.</p>
+
+    <h2 id="effet">Pourquoi les frais comptent plus qu'on ne le croit</h2>
+    <p class="accroche">Un point de frais par an peut avaler un quart du gain, ou la moitié.</p>
+    <p>Le rendement que tu reçois réellement, c'est le rendement brut <strong>moins les frais</strong>. Comme les frais sont prélevés chaque année sur la totalité du capital, ils s'accumulent comme les intérêts composés, mais à l'envers : ils réduisent le capital, donc les gains futurs.</p>
+    <figure class="graph">
+      <svg viewBox="0 0 420 206" role="img" aria-label="Valeur finale de 10 000 euros selon les frais annuels, sur 30 ans" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><text x="210" y="14" text-anchor="middle" font-size="11" fill="#0A1C3B" font-weight="700">10 000 € placés 30 ans, rendement brut de 6 % par an</text><text x="104" y="43" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Sans frais</text><rect x="112.0" y="26.0" width="190.0" height="24.0" rx="0" fill="#7C8DA8" stroke="none" stroke-width="1"/><text x="308.0" y="38" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">57 435 €</text><text x="104" y="75" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Frais de 0,2 %</text><rect x="112.0" y="58.0" width="179.5" height="24.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="297.53439973129633" y="70" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">54 271 €</text><text x="297.53439973129633" y="82" text-anchor="start" font-size="9" fill="#8a97ad" font-weight="400">−7 % du gain</text><text x="104" y="107" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Frais de 0,8 %</text><rect x="112.0" y="90.0" width="151.4" height="24.0" rx="0" fill="#0A1C3B" stroke="none" stroke-width="1"/><text x="269.3734947395552" y="102" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">45 759 €</text><text x="269.3734947395552" y="114" text-anchor="start" font-size="9" fill="#8a97ad" font-weight="400">−25 % du gain</text><text x="104" y="139" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Frais de 1,8 %</text><rect x="112.0" y="122.0" width="113.7" height="24.0" rx="0" fill="#b3402e" stroke="none" stroke-width="1"/><text x="231.66040832513502" y="134" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">34 358 €</text><text x="231.66040832513502" y="146" text-anchor="start" font-size="9" fill="#8a97ad" font-weight="400">−49 % du gain</text><text x="104" y="171" text-anchor="end" font-size="10.5" fill="#0A1C3B" font-weight="400">Frais de 2,5 %</text><rect x="112.0" y="154.0" width="92.9" height="24.0" rx="0" fill="#b3402e" stroke="none" stroke-width="1"/><text x="210.85133167933515" y="166" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">28 068 €</text><text x="210.85133167933515" y="178" text-anchor="start" font-size="9" fill="#8a97ad" font-weight="400">−62 % du gain</text><text x="210" y="196" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">Le gain brut sans frais est de 47 435 € : c'est cette part que les frais rognent chaque année.</text></svg>
+      <figcaption>Schéma illustratif : même placement, mêmes 6 % bruts, mais des frais différents. 1,8 % de frais par an font perdre presque la moitié du gain sur 30 ans.</figcaption>
+    </figure>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Frais annuels</th><th>Capital après 30 ans</th><th>Perte par rapport à « sans frais »</th><th>Part du gain perdue</th></tr></thead>
+        <tbody>
+          <tr><td>0 %</td><td>57 435 €</td><td>—</td><td>—</td></tr>
+          <tr><td>0,2 %</td><td>54 271 €</td><td>3 164 €</td><td>7 %</td></tr>
+          <tr><td>0,8 %</td><td>45 759 €</td><td>11 676 €</td><td>25 %</td></tr>
+          <tr><td>1,8 %</td><td>34 358 €</td><td>23 077 €</td><td>49 %</td></tr>
+          <tr><td>2,5 %</td><td>28 068 €</td><td>29 367 €</td><td>62 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-hist">Les frais ne dépendent pas du résultat : on les paie quand le marché monte comme quand il baisse. C'est l'une des rares choses sur lesquelles un investisseur a un contrôle direct.</p>
+
+    <h2 id="familles">Les cinq familles de frais</h2>
+    <p class="accroche">Pour comparer, il faut d'abord savoir où chercher.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Famille</th><th>Quand on la paie</th><th>Exemples</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Frais d'entrée</strong> (ou de versement)</td><td>Une fois, à chaque versement ou à l'achat</td><td>Assurance-vie bancaire, SCPI, frais de notaire en immobilier</td></tr>
+          <tr><td><strong>Frais de gestion ou frais courants</strong></td><td>Chaque année, prélevés sur l'encours</td><td>Frais d'un fonds ou d'un ETF, frais du contrat d'assurance-vie, mandat de gestion</td></tr>
+          <tr><td><strong>Frais de transaction</strong></td><td>À chaque achat ou vente</td><td>Courtage, écart entre prix d'achat et de vente (<em>spread</em>), frais de change, taxe sur les transactions financières</td></tr>
+          <tr><td><strong>Frais d'arbitrage et de sortie</strong></td><td>Quand on change de support ou qu'on sort</td><td>Arbitrage entre supports, pénalités de sortie, transfert d'un compte</td></tr>
+          <tr><td><strong>Frais indirects ou cachés</strong></td><td>Souvent invisibles</td><td>Fonds de fonds (frais empilés), rétrocessions versées au distributeur, commission de surperformance, rotation du portefeuille</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Les frais de gestion sont les plus dangereux à long terme : ils reviennent tous les ans, et ils sont souvent <strong>déjà déduits</strong> du rendement affiché. La performance publiée d'un fonds en euros, d'une SCPI ou d'un ETF est généralement <strong>nette</strong> de ces frais. Attention : la performance d'un support d'assurance-vie ne tient pas toujours compte des frais du contrat, qui s'ajoutent.</p>
+
+    <h2 id="produits">Combien coûtent les principaux placements ?</h2>
+    <p class="accroche">Des ordres de grandeur, à vérifier pour chaque produit.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Placement</th><th>Frais d'entrée</th><th>Frais annuels</th><th>À savoir</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ETF actions</strong></td><td>Courtage (voir ci-dessous)</td><td>0,1 à 0,4 % environ</td><td>Les ETF sur les grands indices mondiaux coûtent parmi le moins</td></tr>
+          <tr><td><strong>Fonds actifs</strong></td><td>Souvent 0 à 3 % selon le circuit</td><td>Souvent 1 à 2 %</td><td>La majorité fait moins bien que son indice sur dix ans (voir <a href="portefeuille.html#passif">Construire son portefeuille</a>)</td></tr>
+          <tr><td><strong>Assurance-vie</strong></td><td>0 % en ligne ; 2 à 3 % dans beaucoup de banques</td><td>En moyenne 0,67 % sur le fonds en euros, 0,80 % sur les UC en gestion libre, 1,08 % sur les autres modes de gestion (2025)</td><td>S'ajoutent les frais propres à chaque support (fonds, ETF)</td></tr>
+          <tr><td><strong>PEA / compte-titres</strong></td><td>Courtage : ordre de 1 000 € à 1,50 € chez un courtier en ligne, 6,50 € en moyenne en banque de réseau</td><td>Droits de garde : souvent 0 € en ligne, environ 0,35 % par an en banque traditionnelle</td><td>Courtage plafonné à 0,5 % du montant dans un PEA</td></tr>
+          <tr><td><strong>SCPI</strong></td><td>8 à 12 % (en moyenne près de 10 %), parfois 0 %</td><td>8 à 12 % des loyers, déjà déduits du rendement affiché</td><td>Horizon conseillé de 8 à 10 ans pour amortir les frais d'entrée : voir <a href="scpi.html">SCPI</a></td></tr>
+          <tr><td><strong>Immobilier direct</strong></td><td>7 à 8,5 % de frais de notaire dans l'ancien</td><td>Taxe foncière, charges, gestion locative (souvent 7 % des loyers)</td><td>Voir <a href="immobilier.html">L'immobilier</a></td></tr>
+          <tr><td><strong>Gestion pilotée ou sous mandat</strong></td><td>Variable</td><td>De l'ordre de 0,4 à 1,5 % par an en plus</td><td>On paie le gérant, en plus des frais des supports</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-hist">Sources : Banque de France (frais moyens des contrats d'assurance-vie en 2025) ; Observatoire de l'épargne de l'AMF (courtage et droits de garde) ; sociétés de gestion et études de marché sur les SCPI. Ces chiffres évoluent : vérifie les tarifs de chaque établissement.</p>
+
+    <h2 id="lire">Comment repérer et lire les frais</h2>
+    <p class="accroche">Poser la bonne question : « combien je paie, en euros, par an ? »</p>
+    <ul class="liste">
+      <li><strong>Convertir en euros</strong> : 1,8 % de frais sur 50 000 €, cela fait 900 € par an. 0,2 %, cela fait 100 €. Le pourcentage paraît petit, le montant se voit.</li>
+      <li><strong>Lire le document d'informations clés (DIC)</strong> d'un fonds, d'un ETF ou d'un produit structuré : il présente les coûts d'entrée et de sortie, les frais courants, les coûts de transaction, et l'effet des coûts sur le rendement.</li>
+      <li><strong>Consulter la grille tarifaire</strong> d'une banque, d'un courtier ou d'un contrat d'assurance-vie, et le tableau des frais des conditions générales.</li>
+      <li><strong>Additionner les couches</strong> : frais du contrat + frais du fonds + frais de transaction.</li>
+      <li><strong>Demander</strong> : « Y a-t-il des frais d'entrée, d'arbitrage, de sortie ? Une partie de ces frais vous est-elle reversée (rétrocession) ? Comment êtes-vous rémunéré ? » Un conseiller rémunéré par commissions n'a pas le même intérêt qu'un conseiller rémunéré par honoraires.</li>
+    </ul>
+
+    <h2 id="cas">Un cas chiffré : deux façons d'investir les mêmes 221 € par mois</h2>
+    <p class="accroche">Même épargne, même marché, des frais différents.</p>
+    <p>Camille, 35 ans (voir <a href="retraite.html">Préparer sa retraite</a>), place 221 € par mois pendant 29 ans. Le marché lui rapporte 6 % par an avant frais, dans les deux cas. Seule la façon d'investir change :</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th></th><th>A : contrat bancaire, fonds actifs</th><th>B : contrat en ligne, ETF</th></tr></thead>
+        <tbody>
+          <tr><td>Frais sur versement</td><td>3 %</td><td>0 %</td></tr>
+          <tr><td>Frais du contrat</td><td>0,85 % par an</td><td>0,60 % par an</td></tr>
+          <tr><td>Frais du support</td><td>1,6 % par an (fonds actif)</td><td>0,2 % par an (ETF)</td></tr>
+          <tr><td><strong>Frais annuels totaux</strong></td><td><strong>2,45 % par an, plus 3 % sur chaque versement</strong></td><td><strong>0,8 % par an</strong></td></tr>
+          <tr><td><strong>Capital après 29 ans</strong></td><td><strong>128 870 €</strong></td><td><strong>174 868 €</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figure class="graph">
+      <svg viewBox="0 0 420 236" role="img" aria-label="Capital obtenu avec 221 euros par mois selon les frais du contrat" xmlns="http://www.w3.org/2000/svg" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11"><line x1="56" y1="190.0" x2="400" y2="190.0" stroke="#EEF1F6" stroke-width="1"/><text x="50" y="194.0" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">0</text><line x1="56" y1="145.67567567567568" x2="400" y2="145.67567567567568" stroke="#EEF1F6" stroke-width="1"/><text x="50" y="149.67567567567568" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">50 000</text><line x1="56" y1="101.35135135135135" x2="400" y2="101.35135135135135" stroke="#EEF1F6" stroke-width="1"/><text x="50" y="105.35135135135135" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">100 000</text><line x1="56" y1="57.02702702702703" x2="400" y2="57.02702702702703" stroke="#EEF1F6" stroke-width="1"/><text x="50" y="61.02702702702703" text-anchor="end" font-size="9.5" fill="#8a97ad" font-weight="400">150 000</text><text x="56.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">0</text><text x="174.6206896551724" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">10</text><text x="293.2413793103448" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">20</text><text x="400.0" y="204" text-anchor="middle" font-size="9.5" fill="#8a97ad" font-weight="400">29</text><text x="228.0" y="220" text-anchor="middle" font-size="10" fill="#8a97ad" font-weight="400">Années</text><polyline points="56.0,190.0 67.9,187.6 79.7,185.1 91.6,182.4 103.4,179.6 115.3,176.6 127.2,173.5 139.0,170.3 150.9,166.9 162.8,163.2 174.6,159.4 186.5,155.5 198.3,151.2 210.2,146.8 222.1,142.2 233.9,137.3 245.8,132.1 257.7,126.7 269.5,121.0 281.4,115.0 293.2,108.7 305.1,102.1 317.0,95.1 328.8,87.8 340.7,80.1 352.6,71.9 364.4,63.4 376.3,54.4 388.1,44.9 400.0,35.0" fill="none" stroke="#0A1C3B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><polyline points="56.0,190.0 67.9,187.7 79.7,185.3 91.6,182.8 103.4,180.2 115.3,177.6 127.2,174.8 139.0,171.9 150.9,169.0 162.8,165.9 174.6,162.8 186.5,159.5 198.3,156.1 210.2,152.5 222.1,148.9 233.9,145.1 245.8,141.2 257.7,137.2 269.5,133.0 281.4,128.6 293.2,124.1 305.1,119.5 317.0,114.7 328.8,109.7 340.7,104.5 352.6,99.1 364.4,93.6 376.3,87.9 388.1,81.9 400.0,75.8" fill="none" stroke="#b3402e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><line x1="66" y1="44" x2="90" y2="44" stroke="#0A1C3B" stroke-width="3"/><text x="96" y="48" text-anchor="start" font-size="10" fill="#0A1C3B" font-weight="700">B : en ligne, ETF (0,8 % par an) : 174 868 €</text><line x1="66" y1="62" x2="90" y2="62" stroke="#b3402e" stroke-width="3"/><text x="96" y="66" text-anchor="start" font-size="10" fill="#b3402e" font-weight="700">A : banque, fonds actifs (2,45 % + 3 %) : 128 870 €</text><text x="56" y="14" text-anchor="start" font-size="10.5" fill="#0A1C3B" font-weight="700">221 € par mois pendant 29 ans, rendement brut de 6 %</text></svg>
+      <figcaption>Camille a versé 76 908 € dans les deux cas. L'écart de capital est d'environ 45 997 €, soit 26 % du capital final de B.</figcaption>
+    </figure>
+    <p>Pour ce même objectif de retraite de 145 000 € que dans <a href="retraite.html">Préparer sa retraite</a>, la formule B l'atteint avec un rendement de 6 % brut, alors qu'A reste bien en dessous. <strong>Les frais ont donc le même effet qu'un renoncement à environ un quart du capital.</strong></p>
+    <p class="note-hist">Exemple fictif : rendement brut constant de 6 % (en pratique, il varie). Les frais sont des ordres de grandeur courants, et pas les tarifs d'un établissement précis.</p>
+
+    <h2 id="reduire">Réduire ses frais sans rien sacrifier d'essentiel</h2>
+    <ol class="etapes">
+      <li><strong>Mesurer</strong> le coût total, en euros, de ses placements actuels.</li>
+      <li><strong>Privilégier les supports indiciels</strong> (ETF) pour le cœur du portefeuille, et garder les fonds actifs, s'il y en a, pour une petite part.</li>
+      <li><strong>Choisir une enveloppe sans frais d'entrée ni d'arbitrage</strong>, comme beaucoup de contrats d'assurance-vie en ligne, et vérifier les frais de chaque support.</li>
+      <li><strong>Regrouper ses ordres</strong> : un seul ordre de 600 € coûte moins cher en courtage proportionnellement que six ordres de 100 €.</li>
+      <li><strong>Limiter les transactions</strong> : chaque aller-retour coûte, et l'excès de confiance pousse à trop échanger (voir <a href="biais-investisseur.html">Les biais de l'investisseur</a>).</li>
+      <li><strong>Comparer et négocier</strong> : changer de courtier ou de contrat est possible, avec des frais de transfert plafonnés.</li>
+    </ol>
+    <p><strong>Attention aux excès inverses.</strong> Le moins cher n'est pas toujours le mieux : un produit à bas prix mais très concentré ou illiquide peut coûter bien plus cher en cas de problème. Un bon conseil, payé à son juste prix, peut aussi valoir sa rémunération (planification, fiscalité, discipline). Le critère n'est pas « zéro frais », mais <strong>« ce que je paie correspond-il à ce que je reçois ? »</strong></p>
+
+    <div class="retenir" id="retenir">
+      <strong>3 idées à retenir</strong>
+      <ul>
+        <li>Le rendement que tu reçois est le rendement brut moins les frais : sur 30 ans, des frais de 1,8 % par an font perdre près de la moitié du gain.</li>
+        <li>Il existe cinq familles de frais (d'entrée, de gestion, de transaction, d'arbitrage et de sortie, indirects) : on les compare en euros par an, couche par couche.</li>
+        <li>On peut réduire ses frais sans prendre plus de risque : supports indiciels, enveloppes sans frais d'entrée, peu de transactions.</li>
+      </ul>
+    </div>
+
+    <div class="alerte"><strong>À savoir :</strong> contenu pédagogique, pas un conseil en investissement. Les ordres de grandeur évoluent et varient beaucoup d'un établissement à l'autre : vérifie les tarifs en vigueur avant de t'engager.</div>
+    <p class="note-hist"><strong>Sources :</strong> Banque de France, rapport de l'Observatoire de l'épargne réglementée (OPEF 2026, données 2025) ; AMF, Observatoire de l'épargne (lettre n° 65) ; S&amp;P Dow Jones Indices, SPIVA Europe, 2025 ; sociétés de gestion de SCPI et études de marché sur les frais ; loi de finances pour 2025 (frais de mutation).</p>
+
+    <h3>Le jargon traduit</h3>
+    <dl class="glossaire">
+      <dt>Frais d'entrée</dt><dd>Frais prélevés une fois, à chaque versement ou à l'achat.</dd>
+      <dt>Frais courants</dt><dd>Les frais annuels d'un fonds ou d'un ETF, prélevés sur son encours.</dd>
+      <dt>TER</dt><dd>Total Expense Ratio : le total des frais annuels d'un fonds, en pourcentage.</dd>
+      <dt>Courtage</dt><dd>La commission payée à chaque achat ou vente de titres.</dd>
+      <dt>Spread</dt><dd>L'écart entre le prix d'achat et le prix de vente d'un actif.</dd>
+      <dt>Droits de garde</dt><dd>Les frais annuels pour conserver ses titres sur un compte.</dd>
+      <dt>DIC</dt><dd>Document d'informations clés : la fiche normalisée qui présente les coûts et les risques d'un produit.</dd>
+      <dt>Rétrocession</dt><dd>Une partie des frais reversée par un fonds ou un assureur à celui qui le distribue.</dd>
+      <dt>Rotation (turnover)</dt><dd>La fréquence à laquelle un gérant achète et vend, source de frais de transaction.</dd>
+      <dt>Frais d'arbitrage</dt><dd>Les frais prélevés quand on change de support au sein d'un contrat.</dd>
+    </dl>
+
+    <h3 id="quiz">Teste-toi</h3>
+    <div class="q" data-good="1">
+      <p>1. Comment se calcule le rendement réellement perçu ?</p>
+      <button>Brut plus frais</button>
+      <button>Brut moins frais</button>
+      <button>Brut divisé par les frais</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>2. Sur 30 ans à 6 % brut, que font perdre des frais de 1,8 % par an ?</p>
+      <button>Environ 7 % du gain</button>
+      <button>Environ 25 % du gain</button>
+      <button>Environ la moitié du gain</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>3. Quels frais annuels sont typiques pour un ETF sur un grand indice ?</p>
+      <button>0,1 à 0,4 % environ</button>
+      <button>Environ 5 %</button>
+      <button>Aucun frais</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>4. Selon la Banque de France, quels sont les frais de gestion moyens du fonds en euros en 2025 ?</p>
+      <button>0,05 %</button>
+      <button>0,67 %</button>
+      <button>3 %</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>5. Selon l'AMF, combien coûte en moyenne un ordre de 1 000 € en banque de réseau, contre un courtier en ligne ?</p>
+      <button>6,50 € contre 1,50 €</button>
+      <button>1,50 € contre 6,50 €</button>
+      <button>Le même prix</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>6. Pour une SCPI avec 10 % de frais de souscription, que devient un versement de 10 000 € ?</p>
+      <button>10 000 € investis</button>
+      <button>11 000 € investis</button>
+      <button>9 000 € investis</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="1">
+      <p>7. Quel document présente les coûts et les risques d'un fonds ou d'un ETF ?</p>
+      <button>La déclaration d'impôt</button>
+      <button>Le document d'informations clés (DIC)</button>
+      <button>Le relevé de compte courant</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="0">
+      <p>8. Dans l'exemple de Camille, quel est l'écart de capital entre les deux contrats ?</p>
+      <button>Environ 46 000 €</button>
+      <button>Environ 500 €</button>
+      <button>Aucun</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+    <div class="q" data-good="2">
+      <p>9. Pourquoi regrouper ses ordres de bourse ?</p>
+      <button>Pour payer plus de frais</button>
+      <button>Pour éviter l'impôt</button>
+      <button>Pour réduire le coût du courtage rapporté au montant investi</button>
+      <div class="fb" aria-live="polite"></div>
+    </div>
+
+    <div class="pager"><a href="portefeuille.html">← Construire son portefeuille</a><a class="next" href="biais-investisseur.html">Les biais de l'investisseur →</a></div>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 EikoFinance. Tous droits réservés.</p>
+  <p>Contact : <a href="mailto:contacteikofinance@gmail.com">contacteikofinance@gmail.com</a></p>
+</footer>
+<script src="js/lesson.js"></script>
+</body>
+</html>
