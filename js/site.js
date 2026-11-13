@@ -28,6 +28,8 @@
             desc: "Établir son budget, rembourser les dettes chères, constituer une réserve avant d'investir." },
           { title: 'Construire son portefeuille', file: 'portefeuille.html',
             desc: "Diversification, allocation, rééquilibrage, horizon, passif ou actif, en une fois ou progressivement : une méthode." },
+          { title: 'Les frais', file: 'frais.html',
+            desc: "Frais d'entrée, de gestion, de transaction, cachés : les repérer, les comparer et en mesurer l'effet." },
           { title: "Les biais de l'investisseur", file: 'biais-investisseur.html',
             desc: "Aversion à la perte, excès de confiance, effet de troupeau : pourquoi on se trompe, et comment s'en protéger." }
         ]
